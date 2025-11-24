@@ -67,12 +67,6 @@ public abstract class ExtractableItem {
 
     //abstract methods
 
-    //normalizes item names
-    public  abstract String getNormalizedName(String name);
-
-    //boosts confidence based on internal heuristics
-    public  abstract  void boostConfidence();
-
     //non-abstract methods
 
     public String bootstrappingObjects(String classLabel) {
@@ -137,5 +131,5 @@ public abstract class ExtractableItem {
                 "\ncontext snippet = " + contextSnippet +
                 "\nconfidence score = " + confidenceScore;
     }
-    */
+     */
 }

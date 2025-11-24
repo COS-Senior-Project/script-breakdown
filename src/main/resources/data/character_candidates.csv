@@ -1,187 +1,803 @@
-Scene Order Number,Actual Scene Number,CandidateName,Rule,ContextSnippet,Confidence Score
-2,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Freeze! FBI!"
-2,THE SUSPECT'S HANDS,SPEAKER_ABOVE_DIALOGUE,"THE SUSPECT'S HANDS / are taped to his gun, away from the trigger; he couldn't use"
-2,PULLING BACK,SPEAKER_ABOVE_DIALOGUE,"PULLING BACK / we see that we're in some sort of auditorium, with the ""hotel"
-2,BRIGHAM,SPEAKER_ABOVE_DIALOGUE,"BRIGHAM / Starling's reaction time was"
-2,ARDELIA,SPEAKER_ABOVE_DIALOGUE,"ARDELIA / Damn, Clarice, how'd you make me?"
-2,SPECIAL AGENT JACK CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"SPECIAL AGENT JACK CRAWFORD / sits on the top step of the aisle, looking down at her. He"
-3,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / Starling, Clarice M., good morning."
-3,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Good morning, Mr. Crawford."
-4,CHILTON,SPEAKER_ABOVE_DIALOGUE,"CHILTON / You know, we get a lot of detectives"
-4,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / I'm sure it's a great town, Dr."
-5,CHILTON,SPEAKER_ABOVE_DIALOGUE,"CHILTON / Lecter carved up nine people - that"
-5,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / How do you mean, Dr. Chilton?"
-6,CHILTON,SPEAKER_ABOVE_DIALOGUE,"CHILTON / Do not reach through the bars, do"
-6,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / I understand."
-6,BARNEY,SPEAKER_ABOVE_DIALOGUE,"BARNEY / Hi, I'm Barney. He told you, don't"
-7,DARK FIGURE,SPEAKER_ABOVE_DIALOGUE,"DARK FIGURE / I c-can sssmell your cunt!"
-7,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Dr. Lecter... My name is Clarice"
-7,MIGGS,SPEAKER_ABOVE_DIALOGUE,"MIGGS / I b-bit my wrist so I c-can diiiieeee!"
-8,THE YOUNG CLARICE,SPEAKER_ABOVE_DIALOGUE,"THE YOUNG CLARICE / rushes into them, and he sweeps her up in a hug, spinning"
-8,THE ADULT CLARICE,SPEAKER_ABOVE_DIALOGUE,"THE ADULT CLARICE / alone in the parking lot, sagging against her car. Her face"
-10,ARDELIA,SPEAKER_ABOVE_DIALOGUE,"ARDELIA / Phone call, Clarice. It's God."
-10,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Thanks, Ardelia."
-11,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / I've read your interim memo on Lecter."
-11,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / It's all there, sir, practically"
-12,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / I'll take over, Patricia. You get"
-12,BELLA CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"BELLA CRAWFORD / who lies in an elevated hospital bed. Nearby are an oxygen"
-14,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / So no one's been in here since -"
-16,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Mr. Yow, if this door should fall"
-17,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Okay, Mr. Yow..."
-17,THE CAR,SPEAKER_ABOVE_DIALOGUE,"THE CAR / is an antique beauty, a 1931 Packard. It's very dusty, despite"
-19,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Hester Mofet... ""The rest of me."""
-20,CATHERINE,SPEAKER_ABOVE_DIALOGUE,"CATHERINE / This stuff's givin' me the munchies."
-20,CODY,SPEAKER_ABOVE_DIALOGUE,"CODY / Shit. Left the groceries in the car."
-21,CATHERINE,SPEAKER_ABOVE_DIALOGUE,"CATHERINE / Help you with that?"
-21,MAN,SPEAKER_ABOVE_DIALOGUE,"MAN / Would you? Thanks."
-22,MAN,SPEAKER_ABOVE_DIALOGUE,"MAN / Are you about a size 14?"
-22,CATHERINE,SPEAKER_ABOVE_DIALOGUE,"CATHERINE / (surprised)"
-24,BRIGHAM,SPEAKER_ABOVE_DIALOGUE,"BRIGHAM / Clarice Starling! Are you in here?"
-25,BRIGHAM,SPEAKER_ABOVE_DIALOGUE,"BRIGHAM / Get your field gear, take stuff for"
-25,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Where?"
-26,BRIGHAM,SPEAKER_ABOVE_DIALOGUE,"BRIGHAM / Jack's pretty tough on you, isn't"
-26,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Sometimes."
-27,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / Why, we don't yet know... There's no"
-27,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / There's no correlation at all between"
-28,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / Talk about him, Starling. Tell me"
-28,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / (choosing her words"
-29,COUNTRY PEOPLE,SPEAKER_ABOVE_DIALOGUE,"COUNTRY PEOPLE / in their somber best, filing into the mortuary for a service."
-29,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / We're around back."
-30,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / Sheriff Perkins? Jack Crawford, FBI..."
-30,SHERIFF,SPEAKER_ABOVE_DIALOGUE,"SHERIFF / (grim, unsociable)"
-30,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / burning at this slight, is left alone with the troopers, who"
-31,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / I need a six-way linkup! Chicago,"
-31,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / is pulling on a pair of surgical gloves. She raises her voice,"
-31,FAVORING CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"FAVORING CRAWFORD / as he looks at Clarice with a new degree of respect. Men"
-31,LAMAR,SPEAKER_ABOVE_DIALOGUE,"LAMAR / Them fishhooks are set too close"
-32,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Thanks, I'm not thirsty."
-32,LAMAR,SPEAKER_ABOVE_DIALOGUE,"LAMAR / No, hold it under your chin, there,"
-32,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / When I told that sheriff we shouldn't"
-33,CATHERINE MARTIN,SPEAKER_ABOVE_DIALOGUE,"CATHERINE MARTIN / looks up at him. She is standing on the cement bottom of the"
-33,CATHERINE,SPEAKER_ABOVE_DIALOGUE,"CATHERINE / Mister... my family will pay cash."
-33,BLOODY FINGER TRACKS,SPEAKER_ABOVE_DIALOGUE,"BLOODY FINGER TRACKS / dried now, brownish - left by many pairs of frenzied hands..."
-34,ARDELIA,SPEAKER_ABOVE_DIALOGUE,"ARDELIA / You better come see this."
-35,TV ANCHOR,SPEAKER_ABOVE_DIALOGUE,"TV ANCHOR / Memphis Police sources indicate that"
-35,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / looks at Ardelia, surprised. Other trainees are drifting"
-35,ARDELIA,SPEAKER_ABOVE_DIALOGUE,"ARDELIA / Why does she keep repeating the name?"
-35,NEW FOOTAGE,SPEAKER_ABOVE_DIALOGUE,"NEW FOOTAGE / as we see (NIGHT, TELEPHOTO) - a taped-off section of"
-36,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / I don't think he knew that she's a"
-38,RODEN,SPEAKER_ABOVE_DIALOGUE,"RODEN / Tough noogies! It's still my turn."
-38,PILCHER,SPEAKER_ABOVE_DIALOGUE,"PILCHER / (grins)"
-39,RODEN,SPEAKER_ABOVE_DIALOGUE,"RODEN / Where the hell did this one come"
-39,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / You really don't want to know."
-39,PILCHER,SPEAKER_ABOVE_DIALOGUE,"PILCHER / Your West Virginia specimen gave us"
-40,THE TWO MEN,SPEAKER_ABOVE_DIALOGUE,"THE TWO MEN / are hunched over a formica table, peering through square"
-40,PILCHER,SPEAKER_ABOVE_DIALOGUE,"PILCHER / (without looking up)"
-40,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / I try to be a student, Dr. Pilcher."
-40,RODEN,SPEAKER_ABOVE_DIALOGUE,"RODEN / Positive match!"
-40,FAVORING CLARICE,SPEAKER_ABOVE_DIALOGUE,"FAVORING CLARICE / as she looks up at him, awed, excited, almost trembling."
-42,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / But for Catherine Martin, it all"
-42,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / He's already offered to help... What"
-43,CHILTON,SPEAKER_ABOVE_DIALOGUE,"CHILTON / What you're doing, Miss Starling, is"
-43,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Dr. Chilton, I told you - this is"
-44,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / I was your choice, Dr. Lecter. You"
-45,PULLING BACK,SPEAKER_ABOVE_DIALOGUE,"PULLING BACK / we see a big wire cage, holding several of the moths. They"
-47,CHILTON,SPEAKER_ABOVE_DIALOGUE,"CHILTON / Perhaps you should have been less"
-47,FAVORING CHILTON,SPEAKER_ABOVE_DIALOGUE,"FAVORING CHILTON / as he sits chummily on the table."
-48,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / Dr. Danielson, the man we want was"
-48,BURROUGHS,SPEAKER_ABOVE_DIALOGUE,"BURROUGHS / Phone, Jack. Director Burke."
-49,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / (on phone; stunned)"
-50,DIRECTOR BURKE,SPEAKER_ABOVE_DIALOGUE,"DIRECTOR BURKE / (on phone)"
-51,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / (into phone)"
-52,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Chilton has killed her, hasn't he?"
-52,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / Let's get some coffee and talk."
-53,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Are you in trouble over this, Mr."
-53,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / I'm 53, Starling. If I found Jimmy"
-54,BOYLE,SPEAKER_ABOVE_DIALOGUE,"BOYLE / Welcome to Memphis, Dr. Lecter. I'm"
-54,PEMBRY,SPEAKER_ABOVE_DIALOGUE,"PEMBRY / But we ain't pussy-footin' with you,"
-54,TWO BLACK STRETCH LIMOUSINES,SPEAKER_ABOVE_DIALOGUE,"TWO BLACK STRETCH LIMOUSINES / glide smoothly into the hangar, stop. Secret Service agents"
-54,CHILTON,SPEAKER_ABOVE_DIALOGUE,"CHILTON / Senator Martin, meet Dr. Hannibal"
-54,KRENDLER,SPEAKER_ABOVE_DIALOGUE,"KRENDLER / We need his address, a physical descr-"
-55,CATHERINE,SPEAKER_ABOVE_DIALOGUE,"CATHERINE / is hunched over in concentration. The plastic toilet bucket"
-55,SHE STANDS,SPEAKER_ABOVE_DIALOGUE,"SHE STANDS / gathers the coiled string in one hand, and swings the bucket"
-55,THE BUCKET LANDS,SPEAKER_ABOVE_DIALOGUE,"THE BUCKET LANDS / two feet beyond the pit's edge, rolls a bit, stops."
-55,PRECIOUS TROTS UP,SPEAKER_ABOVE_DIALOGUE,"PRECIOUS TROTS UP / then pauses, staring curiously towards..."
-55,PRECIOUS,SPEAKER_ABOVE_DIALOGUE,"PRECIOUS / edges reluctantly closer... then suddenly rushes in, seizing"
-55,THE LITTLE DOG,SPEAKER_ABOVE_DIALOGUE,"THE LITTLE DOG / furious, BARKS down at her, then trots away in disgust."
-61,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / I'm Clarice Starling, Senator. FBI."
-61,KRENDLER,SPEAKER_ABOVE_DIALOGUE,"KRENDLER / You're out of line, Starling, and"
-63,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / I just left him."
-64,MURRAY,SPEAKER_ABOVE_DIALOGUE,"MURRAY / Every cop in Tennessee wants a look"
-64,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / (beat)"
-65,PEMBRY,SPEAKER_ABOVE_DIALOGUE,"PEMBRY / You know the rules, ma'am?"
-65,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Yes, Officer Pembry. I've questioned"
-65,INSIDE THE CAGE,SPEAKER_ABOVE_DIALOGUE,"INSIDE THE CAGE / a cot and a small table, each bolted to the floor, and a"
-65,THE CHILD RISES,SPEAKER_ABOVE_DIALOGUE,"THE CHILD RISES / crosses to the window in her nightgown, rubs the glass."
-65,THE LITTLE GIRL,SPEAKER_ABOVE_DIALOGUE,"THE LITTLE GIRL / is terrified; she covers her ears."
-65,CHILTON,SPEAKER_ABOVE_DIALOGUE,"CHILTON / Out. Let's go."
-66,FOREMAN,SPEAKER_ABOVE_DIALOGUE,"FOREMAN / Hello, dear! Punctual as always. And"
-68,PEMBRY,SPEAKER_ABOVE_DIALOGUE,"PEMBRY / (shouts)"
-68,BOYLE,SPEAKER_ABOVE_DIALOGUE,"BOYLE / (laughs)"
-68,INSIDE THE SCREEN,SPEAKER_ABOVE_DIALOGUE,"INSIDE THE SCREEN / Dr. Lecter sits fully clothed on the toilet - swaying"
-68,OUTSIDE THE CELL,SPEAKER_ABOVE_DIALOGUE,"OUTSIDE THE CELL / Pembry and Boyle turn as the toilet FLUSHES, and Dr. Lecter"
-68,BOYLE'S RIGHT HAND,SPEAKER_ABOVE_DIALOGUE,"BOYLE'S RIGHT HAND / is just inches from the tray when Dr. Lecter's hand darts"
-68,THE OTHER CUFF,SPEAKER_ABOVE_DIALOGUE,"THE OTHER CUFF / around the bolted leg of the table. And suddenly all natural"
-69,THE BRONZE ARROW,SPEAKER_ABOVE_DIALOGUE,"THE BRONZE ARROW / has begun to descend. Down to 4, then past 4..."
-72,JACOBS,SPEAKER_ABOVE_DIALOGUE,"JACOBS / Boyle is dead, Sarge. His gun's"
-72,MURRAY,SPEAKER_ABOVE_DIALOGUE,"MURRAY / This one's alive!"
-74,MURRAY,SPEAKER_ABOVE_DIALOGUE,"MURRAY / You're just fine, Pembry, lookin'"
-74,ORDERLY,SPEAKER_ABOVE_DIALOGUE,"ORDERLY / Downstairs - let's go!"
-77,PETERSON,SPEAKER_ABOVE_DIALOGUE,"PETERSON / whispers into a radio, as Kubell carefully tips an assault"
-77,RADIO VOICE,SPEAKER_ABOVE_DIALOGUE,"RADIO VOICE / Can you get the drop?"
-78,SWAT COMMANDER,SPEAKER_ABOVE_DIALOGUE,"SWAT COMMANDER / (into radio mike)"
-79,ATTENDANT,SPEAKER_ABOVE_DIALOGUE,"ATTENDANT / (into radio mike)"
-79,THE POCKETKNIFE BLADE,SPEAKER_ABOVE_DIALOGUE,"THE POCKETKNIFE BLADE / in Lecter's fist, flashes high in the air..."
-80,BIG GREEN INTERSTATE SIGN,SPEAKER_ABOVE_DIALOGUE,"BIG GREEN INTERSTATE SIGN / ...that reads ""Memphis International Airport / 2 miles."""
-87,ARDELIA,SPEAKER_ABOVE_DIALOGUE,"ARDELIA / In the parking garage at Memphis"
-87,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / No. He won't come after me."
-88,ARDELIA,SPEAKER_ABOVE_DIALOGUE,"ARDELIA / (surprised)"
-88,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / ""Desperately random."" What does he"
-89,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Maybe he lives in this, this"
-89,KRENDLER,SPEAKER_ABOVE_DIALOGUE,"KRENDLER / Starling -"
-89,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / Who the hell's fault is -"
-89,BURKE,SPEAKER_ABOVE_DIALOGUE,"BURKE / Jack -"
-90,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / All his victims are women... His"
-90,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / You heard them. I don't have that"
-91,CATHERINE,SPEAKER_ABOVE_DIALOGUE,"CATHERINE / Get me a telephone. Lower it down to"
-93,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / approaches him, and the man lowers his hammer. He has red-"
-95,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / turns, absorbing nuances. There is loneliness here, an echo"
-95,BIG TORTOISESHELL CAT,SPEAKER_ABOVE_DIALOGUE,"BIG TORTOISESHELL CAT / is rubbing against her ankles."
-95,THE DRESS,SPEAKER_ABOVE_DIALOGUE,"THE DRESS / is very big, to fit Fredrica, but beautifully cut. Some of"
-95,FAVORING THE SEWING MACHINE,SPEAKER_ABOVE_DIALOGUE,"FAVORING THE SEWING MACHINE / as Clarice turns, looks towards it. She hangs the dress on"
-96,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / (into phone)"
-97,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / (into speaker phone)"
-97,INTERCUTTING,SPEAKER_ABOVE_DIALOGUE,"INTERCUTTING / as Clarice reacts; her happiness for Crawford is tinged with"
-97,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / (on phone)"
-98,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / somewhat embarrassed, crosses over to him."
-100,STACY,SPEAKER_ABOVE_DIALOGUE,"STACY / They said she was just rags, like"
-100,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Stacy, did Fredrica ever mention a"
-110,DUSTY BLACK METAL BOX,SPEAKER_ABOVE_DIALOGUE,"DUSTY BLACK METAL BOX / the extension buzzer, mounted high on the wall, which is"
-111,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Good afternoon... I wonder if you"
-113,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Excuse me, but I really do need to"
-115,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / I'm investigating the death of"
-117,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Thanks."
-118,WE PICK OUT CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"WE PICK OUT CRAWFORD / walking across the grass towards the van, when all at once"
-118,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / Clarice."
-119,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / I think we may be, yes."
-120,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / rushes to this - pauses - then elbows the door aside, aiming"
-121,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / follows her gun around the corner, looking right."
-121,EMPTY PASSAGEWAY,SPEAKER_ABOVE_DIALOGUE,"EMPTY PASSAGEWAY / but doors opening off it - he could be lurking behind any of"
-122,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / kneels, staring up from one door to another, she can't cover"
-122,CATHERINE,SPEAKER_ABOVE_DIALOGUE,"CATHERINE / Safe, SHIT, he's got a gun! Getmeout."
-124,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / spins, almost shoots, before seeing -"
-127,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / centers her gun on the curtain, at chest height, and yanks"
-128,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / spins, still in SLOW MOTION, flame already leaping from her"
-128,THE TWO FIGURES,SPEAKER_ABOVE_DIALOGUE,"THE TWO FIGURES / almost at point-black range, guns ROARING hugely, one FLASH"
-129,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / dazed, her face bandaged - comes out of the house, walking"
-129,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / Starling... your father sees you."
-130,CRAWFORD,SPEAKER_ABOVE_DIALOGUE,"CRAWFORD / who smiles back at her with quiet pride, and offers a little"
-130,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / grins - more happy than we've ever seen her - then turns to"
-131,ARDELIA,SPEAKER_ABOVE_DIALOGUE,"ARDELIA / Agent Starling! Telephone!"
-131,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / (surprised)"
-131,RODEN,SPEAKER_ABOVE_DIALOGUE,"RODEN / Hel-lo, gorgeous! Let's get down."
-131,PILCHER,SPEAKER_ABOVE_DIALOGUE,"PILCHER / Just ignore him. He's not a Ph.D."
-132,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Starling."
-132,ARDELIA,SPEAKER_ABOVE_DIALOGUE,"ARDELIA / who is just inside the rec room door, at the end of the hall,"
-133,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Dr. Lecter -"
-134,CLARICE,SPEAKER_ABOVE_DIALOGUE,"CLARICE / Dr. Lecter... Dr. Lecter...!"
+1,1,CLARICE STARLING,PERSON_NOUN,concentration. This is CLARICE STARLING, mid-20's, trim,,0.7,null
+2,2,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Freeze! FBI!,0.7,NameDatabase@4411d970
+2,2,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/Damn, Clarice, how'd you make me?,0.7,NameDatabase@4411d970
+2,2,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(indicating her gun),0.7,NameDatabase@4411d970
+2,2,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/(grins),0.7,NameDatabase@4411d970
+2,2,SPECIAL AGENT JACK CRAWFORD,SPEAKER_ABOVE_DIALOGUE,SPECIAL AGENT JACK CRAWFORD/sits on the top step of the aisle, looking down at her. He,1.0,NameDatabase@4411d970
+2,2,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/What'd I do?,0.7,NameDatabase@4411d970
+2,2,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/Stay cool. Just remember to call him,0.7,NameDatabase@4411d970
+2,2,JOHN BRIGHAM,NAMEFINDER_ME,as a training set . JOHN BRIGHAM walks onto this set ,,1.0,NameDatabase@4411d970
+2,2,As Brigham,NAMEFINDER_ME,when you talk dirty . As Brigham joins them , Clarice can,1.0,NameDatabase@4411d970
+2,2,FEMALE HOSTAGE,PERSON_ADJ,edge of a bed - a FEMALE HOSTAGE. Black, late 20's, gagged,,0.7,null
+2,2,MALE SUSPECT,PERSON_ADJ,MALE SUSPECT, white, mid-20's, standing by a window with a,0.7,null
+2,2,that we're in,PERSON_NOUN,we see that we're in some sort of auditorium, with the ""hotel,0.7,null
+3,3,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Good morning, Mr. Crawford.,0.7,NameDatabase@4411d970
+3,3,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I hope so. They haven't posted,0.7,NameDatabase@4411d970
+3,3,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Not yet.,0.7,NameDatabase@4411d970
+3,3,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Who's the subject?,0.7,NameDatabase@4411d970
+3,3,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/The cannibal...,0.7,NameDatabase@4411d970
+3,3,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Yes, well... Okay, right. I'm glad,0.7,NameDatabase@4411d970
+3,3,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Yes sir.,0.7,NameDatabase@4411d970
+3,3,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(a bit unnerved),0.7,NameDatabase@4411d970
+3,3,Crawford,NAMEFINDER_ME,Good morning , Mr . Crawford . Your instructors tell me,0.7188678423399146,NameDatabase@4411d970
+3,3,Hannibal Lecter,NAMEFINDER_ME,The psychiatrist - Dr . Hannibal Lecter . Clarice stops walking ,,1.0,NameDatabase@4411d970
+3,3,Hannibal Lecter,NAMEFINDER_ME,. Be very careful with Hannibal Lecter . Dr . Chilton at,1.0,NameDatabase@4411d970
+4,4,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I'm sure it's a great town, Dr.,0.7,NameDatabase@4411d970
+4,4,Lecter,NAMEFINDER_ME,of view , Dr . Lecter is our most prized asset,0.7226044300605814,NameDatabase@4411d970
+4,4,FREDERICK CHILTON,NAMEFINDER_ME,prized asset ... DR . FREDERICK CHILTON looks up from her card,1.0,NameDatabase@4411d970
+4,4,Chilton,NAMEFINDER_ME,great town , Dr . Chilton , but my instructions are,0.9627385372386791,NameDatabase@4411d970
+5,5,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/How do you mean, Dr. Chilton?,0.7,NameDatabase@4411d970
+5,5,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I graduated magna from UVA, Doctor.,0.7,NameDatabase@4411d970
+5,5,Chilton,NAMEFINDER_ME,the bolt shooting home . Chilton walks ahead of her .,0.780746093889076,NameDatabase@4411d970
+5,5,Chilton,NAMEFINDER_ME,you mean , Dr . Chilton ? A pretty young woman,0.8976251581033299,NameDatabase@4411d970
+6,6,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I understand.,0.7,NameDatabase@4411d970
+6,6,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(quickly blocking him),0.7,NameDatabase@4411d970
+6,6,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/But then I would've missed the,0.7,NameDatabase@4411d970
+6,6,BARNEY,SPEAKER_ABOVE_DIALOGUE,BARNEY/Hi, I'm Barney. He told you, don't,0.7,NameDatabase@4411d970
+6,6,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(shaking his hand),0.7,NameDatabase@4411d970
+6,6,BARNEY,SPEAKER_ABOVE_DIALOGUE,BARNEY/Okay. Past the others, it's the last,0.7,NameDatabase@4411d970
+6,6,BARNEY,SPEAKER_ABOVE_DIALOGUE,BARNEY/I'm watching. You'll do fine.,0.7,NameDatabase@4411d970
+6,6,Chilton,NAMEFINDER_ME,blocking him ) Dr . Chilton - if Lecter feels you,0.9486814617563167,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Dr. Lecter... My name is Clarice,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Doctor, we have a hard problem in,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I am, yes.,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I'm - still in training at the,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/We're talking about psychology,,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/He said - ""I can smell your cunt."",0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(beat),0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Maybe they'll catch up.,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(shifting uncomfortably),0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/All that detail, just from memory...?,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Dr. Lecter, if you'd please consider -,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I'm only asking you to look at this,,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/No, I came because we need -,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Five... so far.,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Partially, yes. But Doctor, that's,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I'll tell you if you'll look at this,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/It excites him. Most serial killers,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/No. You ate yours.,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/No. I only hoped that your knowledge -,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/You see a lot, Dr. Lecter. But are,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Reasonably so. Yes.,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/And the questionnaire...?,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/is spattered on the face and neck - not with blood, but with,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Then please - do this test for me.,0.7,NameDatabase@4411d970
+7,7,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/What's that, Dr. Lecter?,0.7,NameDatabase@4411d970
+7,7,Hannibal Lecter,NAMEFINDER_ME,with you ? Dr . Hannibal Lecter is lounging on his bunk,1.0,NameDatabase@4411d970
+7,7,Jack Crawford,NAMEFINDER_ME,You ' re one of Jack Crawford ' s , I expect,1.0,NameDatabase@4411d970
+7,7,Lecter,NAMEFINDER_ME,her fear . Dr . Lecter ' s nostrils lift ,,0.8327450719940694,NameDatabase@4411d970
+7,7,Jack Crawford,NAMEFINDER_ME,Academy . DR . LECTER Jack Crawford sent a trainee to me,1.0,NameDatabase@4411d970
+7,7,Lecter,NAMEFINDER_ME,her case . Dr . Lecter , if you ' d,0.7779532314303211,NameDatabase@4411d970
+7,7,Did Crawford,NAMEFINDER_ME,Such a naughty boy ! Did Crawford send you to ask for,1.0,NameDatabase@4411d970
+7,7,Lecter,NAMEFINDER_ME,behind her , Dr . Lecter calls out , very agitated,0.8223288914988319,NameDatabase@4411d970
+8,8,THE GIRL,PERSON_NOUN,MOVING ANGLE - THE GIRL'S POV,0.7,null
+8,8,A MAN,PERSON_NOUN,a car - late 60's vintage - parked in the dirt road. A MAN,,0.7,null
+8,8,YOUNG CLARICE,PERSON_ADJ,THE YOUNG CLARICE,0.7,null
+8,8,THE ADULT,PERSON_NOUN,THE ADULT CLARICE,0.7,null
+10,10,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/Phone call, Clarice. It's God.,0.7,NameDatabase@4411d970
+10,10,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Thanks, Ardelia.,0.7,NameDatabase@4411d970
+10,10,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/You missed Fourth Amendment law.,0.7,NameDatabase@4411d970
+10,10,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Pleading with a crazy man, with come,0.7,NameDatabase@4411d970
+10,10,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/Damn. Wish I had time for a social,0.7,NameDatabase@4411d970
+10,10,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(on phone),0.7,NameDatabase@4411d970
+10,10,Lecter,NAMEFINDER_ME,grainy newsphoto of Dr . Lecter , scrawling past , with,0.8081429252452456,NameDatabase@4411d970
+10,10,Crawford,NAMEFINDER_ME,on phone ) Mr . Crawford ? CUT TO :,0.9695507127301053,NameDatabase@4411d970
+11,11,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/It's all there, sir, practically,0.7,NameDatabase@4411d970
+11,11,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(a bit heatedly),0.7,NameDatabase@4411d970
+11,11,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I spent all evening on the mainframe.,0.7,NameDatabase@4411d970
+11,11,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Sir, that's a field job. It's outside,0.7,NameDatabase@4411d970
+11,11,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/To complete and file my report by,0.7,NameDatabase@4411d970
+11,11,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Sir, what is it? There's something,0.7,NameDatabase@4411d970
+11,11,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(startled, upset),0.7,NameDatabase@4411d970
+11,11,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I'm here, sir, I just - I don't know,0.7,NameDatabase@4411d970
+11,11,ANGLE ON CLARICE,SPEAKER_ABOVE_DIALOGUE,ANGLE ON CLARICE/as we hear the loud CLICK of Crawford hanging up. She stares,1.0,NameDatabase@4411d970
+11,11,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Well God damn it! You old creep.,0.7,NameDatabase@4411d970
+11,11,ANGLE ON CRAWFORD,SPEAKER_ABOVE_DIALOGUE,ANGLE ON CRAWFORD/as he flips aside her memo, then rises, wearily. He leaves,1.0,NameDatabase@4411d970
+11,11,Lecter,NAMEFINDER_ME,facility outside Baltimore , where Lecter had his practice . She,0.7630817386787896,NameDatabase@4411d970
+11,11,Lecter,NAMEFINDER_ME,any way about it . Lecter did it to amuse himself,0.7606651081849828,NameDatabase@4411d970
+12,12,BELLA CRAWFORD,SPEAKER_ABOVE_DIALOGUE,BELLA CRAWFORD/who lies in an elevated hospital bed. Nearby are an oxygen,1.0,NameDatabase@4411d970
+13,13,Hester Mofet,NAMEFINDER_ME,the name of "" Miss Hester Mofet . "" CUT TO :,1.0,NameDatabase@4411d970
+14,14,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/So no one's been in here since -,0.7,NameDatabase@4411d970
+14,14,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I won't disturb anything, Mr. Yow, I,0.7,NameDatabase@4411d970
+14,14,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Would you hold these, please?,0.7,NameDatabase@4411d970
+14,14,Yow,NAMEFINDER_ME,disturb anything , Mr . Yow , I promise . Be,0.9421924475429464,NameDatabase@4411d970
+14,14,Yow,NAMEFINDER_ME,no good . Mr . Yow stoops to help , puffing,0.9072180286052955,NameDatabase@4411d970
+14,14,Yow,NAMEFINDER_ME,her headlights . Mr . Yow blinks in the sudden brightness,0.8955669204988812,NameDatabase@4411d970
+14,14,Yow,NAMEFINDER_ME,the flashlight from Mr . Yow , then lies on the,0.9243027402541277,NameDatabase@4411d970
+14,14,an FBI matter...,PERSON_NOUN,if you say this is an FBI matter...,0.7,null
+15,15,Yow,NAMEFINDER_ME,small RUSTLINGS . Mr . Yow ' s chubby face appears,0.9915849963609789,NameDatabase@4411d970
+16,16,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Mr. Yow, if this door should fall,0.7,NameDatabase@4411d970
+16,16,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(beat),0.7,NameDatabase@4411d970
+16,16,Yow,NAMEFINDER_ME,appear nonchalant . Mr . Yow , if this door should,0.9883293569803554,NameDatabase@4411d970
+17,17,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Okay, Mr. Yow...,0.7,NameDatabase@4411d970
+17,17,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/That wasn't me.,0.7,NameDatabase@4411d970
+17,17,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/peers in through the gap, aiming her flashlight.,0.7,NameDatabase@4411d970
+17,17,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Mr. Yow? Oh Mr. Yow...? It looks,0.7,NameDatabase@4411d970
+17,17,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Not yet! - just wait for me.,0.7,NameDatabase@4411d970
+17,17,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/sighs with relief. She takes a couple more FLASHES, then,0.7,NameDatabase@4411d970
+17,17,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/staring at this terrible thing, is pleased to find herself,0.7,NameDatabase@4411d970
+17,17,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Well, Toto, we're not in Kansas,0.7,NameDatabase@4411d970
+17,17,Yow,NAMEFINDER_ME,? Okay , Mr . Yow ... She shines her light,0.8843546406978654,NameDatabase@4411d970
+17,17,Yow,NAMEFINDER_ME,steadies herself . Mr . Yow ? Oh Mr . Yow,0.9613052351402361,NameDatabase@4411d970
+17,17,Yow,NAMEFINDER_ME,Yow ? Oh Mr . Yow ... ? It looks like,0.8879965989503551,NameDatabase@4411d970
+17,17,MAN,PERSON_NOUN,A SEVERED HUMAN HEAD stares back at her, as the beaded,0.7,null
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Hester Mofet... ""The rest of me."",0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/You put those - things in there.,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Thank you.,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/How did -,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(surprised, a beat),0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Why don't you tell me about ""Miss,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/If you didn't kill him, then who,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Wouldn't it have been easier to just,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Scared, at first. Then - exhilarated.,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Because you weren't wasting my time.,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I don't know. Next time I'll have to,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I never thought about it.,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/That doesn't interest me, Doctor.,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I don't know. Is it?,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Who killed Raspail, Doctor...? You,0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(almost a whisper),0.7,NameDatabase@4411d970
+19,19,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Buffalo Bill...?,0.7,NameDatabase@4411d970
+19,19,Lecter,NAMEFINDER_ME,stationed so that Dr . Lecter cannot avoid seeing it .,0.9408767326808285,NameDatabase@4411d970
+19,19,Lecter,NAMEFINDER_ME,... Why , Dr . Lecter ? The food carrier suddenly,0.9501767849011589,NameDatabase@4411d970
+19,19,Mofet,NAMEFINDER_ME,tell me about "" Miss Mofet ? "" You wanted me,0.7066751161628401,NameDatabase@4411d970
+19,19,Benjamin Raspail,NAMEFINDER_ME,) His real name is Benjamin Raspail . A former patient of,1.0,NameDatabase@4411d970
+19,19,Lecter,NAMEFINDER_ME,deal directly . Dr . Lecter slowly turns up the rheostat,0.9735070585523604,NameDatabase@4411d970
+19,19,Jack Crawford,NAMEFINDER_ME,boy . Someone you and Jack Crawford are most anxious to meet,1.0,NameDatabase@4411d970
+19,19,Bill,NAMEFINDER_ME,... ? ( incredulous ) Bill killed him , all those,1.0,NameDatabase@4411d970
+19,19,Lecter,NAMEFINDER_ME,impossible . But Dr . Lecter only smiles , enigmatically .,0.8778875031969583,NameDatabase@4411d970
+19,19,that the cell's,PERSON_NOUN,lights rise, we see that the cell's been stripped bare. Gone,0.7,null
+20,20,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/This stuff's givin' me the munchies.,0.7,NameDatabase@4411d970
+20,20,CODY,SPEAKER_ABOVE_DIALOGUE,CODY/Shit. Left the groceries in the car.,0.7,NameDatabase@4411d970
+20,20,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/'S okay, I'll go.,0.7,NameDatabase@4411d970
+21,21,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/Help you with that?,0.7,NameDatabase@4411d970
+21,21,MAN,SPEAKER_ABOVE_DIALOGUE,MAN/Would you? Thanks.,0.7,NameDatabase@4411d970
+21,21,Catherine,NAMEFINDER_ME,Catherine straightens , with her bag,0.9652370230281845,NameDatabase@4411d970
+21,21,Catherine,NAMEFINDER_ME,lights make yellow pools . Catherine hesitates , then crosses towards,1.0,NameDatabase@4411d970
+21,21,A MAN,PERSON_NOUN,A MAN,0.7,null
+21,21,MAN,PERSON_NOUN,MAN,0.7,null
+21,21,MAN,PERSON_NOUN,MAN (O.S.),0.7,null
+22,22,MAN,SPEAKER_ABOVE_DIALOGUE,MAN/Are you about a size 14?,0.7,NameDatabase@4411d970
+22,22,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/(surprised),0.7,NameDatabase@4411d970
+22,22,MAN,SPEAKER_ABOVE_DIALOGUE,MAN/Good.,0.7,NameDatabase@4411d970
+22,22,MAN,SPEAKER_ABOVE_DIALOGUE,MAN/Good.,0.7,NameDatabase@4411d970
+22,22,MAN,SPEAKER_ABOVE_DIALOGUE,MAN/Gooood...,0.7,NameDatabase@4411d970
+22,22,MAN,PERSON_NOUN,MAN,0.7,null
+22,22,MAN,PERSON_NOUN,MAN,0.7,null
+22,22,MAN,PERSON_NOUN,MAN,0.7,null
+22,22,MAN,PERSON_NOUN,MAN,0.7,null
+23,23,Catherine,NAMEFINDER_ME,ANGLE - CLOSE - on Catherine ' s grocery bag ,,1.0,NameDatabase@4411d970
+24,24,ON THE SCREEN,SPEAKER_ABOVE_DIALOGUE,ON THE SCREEN/successively CLOSER VIEWS of the cut fabric edges, until we,0.8999999999999999,NameDatabase@4411d970
+24,24,ANGLE ON THE DOOR,SPEAKER_ABOVE_DIALOGUE,ANGLE ON THE DOOR/as John Brigham, the gunnery instructor, sticks his head in.,1.0,NameDatabase@4411d970
+24,24,Each,NAMEFINDER_ME,students in the background . Each trainee has his own microscope,0.7327919566808564,NameDatabase@4411d970
+24,24,John Brigham,NAMEFINDER_ME,the same pair ... as John Brigham , the gunnery instructor ,,1.0,NameDatabase@4411d970
+25,25,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Where?,0.7,NameDatabase@4411d970
+25,25,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(thinking quickly),0.7,NameDatabase@4411d970
+25,25,Jack,NAMEFINDER_ME,about a week , and Jack needs somebody that can print,1.0,NameDatabase@4411d970
+26,26,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Sometimes.,0.7,NameDatabase@4411d970
+26,26,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I will... I promise.,0.7,NameDatabase@4411d970
+26,26,Jack,NAMEFINDER_ME,and a weekend bag . Jack ' s pretty tough on,1.0,NameDatabase@4411d970
+26,26,Bella,NAMEFINDER_ME,Bill ... His wife , Bella , is real sick .,1.0,NameDatabase@4411d970
+26,26,Jack,NAMEFINDER_ME,' ve got something ... Jack sees it , I do,1.0,NameDatabase@4411d970
+27,27,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/There's no correlation at all between,0.7,NameDatabase@4411d970
+27,27,The,NAMEFINDER_ME,folder in her lap . The cover reads "" Case File,0.9425801480976865,NameDatabase@4411d970
+27,27,She,NAMEFINDER_ME,is moody , distracted . She hesitates , then opens the,0.7325248734119849,NameDatabase@4411d970
+27,27,Bobby,NAMEFINDER_ME,, are you hot ? Bobby , it ' s too,1.0,NameDatabase@4411d970
+28,28,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(choosing her words,0.7,NameDatabase@4411d970
+28,28,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/What he does with them - takes,0.7,NameDatabase@4411d970
+28,28,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/He's got a real taste for it now.,0.7,NameDatabase@4411d970
+28,28,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(quietly, evenly),0.7,NameDatabase@4411d970
+28,28,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/You haven't said a word today about,0.7,NameDatabase@4411d970
+28,28,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/You knew. You knew from the start,0.7,NameDatabase@4411d970
+28,28,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/He starts this - buzzing in me, in,0.7,NameDatabase@4411d970
+28,28,Lecter,NAMEFINDER_ME,knack "" for Dr . Lecter ? He studies her a,0.942638886605764,NameDatabase@4411d970
+28,28,Lecter,NAMEFINDER_ME,knew from the start that Lecter held the key to this,0.7325831055270163,NameDatabase@4411d970
+28,28,They,NAMEFINDER_ME,mountains in the background . They slow , turn . Number,0.7488401623242421,NameDatabase@4411d970
+28,28,Its,NAMEFINDER_ME,big white frame house . Its sign reads "" Potter Funeral,0.9714988039986819,NameDatabase@4411d970
+28,28,Potter Funeral Home,NAMEFINDER_ME,. Its sign reads "" Potter Funeral Home . "" Two troopers climb,1.0,NameDatabase@4411d970
+29,29,ANGLE ON CLARICE,SPEAKER_ABOVE_DIALOGUE,ANGLE ON CLARICE/staring back at the mourners, hearing the music, as a sense,1.0,NameDatabase@4411d970
+29,29,OLD CLARICE,PERSON_ADJ,THE SAD, 10 YEAR-OLD CLARICE,0.7,null
+29,29,CHILD,PERSON_NOUN,CHILD'S POV,0.7,null
+30,30,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/burning at this slight, is left alone with the troopers, who,0.7,NameDatabase@4411d970
+30,30,ANGLE ON THE OFFICE DOOR,SPEAKER_ABOVE_DIALOGUE,ANGLE ON THE OFFICE DOOR/as, after a few more moments, the sheriff and Crawford emerge.,1.0,NameDatabase@4411d970
+30,30,Sheriff Perkins,NAMEFINDER_ME,hands with the sheriff . Sheriff Perkins ? Jack Crawford , FBI,1.0,NameDatabase@4411d970
+30,30,Jack Crawford,NAMEFINDER_ME,sheriff . Sheriff Perkins ? Jack Crawford , FBI ... This is,1.0,NameDatabase@4411d970
+30,30,Oscar,NAMEFINDER_ME,, addresses his deputy . Oscar , run fetch Dr .,1.0,NameDatabase@4411d970
+30,30,Akin,NAMEFINDER_ME,, run fetch Dr . Akin from the chapel . And,0.6505473766278587,NameDatabase@4411d970
+30,30,Officer Starling. We,PERSON_NOUN,This is Officer Starling. We,0.7,null
+31,31,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/is pulling on a pair of surgical gloves. She raises her voice,,0.7,NameDatabase@4411d970
+31,31,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Gentlemen. You officers and gentlemen!,0.7,NameDatabase@4411d970
+31,31,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/at a side counter, has turned back to her open fingerprint,0.7,NameDatabase@4411d970
+31,31,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(pause; softly),0.7,NameDatabase@4411d970
+31,31,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Well, she's not local. Her ears are,0.7,NameDatabase@4411d970
+31,31,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Two of the fingernails are broken,0.7,NameDatabase@4411d970
+31,31,LAMAR,SPEAKER_ABOVE_DIALOGUE,LAMAR/Them fishhooks are set too close,0.7,NameDatabase@4411d970
+31,31,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Think they were runnin' a trotline?,0.7,NameDatabase@4411d970
+31,31,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(to Crawford),0.7,NameDatabase@4411d970
+31,31,LAMAR,SPEAKER_ABOVE_DIALOGUE,LAMAR/Right... Are you from around here?,0.7,NameDatabase@4411d970
+31,31,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/They do it lots of places.,0.7,NameDatabase@4411d970
+31,31,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/She's got something in her throat.,0.7,NameDatabase@4411d970
+31,31,LAMAR,SPEAKER_ABOVE_DIALOGUE,LAMAR/When a body comes out of the water,,0.7,NameDatabase@4411d970
+31,31,LAMAR,SPEAKER_ABOVE_DIALOGUE,LAMAR/Nawsir, that's a bug cocoon. But how,0.7,NameDatabase@4411d970
+31,31,LAMAR,SPEAKER_ABOVE_DIALOGUE,LAMAR/Yessir, I will. Clarice takes a jar,0.7,NameDatabase@4411d970
+31,31,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I don't know. I didn't see those on,0.7,NameDatabase@4411d970
+31,31,Akin,NAMEFINDER_ME,BENEATH TABLE as Dr . Akin gently lifts aside one of,0.9727075745544369,NameDatabase@4411d970
+31,31,DEAD GIRL,PERSON_NOUN,SIDE ANGLE - CLOSE ON THE DEAD GIRL'S FACE,0.7,null
+31,31,that the small,PERSON_NOUN,as we see that the small room is very crowded with deputies,0.7,null
+32,32,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Thanks, I'm not thirsty.,0.7,NameDatabase@4411d970
+32,32,LAMAR,SPEAKER_ABOVE_DIALOGUE,LAMAR/No, hold it under your chin, there,,0.7,NameDatabase@4411d970
+32,32,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/It matters, Mr. Crawford... Other,0.7,NameDatabase@4411d970
+32,32,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I'm wondering if he's done that before -,0.7,NameDatabase@4411d970
+32,32,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Then have the lab check Raspail's,0.7,NameDatabase@4411d970
+32,32,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Raspail was killed by the same man,0.7,NameDatabase@4411d970
+32,32,Lecter,NAMEFINDER_ME,at her ) Dr . Lecter ' s patient - have,0.8327450719940694,NameDatabase@4411d970
+33,33,CATHERINE MARTIN,SPEAKER_ABOVE_DIALOGUE,CATHERINE MARTIN/looks up at him. She is standing on the cement bottom of the,1.0,NameDatabase@4411d970
+33,33,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/Mister... my family will pay cash.,0.7,NameDatabase@4411d970
+33,33,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/(under her breath),0.7,NameDatabase@4411d970
+33,33,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/Mister, if you let me go, I won't,0.7,NameDatabase@4411d970
+33,33,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/Is that all...? See - see, my mom is,0.7,NameDatabase@4411d970
+33,33,Whatever,NAMEFINDER_ME,family will pay cash . Whatever ransom you ' re askin,0.9593236707222953,NameDatabase@4411d970
+33,33,The,NAMEFINDER_ME,get the hose again . The little dog squirms in his,0.7793686184154044,NameDatabase@4411d970
+33,33,Catherine,NAMEFINDER_ME,- AT PIT BOTTOM as Catherine kneels , turning slightly away,1.0,NameDatabase@4411d970
+33,33,MR. GUMB,PERSON_NOUN,arms, stroking it. This is MR. GUMB, aka ""Buffalo Bill."",0.7,null
+34,34,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/You better come see this.,0.7,NameDatabase@4411d970
+34,34,Ardelia,NAMEFINDER_ME,a thick law book . Ardelia sticks her head in the,1.0,NameDatabase@4411d970
+35,35,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/looks at Ardelia, surprised. Other trainees are drifting,0.7,NameDatabase@4411d970
+35,35,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(whispers),0.7,NameDatabase@4411d970
+35,35,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/Why does she keep repeating the name?,0.7,NameDatabase@4411d970
+35,35,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Somebody's coaching her... They're,0.7,NameDatabase@4411d970
+35,35,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/I don't know whether to say ""I'm,0.7,NameDatabase@4411d970
+35,35,Catherine Martin,NAMEFINDER_ME,filled with a photo of Catherine Martin . TV ANCHOR ( V,1.0,NameDatabase@4411d970
+35,35,Young,NAMEFINDER_ME,of grim calling card . Young Catherine Martin , as we,1.0,NameDatabase@4411d970
+35,35,Catherine Martin,NAMEFINDER_ME,grim calling card . Young Catherine Martin , as we ' ve,1.0,NameDatabase@4411d970
+35,35,Ruth Martin,NAMEFINDER_ME,U . S . Senator Ruth Martin - looks at Ardelia ,,1.0,NameDatabase@4411d970
+35,35,Martin,NAMEFINDER_ME,Just moments ago , Senator Martin made this dramatic personal plea,1.0,NameDatabase@4411d970
+35,35,Catherine,NAMEFINDER_ME,see . Her name is Catherine ... Clarice is moved by,1.0,NameDatabase@4411d970
+35,35,Catherine,NAMEFINDER_ME,trying to make him see Catherine as a person - not,1.0,NameDatabase@4411d970
+35,35,Catherine,NAMEFINDER_ME,beg you - release my Catherine ... as we see (,0.9644129957668142,NameDatabase@4411d970
+35,35,Catherine,NAMEFINDER_ME,taped - off section of Catherine ' s parking lot .,1.0,NameDatabase@4411d970
+35,35,Jack Crawford,NAMEFINDER_ME,STILL TV FOOTAGE ) as Jack Crawford is seen striding towards the,1.0,NameDatabase@4411d970
+35,35,Catherine,NAMEFINDER_ME,towards the front door of Catherine ' s apartment , followed,1.0,NameDatabase@4411d970
+35,35,Burroughs,NAMEFINDER_ME,s apartment , followed by Burroughs and other agents . One,0.6939836493585678,NameDatabase@4411d970
+37,37,Bill,NAMEFINDER_ME,. ) By now , Bill ' s had her for,1.0,NameDatabase@4411d970
+39,39,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/You really don't want to know.,0.7,NameDatabase@4411d970
+40,40,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I try to be a student, Dr. Pilcher.,0.7,NameDatabase@4411d970
+40,40,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(smiles),0.7,NameDatabase@4411d970
+40,40,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/You're sure?,0.7,NameDatabase@4411d970
+40,40,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/And there's no way - no natural way -,0.7,NameDatabase@4411d970
+40,40,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(pause, then softly),0.7,NameDatabase@4411d970
+42,42,CLARICE AND CRAWFORD,SPEAKER_ABOVE_DIALOGUE,CLARICE AND CRAWFORD/sit in swivel seats at the rear, by a big window. Clarice,1.0,NameDatabase@4411d970
+42,42,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/He's already offered to help... What,0.7,NameDatabase@4411d970
+42,42,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/But if he knew we have so little,0.7,NameDatabase@4411d970
+42,42,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I think he means it, this time. I,0.7,NameDatabase@4411d970
+42,42,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Transfer to a new prison. With a,0.7,NameDatabase@4411d970
+42,42,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/You'll back me up with some paperwork?,0.7,NameDatabase@4411d970
+42,42,Burroughs,NAMEFINDER_ME,all CLICKING and HUMMING . Burroughs is talking quietly on a,0.9818702671831164,NameDatabase@4411d970
+42,42,Catherine Martin,NAMEFINDER_ME,much attention . But for Catherine Martin , it all comes down,1.0,NameDatabase@4411d970
+42,42,Bill,NAMEFINDER_ME,cards - asked him for Bill ? He offered to help,1.0,NameDatabase@4411d970
+43,43,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Dr. Chilton, I told you - this is,0.7,NameDatabase@4411d970
+43,43,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I'm acting on instruction, Dr.,0.7,NameDatabase@4411d970
+43,43,Frederick Chilton,NAMEFINDER_ME,We can ' t trust Frederick Chilton , either . He ',1.0,NameDatabase@4411d970
+43,43,Bill,NAMEFINDER_ME,Lecter ' s link to Bill , he ' s go,1.0,NameDatabase@4411d970
+43,43,Chilton,NAMEFINDER_ME,third time ! Dr . Chilton , I told you -,0.8121222657772048,NameDatabase@4411d970
+43,43,the U.S. Attorney's,PERSON_NOUN,This is the U.S. Attorney's number.,0.7,null
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I was your choice, Dr. Lecter. You,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/By the book, he's a sadist.,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Yes.,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/They all were.,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/She had an insect deliberately,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(pause; staring at,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/If you help us find Buffalo Bill in,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Best of all, though - one week a,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Copy of the Buffalo Bill case file,,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/That's just part of the island. It,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Go, Doctor.,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/The death of my father.,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/He was a town marshal... one night,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/No. He was strong, he lasted almost,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Quid pro quo, Doctor.,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(puzzled),0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/No. Tell me why.,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I went to live with my mother's cousin,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Horses - and sheep...,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Two months.,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I - ran away...,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(angrily),0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/No...! Quid pro quo, Doctor.,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/You said - I was very close to the,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/On what basis would they reject him?,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/How would he test?,0.7,NameDatabase@4411d970
+44,44,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(shaken),0.7,NameDatabase@4411d970
+44,44,Billy,NAMEFINDER_ME,feel when you viewed our Billy ' s latest effort ?,0.9272572921238075,NameDatabase@4411d970
+44,44,Bill,NAMEFINDER_ME,you help us find Buffalo Bill in time to save Catherine,1.0,NameDatabase@4411d970
+44,44,Catherine Martin,NAMEFINDER_ME,Bill in time to save Catherine Martin , the Senator promises you,1.0,NameDatabase@4411d970
+44,44,Bill,NAMEFINDER_ME,. Copy of the Buffalo Bill case file , copy of,1.0,NameDatabase@4411d970
+44,44,Martin,NAMEFINDER_ME,file , copy of Senator Martin ' s terms . Her,1.0,NameDatabase@4411d970
+44,44,Catherine,NAMEFINDER_ME,or no , Clarice . Catherine is waiting . Tick -,1.0,NameDatabase@4411d970
+44,44,Tick,NAMEFINDER_ME,. Catherine is waiting . Tick - tock , tick -,0.6955574760001636,NameDatabase@4411d970
+44,44,Billy,NAMEFINDER_ME,into cocoon into beauty ... Billy wants to change , too,1.0,NameDatabase@4411d970
+44,44,Lecter,NAMEFINDER_ME,( puzzled ) Dr . Lecter , there ' s no,0.7808633222713309,NameDatabase@4411d970
+44,44,Billy,NAMEFINDER_ME,' t be surprised if Billy has applied for sex reassignment,1.0,NameDatabase@4411d970
+44,44,Lecter,NAMEFINDER_ME,test ? Suddenly Dr . Lecter snarls , loudly , stretching,0.8417327042707796,NameDatabase@4411d970
+45,45,Moth,NAMEFINDER_ME,Death ' s - head Moth wriggles torturously free . Trembling,0.6787383124182379,NameDatabase@4411d970
+45,45,Fats Waller,NAMEFINDER_ME,is growing even louder : Fats Waller singing "" Bye Bye Baby,1.0,NameDatabase@4411d970
+45,45,Billy,NAMEFINDER_ME,their drawings , especially . Billy ' s house drawings will,1.0,NameDatabase@4411d970
+45,45,Gumb,NAMEFINDER_ME,and there is Mr . Gumb himself . As we APPROACH,0.9821555296636261,NameDatabase@4411d970
+45,45,Gumb,NAMEFINDER_ME,... Next to Mr . Gumb is an antique phonograph -,0.9301991557336889,NameDatabase@4411d970
+45,45,Gumb,NAMEFINDER_ME,As we PASS Mr . Gumb , Precious scurries away from,0.9319834733421949,NameDatabase@4411d970
+45,45,Billy,NAMEFINDER_ME,V . O . ) Billy hates his own identity ,,1.0,NameDatabase@4411d970
+45,45,a big wire,PERSON_NOUN,we see a big wire cage, holding several of the moths. They,0.7,null
+45,45,the gaping circle,PERSON_NOUN,the center of this is the gaping circle of the oubliette.,0.7,null
+46,46,Lecter,NAMEFINDER_ME,- CLOSE ON Dr . Lecter ' s slippered feet ,,0.9826451220164287,NameDatabase@4411d970
+46,46,CHILTON,NAMEFINDER_ME,is a hockey mask . CHILTON ( V . O .,0.661732481395051,NameDatabase@4411d970
+46,46,Lecter,NAMEFINDER_ME,... shows that Dr . Lecter , on the handtruck ,,0.9693660272292334,NameDatabase@4411d970
+46,46,CHILTON,NAMEFINDER_ME,into his open cell . CHILTON ( V . O .,0.6591278598685163,NameDatabase@4411d970
+46,46,that his ankles,PERSON_NOUN,tilted form, we see that his ankles are linked by steel,0.7,null
+47,47,Lecter,NAMEFINDER_ME,Chilton lounges on Dr . Lecter ' s cot , casually,0.9826451220164287,NameDatabase@4411d970
+47,47,Another,NAMEFINDER_ME,on a little pad . Another orderly mops the floor .,0.698800668313995,NameDatabase@4411d970
+47,47,Lecter,NAMEFINDER_ME,it triumphantly at Dr . Lecter . I thought she might,0.9242780395061188,NameDatabase@4411d970
+47,47,Then Crawford,NAMEFINDER_ME,these years , Hannibal . Then Crawford sends his bit of fluff,1.0,NameDatabase@4411d970
+47,47,Lecter,NAMEFINDER_ME,the front of Dr . Lecter ' s mask . You,0.9826451220164287,NameDatabase@4411d970
+47,47,Ruth Martin,NAMEFINDER_ME,Hannibal ... I called Senator Ruth Martin , and she never heard,1.0,NameDatabase@4411d970
+47,47,Lecter,NAMEFINDER_ME,... CLOSE ON Dr . Lecter ' s glittering eyes ,,0.9826451220164287,NameDatabase@4411d970
+47,47,Martin,NAMEFINDER_ME,was a deal with Senator Martin - but there is now,1.0,NameDatabase@4411d970
+47,47,Bill,NAMEFINDER_ME,: if you identify Buffalo Bill , and the girl is,0.7233516906356474,NameDatabase@4411d970
+47,47,Martin,NAMEFINDER_ME,found in time , Senator Martin will have you transferred to,1.0,NameDatabase@4411d970
+47,47,Jack Crawford,NAMEFINDER_ME,' d be out of Jack Crawford ' s reach , forever,1.0,NameDatabase@4411d970
+47,47,Lecter,NAMEFINDER_ME,A beat . Dr . Lecter is silent . Chilton sticks,0.9911757338421634,NameDatabase@4411d970
+47,47,Chilton,NAMEFINDER_ME,. Lecter is silent . Chilton sticks his face INTO SHOT,0.9155698605098531,NameDatabase@4411d970
+47,47,Bill,NAMEFINDER_ME,Homicide . Who is Buffalo Bill ? DR . LECTER (,0.8194140645398951,NameDatabase@4411d970
+48,48,Crawford,NAMEFINDER_ME,- as the very impatient Crawford , clutching a folder ,,0.728812600592429,NameDatabase@4411d970
+48,48,Crawford,NAMEFINDER_ME,hunt here , Mr . Crawford ! Our patients are decent,0.8858058555669529,NameDatabase@4411d970
+48,48,Danielson,NAMEFINDER_ME,real problem . Dr . Danielson , the man we want,0.8633876313737511,NameDatabase@4411d970
+48,48,Doctor,NAMEFINDER_ME,criminal violence . Please , Doctor - time is eating us,0.6529579702196652,NameDatabase@4411d970
+48,48,Danielson,NAMEFINDER_ME,' ve turned away . Danielson enters a cramped , stainless,0.7830028801352666,NameDatabase@4411d970
+48,48,Kimberly Jane Emberg,NAMEFINDER_ME,clearly . Her name is Kimberly Jane Emberg , she was just ID,1.0,NameDatabase@4411d970
+48,48,Catherine Martin,NAMEFINDER_ME,do the same thing to Catherine Martin . DR . DANIELSON That,1.0,NameDatabase@4411d970
+48,48,Crawford,NAMEFINDER_ME,bullying stunt , Mr . Crawford . I was a battlefield,0.9708378283837403,NameDatabase@4411d970
+48,48,Burroughs,NAMEFINDER_ME,put away your picture . Burroughs sticks his head in ,,0.9988223546492532,NameDatabase@4411d970
+48,48,Jack,NAMEFINDER_ME,for Crawford . Phone , Jack . Director Burke . (,1.0,NameDatabase@4411d970
+48,48,Director Burke,NAMEFINDER_ME,. Phone , Jack . Director Burke . ( snaps ) In,0.9773773647669646,NameDatabase@4411d970
+48,48,Burroughs,NAMEFINDER_ME,) In a minute ! Burroughs hurriedly retreats . Crawford strains,0.9848946091937457,NameDatabase@4411d970
+48,48,Crawford,NAMEFINDER_ME,! Burroughs hurriedly retreats . Crawford strains for patience . Look,0.6545457257905958,NameDatabase@4411d970
+48,48,Bill,NAMEFINDER_ME,. If we find Buffalo Bill through your information , I,1.0,NameDatabase@4411d970
+48,48,Crawford,NAMEFINDER_ME,a secret , Mr . Crawford . Truth will out ...,0.9646640535941395,NameDatabase@4411d970
+48,48,Danielson,NAMEFINDER_ME,will focus on Dr . Danielson , over at Johns Hopkins,0.8785265793462375,NameDatabase@4411d970
+48,48,Catherine Martin,NAMEFINDER_ME,on the case - when Catherine Martin floats , when the next,1.0,NameDatabase@4411d970
+48,48,Danielson,NAMEFINDER_ME,good ol ' Dr . Danielson , over at Johns Hopkins,0.8785265793462375,NameDatabase@4411d970
+49,49,Burroughs,NAMEFINDER_ME,on the scrambler phone . Burroughs watches silently . ( on,0.9838241997225666,NameDatabase@4411d970
+50,50,Martin,NAMEFINDER_ME,airborne for Memphis . Senator Martin ' s meeting him at,1.0,NameDatabase@4411d970
+50,50,Jack,NAMEFINDER_ME,airport . ( uneasily ) Jack - did you make some,1.0,NameDatabase@4411d970
+50,50,Jack,NAMEFINDER_ME,to talk about this , Jack . The Senator ' s,1.0,NameDatabase@4411d970
+50,50,Paul Krendler,NAMEFINDER_ME,s mad as hell . Paul Krendler ' s over here from,1.0,NameDatabase@4411d970
+50,50,Jack,NAMEFINDER_ME,' s your call , Jack - but I want it,1.0,NameDatabase@4411d970
+51,51,Burroughs,NAMEFINDER_ME,Burroughs starts to make an objection,0.709448126984481,NameDatabase@4411d970
+52,52,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Chilton has killed her, hasn't he?,0.7,NameDatabase@4411d970
+53,53,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Are you in trouble over this, Mr.,0.7,NameDatabase@4411d970
+53,53,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/If you didn't want me chasing him,,0.7,NameDatabase@4411d970
+53,53,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Lecter is still the key, I know he,0.7,NameDatabase@4411d970
+53,53,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I lied to Lecter. I'll need some,0.7,NameDatabase@4411d970
+53,53,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(hesitates),0.7,NameDatabase@4411d970
+53,53,Martin,NAMEFINDER_ME,. Crawford ? Can Senator Martin do something to you ?,0.9918891763835372,NameDatabase@4411d970
+53,53,Jimmy Hoffa,NAMEFINDER_ME,Starling . If I found Jimmy Hoffa on national TV , I,1.0,NameDatabase@4411d970
+53,53,Bill,NAMEFINDER_ME,Whatever he told me about Bill is just as good now,1.0,NameDatabase@4411d970
+53,53,Martin,NAMEFINDER_ME,tired of toying with Senator Martin , he ' ll talk,1.0,NameDatabase@4411d970
+53,53,Catherine Martin,NAMEFINDER_ME,to get a feel for Catherine Martin . Her apartment , her,1.0,NameDatabase@4411d970
+53,53,Lecter,NAMEFINDER_ME,down there handle Dr . Lecter ? ( grimly ) They,0.6859843134943119,NameDatabase@4411d970
+54,54,OFFICERS PEMBRY AND BOYLE,SPEAKER_ABOVE_DIALOGUE,OFFICERS PEMBRY AND BOYLE/two sturdy, well-armed, veteran prison guards - are checking,0.8999999999999999,NameDatabase@4411d970
+54,54,TWO BLACK STRETCH LIMOUSINES,SPEAKER_ABOVE_DIALOGUE,TWO BLACK STRETCH LIMOUSINES/glide smoothly into the hangar, stop. Secret Service agents,0.8999999999999999,NameDatabase@4411d970
+54,54,Lecter,NAMEFINDER_ME,CLOSE ON Dr . Lecter . Behind his mask ,,0.8988593522084507,NameDatabase@4411d970
+54,54,Lecter,NAMEFINDER_ME,- are checking Dr . Lecter ' s restraints with clever,0.9826451220164287,NameDatabase@4411d970
+54,54,Lecter,NAMEFINDER_ME,to Memphis , Dr . Lecter . I ' m Officer,0.9242780395061188,NameDatabase@4411d970
+54,54,Lecter,NAMEFINDER_ME,unstraps and removes Dr . Lecter ' s mask . Senator,0.9826451220164287,NameDatabase@4411d970
+54,54,Martin,NAMEFINDER_ME,' s mask . Senator Martin , meet Dr . Hannibal,0.6976804770558395,NameDatabase@4411d970
+54,54,Hannibal Lecter,NAMEFINDER_ME,Martin , meet Dr . Hannibal Lecter . They stare at one,1.0,NameDatabase@4411d970
+54,54,Lecter,NAMEFINDER_ME,SEN . MARTIN Dr . Lecter , I ' ve brought,0.9803345818579265,NameDatabase@4411d970
+54,54,Catherine,NAMEFINDER_ME,t waste your time and Catherine ' s time bargaining for,1.0,NameDatabase@4411d970
+54,54,Jack Crawford,NAMEFINDER_ME,Clarice Starling and that awful Jack Crawford have wasted far too much,1.0,NameDatabase@4411d970
+54,54,Paul,NAMEFINDER_ME,You have my word . Paul ? Krendler raises a pad,1.0,NameDatabase@4411d970
+54,54,Krendler,NAMEFINDER_ME,my word . Paul ? Krendler raises a pad , poised,0.7004063800241404,NameDatabase@4411d970
+54,54,Bill,NAMEFINDER_ME,. DR . LECTER Buffalo Bill ' s real name is,1.0,NameDatabase@4411d970
+54,54,William Rubin,NAMEFINDER_ME,' s real name is William Rubin . I met him just,1.0,NameDatabase@4411d970
+54,54,Benjamin Raspail,NAMEFINDER_ME,1980 , by my patient Benjamin Raspail . They were lovers ,,1.0,NameDatabase@4411d970
+54,54,Billy,NAMEFINDER_ME,thought if I could cure Billy , then Billy ' d,1.0,NameDatabase@4411d970
+54,54,Billy,NAMEFINDER_ME,could cure Billy , then Billy ' d be safe from,1.0,NameDatabase@4411d970
+54,54,Martin,NAMEFINDER_ME,. DR . LECTER Senator Martin ... ! You can ',1.0,NameDatabase@4411d970
+54,54,Jack Crawford,NAMEFINDER_ME,You can ' t trust Jack Crawford or Clarice Starling . It,1.0,NameDatabase@4411d970
+54,54,Love,NAMEFINDER_ME,, and Senator ... ? Love you suit . DISSOLVE TO,0.9028129071288933,NameDatabase@4411d970
+54,54,BLACK STRETCH LIMOUSINES,PERSON_ADJ,TWO BLACK STRETCH LIMOUSINES,0.7,null
+54,54,Officer Pembry.,PERSON_NOUN,Officer Boyle, this is Officer Pembry.,0.7,null
+54,54,that we're in,PERSON_NOUN,as we see that we're in a vast, dusty hangar. Parked to one,0.7,null
+55,55,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/is hunched over in concentration. The plastic toilet bucket,0.7,NameDatabase@4411d970
+55,55,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/Get my legs round your neck, you,0.7,NameDatabase@4411d970
+55,55,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/Okay, Precious. Time for a treat...,0.7,NameDatabase@4411d970
+55,55,DOWN IN THE PIT,SPEAKER_ABOVE_DIALOGUE,DOWN IN THE PIT/Catherine swings the bucket again, trying another cast.,0.8999999999999999,NameDatabase@4411d970
+55,55,PRECIOUS TROTS UP,SPEAKER_ABOVE_DIALOGUE,PRECIOUS TROTS UP/then pauses, staring curiously towards...,0.7,NameDatabase@4411d970
+55,55,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/staring upwards, pulls again, even so gently, at the string.,0.7,NameDatabase@4411d970
+55,55,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/(softly),0.7,NameDatabase@4411d970
+55,55,PRECIOUS,SPEAKER_ABOVE_DIALOGUE,PRECIOUS/edges reluctantly closer... then suddenly rushes in, seizing,0.7,NameDatabase@4411d970
+55,55,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/stares desperately, unable to see how she's doing.,0.7,NameDatabase@4411d970
+55,55,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/Hang on, boy... hang on...,0.7,NameDatabase@4411d970
+55,55,PRECIOUS,SPEAKER_ABOVE_DIALOGUE,PRECIOUS/still fights for the bone, GROWLING, as the bucket rocks,0.7,NameDatabase@4411d970
+55,55,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/crouches, covering her head as the bucket bounces off her.,0.7,NameDatabase@4411d970
+55,55,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/Nooooo...!,0.7,NameDatabase@4411d970
+55,55,THE LITTLE DOG,SPEAKER_ABOVE_DIALOGUE,THE LITTLE DOG/furious, BARKS down at her, then trots away in disgust.,0.8999999999999999,NameDatabase@4411d970
+55,55,CLOSE ON CATHERINE,SPEAKER_ABOVE_DIALOGUE,CLOSE ON CATHERINE/as she sinks to the cold cement. She slaps aside the foil,0.8999999999999999,NameDatabase@4411d970
+55,55,Catherine,NAMEFINDER_ME,sets off to investigate . Catherine swings the bucket again ,,1.0,NameDatabase@4411d970
+55,55,Catherine,NAMEFINDER_ME,away . It twitches as Catherine tugs on the string ,,0.9053304818653899,NameDatabase@4411d970
+55,55,Catherine,NAMEFINDER_ME,away with it , but Catherine is pulling her towards the,1.0,NameDatabase@4411d970
+56,56,Martin,NAMEFINDER_ME,framed photo of Sen . Martin and Catherine , held in,1.0,NameDatabase@4411d970
+56,56,Catherine,NAMEFINDER_ME,of Sen . Martin and Catherine , held in Clarice ',1.0,NameDatabase@4411d970
+56,56,Catherine,NAMEFINDER_ME,young STATE TROOPER sitting in Catherine ' s easy chair .,1.0,NameDatabase@4411d970
+57,57,Catherine,NAMEFINDER_ME,breakfast counter , attached to Catherine ' s phone . Two,1.0,NameDatabase@4411d970
+60,60,Catherine,NAMEFINDER_ME,Clarice wriggles out from under Catherine ' s bed . She,1.0,NameDatabase@4411d970
+61,61,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I'm Clarice Starling, Senator. FBI.,0.7,NameDatabase@4411d970
+61,61,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Sir, Mr. Crawford instructed me -,0.7,NameDatabase@4411d970
+61,61,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(stubbornly),0.7,NameDatabase@4411d970
+61,61,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Mr. Krendler... Dr. Lecter trusts,0.7,NameDatabase@4411d970
+61,61,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Sir, doesn't this ""William Rubin"",0.7,NameDatabase@4411d970
+61,61,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Yes sir. I can find it by myself.,0.7,NameDatabase@4411d970
+61,61,Martin,NAMEFINDER_ME,cries out softly . Senator Martin is revealed , staring at,1.0,NameDatabase@4411d970
+61,61,Paul,NAMEFINDER_ME,... ( calls out ) Paul ? Would you come in,1.0,NameDatabase@4411d970
+61,61,Krendler,NAMEFINDER_ME,here , please ... ? Krendler enters from the hallway ,,0.8849342161197248,NameDatabase@4411d970
+61,61,Krendler,NAMEFINDER_ME,Attorney General , Mr . Krendler . Paul , this is,0.9703529106609818,NameDatabase@4411d970
+61,61,Paul,NAMEFINDER_ME,, Mr . Krendler . Paul , this is the trainee,1.0,NameDatabase@4411d970
+61,61,Jack Crawford,NAMEFINDER_ME,this is the trainee that Jack Crawford sent to Lecter ... She,1.0,NameDatabase@4411d970
+61,61,Krendler,NAMEFINDER_ME,hurries from the room . Krendler shuts the door behind her,0.673738948142565,NameDatabase@4411d970
+61,61,Crawford,NAMEFINDER_ME,. Sir , Mr . Crawford instructed me - Your instructions,0.9988910676200282,NameDatabase@4411d970
+61,61,Jack Crawford,NAMEFINDER_ME,m giving you now . Jack Crawford answers to the Director ,,1.0,NameDatabase@4411d970
+61,61,Crawford,NAMEFINDER_ME,me . My God , Crawford ' s losing it ...,0.7131934255160809,NameDatabase@4411d970
+61,61,Krendler,NAMEFINDER_ME,turns back . Mr . Krendler ... Dr . Lecter trusts,0.7997485594222832,NameDatabase@4411d970
+61,61,Lecter,NAMEFINDER_ME,. Krendler ... Dr . Lecter trusts me . Or at,0.9775299385989458,NameDatabase@4411d970
+61,61,Buffalo Bill,NAMEFINDER_ME,- Lecter has already named Buffalo Bill . Clarice reacts , surprised,0.9875337212221353,NameDatabase@4411d970
+61,61,Krendler,NAMEFINDER_ME,Clarice reacts , surprised . Krendler takes a folded computer sheet,0.765769022182962,NameDatabase@4411d970
+61,61,William Rubin,NAMEFINDER_ME,doesn ' t this "" William Rubin "" strike you as -,1.0,NameDatabase@4411d970
+61,61,the trainee that,PERSON_NOUN,this is the trainee that Jack Crawford,0.7,null
+62,62,Lecter,NAMEFINDER_ME,of papers - Dr . Lecter ' s drawings - she,0.8327450719940694,NameDatabase@4411d970
+62,62,Frederick Chilton,NAMEFINDER_ME,her pause . Dr . Frederick Chilton in a sea of interviewers,1.0,NameDatabase@4411d970
+63,63,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I just left him.,0.7,NameDatabase@4411d970
+63,63,Krendler,NAMEFINDER_ME,Are you with Mr . Krendler ' s people ? I,0.8937511648096421,NameDatabase@4411d970
+63,63,Lecter,NAMEFINDER_ME,SGT . TATE Access to Lecter is strictly limited . We,0.6811470694177448,NameDatabase@4411d970
+64,64,MURRAY,SPEAKER_ABOVE_DIALOGUE,MURRAY/Every cop in Tennessee wants a look,0.7,NameDatabase@4411d970
+64,64,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(beat),0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Yes, Officer Pembry. I've questioned,0.7,NameDatabase@4411d970
+65,65,INSIDE THE CAGE,SPEAKER_ABOVE_DIALOGUE,INSIDE THE CAGE/a cot and a small table, each bolted to the floor, and a,0.8999999999999999,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I thought you might want your drawings,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Nobody sent me. I came on my own.,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Dr. Lecter, you find out everything.,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I think you were telling me the truth,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Then tell me how.,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/He kills w-,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Anger, social resentment, sexual,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/No. We just -,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/All right, then tell me how -,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Dr. Lecter, when there's time I'll -,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Later, listen, I'll -,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/And - one morning I just - ran away...,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Early. Still dark.,0.7,NameDatabase@4411d970
+65,65,BACK TO THE ADULT CLARICE,SPEAKER_ABOVE_DIALOGUE,BACK TO THE ADULT CLARICE/staring into the distance, shaken, still trembling from the,0.8999999999999999,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Yes...! They were screaming.,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/No. First I tried to free them... I,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I took one lamb. And I ran away, as,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Yes...,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Yes! I don't know...! I don't know.,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(a whisper),0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(moving closer to the,0.7,NameDatabase@4411d970
+65,65,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/hugging the case file to her chest, stares back at him as,0.7,NameDatabase@4411d970
+65,65,Lecter,NAMEFINDER_ME,unrolled pile of Dr . Lecter ' s drawings . You,0.9826451220164287,NameDatabase@4411d970
+65,65,Lecter,NAMEFINDER_ME,a toilet . Dr . Lecter sits at the table ,,0.9009252046201445,NameDatabase@4411d970
+65,65,Bill,NAMEFINDER_ME,her , studying the Buffalo Bill case file . He now,0.9978243773996379,NameDatabase@4411d970
+65,65,Crawford,NAMEFINDER_ME,very thoughtful ... Or did Crawford send you here for one,0.8076150749343556,NameDatabase@4411d970
+65,65,Catherine,NAMEFINDER_ME,it ? Pity for poor Catherine . Tick - tock ...,1.0,NameDatabase@4411d970
+65,65,Tick,NAMEFINDER_ME,Pity for poor Catherine . Tick - tock ... He spins,0.8090933629658512,NameDatabase@4411d970
+65,65,Lecter,NAMEFINDER_ME,in sight . Dr . Lecter , you find out everything,0.9797818323438421,NameDatabase@4411d970
+65,65,William Rubin,NAMEFINDER_ME,have talked with this "" William Rubin "" , even once ,,1.0,NameDatabase@4411d970
+65,65,Lecter,NAMEFINDER_ME,that ranch ? Dr . Lecter , when there ' s,0.9412938870559354,NameDatabase@4411d970
+65,65,Lecter,NAMEFINDER_ME,. We see Dr . Lecter , over her shoulder ,,0.9753668253390498,NameDatabase@4411d970
+65,65,Catherine,NAMEFINDER_ME,you think if you saved Catherine , you could make them,1.0,NameDatabase@4411d970
+65,65,Catherine,NAMEFINDER_ME,Do you think , if Catherine lives , you won ',1.0,NameDatabase@4411d970
+65,65,Lecter,NAMEFINDER_ME,his name , Dr . Lecter . DR . LECTER Dr,0.8645957971946345,NameDatabase@4411d970
+65,65,Chilton,NAMEFINDER_ME,DR . LECTER Dr . Chilton ... I believe you know,0.8606648989195307,NameDatabase@4411d970
+65,65,Sorry,NAMEFINDER_ME,Let ' s go . Sorry , ma ' a m,0.924666276941513,NameDatabase@4411d970
+65,65,Lecter,NAMEFINDER_ME,- MOVING as Dr . Lecter , head cocked in a,0.9346250290540097,NameDatabase@4411d970
+65,65,THE CHILD,PERSON_NOUN,THE CHILD RISES,0.7,null
+65,65,THE CHILD,PERSON_NOUN,HIGH ANGLES (2ND STORY) - THE CHILD'S POV,0.7,null
+65,65,LITTLE GIRL,PERSON_NOUN,THE LITTLE GIRL,0.7,null
+65,65,LITTLE GIRL,PERSON_NOUN,THE LITTLE GIRL,0.7,null
+65,65,LITTLE GIRL,PERSON_NOUN,THE LITTLE GIRL'S POV,0.7,null
+65,65,THE ADULT,PERSON_NOUN,BACK TO THE ADULT CLARICE,0.7,null
+65,65,every day. Don't,PERSON_NOUN,what we see every day. Don't you,0.7,null
+65,65,all the time,PERSON_NOUN,Clarice. This is all the time you'll,0.7,null
+65,65,Dr. Lecter,PERSON_NOUN,child's shock. We see Dr. Lecter, over her shoulder, studying,0.7,null
+66,66,Gumb,NAMEFINDER_ME,wanting your - Mr . Gumb ' s hand reaches INTO,0.9915849963609789,NameDatabase@4411d970
+66,66,Bach,NAMEFINDER_ME,UPCUT - Glenn Gould playing Bach ' s Goldberg Variations ...,0.7901796611917623,NameDatabase@4411d970
+66,66,MAN,PERSON_NOUN,A thin FOREMAN in a flowery shirt, sees him approaching. He,0.7,null
+66,66,MAN,PERSON_NOUN,FOREMAN,0.7,null
+66,66,MAN,PERSON_NOUN,FOREMAN,0.7,null
+66,66,MAN,PERSON_NOUN,FOREMAN,0.7,null
+66,66,MAN,PERSON_NOUN,FOREMAN,0.7,null
+66,66,MAN,PERSON_NOUN,FOREMAN,0.7,null
+68,68,IN THE CELL,SPEAKER_ABOVE_DIALOGUE,IN THE CELL/the BACH is issuing from the cassette player. Beside it, on,1.0,NameDatabase@4411d970
+68,68,INSIDE THE SCREEN,SPEAKER_ABOVE_DIALOGUE,INSIDE THE SCREEN/Dr. Lecter sits fully clothed on the toilet - swaying,0.8999999999999999,NameDatabase@4411d970
+68,68,IN EXTREME CLOSEUP,SPEAKER_ABOVE_DIALOGUE,IN EXTREME CLOSEUP/he is holding the pocket clip from Prentice's disassembled,0.7,NameDatabase@4411d970
+68,68,IN EXTREME CLOSEUP,SPEAKER_ABOVE_DIALOGUE,IN EXTREME CLOSEUP/the straight end of the clip now forms a tiny right angle,,0.7,NameDatabase@4411d970
+68,68,OUTSIDE THE CELL,SPEAKER_ABOVE_DIALOGUE,OUTSIDE THE CELL/Pembry and Boyle turn as the toilet FLUSHES, and Dr. Lecter,0.8999999999999999,NameDatabase@4411d970
+68,68,VERY CLOSE ON,SPEAKER_ABOVE_DIALOGUE,VERY CLOSE ON/...Dr. Lecter's hands, outside the bars, as the makeshift,0.8999999999999999,NameDatabase@4411d970
+68,68,LOW ANGLE ON PEMBRY,SPEAKER_ABOVE_DIALOGUE,LOW ANGLE ON PEMBRY/as he crawls, with torturous slowness, towards the command,0.8999999999999999,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,as he approaches Dr . Lecter ' s cell . (,0.9826451220164287,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,the pile of Dr . Lecter ' s drawings . The,0.9826451220164287,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,the zoo ? Dr . Lecter sits fully clothed on the,0.7776274467884631,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,FLUSHES , and Dr . Lecter reappears , looking jaunty .,0.9829949171588793,NameDatabase@4411d970
+68,68,Doc,NAMEFINDER_ME,looking jaunty . Okay , Doc , grab some floor .,0.9278838147781118,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,as lunchtime . Dr . Lecter sits on the floor ,,0.8961798663073576,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,to squat behind Dr . Lecter . He tugs his hands,0.9188378579435608,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,on . ... Dr . Lecter ' s hands , outside,0.9826451220164287,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,turns back towards Dr . Lecter , stooping to pick up,0.9731407069787208,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,the tray when Dr . Lecter ' s hand darts INTO,0.9826451220164287,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,grinning face of Dr . Lecter - who just as quickly,0.9727881459246186,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,riot baton ... Dr . Lecter smashing against the cell door,0.9443363983804528,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,stares at ... Dr . Lecter ' s bared teeth ,,0.9826451220164287,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,towards him ... Dr . Lecter gripping Pembry ' s face,0.9696730452652574,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,dropping it ... Dr . Lecter yanking the mace can and,0.9704811054755532,NameDatabase@4411d970
+68,68,Lecter,NAMEFINDER_ME,, seeing ... Dr . Lecter standing over him , with,0.9968781858807302,NameDatabase@4411d970
+68,68,Lecter's shadowy form,PERSON_NOUN,Beyond the table, we see Lecter's shadowy form, seated behind,0.7,null
+69,69,Tate,NAMEFINDER_ME,nearby stairwell . Sgt . Tate jumps to his feet ,,0.9156531267895818,NameDatabase@4411d970
+69,69,Bobby,NAMEFINDER_ME,on your outside posts . Bobby , get the vests .,1.0,NameDatabase@4411d970
+69,69,Howard,NAMEFINDER_ME,the vests . Rainey , Howard , cover that fucking elevator,1.0,NameDatabase@4411d970
+69,69,Tate,NAMEFINDER_ME,at 3 . Sgt . Tate lifts the microphone again .,0.9232451762608306,NameDatabase@4411d970
+70,70,Tate,NAMEFINDER_ME,HIGH ANGLE on Sgt . Tate as he leads a five,0.985769559995108,NameDatabase@4411d970
+72,72,IN THE CELL,SPEAKER_ABOVE_DIALOGUE,IN THE CELL/a cop angrily punches OFF the music. Jacobs kneels with his,1.0,NameDatabase@4411d970
+72,72,AT THE OTHER BODY,SPEAKER_ABOVE_DIALOGUE,AT THE OTHER BODY/a cop gently removes a revolver from the bloody fist. Murray,,0.8999999999999999,NameDatabase@4411d970
+72,72,MURRAY,SPEAKER_ABOVE_DIALOGUE,MURRAY/This one's alive!,0.7,NameDatabase@4411d970
+72,72,MURRAY,SPEAKER_ABOVE_DIALOGUE,MURRAY/What's his name, Sarge?,0.7,NameDatabase@4411d970
+72,72,Tate,NAMEFINDER_ME,the glass to shatter , Tate following his gun inside ,,0.9053902036257503,NameDatabase@4411d970
+72,72,Jacobs,NAMEFINDER_ME,punches OFF the music . Jacobs kneels with his fingers on,0.734739903841806,NameDatabase@4411d970
+72,72,Murray,NAMEFINDER_ME,from the bloody fist . Murray , the young patrolman ,,1.0,NameDatabase@4411d970
+72,72,Tate,NAMEFINDER_ME,one ' s alive ! Tate crosses , kneels to see,0.9736903488554155,NameDatabase@4411d970
+72,72,Murray,NAMEFINDER_ME,to see for himself . Murray looks green . SGT .,0.9217167214717642,NameDatabase@4411d970
+72,72,Lecter,NAMEFINDER_ME,' s read bad . Lecter is missing and armed -,0.7042879150809226,NameDatabase@4411d970
+74,74,MURRAY,SPEAKER_ABOVE_DIALOGUE,MURRAY/You're just fine, Pembry, lookin',0.7,NameDatabase@4411d970
+74,74,Young Murray,NAMEFINDER_ME,pulse at the neck . Young Murray crouches , sickened , gripping,1.0,NameDatabase@4411d970
+75,75,Tate,NAMEFINDER_ME,Sgt . Tate , riding down with Jacobs,0.7670522109344977,NameDatabase@4411d970
+75,75,Jacobs,NAMEFINDER_ME,Tate , riding down with Jacobs , has his radio out,0.9093323194792473,NameDatabase@4411d970
+75,75,Jacobs,NAMEFINDER_ME,his cheek . He and Jacobs stare at each other .,0.831301784067861,NameDatabase@4411d970
+75,75,Tate,NAMEFINDER_ME,service hatch . Sgt . Tate motions for silence , as,0.8265089457957957,NameDatabase@4411d970
+76,76,Tate,NAMEFINDER_ME,elevator doors open , and Tate and Jacobs hurry out ,,0.965734750418726,NameDatabase@4411d970
+76,76,Jacobs,NAMEFINDER_ME,open , and Tate and Jacobs hurry out , stepping quickly,0.8874388039882959,NameDatabase@4411d970
+76,76,Tate,NAMEFINDER_ME,quickly to the side . Tate reaches back in and -,0.9677874511280412,NameDatabase@4411d970
+76,76,Tate,NAMEFINDER_ME,them , curious , as Tate frantically pushes them aside ,,0.8188089110087432,NameDatabase@4411d970
+77,77,IN THE MIRROR,SPEAKER_ABOVE_DIALOGUE,IN THE MIRROR/the green figure shows no movement.,1.0,NameDatabase@4411d970
+77,77,ANGLE ON THE COPS AGAIN,SPEAKER_ABOVE_DIALOGUE,ANGLE ON THE COPS AGAIN/as Peterson mutters to Kubell.,1.0,NameDatabase@4411d970
+77,77,VERY CLOSE ON,SPEAKER_ABOVE_DIALOGUE,VERY CLOSE ON/The figure below, as Kubell's gunshot ROARS, echoing hugely,0.8999999999999999,NameDatabase@4411d970
+77,77,Peterson,NAMEFINDER_ME,up to the edge , Peterson extends a mirror , on,0.8850129870157706,NameDatabase@4411d970
+77,77,Peterson,NAMEFINDER_ME,Then take him out . Peterson nods to Kubell , who,0.8851115814772831,NameDatabase@4411d970
+77,77,Peterson,NAMEFINDER_ME,ON the flashlight , as Peterson shouts down the shaft .,0.6715849032765687,NameDatabase@4411d970
+77,77,Johnny,NAMEFINDER_ME,No movement . Okay , Johnny , hold your fire ...,1.0,NameDatabase@4411d970
+78,78,Tate,NAMEFINDER_ME,, from both sides . Tate crouches next to the SWAT,0.8298833283887499,NameDatabase@4411d970
+78,78,the back of,PERSON_NOUN,at the waist. We see the back of the head.,0.7,null
+80,80,Lecter,NAMEFINDER_ME,THROUGH AMBULANCE WINDSHIELD Dr . Lecter ' s face is slowly,0.8327450719940694,NameDatabase@4411d970
+84,84,Lecter,NAMEFINDER_ME,the face of Dr . Lecter . He smiles his terrible,0.9188378579435608,NameDatabase@4411d970
+87,87,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/In the parking garage at Memphis,0.7,NameDatabase@4411d970
+87,87,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/No. He won't come after me.,0.7,NameDatabase@4411d970
+87,87,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/Why not?,0.7,NameDatabase@4411d970
+87,87,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(bitterly),0.7,NameDatabase@4411d970
+87,87,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/Clarice - you did the best anybody,0.7,NameDatabase@4411d970
+87,87,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/The worst part - the thing that's,0.7,NameDatabase@4411d970
+87,87,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/Lecter said a lot of things.,0.7,NameDatabase@4411d970
+87,87,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(shakes her head),0.7,NameDatabase@4411d970
+87,87,Bill,NAMEFINDER_ME,hair wet . The Buffalo Bill case file , a thick,1.0,NameDatabase@4411d970
+87,87,Catherine Martin,NAMEFINDER_ME,best anybody could have for Catherine Martin . You stuck your neck,1.0,NameDatabase@4411d970
+87,87,Bill,NAMEFINDER_ME,me crazy - is that Bill is right in front of,1.0,NameDatabase@4411d970
+87,87,Lecter,NAMEFINDER_ME,touching the case file ) Lecter said , everything I need,0.8387709707623424,NameDatabase@4411d970
+87,87,Lecter,NAMEFINDER_ME,, in these pages ... Lecter said a lot of things,0.9186358161950982,NameDatabase@4411d970
+88,88,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/(surprised),0.7,NameDatabase@4411d970
+88,88,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/""Desperately random."" What does he,0.7,NameDatabase@4411d970
+88,88,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/Not random at all, maybe. Like there's,0.7,NameDatabase@4411d970
+88,88,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/But there is no pattern. There's no,0.7,NameDatabase@4411d970
+88,88,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/Well, except for the one girl.,0.7,NameDatabase@4411d970
+88,88,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(beat),0.7,NameDatabase@4411d970
+88,88,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/The one that was weighted down. Where,0.7,NameDatabase@4411d970
+88,88,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Fredrica Bimmel, from Belvedere,,0.7,NameDatabase@4411d970
+88,88,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/'Cause she didn't drift. He weighted,0.7,NameDatabase@4411d970
+88,88,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/But why? He didn't weight the others.,0.7,NameDatabase@4411d970
+88,88,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/The first, what the hell did Lecter,0.7,NameDatabase@4411d970
+88,88,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/""- every day."",0.7,NameDatabase@4411d970
+88,88,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/(softly),0.7,NameDatabase@4411d970
+88,88,Lecter,NAMEFINDER_ME,inked words in Dr . Lecter ' s precise , elegant,0.9826451220164287,NameDatabase@4411d970
+88,88,Hannibal Lecter,NAMEFINDER_ME,bad liar ? Ta ... Hannibal Lecter . as Clarice looks up,1.0,NameDatabase@4411d970
+88,88,Fred,NAMEFINDER_ME,Where is she ... ? Fred something . They search among,1.0,NameDatabase@4411d970
+88,88,Lecter,NAMEFINDER_ME,, what the hell did Lecter say about ... "" First,0.8292482240189135,NameDatabase@4411d970
+89,89,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Maybe he lives in this, this,0.7,NameDatabase@4411d970
+89,89,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/But then he had to cover up, make,0.7,NameDatabase@4411d970
+89,89,Jack -,NAMEFINDER_ME,in custody in Baltimore ! Jack - You sent in a green,1.0,NameDatabase@4411d970
+89,89,Crawford,NAMEFINDER_ME,struggle to regain composure . Crawford , who was at the,0.8469243848753516,NameDatabase@4411d970
+89,89,Jack,NAMEFINDER_ME,hearing . ( pause ) Jack ... you ' re ordered,1.0,NameDatabase@4411d970
+89,89,Jack,NAMEFINDER_ME,I ' m sorry , Jack ... Go home . Take,1.0,NameDatabase@4411d970
+89,89,Bella,NAMEFINDER_ME,home . Take care of Bella . Clarice and Crawford stare,1.0,NameDatabase@4411d970
+89,89,pending a reevaluation,PERSON_NOUN,This is pending a reevaluation of,0.7,null
+90,90,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/All his victims are women... His,0.7,NameDatabase@4411d970
+90,90,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/You do until six p.m.,0.7,NameDatabase@4411d970
+90,90,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/But not from this angle. Not thinking,0.7,NameDatabase@4411d970
+90,90,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/But I just became a private citizen.,0.7,NameDatabase@4411d970
+90,90,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/He's going to kill her, Mr. Crawford.,0.7,NameDatabase@4411d970
+90,90,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Thank you.,0.7,NameDatabase@4411d970
+90,90,Catherine,NAMEFINDER_ME,, a long moment . Catherine ' s life . Clarice,1.0,NameDatabase@4411d970
+90,90,Fats Waller SINGING,NAMEFINDER_ME,- the scratchy recording of Fats Waller SINGING , as we ... CUT,1.0,NameDatabase@4411d970
+91,91,REVERSE ANGLE ON CATHERINE,SPEAKER_ABOVE_DIALOGUE,REVERSE ANGLE ON CATHERINE/crouched to one side, clutching the dog to her chest. Seeing,1.0,NameDatabase@4411d970
+91,91,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/Get me a telephone. Lower it down to,0.7,NameDatabase@4411d970
+91,91,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/You shoot motherfucker you better,0.7,NameDatabase@4411d970
+91,91,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/Back off, you son of a bitch! Back,0.7,NameDatabase@4411d970
+91,91,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/That's better... Now get me a live,0.7,NameDatabase@4411d970
+91,91,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/begins shaking, hands and arms twitching uncontrollably. She,0.7,NameDatabase@4411d970
+91,91,Gumb,NAMEFINDER_ME,record , as Mr . Gumb ' s fingers lift away,0.9915849963609789,NameDatabase@4411d970
+91,91,Gumb,NAMEFINDER_ME,cage , as Mr . Gumb ' s fingers search through,0.9915849963609789,NameDatabase@4411d970
+91,91,Gumb,NAMEFINDER_ME,alarm has entered Mr . Gumb ' s voice . MR,0.9915849963609789,NameDatabase@4411d970
+91,91,Gumb,NAMEFINDER_ME,LOW ANGLE on Mr . Gumb , wearing the kimono ,,0.9957945692353859,NameDatabase@4411d970
+91,91,Gumb,NAMEFINDER_ME,PIT OPENING Towards Mr . Gumb , as he stops at,0.9890275557442828,NameDatabase@4411d970
+91,91,Catherine,NAMEFINDER_ME,the pit , we hear Catherine ' s voice . CATHERINE,1.0,NameDatabase@4411d970
+91,91,Gumb,NAMEFINDER_ME,of shit . Mr . Gumb ' s fist flies to,0.9915849963609789,NameDatabase@4411d970
+91,91,Gumb,NAMEFINDER_ME,PIT BOTTOM as Mr . Gumb ' s dark shape leans,0.9915849963609789,NameDatabase@4411d970
+91,91,Gumb,NAMEFINDER_ME,chest . Seeing Mr . Gumb , the dog squirms frantically,0.9887145217664238,NameDatabase@4411d970
+91,91,Gumb,NAMEFINDER_ME,dog . on Mr . Gumb , as , with a,0.9890275557442828,NameDatabase@4411d970
+91,91,Catherine,NAMEFINDER_ME,as he takes aim . Catherine yanks the dog up ,,1.0,NameDatabase@4411d970
+91,91,Gumb,NAMEFINDER_ME,off ! as Mr . Gumb cries out again - a,0.9809976379877673,NameDatabase@4411d970
+93,93,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/approaches him, and the man lowers his hammer. He has red-,0.7,NameDatabase@4411d970
+93,93,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Mr. Bimmel...?,0.7,NameDatabase@4411d970
+94,94,Bimmel,NAMEFINDER_ME,LOOKING DOWN as Mr . Bimmel leads Clarice up a steep,0.9159953963432603,NameDatabase@4411d970
+95,95,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/turns, absorbing nuances. There is loneliness here, an echo,0.7,NameDatabase@4411d970
+95,95,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/picks up the cat, scratches behind his ears. She glances up.,0.7,NameDatabase@4411d970
+95,95,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/sitting at the desk, turns the pages of a high school,0.7,NameDatabase@4411d970
+95,95,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/kneeling by the old Decca record player, flips through LPs,0.7,NameDatabase@4411d970
+95,95,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/pulling a string to light up the closet. She is surprised,0.7,NameDatabase@4411d970
+95,95,FAVORING THE SEWING MACHINE,SPEAKER_ABOVE_DIALOGUE,FAVORING THE SEWING MACHINE/as Clarice turns, looks towards it. She hangs the dress on,0.8999999999999999,NameDatabase@4411d970
+95,95,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/who stares at them, starting to tremble.,0.7,NameDatabase@4411d970
+95,95,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Sewing darts. You bastard.,0.7,NameDatabase@4411d970
+95,95,Billy,NAMEFINDER_ME,V . O . ) Billy wants to change , too,0.9252410470816878,NameDatabase@4411d970
+96,96,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(into phone),0.7,NameDatabase@4411d970
+96,96,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/That's why they're all so big -,0.7,NameDatabase@4411d970
+96,96,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(pause; surprised),0.7,NameDatabase@4411d970
+96,96,Crawford,NAMEFINDER_ME,suit , "" Mr . Crawford - out of real women,0.9798381033677356,NameDatabase@4411d970
+97,97,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(on phone),0.7,NameDatabase@4411d970
+97,97,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Sewing...,0.7,NameDatabase@4411d970
+97,97,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(eagerly),0.7,NameDatabase@4411d970
+97,97,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Yes sir... I'll do my best.,0.7,NameDatabase@4411d970
+97,97,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Yes sir. Thank you, sir...,0.7,NameDatabase@4411d970
+97,97,Burroughs,NAMEFINDER_ME,a communications console , with Burroughs , in headphones , by,0.9092087724225754,NameDatabase@4411d970
+97,97,Calumet City,NAMEFINDER_ME,( into speaker phone ) Calumet City , edge of Chicago .,0.9886583100703068,NameDatabase@4411d970
+97,97,Jamie Gumb,NAMEFINDER_ME,' s name is "" Jamie Gumb , "" AKA "" John,1.0,NameDatabase@4411d970
+97,97,John Grant,NAMEFINDER_ME,Gumb , "" AKA "" John Grant . "" Lecter ' s,1.0,NameDatabase@4411d970
+97,97,John Grant,NAMEFINDER_ME,. The addressee was "" John Grant . "" Calumet Power &,1.0,NameDatabase@4411d970
+97,97,Jack,NAMEFINDER_ME,) Here he comes , Jack . an emerging sheet ,,1.0,NameDatabase@4411d970
+97,97,clouds,PERSON_NOUN,Through a window we see clouds, part of the jet's wing.,0.7,null
+98,98,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/somewhat embarrassed, crosses over to him.,0.7,NameDatabase@4411d970
+98,98,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Mr. Bimmel... did Fredrica ever,0.7,NameDatabase@4411d970
+98,98,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Who was her best friend, Mr. Bimmel?,0.7,NameDatabase@4411d970
+98,98,Jamie Gumb,NAMEFINDER_ME,ever mention a man named Jamie Gumb , from Calumet City ?,1.0,NameDatabase@4411d970
+98,98,John Grant,NAMEFINDER_ME,from Calumet City ? Or John Grant ? ( he shakes his,1.0,NameDatabase@4411d970
+98,98,Bimmel,NAMEFINDER_ME,best friend , Mr . Bimmel ? Who ' d she,0.7116885224593288,NameDatabase@4411d970
+100,100,STACY,SPEAKER_ABOVE_DIALOGUE,STACY/They said she was just rags, like,0.7,NameDatabase@4411d970
+100,100,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Stacy, did Fredrica ever mention a,0.7,NameDatabase@4411d970
+100,100,STACY,SPEAKER_ABOVE_DIALOGUE,STACY/No way. She had a guy, I'da known,,0.7,NameDatabase@4411d970
+100,100,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Did you ever work with her?,0.7,NameDatabase@4411d970
+100,100,STACY,SPEAKER_ABOVE_DIALOGUE,STACY/Oh sure, me'n Pam Malavesi used to,0.7,NameDatabase@4411d970
+100,100,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Where does Mrs. Lippman live? I'd,0.7,NameDatabase@4411d970
+100,100,STACY,SPEAKER_ABOVE_DIALOGUE,STACY/She died. She went to Florida to,0.7,NameDatabase@4411d970
+100,100,STACY,SPEAKER_ABOVE_DIALOGUE,STACY/(beat; shyly),0.7,NameDatabase@4411d970
+100,100,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I think so.,0.7,NameDatabase@4411d970
+100,100,STACY,SPEAKER_ABOVE_DIALOGUE,STACY/You get to travel around and stuff?,0.7,NameDatabase@4411d970
+100,100,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Sometimes you do.,0.7,NameDatabase@4411d970
+100,100,STACY,SPEAKER_ABOVE_DIALOGUE,STACY/Freddie was so happy for me when I,0.7,NameDatabase@4411d970
+100,100,Jamie Gumb,NAMEFINDER_ME,ever mention a man named Jamie Gumb ? Or John Grant ?,1.0,NameDatabase@4411d970
+100,100,John Grant,NAMEFINDER_ME,named Jamie Gumb ? Or John Grant ? ( Stacy shakes her,1.0,NameDatabase@4411d970
+100,100,Barry Manilow,NAMEFINDER_ME,- toaster giveaways , and Barry Manilow on the speakers all day,1.0,NameDatabase@4411d970
+102,102,Gumb,NAMEFINDER_ME,CLOSE ON Mr . Gumb , as he settles a,0.9899762978034268,NameDatabase@4411d970
+104,104,Gumb,NAMEFINDER_ME,box , as Mr . Gumb reaches in , flips a,0.9904246215432476,NameDatabase@4411d970
+106,106,Gumb,NAMEFINDER_ME,Mr . Gumb , in his kimono and,0.9855850780915998,NameDatabase@4411d970
+108,108,Catherine,NAMEFINDER_ME,and closer ... and then Catherine comes INTO VIEW , at,0.9460509388205354,NameDatabase@4411d970
+109,109,CRAWFORD AND BURROUGHS,SPEAKER_ABOVE_DIALOGUE,CRAWFORD AND BURROUGHS/have slipped out of the van, and are crouched behind it now,,0.8999999999999999,NameDatabase@4411d970
+109,109,MAN,PERSON_NOUN,THE ""DELIVERYMAN"",0.7,null
+110,110,DUSTY BLACK METAL BOX,SPEAKER_ABOVE_DIALOGUE,DUSTY BLACK METAL BOX/the extension buzzer, mounted high on the wall, which is,1.0,NameDatabase@4411d970
+110,110,Gumb,NAMEFINDER_ME,the moment , Mr . Gumb aims the big Colt ,,0.8962108161052954,NameDatabase@4411d970
+110,110,Catherine,NAMEFINDER_ME,- THE PIT BOTTOM where Catherine , hearing but still not,1.0,NameDatabase@4411d970
+110,110,BLACK METAL BOX,PERSON_ADJ,DUSTY BLACK METAL BOX,0.7,null
+111,111,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Good afternoon... I wonder if you,0.7,NameDatabase@4411d970
+111,111,Lippman,NAMEFINDER_ME,m looking for Mrs . Lippman ' s family ? Mr,0.9713699297782789,NameDatabase@4411d970
+111,111,Gumb,NAMEFINDER_ME,s family ? Mr . Gumb frowns out at Clarice .,0.9859980410094846,NameDatabase@4411d970
+112,112,Burroughs,NAMEFINDER_ME,through as - Crawford and Burroughs race towards the door ,,0.9588611155721205,NameDatabase@4411d970
+113,113,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Excuse me, but I really do need to,0.7,NameDatabase@4411d970
+113,113,Gumb,NAMEFINDER_ME,Mr . Gumb starts to close the door,0.98108036389285,NameDatabase@4411d970
+113,113,Lippman,NAMEFINDER_ME,. This was Mrs . Lippman ' s house . Did,0.9713699297782789,NameDatabase@4411d970
+115,115,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I'm investigating the death of,0.7,NameDatabase@4411d970
+115,115,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Mr. Gordon, did you know Fredrica,0.7,NameDatabase@4411d970
+115,115,Gumb,NAMEFINDER_ME,Clarice and Mr . Gumb , still eyeing each other,0.9909075152648615,NameDatabase@4411d970
+115,115,Jack Gordon,NAMEFINDER_ME,please ? MR . GUMB Jack Gordon . Mr . Gordon ,,1.0,NameDatabase@4411d970
+115,115,Gordon,NAMEFINDER_ME,Jack Gordon . Mr . Gordon , did you know Fredrica,1.0,NameDatabase@4411d970
+115,115,Lippman,NAMEFINDER_ME,she worked for Mrs . Lippman ? MR . GUMB No,0.8789975498153887,NameDatabase@4411d970
+116,116,Burroughs,NAMEFINDER_ME,MOVING ANGLE as Burroughs moves quickly down a hallway,0.8230460746339322,NameDatabase@4411d970
+116,116,Burroughs,NAMEFINDER_ME,by several other cops . Burroughs shakes his head : Nothing,0.964211095722277,NameDatabase@4411d970
+117,117,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Thanks.,0.7,NameDatabase@4411d970
+117,117,ANGLE FAVORING THE COLT PYTHON,SPEAKER_ABOVE_DIALOGUE,ANGLE FAVORING THE COLT PYTHON/which rests on a counter, just inside the open kitchen,1.0,NameDatabase@4411d970
+117,117,Gumb,NAMEFINDER_ME,Mr . Gumb glances briefly over his shoulder,0.99179399183829,NameDatabase@4411d970
+117,117,Lippman,NAMEFINDER_ME,MR . GUMB Mrs . Lippman had a son , maybe,0.9712461548245919,NameDatabase@4411d970
+117,117,Gumb,NAMEFINDER_ME,we watch as Mr . Gumb , at the end of,0.9867488302838145,NameDatabase@4411d970
+118,118,WE PICK OUT CRAWFORD,SPEAKER_ABOVE_DIALOGUE,WE PICK OUT CRAWFORD/walking across the grass towards the van, when all at once,0.8999999999999999,NameDatabase@4411d970
+118,118,CAMERA RUSHES VERY CLOSE,SPEAKER_ABOVE_DIALOGUE,CAMERA RUSHES VERY CLOSE/on his stricken face...,0.8999999999999999,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I think we may be, yes.,0.7,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Mr. Gordon, did you take over this,0.7,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Did she leave any records here? Tax,0.7,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/unaware, is still glancing around the room. For several,0.7,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/No... no, we don't.,0.7,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/keeps her distance. They are about ten feet apart.,0.7,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Good, thank you. Mr. Gordon, do you,0.7,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/whips her gun out, gripping it in both shaking hands.,0.7,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Freeze!,0.7,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/tries to force more authority into her voice.,0.7,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Okay... Okay, Mr. Gumb, you're under,0.7,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/hesitates, just a split second, to shoot him in the back -,0.7,NameDatabase@4411d970
+119,119,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Shit!,0.7,NameDatabase@4411d970
+119,119,Gumb,NAMEFINDER_ME,the kitchen . Mr . Gumb is crossing to a rolling,0.9900985895223514,NameDatabase@4411d970
+119,119,Gumb,NAMEFINDER_ME,, yes . Mr . Gumb stiffens , almost imperceptibly .,0.9922589915556946,NameDatabase@4411d970
+119,119,Gordon,NAMEFINDER_ME,rustling papers . Mr . Gordon , did you take over,1.0,NameDatabase@4411d970
+119,119,Lippman,NAMEFINDER_ME,this place after Mrs . Lippman died ? MR . GUMB,0.986572231072615,NameDatabase@4411d970
+119,119,Moth,NAMEFINDER_ME,Death ' s - head Moth . It creeps slowly to,0.8804309681638611,NameDatabase@4411d970
+119,119,Gordon,NAMEFINDER_ME,thank you . Mr . Gordon , do you have a,1.0,NameDatabase@4411d970
+119,119,Gumb,NAMEFINDER_ME,... Okay , Mr . Gumb , you ' re under,0.98882334633765,NameDatabase@4411d970
+120,120,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/rushes to this - pauses - then elbows the door aside, aiming,0.7,NameDatabase@4411d970
+120,120,AN EMPTY STAIRWELL,SPEAKER_ABOVE_DIALOGUE,AN EMPTY STAIRWELL/brightly lit, leading to the cellar. Two doors facing the,0.7,NameDatabase@4411d970
+120,120,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/hates this, hates this, which door, it's a trap, what to do:,0.7,NameDatabase@4411d970
+120,120,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/rushes through the doorway, and down the stairs.,0.7,NameDatabase@4411d970
+120,120,Gumb,NAMEFINDER_ME,No sign of Mr . Gumb . hates this , hates,0.9562606934379682,NameDatabase@4411d970
+120,120,Catherine Martin,NAMEFINDER_ME,- The distant SCREAM of Catherine Martin , somewhere down there in,1.0,NameDatabase@4411d970
+121,121,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/follows her gun around the corner, looking right.,0.7,NameDatabase@4411d970
+121,121,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/moves cautiously towards this chamber...,0.7,NameDatabase@4411d970
+121,121,Gumb,NAMEFINDER_ME,is incandescent ; Mr . Gumb has switched off his infra,0.9910221889494181,NameDatabase@4411d970
+122,122,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/kneels, staring up from one door to another, she can't cover,0.7,NameDatabase@4411d970
+122,122,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/FBI, Catherine, you're safe.,0.7,NameDatabase@4411d970
+122,122,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/Safe, SHIT, he's got a gun! Getmeout.,0.7,NameDatabase@4411d970
+122,122,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/You're all right! Where is he?,0.7,NameDatabase@4411d970
+122,122,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/Get me out!,0.7,NameDatabase@4411d970
+122,122,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/I'll get you out! Just be quiet so I,0.7,NameDatabase@4411d970
+122,122,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/I don't know! Get me out!!,0.7,NameDatabase@4411d970
+122,122,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Catherine. Listen to me. I have to,0.7,NameDatabase@4411d970
+122,122,CATHERINE,SPEAKER_ABOVE_DIALOGUE,CATHERINE/NOOOOO! You fucking bitch don't you,0.7,NameDatabase@4411d970
+122,122,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Shut UP!,0.7,NameDatabase@4411d970
+122,122,Catherine SCREAMING,NAMEFINDER_ME,, very briefly , sees Catherine SCREAMING , hysterical , and a,1.0,NameDatabase@4411d970
+122,122,Catherine,NAMEFINDER_ME,doing there ? FBI , Catherine , you ' re safe,1.0,NameDatabase@4411d970
+122,122,Shut,NAMEFINDER_ME,so I can hear . Shut that dog up . (,0.872765201618675,NameDatabase@4411d970
+122,122,Catherine,NAMEFINDER_ME,! Get me out !! Catherine . Listen to me .,1.0,NameDatabase@4411d970
+122,122,Ignoring Catherine,NAMEFINDER_ME,re perfectly safe now ! Ignoring Catherine , whose shouts turn to,1.0,NameDatabase@4411d970
+123,123,Catherine,NAMEFINDER_ME,hear ... no sound except Catherine ' s CRYING , not,1.0,NameDatabase@4411d970
+124,124,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/spins, almost shoots, before seeing -,0.7,NameDatabase@4411d970
+124,124,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/gasps for breath, fighting for calm. She turns again, slashing,0.7,NameDatabase@4411d970
+124,124,Gumb,NAMEFINDER_ME,takes in ... Mr . Gumb ' s sewing machine ...,0.9915849963609789,NameDatabase@4411d970
+127,127,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/centers her gun on the curtain, at chest height, and yanks,0.7,NameDatabase@4411d970
+127,127,FEMALE HAND AND WRIST,SPEAKER_ABOVE_DIALOGUE,FEMALE HAND AND WRIST/sticking up from the tub, which is filled with hard red-purple,0.8999999999999999,NameDatabase@4411d970
+127,127,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/is reacting with horror to this sight, the lights go out, to,0.7,NameDatabase@4411d970
+127,127,Gumb,NAMEFINDER_ME,green glow of Mr . Gumb ' s infra - red,0.9915849963609789,NameDatabase@4411d970
+127,127,Catherine,NAMEFINDER_ME,utter darkness . SOUND of Catherine KEENING again , in the,1.0,NameDatabase@4411d970
+127,127,FEMALE HAND AND,PERSON_ADJ,FEMALE HAND AND WRIST,0.7,null
+128,128,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/spins, still in SLOW MOTION, flame already leaping from her,0.7,NameDatabase@4411d970
+128,128,Catherine,NAMEFINDER_ME,own terrified BREATHING , and Catherine ' s faraway , echoing,1.0,NameDatabase@4411d970
+128,128,Gumb,NAMEFINDER_ME,one FLASH from Mr . Gumb , and one two three,0.9894410394362683,NameDatabase@4411d970
+128,128,Gumb,NAMEFINDER_ME,it bumps against Mr . Gumb ' s shoulder . He,0.9915849963609789,NameDatabase@4411d970
+128,128,an exquisite moment,PERSON_NOUN,suit of human skins. This is an exquisite moment for him - a,0.7,null
+128,128,that,PERSON_NOUN,on their pillow. Then, as we PULL SLOWLY AWAY, we see that,0.7,null
+129,129,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/dazed, her face bandaged - comes out of the house, walking,0.7,NameDatabase@4411d970
+129,129,AN OHIO HIGHWAY PATROL CAR,SPEAKER_ABOVE_DIALOGUE,AN OHIO HIGHWAY PATROL CAR/pulls up, stops, and Crawford climbs out of the back seat.,1.0,NameDatabase@4411d970
+129,129,Catherine,NAMEFINDER_ME,house , walking protectively beside Catherine , who is wheeled on,1.0,NameDatabase@4411d970
+129,129,Catherine,NAMEFINDER_ME,with an extension ladder . Catherine , blinking in confusion ,,1.0,NameDatabase@4411d970
+130,130,CLARICE AND ARDELIA,SPEAKER_ABOVE_DIALOGUE,CLARICE AND ARDELIA/look at one another solemnly. Ardelia holds up both fists,,1.0,NameDatabase@4411d970
+130,130,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/grins - more happy than we've ever seen her - then turns to,0.7,NameDatabase@4411d970
+131,131,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/Agent Starling! Telephone!,0.7,NameDatabase@4411d970
+131,131,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/(surprised),0.7,NameDatabase@4411d970
+132,132,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Starling.,0.7,NameDatabase@4411d970
+132,132,ARDELIA,SPEAKER_ABOVE_DIALOGUE,ARDELIA/who is just inside the rec room door, at the end of the hall,,0.7,NameDatabase@4411d970
+132,132,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/turns back, gripping the phone more tightly.,0.7,NameDatabase@4411d970
+132,132,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Where are you, Dr. Lecter?,0.7,NameDatabase@4411d970
+133,133,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Dr. Lecter -,0.7,NameDatabase@4411d970
+133,133,a rolling lawn,PERSON_NOUN,we see a rolling lawn, a curving bay. Boats ride at anchor,,0.7,null
+134,134,CLARICE,SPEAKER_ABOVE_DIALOGUE,CLARICE/Dr. Lecter... Dr. Lecter...!,0.7,NameDatabase@4411d970
+135,135,Lecter,NAMEFINDER_ME,Dr . Lecter sighs , sets his phone,0.8417327042707796,NameDatabase@4411d970
+136,136,Frederick Chilton,NAMEFINDER_ME,writhing figure of Dr . Frederick Chilton . The extreme intricacy of,1.0,NameDatabase@4411d970
+136,136,Lecter,NAMEFINDER_ME,his bindings recalls Dr . Lecter ' s own former restraints,0.9826451220164287,NameDatabase@4411d970
+136,136,Lecter,NAMEFINDER_ME,he stares at Dr . Lecter like a rabbit trapped in,0.9745242622916166,NameDatabase@4411d970

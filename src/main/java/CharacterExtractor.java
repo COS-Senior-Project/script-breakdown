@@ -1,3 +1,6 @@
+import opennlp.tools.namefind.NameFinderME;
+import opennlp.tools.util.Span;
+
 import java.io.IOException;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -6,15 +9,21 @@ import java.util.regex.*;
 
 public class CharacterExtractor {
 
-    //Regex that captures multi-word uppercase names, group1 = name, group2 = parenthetical (optional)
+    //regex that captures multi-word uppercase names, group1 = name, group2 = parenthetical (optional)
     private static final Pattern MULTI_WORD_NAME = Pattern.compile("\\b((?:[A-Z][A-Z0-9'’\\.\\-]*)" +
             "(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*)*)\\b(?:\\s*\\(([^)]*)\\))?");
 
     //pattern looks for a string starting with one upper-cased letter
     // followed by more upper-cased letters, digits, apostrophes, periods, or dashes
     private static final Pattern NAME_TOKEN = Pattern.compile("^[A-Z][A-Z0-9'’\\.\\-]*$");
+    //patterns looks for a person indicating uppercase adjective followed by one or two uppercase words
+    private static final Pattern PERSON_ADJECTIVE = Pattern.compile("\\b(MALE|FEMALE|YOUNG|OLD|MIDDLE-AGED|MIDDLE AGED|BLACK|WHITE|ASIAN|CAUCASIAN|LATIN)(?:\\s+[A-Z][A-Z]+){1,2}\\b");
+    //pattern looks for a person noun proceeded by an uppercase word
+    private static final Pattern PERSON_NOUN = Pattern.compile("(\\b([A-Z]+)\\s+)?(MAN|WOMAN|BOY|GIRL|CHILD|TODDLER|TEENAGER|ADULT|ELDER)\\b");
 
-    //optional debug flag to print decisions
+    private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|Enter|We see|Introducing)\\s+([A-Z][A-Z0-9'’\\.\\-]*(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*){0,2})(?=\\s|$|,|\\.)",
+            Pattern.CASE_INSENSITIVE);
+    //set of black list words that are definitely not names
     private static final Set<String> BLACK_LIST = new HashSet<>(Arrays.asList(
             "A","AN","AND","OR","BUT","FOR","TO","IN","ON","AT","IS","ARE","WAS","WERE",
             "BEEN","HAVE","HAS","HAD","DO","DOES","DID","WILL","WOULD","SHALL","SHOULD","MAY",
@@ -22,156 +31,271 @@ public class CharacterExtractor {
             "BOOM","BANG","CRASH","RUMBLE","SOUND","NOISE","FX","CUT","CUTTING","CUTS","CUTS TO","CUT TO",
             "CLOSE","CLOSES","CLOSE ON","PAN","PANNING","ZOOM","DOLLY","ANGLE","HER","HIS","THEM","THEMSELVES",
             "POV","BETWEEN","CUTTING","FX","SFX","CROWD","INT","EXT","OMITTED","DAY","NIGHT","SAME","TIME",
-            "CONTINUOUS","PART","END","SCENE","PAGE","CLOSE","WIDE","MIDDLE","POV","OMITTED","CONTINUED"
-            ));
+            "CONTINUOUS","PART","END","SCENE","PAGE","CLOSE","WIDE","MIDDLE","POV","OMITTED","CONTINUED",
+            "PULLING", "PULLING BACK", "PUSHING", "SLOW MOTION", "FAST FORWARD", "FLASHBACK", "ON THE SCREEN",
+            "SCREEN"));
 
+    //set of stage verbs that are definitely not names
     private static final Set <String> STAGE_VERBS = new HashSet<>(Arrays.asList(
             "CUT","PAN","ZOOM","DOLLY","TRACK","FADE","SMASH","MATCH","WIPE"
     ));
-    private static final boolean DEBUG = false;
+    //extracts names above dialogue
+    public static List <Character> extractSpeakerCues(String content, Scene scene, NameDatabase nameDb) {
+        //creates a list of Character objects for the names obtained
+        List<Character> result = new ArrayList<>();
+        String[] lines = content.split("\n", -1);
+        //loops through each line
+        for (int i = 0; i < lines.length; i++) {
+            //single line
+            String line = lines[i].trim();
+            //if line is empty, move to the next one
+            if (line.isEmpty()) continue;
 
-    public static void extractCharacterToCSV(List<Scene> scenes, String outputPath) throws IOException{
-        //using try-with-resources for safe closing
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath, false))){
-            //header
-            writer.write("Scene Order Number,Actual Scene Number,CandidateName,Rule,ContextSnippet,Confidence Score\n");
-
-            for (Scene scene : scenes){
-                String sceneKey = scene.getSceneNumber();
-                String content = scene.getContent();
-                if (content == null || content.trim().isEmpty()) continue;
-
-                //keeps track of the names already written for this scene
-                Set<String> written = new LinkedHashSet<>();
-
-                //speaker line above dialogue rule
-                //splits into lines and looks for an uppercase cue line followed by a non-uppercase line
-                //keeps the content as it is because of the -1
-                String[] lines = content.split("\n", -1);
-                //loops through the lines of each the scene's content
-                for (int i = 0; i < lines.length; i++){
-                    String line = lines[i].trim();
-                    if (line.isEmpty()) continue;
-
-                    //try to match a name on this line
-                    Matcher lineMatcher = MULTI_WORD_NAME.matcher(line);
-                    if(lineMatcher.find()){
-                        //to reduce false positives, require this line to look like a speaker cue
-                        if (isCharacterCue(line)){
-                            //look ahead to next non-empty line (dialogue)
-                            int j = i + 1;
-                            while(j < lines.length && lines[j].trim().isEmpty()) j++;
-                            if (j < lines.length){
-                                String next = lines[j].trim();
-                                //treats next as dialogue if it is not mostly uppercase (i.e. not another cue/heading)
-                                if(!isCharacterCue(next)){
-                                    //capture the candidate name from the line
-                                    String rawName = lineMatcher.group(1);
-                                    String name = normalizeName(rawName);
-                                    name = name.replaceAll("\\s+\\d+[A-Z]?\\.?\\s*$", "").trim();
-                                    if (name.length() >= 2) {
-                                        if (isStopPhrase(name)) {
-                                            if (DEBUG) System.out.printf("SPEAKER_ABOVE_DIALOGUE skip stop phrase: %s -> %s%n", sceneKey, name);
-                                        } else {
-                                            if (written.add(name)) {
-                                                String snippet = safeSnippet(line + " / " + next);
-                                                writeRow(writer, sceneKey, name, "SPEAKER_ABOVE_DIALOGUE", snippet);
-                                                if (DEBUG) System.out.printf("SPEAKER_ABOVE_DIALOGUE keep: %s -> %s%n", sceneKey, name);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+            //tries to match the character speaking above dialogue line
+            Matcher lineMatcher = MULTI_WORD_NAME.matcher(line);
+            //if the line looks like a character cue line and a match is found
+            if (isCharacterCue(line) && lineMatcher.find()) {
+                //j will be the index of the line following i
+                int j = i + 1;
+                //if the following line is empty, and it is not after the last,
+                // move to the one after
+                while (j < lines.length && lines[j].trim().isEmpty()) j++;
+                //if the following line is not after the last, and
+                //it is not a character cue
+                if (j < lines.length && !isCharacterCue(lines[j])) {
+                    //the raw name found by the regex matches to its group 1
+                    String rawName = lineMatcher.group(1);
+                    //normalizes the raw name
+                    String normalized = normalizeName(rawName);
+                    //if the name is not included in the words that are clearly not names,
+                    // but often are all uppercase (the sets of the black list and the stage verbs)
+                    if (isStopPhrase(normalized)) continue;
+                    //if all those rules are met, the confidence starts from 40%
+                    double confidence = 0.3;
+                    //the confidence increases if the name is found in the name files
+                    confidence += nameDb.confidenceBoostMatchFile(normalized);
+                    //the candidate name values are added as a Character object to the results
+                    result.add(new Character(
+                            scene.getSceneIntNumber(),
+                            scene.getSceneNumber(),
+                            normalized,
+                            "SPEAKER_ABOVE_DIALOGUE",
+                            safeSnippet(lines[i] + "/" + lines[j]),
+                            Math.min(1.0, confidence),
+                            nameDb
+                    ));
                 }
-            } //scenes loop
-        } //writer auto-closed
-        if (DEBUG) System.out.println("Character extraction finished.");
+            }
+        }
+        //returns all results from the speaker above dialogue + file names check
+        return result;
     }
 
-    //Helper methods
+    //extracts names that are not above dialogue but still character names
+    public static List <Character> extractInlineName(String content, Scene scene, NameFinderME nameFinder, NameDatabase nameDb) {
+        //list to store all the Character objects fitting the criteria
+        List <Character> result = new ArrayList<>();
+        //if there is no content
+        if (content == null || content.trim().isEmpty()) return result;
+
+        StringBuilder contentInline = new StringBuilder();
+        String[] lines = content.split("\n", -1);
+        for (String line : lines) {
+            if (!isCharacterCue(line.trim())) {
+                contentInline.append(line).append("\n");
+            }
+        }
+
+        //tokenizes the text
+        String[] contentTokens = TextUnits.tokenize(contentInline.toString());
+
+        //a sequence of tokens that NameFinderME considers a person's name
+        //a sequence of tokens that NameFinderME considers a person's name
+        Span[] spans = nameFinder.find(contentTokens);
+        //the confidence score returned by NameFinderME
+        double[] probs = nameFinder.probs(spans);
+
+        //loops through the span of candidate names
+        for (int i = 0; i < spans.length; i++) {
+            //current span
+            Span s = spans[i];
+            StringBuilder sb = new StringBuilder();
+
+            //loops through each word of the name found by NameFinderME
+            for (int t = s.getStart(); t < s.getEnd(); t++) {
+                //puts spaces between the word names
+                if (t > s.getStart()) sb.append(" ");
+                //adds words to the string builder
+                sb.append(contentTokens[t]);
+            }
+
+            String candidate = sb.toString();
+            //checks if the candidate name is contained in the black list set or
+            //the stage verbs set
+            if (BLACK_LIST.contains(candidate.toUpperCase(Locale.ROOT)) ||
+                    STAGE_VERBS.contains(candidate.toUpperCase(Locale.ROOT))) continue;
+            ////builds a context snippet using 5 tokens before the candidate's name and 5 tokens after
+            String snippet = safeSnippet(String.join(" ", Arrays.copyOfRange(contentTokens, Math.max(0, s.getStart() - 5),
+                    Math.min(contentTokens.length, s.getEnd() + 5))));
+            //evaluates confidence score according to NameFinderME
+            double confidence = probs[i];
+            //checks if the names are part of the name files and adds confidence if true
+            confidence += nameDb.confidenceBoostMatchFile(candidate);
+            confidence = Math.min(1.0, confidence); //assigns confidence no larger than 1
+
+            //creates a new Character object in the results for the candidate's name mention
+            result.add(new Character(
+                    scene.getSceneIntNumber(),
+                    scene.getSceneNumber(),
+                    candidate,
+                    "NAMEFINDER_ME",
+                    snippet,
+                    confidence,
+                    nameDb
+            ));
+        }
+        //returns all results of the NameFinderME + file names check
+        return result;
+    }
+
+    public static List <Character> extractPersonWord (String content, Scene scene) {
+        //list to store all the Character objects fitting the criteria
+        List <Character> result = new ArrayList<>();
+        //if there is no content
+        if (content == null || content.trim().isEmpty()) return result;
+        double confidence = 0.7;
+        String[] lines = content.split("\n", -1);
+        for (String line : lines) {
+            String trimmed = line.trim();
+            if (trimmed.isEmpty()) continue;
+
+            Matcher matchAdj = PERSON_ADJECTIVE.matcher(trimmed);
+            Matcher matchNoun = PERSON_NOUN.matcher(trimmed);
+
+            if (matchAdj.find()) {
+                result.add(new Character(
+                        scene.getSceneIntNumber(),
+                        scene.getSceneNumber(),
+                        matchAdj.group(),
+                        "PERSON_ADJ",
+                        safeSnippet(trimmed),
+                        confidence,
+                        null
+                ));
+            }
+            else if (matchNoun.find()) {
+                result.add(new Character(
+                        scene.getSceneIntNumber(),
+                        scene.getSceneNumber(),
+                        matchNoun.group(),
+                        "PERSON_NOUN",
+                        safeSnippet(trimmed),
+                        confidence,
+                        null
+                ));
+            }
+        }
+        return result;
+    }
+
+    public static List <Character> extractIntroCharacter (String content, Scene scene) {
+        List <Character> result = new ArrayList<>();
+        if (content == null || content.trim().isEmpty()) return result;
+        double confidence = 0.7;
+        String[] lines = content.split("\n", -1);
+        for (String line : lines) {
+            String trimmed = line.trim();
+            if (trimmed.isEmpty()) continue;
+
+            Matcher matchIntro = INLINE_INTRO.matcher(trimmed);
+
+            if (matchIntro.find()) {
+                result.add(new Character(
+                        scene.getSceneIntNumber(),
+                        scene.getSceneNumber(),
+                        matchIntro.group(1),
+                        "PERSON_NOUN",
+                        safeSnippet(trimmed),
+                        confidence,
+                        null
+                ));
+            }
+        }
+        return result;
+    }
+
+    //normalizes name formatting
     public static String normalizeName(String raw){
         if (raw == null) return "";
-        String s = raw.replace("’", "'").replaceAll("\\s+", " ").trim();
-        //removes stray trailing punctuation except middle-of-name punctuation
+        //converts to readable apostrophes and multiple spaces to just one space
+        String s = raw.replaceAll("’", "'").replaceAll("\\s+", " ").trim();
+        //removes (V.O.), (O.S.), and (CONT'D)
+        s = s.replaceAll("\\s*\\((V\\.O\\.|O\\.S\\.|CONT'D)\\)\\s*$", "").trim();
+        //removes stray trailing punctuation in the beginning and at the end of the string
         s = s.replaceAll("^[^A-Z0-9]+", "").replaceAll("[^A-Z0-9]+$", "");
+        //removes any trailing scene-number formatting that might accidentally go into the name
+        s = s.replaceAll("\\s+\\d+[A-Z]?\\.?\\s*$", "").trim();
         return s;
     }
-    //returns true if the text is mostly uppercase tokens
-    private static boolean isMostlyUppercase(String text){
-        String[] toks = TextUnits.tokenize(text);
-        if(toks.length == 0) return false;
-        int upper = 0, total = 0;
-        for (String t : toks){
-            String letters = t.replaceAll("[^A-Z]", "");
-            if (!letters.isEmpty()) {
-                upper++;
-            }
-            total++;
-        }
-        return total > 0 && ((double) upper / total) >= 0.80; //80% tokens uppercase -> treat it as an uppercase line
-    }
 
-    private static boolean isStopPhrase(String candidateName){
-        if (candidateName == null || candidateName.isEmpty()) return true;
-        String[] parts = candidateName.split("\\s+");
-        boolean allStop = true;
-        for (String p : parts){
-            String up = p.replaceAll("[^A-Z]", "");
-            if (up.isEmpty()) continue;
-            if (!BLACK_LIST.contains(up) && !STAGE_VERBS.contains(up)){
-                allStop = false;
-            }
-        }
-        if (allStop) return true;
-
-        String upName = candidateName.toUpperCase(Locale.ROOT);
-        if (upName.contains("POV") || upName.contains("BETWEEN") || upName.contains("CUT ") || upName.contains("CLOSE ")) return true;
-
-        return false;
-    }
-
+    //checks if the line is a character cue line
     private static boolean isCharacterCue(String line){
-        //Ignores very short lines
+        //Ignores very short lines with less than two characters/symbols
         if (line.length() < 2) return false;
 
-        //checks if the line has mostly words that contain at least one uppercase character
-        if(!isMostlyUppercase(line)) return false;
+        //tokenizes the line
         String[] toks = TextUnits.tokenize(line);
 
+        if (toks.length == 0) return false;
+        //name token counter
         int nameTokens = 0;
-        int tokenCount = 0;
+        //total token counter equals the total length of all tokens
+        int tokenCount = toks.length;
 
+        //loops through each token of the line
         for (String t : toks){
-            //skips any tokens that have no upper-cased letters
-            String lettersOnly = t.replaceAll("[^A-Z]", "");
-            tokenCount++;
-            if (lettersOnly.isEmpty()) continue;
-
             //normalizes token for matching (strip punctuation that tokenizer may still keep)
             String clean = t.replaceAll("[^A-Z0-9'’\\.\\-]", "");
+            //if the token matches the name token regex
             if (NAME_TOKEN.matcher(clean).matches()){
+                //the name token counter increases
                 nameTokens++;
             }
         }
 
-        if (tokenCount == 0) return false;
+        //if there are no name tokens, returns false
         if (nameTokens == 0) return false;
 
-        //if there is at least one name-like token
+        //if the name token count is at least 80% of the total count and
+        //the total token count is at most 5
         if (nameTokens >= Math.ceil(tokenCount * 0.8) && tokenCount <= 5){
-            //rejects if punctuation or obvious sound/transition keywords appear
+            //rejects if non-word specific punctuation appears
             if (line.matches(".*[!\\?\\,\\.;:\\(\\)\\[\\]].*")) return false;
-            for (String tok : TextUnits.tokenize(line)){
-                String up = tok.replaceAll("[^A-Z]", "");
-                if (up.isEmpty()) continue;
-                if (BLACK_LIST.contains(up)) return false;
-                if (STAGE_VERBS.contains(up)) return false;
-            }
             return true;
         }
         return false;
+    }
+
+    //checks if the uppercase name is a black list or a stage verb
+    private static boolean isStopPhrase(String candidateName){
+        //if there is no value for the name
+        if (candidateName == null || candidateName.isEmpty()) return true;
+        //tokenizes the parts of the name
+        String[] parts = TextUnits.tokenize(candidateName);
+        //loops through every token in the name
+        for (String p : parts){
+            //keeps in up only uppercase characters
+            String up = p.replaceAll("[^A-Z]", "");
+            //if there is nothing in up, move to the next token
+            if (up.isEmpty()) continue;
+            //if up is not contained in the black list or stage verbs set,
+            //it returns it is not a stop phrase
+            if (!BLACK_LIST.contains(up) && !STAGE_VERBS.contains(up)){
+                return false;
+            }
+        }
+        //if nothing returns false, then it is a stop phrase
+        return true;
     }
 
     //Create a safe snippet for CSV (collapse newlines and escape quotes)
@@ -183,16 +307,5 @@ public class CharacterExtractor {
         return esc;
     }
 
-    //Writes a CSV row
-    private static void writeRow(BufferedWriter writer, String sceneNumber, String name, String rule, String snippet) throws IOException{
-        //name and rules are assumed safe (uppercase tokens); snippets need quoting
-        StringBuilder sb = new StringBuilder();
-        sb.append(sceneNumber).append(",")
-                .append(name).append(",")
-                .append(rule).append(",")
-                .append("\"").append(snippet).append("\"");
-        writer.write(sb.toString());
-        writer.newLine();
-    }
 }
 

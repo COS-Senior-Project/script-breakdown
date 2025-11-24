@@ -1,31 +1,40 @@
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.util.List;
 import java.util.Locale;
 
 public class Character extends ExtractableItem {
+
+    private final NameDatabase nameDb;
     public Character (int sceneNumberInt, String sceneNumber, String nameItem, String rule,
-                      String contextSnippet, double confidenceScore) {
+                      String contextSnippet, double confidenceScore, NameDatabase nameDb) {
         super(sceneNumberInt, sceneNumber, nameItem, rule, contextSnippet, confidenceScore);
+        this.nameDb = nameDb;
     }
 
-    @Override
-    public String getNormalizedName(String raw){
-        if (raw == null) return "";
-        String s = raw.replace("’", "'").replaceAll("\\s+", " ").trim();
-        //removes stray trailing punctuation except middle-of-name punctuation
-        s = s.replaceAll("^[^A-Z0-9]+", "").replaceAll("[^A-Z0-9]+$", "");
-        return s;
+    public String toCSVRow() {
+        String snippetSafe = contextSnippet.replaceAll("\\s+", " ").replace("\"", "\"\"");
+        return sceneNumberInt + "," +
+                sceneNumber + "," +
+                nameItem + "," +
+                rule + "," +
+                contextSnippet + "," +
+                confidenceScore + "," +
+                nameDb;
     }
 
-    @Override
-    public void boostConfidence() {
-        //multi-word names (e.g. ANNA SMITH) can be stronger matches
-        if (nameItem != null && nameItem.length() >= 2) {
-            confidenceScore += 0.1;
-        }
-
-        if (nameItem != null) {
-            double boost = NameDatabase.confidenceBoostMatchFile(nameItem);
-            this.confidenceScore = Math.min(1.0, this.confidenceScore + boost);
-        }
-
+    /*
+    //Writes a CSV row
+    private static void writeCSV(BufferedWriter writer, Scene scene, NameDatabase nameDb) throws IOException {
+        List <Character> speakerCues = CharacterExtractor.extractSpeakerCues(scene.getContent(), scene, nameDb;)
+        //name and rules are assumed safe (uppercase tokens); snippets need quoting
+        StringBuilder sb = new StringBuilder();
+        sb.append(sceneNumber).append(",")
+                .append(nameItem).append(",")
+                .append(rule).append(",")
+                .append("\"").append(contextSnippet).append("\"");
+        writer.write(sb.toString());
+        writer.newLine();
     }
+     */
 }

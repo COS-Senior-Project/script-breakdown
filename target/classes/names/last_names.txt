@@ -2,6 +2,8 @@ Smith
 Johnson
 Williams
 Brown
+Lecter
+Chilton
 Jones
 Miller
 Davis

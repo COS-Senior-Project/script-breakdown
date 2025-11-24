@@ -36,10 +36,16 @@ public class NameDatabase {
             System.out.println("General exception: " + e.getMessage());
         }
     }
+    public boolean containInFirstNames(String word) {
+        return FIRST_NAME_TRIE.contain(word);
+    }
 
+    public boolean containInLastNames(String word) {
+        return LAST_NAME_TRIE.contain(word);
+    }
     //checks if a string is found in the first or last name Trie structures
     //and boost confidence depending on where it is found
-    public static double confidenceBoostMatchFile (String raw) {
+    public double confidenceBoostMatchFile (String raw) {
         //if the string is null or empty, it returns 0 boost
         if (raw == null || raw.isEmpty()) return 0.0;
 
@@ -60,11 +66,6 @@ public class NameDatabase {
                     boost += 0.3;
                 }
             }
-        }
-
-        //if both first name and at least one other name match, boost to 1
-        if (boost >= 0.7) {
-            boost += 0.3;
         }
 
         //returns the boost, and returns 1 if the boost is higher than that

@@ -29,13 +29,11 @@ public abstract class PhysicalObject extends ExtractableItem {
     }
 
     //normalizes physical object names
-    @Override
     public String getNormalizedName(String name){
         if (name == null) return "";
         return  name.trim().toLowerCase();
     }
 
-    @Override
     public void boostConfidence(){
         if (nameItem != null && nameItem.contains(" ")){
             //multi-word objects are usually real props or set dressing
@@ -81,10 +79,6 @@ public abstract class PhysicalObject extends ExtractableItem {
             }
         }
         return false; //if false => likely set dressing
-    }
-
-    public boolean isInteractedWith(){
-        return contextSnippet.matches(".*\\b(takes|holds|grabs|picks up|uses|gives)\\b.*");
     }
 
     public String getSurroundingContext(int window){
