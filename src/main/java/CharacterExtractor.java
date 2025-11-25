@@ -20,10 +20,9 @@ public class CharacterExtractor {
     //patterns looks for a person indicating uppercase adjective followed by one or two uppercase words
     private static final Pattern PERSON_ADJECTIVE = Pattern.compile("\\b(MALE|FEMALE|YOUNG|OLD|MIDDLE-AGED|MIDDLE AGED|BLACK|WHITE|ASIAN|CAUCASIAN|LATIN)(?:\\s+[A-Z][A-Z]+){1,2}\\b");
     //pattern looks for a person noun proceeded by an uppercase word
-    private static final Pattern PERSON_NOUN = Pattern.compile("(\\b([A-Z]+)\\s+)?(MAN|WOMAN|BOY|GIRL|CHILD|TODDLER|TEENAGER|ADULT|ELDER)\\b");
+    private static final Pattern PERSON_NOUN = Pattern.compile("\\b(?:[A-Z][A-Z0-9'’\\.\\-]*\\s+)?(MAN|WOMAN|BOY|GIRL|CHILD|TODDLER|TEENAGER|ADULT|ELDER|HUMAN)\\b");
     //pattern looks for a person's name when introducing characters
-    private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|Enter|Entering|Introducing)\\s+([A-Z][A-Z0-9'’\\.\\-]*(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*){0,2})(?=\\s|$|,|\\.)",
-            Pattern.CASE_INSENSITIVE);
+    private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|Enter|Entering|Introducing|It's|It is)\\s+([A-Z0-9'’\\.\\-]+(?:\\s+[A-Z0-9'’\\.\\-]+){0,2})(?=\\s|$|,|\\.)");
     //set of black list words that are definitely not names
     private static final Set<String> BLACK_LIST = new HashSet<>(Arrays.asList(
             "A","AN","AND","OR","BUT","FOR","TO","IN","ON","AT","IS","ARE","WAS","WERE",
@@ -34,7 +33,7 @@ public class CharacterExtractor {
             "POV","BETWEEN","CUTTING","FX","SFX","CROWD","INT","EXT","OMITTED","DAY","NIGHT","SAME","TIME",
             "CONTINUOUS","PART","END","SCENE","PAGE","CLOSE","WIDE","MIDDLE","POV","OMITTED","CONTINUED",
             "PULLING", "PULLING BACK", "PUSHING", "SLOW MOTION", "FAST FORWARD", "FLASHBACK", "ON THE SCREEN",
-            "SCREEN", "WITH"));
+            "SCREEN", "WITH", "SHE", "HE", "THEY", "EACH", "ITS", "HERS", "HIS", "FOOTAGE", "MUSIC"));
 
     //set of stage verbs that are definitely not names
     private static final Set <String> STAGE_VERBS = new HashSet<>(Arrays.asList(
@@ -50,6 +49,21 @@ public class CharacterExtractor {
         for (int i = 0; i < lines.length; i++) {
             //single line
             String line = lines[i].trim();
+
+            // inside the for (int i=0; i<lines.length; i++) loop, right after String line = lines[i].trim();
+            if (line.length() > 0 && line.length() < 40 && line.equals(line.toUpperCase())) {
+                System.out.println("DEBUG LINE[" + i + "]: '" + line + "'");
+                System.out.println("  isCharacterCue? " + isCharacterCue(line));
+                Matcher m = MULTI_WORD_NAME.matcher(line);
+                System.out.println("  MULTI_WORD_NAME.find(): " + m.find());
+                if (m.find()) System.out.println("    group(1)='" + m.group(1) + "'");
+                Matcher mp = NAME_WITH_PAREN.matcher(line);
+                System.out.println("  NAME_WITH_PAREN.find(): " + mp.find());
+                // lookahead line
+                String nextLine = (i+1 < lines.length) ? lines[i+1].trim() : "<EOF>";
+                System.out.println("  nextLine: '" + nextLine + "'  isCharacterCue(nextLine)? " + (nextLine.equals("<EOF>") ? "N/A" : isCharacterCue(nextLine)));
+            }
+
             //if line is empty, move to the next one
             if (line.isEmpty()) continue;
 
@@ -215,7 +229,7 @@ public class CharacterExtractor {
             String trimmed = line.trim();
             //if nothing left, goes to the next iteration
             if (trimmed.isEmpty()) continue;
-
+            if (isCharacterCue(trimmed)) continue;
             //creates a matcher object for an uppercase adjective word combination
             // that is related to a personal characteristic
             Matcher matchAdj = PERSON_ADJECTIVE.matcher(trimmed);
@@ -225,6 +239,8 @@ public class CharacterExtractor {
 
             //if it finds the adjective word sequence, it creates a new character entry
             if (matchAdj.find()) {
+                //if it contains a stop phrase, skip this iteration
+                if (isStopPhrase(matchAdj.group())) continue;
                 result.add(new Character(
                         scene.getSceneIntNumber(),
                         scene.getSceneNumber(),
@@ -238,6 +254,8 @@ public class CharacterExtractor {
             //if it finds a word noun sequence, it creates a new character
             //using else if in case of a "YOUNG WOMAN" match
             else if (matchNoun.find()) {
+                //if it contains a stop phrase, skip this iteration
+                if (isStopPhrase(matchNoun.group())) continue;
                 result.add(new Character(
                         scene.getSceneIntNumber(),
                         scene.getSceneNumber(),
@@ -274,15 +292,18 @@ public class CharacterExtractor {
             Matcher matchIntro = INLINE_INTRO.matcher(trimmed);
             //if matched, adds the character to the result list
             if (matchIntro.find()) {
-                result.add(new Character(
-                        scene.getSceneIntNumber(),
-                        scene.getSceneNumber(),
-                        matchIntro.group(1),
-                        "PERSON_INTRO",
-                        safeSnippet(trimmed),
-                        confidence,
-                        null
-                ));
+                String candidate = matchIntro.group(1).replaceAll("[^A-Z]", "").trim();
+                if (!candidate.isEmpty() && candidate.equals(candidate.toUpperCase())) {
+                    result.add(new Character(
+                            scene.getSceneIntNumber(),
+                            scene.getSceneNumber(),
+                            matchIntro.group(1),
+                            "PERSON_INTRO",
+                            safeSnippet(trimmed),
+                            confidence,
+                            null
+                    ));
+                }
             }
         }
         //returns the result list
@@ -321,6 +342,7 @@ public class CharacterExtractor {
         for (String t : toks){
             //normalizes token for matching (strip punctuation that tokenizer may still keep)
             String clean = t.replaceAll("[^A-Z0-9'’\\.\\-]", "");
+
             //if the token matches the name token regex
             if (NAME_TOKEN.matcher(clean).matches()){
                 //the name token counter increases
@@ -331,11 +353,11 @@ public class CharacterExtractor {
         //if there are no name tokens, returns false
         if (nameTokens == 0) return false;
 
-        //if the name token count is at least 80% of the total count and
+        //if the name token count is at least 65% of the total count and
         //the total token count is at most 5
-        if (nameTokens >= Math.ceil(tokenCount * 0.8) && tokenCount <= 5){
+        if (nameTokens >= Math.ceil(tokenCount * 0.65) && tokenCount <= 5){
             //rejects if non-word specific punctuation appears
-            if (line.matches(".*[!\\?\\,\\.;:].*")) return false;
+            if (line.matches(".*[!\\?,;:].*")) return false;
             return true;
         }
         return false;

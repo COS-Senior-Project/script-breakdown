@@ -2,8 +2,11 @@ import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.TokenNameFinderModel;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.Files;
+import java.util.*;
+import java.util.Collection;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -15,30 +18,41 @@ public class Main {
         List<Scene> scenes = parser.splitScenes(script);
         //creates a name database object
         NameDatabase nameDb = new NameDatabase();
+
         //tries to load the NameFinderME file as a resource from the classpath
         try (InputStream modelIn = Main.class.getResourceAsStream("/models/en-ner-person.bin")) {
             //reads the model from the input stream and loads it as an OpenNLP model to recognize human names
             TokenNameFinderModel model = new TokenNameFinderModel(modelIn);
             //creates an instance of NameFinderME
             NameFinderME nameFinderME = new NameFinderME(model);
+
+            //creates Path objects and converts the string path into a Path object
+            Path csvPath = Paths.get("output/character_candidates.csv");
+            Path trainPath = Paths.get("output/characters_train.train");
+            Path testPath = Paths.get("output/characters_test.train");
+
+            //ensures the parent directories of the paths exist
+            //it creates all missing directories
+            //if they already exist, it does nothing
+            Files.createDirectories(csvPath.getParent());
+            Files.createDirectories(trainPath.getParent());
+            Files.createDirectories(testPath.getParent());
+
+            //list to contain all the train entries
+            List<String> trainEntries = new ArrayList<>();
+
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("src/main/resources/data/character_candidates.csv"));
-                 BufferedWriter trainWriter = new BufferedWriter(new FileWriter("src/main/resources/data/characters.train"))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates.csv"))) {
                 //loops through each scene
                 for (Scene scene : scenes) {
                     //prints out each scene
-                    System.out.println(scene);
-                    //creates lists of characters for all extractors
-                    List <Character> speakerCharacters = CharacterExtractor.extractSpeakerCues(scene.getContent(), scene, nameDb);
-                    List <Character> inlineCharacters = CharacterExtractor.extractInlineName(scene.getContent(), scene, nameFinderME, nameDb);
-                    List <Character> personWordCharacters = CharacterExtractor.extractPersonWord(scene.getContent(), scene);
-                    List <Character> personIntroCharacters = CharacterExtractor.extractIntroCharacter(scene.getContent(), scene);
-
+                    //System.out.println(scene);
+                    //creates a list that takes characters from all extractors
                     List<Character> allCharacters = new ArrayList<>();
-                    allCharacters.addAll(speakerCharacters);
-                    allCharacters.addAll(inlineCharacters);
-                    allCharacters.addAll(personWordCharacters);
-                    allCharacters.addAll(personIntroCharacters);
+                    allCharacters.addAll(CharacterExtractor.extractSpeakerCues(scene.getContent(), scene, nameDb));
+                    allCharacters.addAll(CharacterExtractor.extractInlineName(scene.getContent(), scene, nameFinderME, nameDb));
+                    allCharacters.addAll(CharacterExtractor.extractPersonWord(scene.getContent(), scene));
+                    allCharacters.addAll(CharacterExtractor.extractIntroCharacter(scene.getContent(), scene));
 
                     //loops through each film character in the list
                     for (Character c : allCharacters) {
@@ -47,48 +61,41 @@ public class Main {
                             csvWriter.write(c.toCSVRow());
                             csvWriter.newLine();
 
-                            //TRAIN FILE OUTPUT
-                            trainWriter.write(c.bootstrappingObjects("PERSON"));
-                            trainWriter.newLine();
+                            //collect .train entry in memory
+                            trainEntries.add(c.bootstrappingObjects("PERSON"));
                         }
                     }
-                    /*
-                    for (Character c : speakerCharacters) {
-                        //CSV OUTPUT
-                        //if the confidence score is high enough, it writes into the CSV
-                        if (c.confidenceScore >= 0.65){
-                            writer.write(c.toCSVRow());
-                            writer.newLine();
-                        }
-                    }
-
-                    for (Character c : inlineCharacters) {
-                        if (c.confidenceScore >= 0.65){
-                            writer.write(c.toCSVRow());
-                            writer.newLine();
-                        }
-                    }
-
-                    for (Character c : personWordCharacters) {
-                        //no need to check confidence here because it is a static number
-                        //writes into the CSV
-                        writer.write(c.toCSVRow());
-                        writer.newLine();
-                    }
-                    for (Character c : personIntroCharacters) {
-                        writer.write(c.toCSVRow());
-                        writer.newLine();
-                    }
-
-                     */
                 }
             } catch (IOException io) { //if the CSV file is not found, it handles the error
                 System.out.println("CSV file not found.");
             }
 
+            //shuffles the entries of the list using a random generator with the current time
+            Collections.shuffle(trainEntries, new Random(System.currentTimeMillis()));
+
+            //total number of entries
+            int total = trainEntries.size();
+            //the number of entries for training, leaving 20% for testing
+            int trainSize = (int) (total * 0.8);
+
+            //splits the data into training and testing subsets
+            List<String> trainingData = trainEntries.subList(0, trainSize);
+            List<String> testingData = trainEntries.subList(trainSize, total);
+
+            //writes the lists into the files
+            Files.write(trainPath, trainingData);
+            Files.write(testPath, testingData);
+
+            System.out.println("Training entries: " + trainingData.size());
+            System.out.println("Testing entries: " + testingData.size());
+
+
         } catch (NullPointerException npe) { //if the model input stream is null
             System.out.println("Model input stream was null.");
-        } catch (Exception e) { //general exception
+        } catch (IOException e) { //if an input/output exception occurs
+            System.out.println("File not found: " + e.getMessage());
+        }
+        catch (Exception e) { //general exception
             e.printStackTrace();
         }
     }
