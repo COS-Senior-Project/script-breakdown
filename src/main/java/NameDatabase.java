@@ -71,5 +71,4 @@ public class NameDatabase {
         //returns the boost, and returns 1 if the boost is higher than that
         return Math.min(boost, 1.0);
     }
-
 }

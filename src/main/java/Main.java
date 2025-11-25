@@ -2,6 +2,7 @@ import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.TokenNameFinderModel;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -21,7 +22,8 @@ public class Main {
             //creates an instance of NameFinderME
             NameFinderME nameFinderME = new NameFinderME(model);
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/data/character_candidates.csv"))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("src/main/resources/data/character_candidates.csv"));
+                 BufferedWriter trainWriter = new BufferedWriter(new FileWriter("src/main/resources/data/characters.train"))) {
                 //loops through each scene
                 for (Scene scene : scenes) {
                     //prints out each scene
@@ -32,8 +34,27 @@ public class Main {
                     List <Character> personWordCharacters = CharacterExtractor.extractPersonWord(scene.getContent(), scene);
                     List <Character> personIntroCharacters = CharacterExtractor.extractIntroCharacter(scene.getContent(), scene);
 
+                    List<Character> allCharacters = new ArrayList<>();
+                    allCharacters.addAll(speakerCharacters);
+                    allCharacters.addAll(inlineCharacters);
+                    allCharacters.addAll(personWordCharacters);
+                    allCharacters.addAll(personIntroCharacters);
+
                     //loops through each film character in the list
+                    for (Character c : allCharacters) {
+                        if (c.confidenceScore >= 0.65) {
+                            //CSV OUTPUT
+                            csvWriter.write(c.toCSVRow());
+                            csvWriter.newLine();
+
+                            //TRAIN FILE OUTPUT
+                            trainWriter.write(c.bootstrappingObjects("PERSON"));
+                            trainWriter.newLine();
+                        }
+                    }
+                    /*
                     for (Character c : speakerCharacters) {
+                        //CSV OUTPUT
                         //if the confidence score is high enough, it writes into the CSV
                         if (c.confidenceScore >= 0.65){
                             writer.write(c.toCSVRow());
@@ -58,15 +79,17 @@ public class Main {
                         writer.write(c.toCSVRow());
                         writer.newLine();
                     }
+
+                     */
                 }
             } catch (IOException io) { //if the CSV file is not found, it handles the error
                 System.out.println("CSV file not found.");
-            } catch (NullPointerException npe) { //if the model input stream is null
-                System.out.println("Model input stream was null.");
-            } catch (Exception e) { //general exception
-                e.printStackTrace();
             }
 
+        } catch (NullPointerException npe) { //if the model input stream is null
+            System.out.println("Model input stream was null.");
+        } catch (Exception e) { //general exception
+            e.printStackTrace();
         }
     }
 }
