@@ -50,20 +50,6 @@ public class CharacterExtractor {
             //single line
             String line = lines[i].trim();
 
-            // inside the for (int i=0; i<lines.length; i++) loop, right after String line = lines[i].trim();
-            if (line.length() > 0 && line.length() < 40 && line.equals(line.toUpperCase())) {
-                System.out.println("DEBUG LINE[" + i + "]: '" + line + "'");
-                System.out.println("  isCharacterCue? " + isCharacterCue(line));
-                Matcher m = MULTI_WORD_NAME.matcher(line);
-                System.out.println("  MULTI_WORD_NAME.find(): " + m.find());
-                if (m.find()) System.out.println("    group(1)='" + m.group(1) + "'");
-                Matcher mp = NAME_WITH_PAREN.matcher(line);
-                System.out.println("  NAME_WITH_PAREN.find(): " + mp.find());
-                // lookahead line
-                String nextLine = (i+1 < lines.length) ? lines[i+1].trim() : "<EOF>";
-                System.out.println("  nextLine: '" + nextLine + "'  isCharacterCue(nextLine)? " + (nextLine.equals("<EOF>") ? "N/A" : isCharacterCue(nextLine)));
-            }
-
             //if line is empty, move to the next one
             if (line.isEmpty()) continue;
 
