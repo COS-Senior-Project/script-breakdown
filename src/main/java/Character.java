@@ -15,10 +15,10 @@ public class Character extends ExtractableItem {
     public String toCSVRow() {
         String snippetSafe = contextSnippet.replaceAll("\\s+", " ").replace("\"", "\"\"");
         return sceneNumberInt + "," +
-                sceneNumber + "," +
-                nameItem + "," +
-                rule + "," +
-                contextSnippet + "," +
+                sceneNumber + ",\"" +
+                nameItem + "\"," +
+                rule + ",\"" +
+                contextSnippet + "\"," +
                 confidenceScore + "," +
                 nameDb;
     }

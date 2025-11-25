@@ -1,19 +1,34 @@
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.regex.*;
 import java.util.*;
 
 public class ScriptParser {
-    //load a script file into a String
-    public static String loadScript(String filePath) throws IOException {
-        String script = new String(Files.readAllBytes(Paths.get(filePath)));
-        script = script
-                .replaceAll("\u00A0", " ") //replaces non-breaking spaces
-                .replaceAll("\\r", "") //normalizes line breaks (carriage returns)
-                .replaceAll("(?m)^\\s+", "") //removes leading spaces on each line
-                .replaceAll("(?m)\\s+$", ""); //removes trailing spaces
-        return script;
+    //load a script file using the ScriptParser class
+    public static String loadScript (String filePath) throws IOException {
+        return loadScript(ScriptParser.class, filePath);
+    }
+    //loads the script file using non-specific class and classpath
+    public static String loadScript(Class<?> className,String filePath) throws IOException {
+        //tries to load input stream from the classpath
+        try (InputStream in = className.getResourceAsStream(filePath)) {
+            //if the input stream is null, throw an exception
+            if (in == null) {
+                throw new IllegalArgumentException("Resource path not found: " + filePath);
+            }
+            //reads the bytes of the script into a string
+            String script = new String(in.readAllBytes());
+            //normalizes the script
+            script = script
+                    .replaceAll("\u00A0", " ") //replaces non-breaking spaces
+                    .replaceAll("\\r", "") //normalizes line breaks (carriage returns)
+                    .replaceAll("(?m)^\\s+", "") //removes leading spaces on each line
+                    .replaceAll("(?m)\\s+$", ""); //removes trailing spaces
+            //returns the normalized string
+            return script;
+        }
     }
 
     //Removes page headers/footers and obvious page number-only lines,

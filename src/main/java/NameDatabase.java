@@ -60,8 +60,8 @@ public class NameDatabase {
         }
 
         //if any last or middle names match
-        if (parts.length >= 2){
-            for (int i = 1; i < parts.length; i++) {
+        if (parts.length >= 1){
+            for (int i = 0; i < parts.length; i++) {
                 if (LAST_NAME_TRIE.contain(parts[i])) {
                     boost += 0.3;
                 }

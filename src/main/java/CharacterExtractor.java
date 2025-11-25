@@ -13,6 +13,7 @@ public class CharacterExtractor {
     private static final Pattern MULTI_WORD_NAME = Pattern.compile("\\b((?:[A-Z][A-Z0-9'’\\.\\-]*)" +
             "(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*)*)\\b(?:\\s*\\(([^)]*)\\))?");
 
+    private static final Pattern NAME_WITH_PAREN = Pattern.compile("^\\s*([A-Z][A-Z0-9'’\\.\\-]*)\\s*\\((V\\.O\\.|O\\.S\\.|CONT'D)\\)\\s*$");
     //pattern looks for a string starting with one upper-cased letter
     // followed by more upper-cased letters, digits, apostrophes, periods, or dashes
     private static final Pattern NAME_TOKEN = Pattern.compile("^[A-Z][A-Z0-9'’\\.\\-]*$");
@@ -20,8 +21,8 @@ public class CharacterExtractor {
     private static final Pattern PERSON_ADJECTIVE = Pattern.compile("\\b(MALE|FEMALE|YOUNG|OLD|MIDDLE-AGED|MIDDLE AGED|BLACK|WHITE|ASIAN|CAUCASIAN|LATIN)(?:\\s+[A-Z][A-Z]+){1,2}\\b");
     //pattern looks for a person noun proceeded by an uppercase word
     private static final Pattern PERSON_NOUN = Pattern.compile("(\\b([A-Z]+)\\s+)?(MAN|WOMAN|BOY|GIRL|CHILD|TODDLER|TEENAGER|ADULT|ELDER)\\b");
-
-    private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|Enter|We see|Introducing)\\s+([A-Z][A-Z0-9'’\\.\\-]*(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*){0,2})(?=\\s|$|,|\\.)",
+    //pattern looks for a person's name when introducing characters
+    private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|Enter|Entering|Introducing)\\s+([A-Z][A-Z0-9'’\\.\\-]*(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*){0,2})(?=\\s|$|,|\\.)",
             Pattern.CASE_INSENSITIVE);
     //set of black list words that are definitely not names
     private static final Set<String> BLACK_LIST = new HashSet<>(Arrays.asList(
@@ -33,7 +34,7 @@ public class CharacterExtractor {
             "POV","BETWEEN","CUTTING","FX","SFX","CROWD","INT","EXT","OMITTED","DAY","NIGHT","SAME","TIME",
             "CONTINUOUS","PART","END","SCENE","PAGE","CLOSE","WIDE","MIDDLE","POV","OMITTED","CONTINUED",
             "PULLING", "PULLING BACK", "PUSHING", "SLOW MOTION", "FAST FORWARD", "FLASHBACK", "ON THE SCREEN",
-            "SCREEN"));
+            "SCREEN", "WITH"));
 
     //set of stage verbs that are definitely not names
     private static final Set <String> STAGE_VERBS = new HashSet<>(Arrays.asList(
@@ -43,6 +44,7 @@ public class CharacterExtractor {
     public static List <Character> extractSpeakerCues(String content, Scene scene, NameDatabase nameDb) {
         //creates a list of Character objects for the names obtained
         List<Character> result = new ArrayList<>();
+        //splits the lines into an array but keeps formatting
         String[] lines = content.split("\n", -1);
         //loops through each line
         for (int i = 0; i < lines.length; i++) {
@@ -52,9 +54,38 @@ public class CharacterExtractor {
             if (line.isEmpty()) continue;
 
             //tries to match the character speaking above dialogue line
-            Matcher lineMatcher = MULTI_WORD_NAME.matcher(line);
+            Matcher matcherMultiWord = MULTI_WORD_NAME.matcher(line);
+            //tries to match the character above dialogue with V.O. or O.S.
+            Matcher matcherParen = NAME_WITH_PAREN.matcher(line);
+            //if it finds a character with V.O.\O.S.
+            if (matcherParen.find()) {
+                //takes the character name only
+                String rawName = matcherParen.group(1);
+                //normalizes the name
+                String normalized = normalizeName(rawName);
+                //if the name is not included in the words that are clearly not names,
+                // but often are all uppercase (the sets of the black list and the stage verbs)
+                if (isStopPhrase(normalized)) continue;
+                //sets base confidence level
+                //higher because almost all names before V.O.\O.S. are character names
+                double confidence = 0.7;
+                //the confidence increases if the name is found in the name files
+                confidence += nameDb.confidenceBoostMatchFile(normalized);
+                //makes sure that the next line isn't after the last line (out of bounds)
+                String nextLine = (i + 1 < lines.length) ? lines[i+1] : "";
+                //the candidate name values are added as a Character object to the results
+                result.add(new Character(
+                        scene.getSceneIntNumber(),
+                        scene.getSceneNumber(),
+                        normalized,
+                        "SPEAKER_WITH_VO_OS",
+                        safeSnippet(lines[i] + "/" + nextLine),
+                        Math.min(1.0, confidence),
+                        nameDb
+                ));
+            }
             //if the line looks like a character cue line and a match is found
-            if (isCharacterCue(line) && lineMatcher.find()) {
+            else if (isCharacterCue(line) && matcherMultiWord.find()) {
                 //j will be the index of the line following i
                 int j = i + 1;
                 //if the following line is empty, and it is not after the last,
@@ -64,14 +95,14 @@ public class CharacterExtractor {
                 //it is not a character cue
                 if (j < lines.length && !isCharacterCue(lines[j])) {
                     //the raw name found by the regex matches to its group 1
-                    String rawName = lineMatcher.group(1);
+                    String rawName = matcherMultiWord.group(1);
                     //normalizes the raw name
                     String normalized = normalizeName(rawName);
                     //if the name is not included in the words that are clearly not names,
                     // but often are all uppercase (the sets of the black list and the stage verbs)
                     if (isStopPhrase(normalized)) continue;
                     //if all those rules are met, the confidence starts from 40%
-                    double confidence = 0.3;
+                    double confidence = 0.4;
                     //the confidence increases if the name is found in the name files
                     confidence += nameDb.confidenceBoostMatchFile(normalized);
                     //the candidate name values are added as a Character object to the results
@@ -97,12 +128,20 @@ public class CharacterExtractor {
         List <Character> result = new ArrayList<>();
         //if there is no content
         if (content == null || content.trim().isEmpty()) return result;
-
+        //string builder to hold all the content that has not been covered by the extractSpeakerCues extractor
         StringBuilder contentInline = new StringBuilder();
+        //splits the regular content into lines without losing formatting
         String[] lines = content.split("\n", -1);
+        //loops through all lines
         for (String line : lines) {
-            if (!isCharacterCue(line.trim())) {
-                contentInline.append(line).append("\n");
+            //replaces V.O.\O.S. with "" so that it cn fit into the isCharacterCue
+            String withoutPostfix = line.replaceAll("\\s*\\((V\\.O\\.|O\\.S\\.|CONT'D)\\)$", "").trim();
+
+            //if the lines without V.O.\O.S. do not fit into the isCharacterCue,
+            //they are appended to the new content
+            //in this way, the new content omits all covered by the extractCharacterCues extractor
+            if (!isCharacterCue(withoutPostfix)) {
+                contentInline.append(withoutPostfix).append("\n");
             }
         }
 
@@ -141,7 +180,8 @@ public class CharacterExtractor {
             double confidence = probs[i];
             //checks if the names are part of the name files and adds confidence if true
             confidence += nameDb.confidenceBoostMatchFile(candidate);
-            confidence = Math.min(1.0, confidence); //assigns confidence no larger than 1
+            //assigns confidence no larger than 1
+            confidence = Math.min(1.0, confidence);
 
             //creates a new Character object in the results for the candidate's name mention
             result.add(new Character(
@@ -158,20 +198,32 @@ public class CharacterExtractor {
         return result;
     }
 
+    //extractor to extract characters that include a person-related adjective or noun
     public static List <Character> extractPersonWord (String content, Scene scene) {
         //list to store all the Character objects fitting the criteria
         List <Character> result = new ArrayList<>();
         //if there is no content
         if (content == null || content.trim().isEmpty()) return result;
+        //sets static confidence score
+        // because the match cannot be contained in the name files
         double confidence = 0.7;
+        //splits the lines into an array keeping the formatting
         String[] lines = content.split("\n", -1);
+        //loops through the lines
         for (String line : lines) {
+            //trims the line
             String trimmed = line.trim();
+            //if nothing left, goes to the next iteration
             if (trimmed.isEmpty()) continue;
 
+            //creates a matcher object for an uppercase adjective word combination
+            // that is related to a personal characteristic
             Matcher matchAdj = PERSON_ADJECTIVE.matcher(trimmed);
+            //creates a matcher object for an uppercase noun word combination
+            // that is related to a person's identity
             Matcher matchNoun = PERSON_NOUN.matcher(trimmed);
 
+            //if it finds the adjective word sequence, it creates a new character entry
             if (matchAdj.find()) {
                 result.add(new Character(
                         scene.getSceneIntNumber(),
@@ -183,6 +235,8 @@ public class CharacterExtractor {
                         null
                 ));
             }
+            //if it finds a word noun sequence, it creates a new character
+            //using else if in case of a "YOUNG WOMAN" match
             else if (matchNoun.find()) {
                 result.add(new Character(
                         scene.getSceneIntNumber(),
@@ -195,32 +249,43 @@ public class CharacterExtractor {
                 ));
             }
         }
+        //returns the list of characters
         return result;
     }
 
+    //extracts characters that are first introduced
     public static List <Character> extractIntroCharacter (String content, Scene scene) {
+        //list of characters to store the matches
         List <Character> result = new ArrayList<>();
+        //if no content, it returns the list
         if (content == null || content.trim().isEmpty()) return result;
+        //sets confidence score
         double confidence = 0.7;
+        //splits the lines into an array of lines
         String[] lines = content.split("\n", -1);
+        //loops through each line
         for (String line : lines) {
+            //trims the line
             String trimmed = line.trim();
+            //if empty, moves to the next iteration
             if (trimmed.isEmpty()) continue;
 
+            //creates a matcher object to match the introduction of character
             Matcher matchIntro = INLINE_INTRO.matcher(trimmed);
-
+            //if matched, adds the character to the result list
             if (matchIntro.find()) {
                 result.add(new Character(
                         scene.getSceneIntNumber(),
                         scene.getSceneNumber(),
                         matchIntro.group(1),
-                        "PERSON_NOUN",
+                        "PERSON_INTRO",
                         safeSnippet(trimmed),
                         confidence,
                         null
                 ));
             }
         }
+        //returns the result list
         return result;
     }
 
@@ -270,7 +335,7 @@ public class CharacterExtractor {
         //the total token count is at most 5
         if (nameTokens >= Math.ceil(tokenCount * 0.8) && tokenCount <= 5){
             //rejects if non-word specific punctuation appears
-            if (line.matches(".*[!\\?\\,\\.;:\\(\\)\\[\\]].*")) return false;
+            if (line.matches(".*[!\\?\\,\\.;:].*")) return false;
             return true;
         }
         return false;
@@ -288,14 +353,14 @@ public class CharacterExtractor {
             String up = p.replaceAll("[^A-Z]", "");
             //if there is nothing in up, move to the next token
             if (up.isEmpty()) continue;
-            //if up is not contained in the black list or stage verbs set,
-            //it returns it is not a stop phrase
-            if (!BLACK_LIST.contains(up) && !STAGE_VERBS.contains(up)){
-                return false;
+            //if up is contained in the black list or stage verbs set,
+            //it returns it is a stop phrase
+            if (BLACK_LIST.contains(up) || STAGE_VERBS.contains(up)){
+                return true;
             }
         }
-        //if nothing returns false, then it is a stop phrase
-        return true;
+        //if nothing returns true, then it is not a stop phrase
+        return false;
     }
 
     //Create a safe snippet for CSV (collapse newlines and escape quotes)
