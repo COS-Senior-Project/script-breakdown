@@ -25,11 +25,11 @@ public class CharacterExtractor {
     private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|Enter|Entering|Introducing|It's|It is)\\s+([A-Z0-9'’\\.\\-]+(?:\\s+[A-Z0-9'’\\.\\-]+){0,2})(?=\\s|$|,|\\.)");
     //set of black list words that are definitely not names
     private static final Set<String> BLACK_LIST = new HashSet<>(Arrays.asList(
-            "A","AN","AND","OR","BUT","FOR","TO","IN","ON","AT","IS","ARE","WAS","WERE",
+            "A","AND","OR","BUT","FOR","TO","IN","ON","AT","IS","ARE","WAS","WERE",
             "BEEN","HAVE","HAS","HAD","DO","DOES","DID","WILL","WOULD","SHALL","SHOULD","MAY",
             "MIGHT","CAN","COULD","NOT","NO","AS","THAN","IF","WHEN","WHILE","HOW","WHAT", "WHICH", "SHOT", "MOVING",
             "BOOM","BANG","CRASH","RUMBLE","SOUND","NOISE","FX","CUT","CUTTING","CUTS","CUTS TO","CUT TO",
-            "CLOSE","CLOSES","CLOSE ON","PAN","PANNING","ZOOM","DOLLY","ANGLE","HER","HIS","THEM","THEMSELVES",
+            "CLOSE","CLOSES","CLOSE ON","PAN","PANNING","ZOOM","ANGLE","HER","HIS","THEM","THEMSELVES",
             "POV","BETWEEN","CUTTING","FX","SFX","CROWD","INT","EXT","OMITTED","DAY","NIGHT","SAME","TIME",
             "CONTINUOUS","PART","END","SCENE","PAGE","CLOSE","WIDE","MIDDLE","POV","OMITTED","CONTINUED",
             "PULLING", "PULLING BACK", "PUSHING", "SLOW MOTION", "FAST FORWARD", "FLASHBACK", "ON THE SCREEN",
@@ -37,7 +37,7 @@ public class CharacterExtractor {
 
     //set of stage verbs that are definitely not names
     private static final Set <String> STAGE_VERBS = new HashSet<>(Arrays.asList(
-            "CUT","PAN","ZOOM","DOLLY","TRACK","FADE","SMASH","MATCH","WIPE"
+            "CUT","PAN","ZOOM","TRACK","FADE","SMASH","MATCH","WIPE"
     ));
     //extracts names above dialogue
     public static List <Character> extractSpeakerCues(String content, Scene scene, NameDatabase nameDb) {
