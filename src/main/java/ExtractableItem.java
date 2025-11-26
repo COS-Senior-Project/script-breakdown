@@ -96,12 +96,10 @@ public abstract class ExtractableItem {
             if (i + nameWordCount <= tokens.length) {
                 //loops through each token of the name
                 for (int j = 0; j < nameWordCount; j++) {
-                    System.out.println(tokens[i+j]);
                     //normalizes the token to lowercase and removes punctuation
                     String cleaned = tokens[i + j].toLowerCase().replaceAll("[^a-zA-Z\\.'’\\-]", "");
                     //if any of the character name words, doesn't match this position of the snippet
                     //break out the name loop and move to the next snippet token
-                    System.out.println("Clean: " + cleaned + "  NameWords[j]: " + nameWords[j]);
                     if (!cleaned.equals(nameWords[j])) {
                         match = false;
                         break;

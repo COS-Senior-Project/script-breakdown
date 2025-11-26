@@ -116,7 +116,6 @@
 7,7,"DR. LECTER",SPEAKER_ABOVE_DIALOGUE,"DR. LECTER/And you'd hate to think you were",0.7,NameDatabase@7f63425a
 7,7,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/And the questionnaire...?",0.8,NameDatabase@7f63425a
 7,7,"DR. LECTER",SPEAKER_ABOVE_DIALOGUE,"DR. LECTER/A census taker once tried to test",0.7,NameDatabase@7f63425a
-7,7,"MIGG'S CELL",SPEAKER_ABOVE_DIALOGUE,"MIGG'S CELL/She sees that creature at his bars again, hissing at her.",0.7,NameDatabase@7f63425a
 7,7,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/is spattered on the face and neck - not with blood, but with",0.8,NameDatabase@7f63425a
 7,7,"DR. LECTER",SPEAKER_ABOVE_DIALOGUE,"DR. LECTER/Who's shivering with rage. For an instant his face opens,",0.7,NameDatabase@7f63425a
 7,7,"DR. LECTER",SPEAKER_ABOVE_DIALOGUE,"DR. LECTER/I would not have had that happen to",0.7,NameDatabase@7f63425a
@@ -190,7 +189,6 @@
 16,16,"Yow",NAMEFINDER_ME,"appear nonchalant . Mr . Yow , if this door should",1.0,NameDatabase@7f63425a
 17,17,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/Okay, Mr. Yow...",0.8,NameDatabase@7f63425a
 17,17,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/That wasn't me.",0.8,NameDatabase@7f63425a
-17,17,"THE CAR",SPEAKER_ABOVE_DIALOGUE,"THE CAR/is an antique beauty, a 1931 Packard. It's very dusty, despite",1.0,NameDatabase@7f63425a
 17,17,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/peers in through the gap, aiming her flashlight.",0.8,NameDatabase@7f63425a
 17,17,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/Mr. Yow? Oh Mr. Yow...? It looks",0.8,NameDatabase@7f63425a
 17,17,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/Not yet! - just wait for me.",0.8,NameDatabase@7f63425a
@@ -678,10 +676,10 @@
 55,55,"PRECIOUS",SPEAKER_ABOVE_DIALOGUE,"PRECIOUS/still fights for the bone, GROWLING, as the bucket rocks",1.0,NameDatabase@7f63425a
 55,55,"CATHERINE",SPEAKER_ABOVE_DIALOGUE,"CATHERINE/crouches, covering her head as the bucket bounces off her.",1.0,NameDatabase@7f63425a
 55,55,"CATHERINE",SPEAKER_ABOVE_DIALOGUE,"CATHERINE/Nooooo...!",1.0,NameDatabase@7f63425a
-55,55,"THE LITTLE DOG",SPEAKER_ABOVE_DIALOGUE,"THE LITTLE DOG/furious, BARKS down at her, then trots away in disgust.",1.0,NameDatabase@7f63425a
 55,55,"Catherine",NAMEFINDER_ME,"sets off to investigate . Catherine swings the bucket again ,",1.0,NameDatabase@7f63425a
 55,55,"Catherine",NAMEFINDER_ME,"away . It twitches as Catherine tugs on the string ,",1.0,NameDatabase@7f63425a
 55,55,"Catherine",NAMEFINDER_ME,"away with it , but Catherine is pulling her towards the",1.0,NameDatabase@7f63425a
+55,55,"The",NAMEFINDER_ME,"her . Nooooo ... ! The little dog furious , BARKS",0.8509873578771001,NameDatabase@7f63425a
 56,56,"Martin",NAMEFINDER_ME,"framed photo of Sen . Martin and Catherine , held in",1.0,NameDatabase@7f63425a
 56,56,"Catherine",NAMEFINDER_ME,"of Sen . Martin and Catherine , held in Clarice '",1.0,NameDatabase@7f63425a
 56,56,"Catherine",NAMEFINDER_ME,"young STATE TROOPER sitting in Catherine ' s easy chair .",1.0,NameDatabase@7f63425a
@@ -706,9 +704,9 @@
 61,61,"Crawford",NAMEFINDER_ME,". Sir , Mr . Crawford instructed me - Your instructions",1.0,NameDatabase@7f63425a
 61,61,"Jack Crawford",NAMEFINDER_ME,"m giving you now . Jack Crawford answers to the Director ,",1.0,NameDatabase@7f63425a
 61,61,"Crawford",NAMEFINDER_ME,"me . My God , Crawford ' s losing it ...",1.0,NameDatabase@7f63425a
+61,61,"The",NAMEFINDER_ME,"as you get back . The gun , too . Be",0.901476391653873,NameDatabase@7f63425a
 61,61,"Krendler",NAMEFINDER_ME,"turns back . Mr . Krendler ... Dr . Lecter trusts",0.7997485594222832,NameDatabase@7f63425a
 61,61,"Lecter",NAMEFINDER_ME,". Krendler ... Dr . Lecter trusts me . Or at",1.0,NameDatabase@7f63425a
-61,61,"Buffalo Bill",NAMEFINDER_ME,"- Lecter has already named Buffalo Bill . Clarice reacts , surprised",1.0,NameDatabase@7f63425a
 61,61,"Krendler",NAMEFINDER_ME,"Clarice reacts , surprised . Krendler takes a folded computer sheet",0.765769022182962,NameDatabase@7f63425a
 61,61,"William Rubin",NAMEFINDER_ME,"doesn ' t this "" William Rubin "" strike you as -",1.0,NameDatabase@7f63425a
 62,62,"Lecter",NAMEFINDER_ME,"of papers - Dr . Lecter ' s drawings - she",1.0,NameDatabase@7f63425a
@@ -754,7 +752,6 @@
 65,65,"THE CHILD RISES",SPEAKER_ABOVE_DIALOGUE,"THE CHILD RISES/crosses to the window in her nightgown, rubs the glass.",1.0,NameDatabase@7f63425a
 65,65,"CLARICE",SPEAKER_WITH_VO_OS,"CLARICE (V.O.)/I didn't know. I went to look...",1.0,NameDatabase@7f63425a
 65,65,"CLARICE",SPEAKER_WITH_VO_OS,"CLARICE (V.O.)/Screaming! Some kind of - screaming.",1.0,NameDatabase@7f63425a
-65,65,"THE LITTLE GIRL",SPEAKER_ABOVE_DIALOGUE,"THE LITTLE GIRL/is terrified; she covers her ears.",1.0,NameDatabase@7f63425a
 65,65,"CLARICE",SPEAKER_WITH_VO_OS,"CLARICE (V.O.)/Got dressed without turning on the",1.0,NameDatabase@7f63425a
 65,65,"THE LITTLE GIRL",SPEAKER_ABOVE_DIALOGUE,"THE LITTLE GIRL/in her winter coat, slips noiselessly towards the open barn",1.0,NameDatabase@7f63425a
 65,65,"CLARICE",SPEAKER_WITH_VO_OS,"CLARICE (V.O.)/I crept up to the barn... I was so",1.0,NameDatabase@7f63425a
@@ -782,7 +779,6 @@
 65,65,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/hugging the case file to her chest, stares back at him as",0.8,NameDatabase@7f63425a
 65,65,"Lecter",NAMEFINDER_ME,"unrolled pile of Dr . Lecter ' s drawings . You",1.0,NameDatabase@7f63425a
 65,65,"Lecter",NAMEFINDER_ME,"a toilet . Dr . Lecter sits at the table ,",1.0,NameDatabase@7f63425a
-65,65,"Bill",NAMEFINDER_ME,"her , studying the Buffalo Bill case file . He now",1.0,NameDatabase@7f63425a
 65,65,"Crawford",NAMEFINDER_ME,"very thoughtful ... Or did Crawford send you here for one",1.0,NameDatabase@7f63425a
 65,65,"Catherine",NAMEFINDER_ME,"it ? Pity for poor Catherine . Tick - tock ...",1.0,NameDatabase@7f63425a
 65,65,"Tick",NAMEFINDER_ME,"Pity for poor Catherine . Tick - tock ... He spins",1.0,NameDatabase@7f63425a
@@ -901,7 +897,6 @@
 87,87,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/The worst part - the thing that's",0.8,NameDatabase@7f63425a
 87,87,"ARDELIA",SPEAKER_ABOVE_DIALOGUE,"ARDELIA/Lecter said a lot of things.",0.8,NameDatabase@7f63425a
 87,87,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/(shakes her head)",0.8,NameDatabase@7f63425a
-87,87,"Bill",NAMEFINDER_ME,"hair wet . The Buffalo Bill case file , a thick",1.0,NameDatabase@7f63425a
 87,87,"Catherine Martin",NAMEFINDER_ME,"best anybody could have for Catherine Martin . You stuck your neck",1.0,NameDatabase@7f63425a
 87,87,"Bill",NAMEFINDER_ME,"me crazy - is that Bill is right in front of",1.0,NameDatabase@7f63425a
 87,87,"Lecter",NAMEFINDER_ME,"touching the case file ) Lecter said , everything I need",1.0,NameDatabase@7f63425a
@@ -1102,7 +1097,6 @@
 119,119,"Gordon",NAMEFINDER_ME,"thank you . Mr . Gordon , do you have a",1.0,NameDatabase@7f63425a
 119,119,"Gumb",NAMEFINDER_ME,"... Okay , Mr . Gumb , you ' re under",1.0,NameDatabase@7f63425a
 120,120,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/rushes to this - pauses - then elbows the door aside, aiming",0.8,NameDatabase@7f63425a
-120,120,"AN EMPTY STAIRWELL",SPEAKER_ABOVE_DIALOGUE,"AN EMPTY STAIRWELL/brightly lit, leading to the cellar. Two doors facing the",1.0,NameDatabase@7f63425a
 120,120,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/hates this, hates this, which door, it's a trap, what to do:",0.8,NameDatabase@7f63425a
 120,120,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/rushes through the doorway, and down the stairs.",0.8,NameDatabase@7f63425a
 120,120,"Gumb",NAMEFINDER_ME,"No sign of Mr . Gumb . hates this , hates",1.0,NameDatabase@7f63425a
@@ -1139,7 +1133,6 @@
 128,128,"Gumb",NAMEFINDER_ME,"one FLASH from Mr . Gumb , and one two three",1.0,NameDatabase@7f63425a
 128,128,"Gumb",NAMEFINDER_ME,"it bumps against Mr . Gumb ' s shoulder . He",1.0,NameDatabase@7f63425a
 129,129,"CLARICE",SPEAKER_ABOVE_DIALOGUE,"CLARICE/dazed, her face bandaged - comes out of the house, walking",0.8,NameDatabase@7f63425a
-129,129,"AN OHIO HIGHWAY PATROL CAR",SPEAKER_ABOVE_DIALOGUE,"AN OHIO HIGHWAY PATROL CAR/pulls up, stops, and Crawford climbs out of the back seat.",1.0,NameDatabase@7f63425a
 129,129,"CRAWFORD",SPEAKER_ABOVE_DIALOGUE,"CRAWFORD/Starling... your father sees you.",0.7,NameDatabase@7f63425a
 129,129,"Catherine",NAMEFINDER_ME,"house , walking protectively beside Catherine , who is wheeled on",1.0,NameDatabase@7f63425a
 129,129,"Catherine",NAMEFINDER_ME,"with an extension ladder . Catherine , blinking in confusion ,",1.0,NameDatabase@7f63425a
@@ -1165,7 +1158,6 @@
 134,134,"Lecter",NAMEFINDER_ME,". Lecter ... Dr . Lecter ... ! But only a",1.0,NameDatabase@7f63425a
 135,135,"Lecter",NAMEFINDER_ME,"Dr . Lecter sighs , sets his phone",1.0,NameDatabase@7f63425a
 136,136,"DR. LECTER",SPEAKER_ABOVE_DIALOGUE,"DR. LECTER/Considers him for a genial moment, then raises the little",0.7,NameDatabase@7f63425a
-136,136,"O'CONNER",SPEAKER_ABOVE_DIALOGUE,"O'CONNER/Well, Dr. Chilton. Shall we begin?",0.8,NameDatabase@7f63425a
 136,136,"Frederick Chilton",NAMEFINDER_ME,"writhing figure of Dr . Frederick Chilton . The extreme intricacy of",1.0,NameDatabase@7f63425a
 136,136,"Lecter",NAMEFINDER_ME,"his bindings recalls Dr . Lecter ' s own former restraints",1.0,NameDatabase@7f63425a
 136,136,"Lecter",NAMEFINDER_ME,"he stares at Dr . Lecter like a rabbit trapped in",1.0,NameDatabase@7f63425a

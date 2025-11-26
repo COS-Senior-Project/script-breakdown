@@ -62,7 +62,7 @@ public class Main {
                             csvWriter.newLine();
 
                             //collect .train entry in memory
-                            trainEntries.add(c.bootstrappingObjects("PERSON"));
+                            trainEntries.add(c.bootstrappingObjects("person"));
                         }
                     }
                 }
@@ -89,6 +89,15 @@ public class Main {
             System.out.println("Training entries: " + trainingData.size());
             System.out.println("Testing entries: " + testingData.size());
 
+            TrainingRunner runner = new TrainingRunner();
+
+            String trainFilePost = "output/characters_train_edited.train";
+            String testFilePost = "output/characters_test_edited.train";
+            String outputModel = "src/main/resources/models/en-ner-person-customer.bin";
+
+            runner.trainAndEvaluate(trainFilePost, testFilePost, outputModel);
+
+            System.out.println("Done!");
 
         } catch (NullPointerException npe) { //if the model input stream is null
             System.out.println("Model input stream was null.");
