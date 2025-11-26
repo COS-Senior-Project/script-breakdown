@@ -75,10 +75,14 @@ public abstract class ExtractableItem {
         String[] tokens = TextUnits.tokenize(this.contextSnippet);
         //string builder to store the training line at the end
         StringBuilder sb = new StringBuilder();
-        //lower the character name so the matching is case-insensitive
-        String nameLower = nameItem.toLowerCase();
         //splits the name in separate words if more than one word
-        String[] nameWords = nameLower.split("\\s+");
+        String[] nameWords = nameItem.toLowerCase()
+                .replaceAll("\\s+", " ")
+                .replaceAll("[^a-zA-Z\\.'’\\-]", " ")
+                .replaceAll("\\.", " .")
+                .replaceAll("'’", " '")
+                .replaceAll("\\-", " -")
+                .trim().split(" ");
         //the number of words in the character's name
         int nameWordCount = nameWords.length;
         //index to walk through tokens
@@ -92,9 +96,11 @@ public abstract class ExtractableItem {
                 //loops through each token of the name
                 for (int j = 0; j < nameWordCount; j++) {
                     //normalizes the token to lowercase and removes punctuation
-                    String cleaned = tokens[i + j].toLowerCase().replaceAll("[^a-zA-Z']", "");
+                    String cleaned = tokens[i + j].toLowerCase().replaceAll("[^a-zA-Z\\.'’]", "");
                     //if any of the character name words, doesn't match this position of the snippet
                     //break out the name loop and move to the next snippet token
+                    System.out.println("Cleaned: " + cleaned + "    NameWords[j]: " + nameWords[j]);
+                    System.out.println("Is it a match: " + cleaned.equals(nameWords[j]));
                     if (!cleaned.equals(nameWords[j])) {
                         match = false;
                         break;
