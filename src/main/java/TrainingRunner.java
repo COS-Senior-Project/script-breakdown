@@ -95,8 +95,6 @@ public class TrainingRunner {
                         //compares the true spans to the predicted spans
                         //updates precision, recall, and f1 scores
                         fMeasure.updateScores(sample.getNames(), predictedSpans);
-                        System.out.println(Arrays.toString(sample.getSentence()));
-
                     }
                     //precision is the fraction of actually correct names compared to all predicted
                     System.out.println("Precision: " + fMeasure.getPrecisionScore());

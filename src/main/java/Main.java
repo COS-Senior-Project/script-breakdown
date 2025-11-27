@@ -11,7 +11,7 @@ import java.util.Collection;
 public class Main {
     public static void main(String[] args) throws IOException {
         //loads the film script
-        String script = ScriptParser.loadScript("/scripts/the-silence-of-the-lambs.txt");
+        String script = ScriptParser.loadScript("/scripts/crazy-stupid-love.txt");
         //creates an object of ScriptParser
         ScriptParser parser = new ScriptParser();
         //the parser splits the script into scenes and puts them in a list
@@ -28,8 +28,8 @@ public class Main {
 
             //creates Path objects and converts the string path into a Path object
             Path csvPath = Paths.get("output/character_candidates.csv");
-            Path trainPath = Paths.get("output/characters_train.train");
-            Path testPath = Paths.get("output/characters_test.train");
+            Path trainPath = Paths.get("output/characters_train2.train");
+            Path testPath = Paths.get("output/characters_test2.train");
 
             //ensures the parent directories of the paths exist
             //it creates all missing directories
@@ -42,17 +42,18 @@ public class Main {
             List<String> trainEntries = new ArrayList<>();
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates.csv"))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates.csv", true))) {
                 //loops through each scene
                 for (Scene scene : scenes) {
                     //prints out each scene
-                    //System.out.println(scene);
+                    System.out.println(scene);
                     //creates a list that takes characters from all extractors
                     List<Character> allCharacters = new ArrayList<>();
                     allCharacters.addAll(CharacterExtractor.extractSpeakerCues(scene.getContent(), scene, nameDb));
                     allCharacters.addAll(CharacterExtractor.extractInlineName(scene.getContent(), scene, nameFinderME, nameDb));
                     allCharacters.addAll(CharacterExtractor.extractPersonWord(scene.getContent(), scene));
                     allCharacters.addAll(CharacterExtractor.extractIntroCharacter(scene.getContent(), scene));
+
 
                     //loops through each film character in the list
                     for (Character c : allCharacters) {
@@ -65,6 +66,7 @@ public class Main {
                             trainEntries.add(c.bootstrappingObjects("person"));
                         }
                     }
+
                 }
             } catch (IOException io) { //if the CSV file is not found, it handles the error
                 System.out.println("CSV file not found.");
@@ -83,11 +85,23 @@ public class Main {
             List<String> testingData = trainEntries.subList(trainSize, total);
 
             //writes the lists into the files
-            Files.write(trainPath, trainingData);
-            Files.write(testPath, testingData);
+            try (BufferedWriter trainWriter = new BufferedWriter(new FileWriter(trainPath.toFile(), true))) {
+                for (String entry : trainingData) {
+                    trainWriter.write(entry);
+                    trainWriter.newLine();
+                }
+            }
+
+            try (BufferedWriter testWriter = new BufferedWriter(new FileWriter(testPath.toFile(), true))) {
+                for (String entry : testingData) {
+                    testWriter.write(entry);
+                    testWriter.newLine();
+                }
+            }
 
             System.out.println("Training entries: " + trainingData.size());
             System.out.println("Testing entries: " + testingData.size());
+
 
             TrainingRunner runner = new TrainingRunner();
 

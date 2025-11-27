@@ -12,32 +12,44 @@ public class CharacterExtractor {
     //regex that captures multi-word uppercase names, group1 = name, group2 = parenthetical (optional)
     private static final Pattern MULTI_WORD_NAME = Pattern.compile("\\b((?:[A-Z][A-Z0-9'’\\.\\-]*)" +
             "(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*)*)\\b(?:\\s*\\(([^)]*)\\))?");
-
-    private static final Pattern NAME_WITH_PAREN = Pattern.compile("^\\s*([A-Z][A-Z0-9'’\\.\\-]*)\\s*\\((V\\.O\\.|O\\.S\\.|CONT'D)\\)\\s*$");
+    //the pattern looks for an uppercase name followed by (V.O./V/O), (O.S./O/S), (O.C./O/C), or (CONT'D)
+    private static final Pattern NAME_WITH_PAREN = Pattern.compile("^\\s*([A-Z][A-Z0-9'’\\.\\-]*)\\s*\\((V\\.O\\.|V/O|O\\.S\\.|O/S|O\\.C\\.|O/C|CONT'D)\\)\\s*$");
     //pattern looks for a string starting with one upper-cased letter
     // followed by more upper-cased letters, digits, apostrophes, periods, or dashes
     private static final Pattern NAME_TOKEN = Pattern.compile("^[A-Z][A-Z0-9'’\\.\\-]*$");
     //patterns looks for a person indicating uppercase adjective followed by one or two uppercase words
-    private static final Pattern PERSON_ADJECTIVE = Pattern.compile("\\b(MALE|FEMALE|YOUNG|OLD|MIDDLE-AGED|MIDDLE AGED|BLACK|WHITE|ASIAN|CAUCASIAN|LATIN)(?:\\s+[A-Z][A-Z]+){1,2}\\b");
+    private static final Pattern PERSON_ADJECTIVE = Pattern.compile("\\b(MALE|FEMALE|YOUNG|OLD|MIDDLE-AGED|MIDDLE AGED|ASIAN|CAUCASIAN|LATIN)(?:\\s+[A-Z][A-Z]+){1,2}\\b");
     //pattern looks for a person noun proceeded by an uppercase word
-    private static final Pattern PERSON_NOUN = Pattern.compile("\\b(?:[A-Z][A-Z0-9'’\\.\\-]*\\s+)?(MAN|WOMAN|BOY|GIRL|CHILD|TODDLER|TEENAGER|ADULT|ELDER|HUMAN)\\b");
+    private static final Pattern PERSON_NOUN = Pattern.compile("\\b(?:[A-Z][A-Z0-9'’\\.\\-]*\\s+)?(MAN|MEN|WOMAN|WOMEN|BOY|BOYS|GIRL|GIRLS|MALE|MALES|FEMALE|FEMALES|CHILD|" +
+            "CHILDREN|TODDLER|TODDLERS|TEENAGER|TEENAGERS|ADULT|ADULTS|ELDER|ELDERS|HUMAN|HUMANS|VOICE)\\b");
     //pattern looks for a person's name when introducing characters
     private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|Enter|Entering|Introducing|It's|It is)\\s+([A-Z0-9'’\\.\\-]+(?:\\s+[A-Z0-9'’\\.\\-]+){0,2})(?=\\s|$|,|\\.)");
+    //pattern looks for a character name before age when first introduced
+    private static final Pattern NAME_WITH_AGE = Pattern.compile("\\b(([A-Z][A-Z0-9'’.\\-]*)(?:\\s+[A-Z][A-Z0-9'’.\\-]*)*)\\b(?:\\s*\\((\\d{1,3}s?)\\))");
     //set of black list words that are definitely not names
     private static final Set<String> BLACK_LIST = new HashSet<>(Arrays.asList(
-            "A","AND","OR","BUT","FOR","TO","IN","ON","AT","IS","ARE","WAS","WERE",
-            "BEEN","HAVE","HAS","HAD","DO","DOES","DID","WILL","WOULD","SHALL","SHOULD","MAY",
-            "MIGHT","CAN","COULD","NOT","NO","AS","THAN","IF","WHEN","WHILE","HOW","WHAT", "WHICH", "SHOT", "MOVING",
-            "BOOM","BANG","CRASH","RUMBLE","SOUND","NOISE","FX","CUT","CUTTING","CUTS","CUTS TO","CUT TO",
-            "CLOSE","CLOSES","CLOSE ON","PAN","PANNING","ZOOM","ANGLE","HER","HIS","THEM","THEMSELVES",
-            "POV","BETWEEN","CUTTING","FX","SFX","CROWD","INT","EXT","OMITTED","DAY","NIGHT","SAME","TIME",
-            "CONTINUOUS","PART","END","SCENE","PAGE","CLOSE","WIDE","MIDDLE","POV","OMITTED","CONTINUED",
-            "PULLING", "PULLING BACK", "PUSHING", "SLOW MOTION", "FAST FORWARD", "FLASHBACK", "ON THE SCREEN",
-            "SCREEN", "WITH", "SHE", "HE", "THEY", "EACH", "ITS", "HERS", "HIS", "FOOTAGE", "MUSIC"));
+            "A", "AND", "OR", "BUT", "FOR", "TO", "IN", "ON", "AT", "IS", "ARE", "WAS", "WERE",
+            "BEEN", "HAVE", "HAS", "HAD", "DO", "DOES", "DID", "WILL", "WOULD", "SHALL", "SHOULD", "MAY",
+            "MIGHT", "CAN", "COULD", "NOT", "NO", "AS", "THAN", "IF", "WHEN", "WHILE", "HOW", "WHAT", "WHICH",
+            "SHOT", "MOVING", "BOOM", "BANG", "CRASH", "RUMBLE", "SOUND", "NOISE", "FX", "CUT", "CUTTING", "CUTS",
+            "CUTS TO", "CUT TO", "CLOSE", "CLOSES", "CLOSE ON", "PAN", "PANNING", "ZOOM", "ANGLE", "HER", "HIS",
+            "THEM", "THEMSELVES", "POV", "BETWEEN", "CUTTING", "FX", "SFX", "CROWD", "INT", "EXT", "OMITTED", "DAY",
+            "NIGHT", "SAME", "TIME", "CONTINUOUS", "PART", "END", "SCENE", "PAGE", "CLOSE", "WIDE", "MIDDLE", "POV",
+            "OMITTED", "CONTINUED", "PULLING", "PULLING BACK", "PUSHING", "SLOW MOTION", "FAST FORWARD", "FLASHBACK", "ON THE SCREEN",
+            "SCREEN", "WITH", "SHE", "HE", "THEY", "EACH", "ITS", "HERS", "HIS", "FOOTAGE", "MUSIC", "EXPLODES",
+            "EXPLODING", "EXPLODE", "PAUSE", "THEN", "MORE", "SORRY", "WHATEVER", "YEAH", "CUE", "WAIT", "SIGNS",
+            "LAUGHS", "NODS", "HONESTLY", "NOW"));
 
     //set of stage verbs that are definitely not names
     private static final Set <String> STAGE_VERBS = new HashSet<>(Arrays.asList(
-            "CUT","PAN","ZOOM","TRACK","FADE","SMASH","MATCH","WIPE"
+            "CUT", "PAN", "ZOOM", "TRACK", "FADE", "SMASH", "SMASHED", "MATCH", "WIPE"
+    ));
+    //words often used to represent characters in a script
+    private static final Set <String> PERSON_WORD = new HashSet<>(Arrays.asList(
+            "MAN", "MEN", "WOMAN", "WOMEN", "BOY", "BOYS", "GIRL", "GIRLS", "MALE",
+            "MALES", "FEMALE", "FEMALES", "CHILD", "CHILDREN", "TODDLER", "TODDLERS",
+            "TEENAGER", "TEENAGERS", "ADULT", "ADULTS", "ELDER", "ELDERS", "HUMAN",
+            "HUMANS", "VOICE"
     ));
     //extracts names above dialogue
     public static List <Character> extractSpeakerCues(String content, Scene scene, NameDatabase nameDb) {
@@ -68,9 +80,14 @@ public class CharacterExtractor {
                 if (isStopPhrase(normalized)) continue;
                 //sets base confidence level
                 //higher because almost all names before V.O.\O.S. are character names
-                double confidence = 0.7;
+                double confidence = 0.4;
                 //the confidence increases if the name is found in the name files
                 confidence += nameDb.confidenceBoostMatchFile(normalized);
+                String[] nameTokenized = TextUnits.tokenize(normalized);
+                //checks in case of words such as WOMAN, MAN, GUY, etc.
+                for (String t : nameTokenized) {
+                    if (PERSON_WORD.contains(t)) confidence += 0.15;
+                }
                 //makes sure that the next line isn't after the last line (out of bounds)
                 String nextLine = (i + 1 < lines.length) ? lines[i+1] : "";
                 //the candidate name values are added as a Character object to the results
@@ -105,6 +122,8 @@ public class CharacterExtractor {
                     double confidence = 0.4;
                     //the confidence increases if the name is found in the name files
                     confidence += nameDb.confidenceBoostMatchFile(normalized);
+                    //if the speaker above dialogue is not a name but a person word
+                    if(PERSON_WORD.contains(normalized.toUpperCase(Locale.ROOT))) confidence += 0.4;
                     //the candidate name values are added as a Character object to the results
                     result.add(new Character(
                             scene.getSceneIntNumber(),
@@ -276,6 +295,7 @@ public class CharacterExtractor {
 
             //creates a matcher object to match the introduction of character
             Matcher matchIntro = INLINE_INTRO.matcher(trimmed);
+            Matcher matchAge = NAME_WITH_AGE.matcher(trimmed);
             //if matched, adds the character to the result list
             if (matchIntro.find()) {
                 String candidate = matchIntro.group(1).replaceAll("[^A-Z]", "").trim();
@@ -285,6 +305,20 @@ public class CharacterExtractor {
                             scene.getSceneNumber(),
                             matchIntro.group(1),
                             "PERSON_INTRO",
+                            safeSnippet(trimmed),
+                            confidence,
+                            null
+                    ));
+                }
+            }
+            if (matchAge.find()) {
+                String candidate = matchAge.group(1).replaceAll("[^A-Z]", "").trim();
+                if (!candidate.isEmpty() && candidate.equals(candidate.toUpperCase())) {
+                    result.add(new Character(
+                            scene.getSceneIntNumber(),
+                            scene.getSceneNumber(),
+                            matchAge.group(1),
+                            "PERSON_WITH_AGE",
                             safeSnippet(trimmed),
                             confidence,
                             null
