@@ -11,7 +11,7 @@ import java.util.Collection;
 public class Main {
     public static void main(String[] args) throws IOException {
         //loads the film script
-        String script = ScriptParser.loadScript("/scripts/crazy-stupid-love.txt");
+        String script = ScriptParser.loadScript("/scripts/interstellar.txt");
         //creates an object of ScriptParser
         ScriptParser parser = new ScriptParser();
         //the parser splits the script into scenes and puts them in a list
@@ -28,8 +28,8 @@ public class Main {
 
             //creates Path objects and converts the string path into a Path object
             Path csvPath = Paths.get("output/character_candidates.csv");
-            Path trainPath = Paths.get("output/characters_train2.train");
-            Path testPath = Paths.get("output/characters_test2.train");
+            Path trainPath = Paths.get("output/characters_train3.train");
+            Path testPath = Paths.get("output/characters_test3.train");
 
             //ensures the parent directories of the paths exist
             //it creates all missing directories
@@ -84,6 +84,7 @@ public class Main {
             List<String> trainingData = trainEntries.subList(0, trainSize);
             List<String> testingData = trainEntries.subList(trainSize, total);
 
+
             //writes the lists into the files
             try (BufferedWriter trainWriter = new BufferedWriter(new FileWriter(trainPath.toFile(), true))) {
                 for (String entry : trainingData) {
@@ -98,6 +99,8 @@ public class Main {
                     testWriter.newLine();
                 }
             }
+
+
 
             System.out.println("Training entries: " + trainingData.size());
             System.out.println("Testing entries: " + testingData.size());

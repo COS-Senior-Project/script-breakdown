@@ -21,11 +21,11 @@ public class CharacterExtractor {
     private static final Pattern PERSON_ADJECTIVE = Pattern.compile("\\b(MALE|FEMALE|YOUNG|OLD|MIDDLE-AGED|MIDDLE AGED|ASIAN|CAUCASIAN|LATIN)(?:\\s+[A-Z][A-Z]+){1,2}\\b");
     //pattern looks for a person noun proceeded by an uppercase word
     private static final Pattern PERSON_NOUN = Pattern.compile("\\b(?:[A-Z][A-Z0-9'’\\.\\-]*\\s+)?(MAN|MEN|WOMAN|WOMEN|BOY|BOYS|GIRL|GIRLS|MALE|MALES|FEMALE|FEMALES|CHILD|" +
-            "CHILDREN|TODDLER|TODDLERS|TEENAGER|TEENAGERS|ADULT|ADULTS|ELDER|ELDERS|HUMAN|HUMANS|VOICE)\\b");
+            "CHILDREN|TODDLER|TODDLERS|TEENAGER|TEENAGERS|ADULT|ADULTS|ELDER|ELDERS|HUMAN|HUMANS|VOICE|OFFICER)\\b");
     //pattern looks for a person's name when introducing characters
     private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|Enter|Entering|Introducing|It's|It is)\\s+([A-Z0-9'’\\.\\-]+(?:\\s+[A-Z0-9'’\\.\\-]+){0,2})(?=\\s|$|,|\\.)");
     //pattern looks for a character name before age when first introduced
-    private static final Pattern NAME_WITH_AGE = Pattern.compile("\\b(([A-Z][A-Z0-9'’.\\-]*)(?:\\s+[A-Z][A-Z0-9'’.\\-]*)*)\\b(?:\\s*\\((\\d{1,3}s?)\\))");
+    private static final Pattern NAME_WITH_AGE = Pattern.compile("\\b([A-Z][A-Z0-9'’.\\-]*(?:\\s+[A-Z][A-Z0-9'’.\\-]*)*)\\b(?:\\s*(?:\\(|,)\\s*(\\d{1,3}s?)\\)?)");
     //set of black list words that are definitely not names
     private static final Set<String> BLACK_LIST = new HashSet<>(Arrays.asList(
             "A", "AND", "OR", "BUT", "FOR", "TO", "IN", "ON", "AT", "IS", "ARE", "WAS", "WERE",
@@ -38,7 +38,8 @@ public class CharacterExtractor {
             "OMITTED", "CONTINUED", "PULLING", "PULLING BACK", "PUSHING", "SLOW MOTION", "FAST FORWARD", "FLASHBACK", "ON THE SCREEN",
             "SCREEN", "WITH", "SHE", "HE", "THEY", "EACH", "ITS", "HERS", "HIS", "FOOTAGE", "MUSIC", "EXPLODES",
             "EXPLODING", "EXPLODE", "PAUSE", "THEN", "MORE", "SORRY", "WHATEVER", "YEAH", "CUE", "WAIT", "SIGNS",
-            "LAUGHS", "NODS", "HONESTLY", "NOW"));
+            "LAUGHS", "NODS", "HONESTLY", "NOW", "LOOK", "LOOKS", "LOOKING", "CHIRP", "VIDEO", "THERE", "OVER", "OVER THERE",
+            "WEAVES", "WALKS", "WALK", "WHY", "INSTANTLY", "WE", "YOU", "CAMERA", "GASPS", "IT", "THE"));
 
     //set of stage verbs that are definitely not names
     private static final Set <String> STAGE_VERBS = new HashSet<>(Arrays.asList(
@@ -49,7 +50,7 @@ public class CharacterExtractor {
             "MAN", "MEN", "WOMAN", "WOMEN", "BOY", "BOYS", "GIRL", "GIRLS", "MALE",
             "MALES", "FEMALE", "FEMALES", "CHILD", "CHILDREN", "TODDLER", "TODDLERS",
             "TEENAGER", "TEENAGERS", "ADULT", "ADULTS", "ELDER", "ELDERS", "HUMAN",
-            "HUMANS", "VOICE"
+            "HUMANS", "VOICE", "ASSISTANT", "OFFICER"
     ));
     //extracts names above dialogue
     public static List <Character> extractSpeakerCues(String content, Scene scene, NameDatabase nameDb) {
@@ -313,7 +314,7 @@ public class CharacterExtractor {
             }
             if (matchAge.find()) {
                 String candidate = matchAge.group(1).replaceAll("[^A-Z]", "").trim();
-                if (!candidate.isEmpty() && candidate.equals(candidate.toUpperCase())) {
+                if (!candidate.isEmpty() && candidate.equals(candidate.toUpperCase()) && !PERSON_WORD.contains(candidate)) {
                     result.add(new Character(
                             scene.getSceneIntNumber(),
                             scene.getSceneNumber(),
