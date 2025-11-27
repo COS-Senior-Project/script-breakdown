@@ -10,8 +10,11 @@ import java.util.regex.*;
 public class CharacterExtractor {
 
     //regex that captures multi-word uppercase names, group1 = name, group2 = parenthetical (optional)
-    private static final Pattern MULTI_WORD_NAME = Pattern.compile("\\b((?:[A-Z][A-Z0-9'’\\.\\-]*)" +
-            "(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*)*)\\b(?:\\s*\\(([^)]*)\\))?");
+    private static final Pattern MULTI_WORD_NAME = Pattern.compile(
+            "\\b(?:(?:Mr|Mrs|Ms|Dr)\\.?)?\\s*" +
+                    "\\b((?:[A-Z][A-Z0-9'’\\.\\-]*)" +
+            "(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*)*)\\b" +
+                    "(?:\\s*\\(([^)]*)\\))?");
     //the pattern looks for an uppercase name followed by (V.O./V/O), (O.S./O/S), (O.C./O/C), or (CONT'D)
     private static final Pattern NAME_WITH_PAREN = Pattern.compile("^\\s*([A-Z][A-Z0-9'’\\.\\-]*)\\s*\\((V\\.O\\.|V/O|O\\.S\\.|O/S|O\\.C\\.|O/C|CONT'D)\\)\\s*$");
     //pattern looks for a string starting with one upper-cased letter

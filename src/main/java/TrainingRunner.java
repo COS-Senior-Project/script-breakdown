@@ -89,13 +89,22 @@ public class TrainingRunner {
                     while (( sample = testSampleStream.read()) != null) {
                         //extracts the tokens in the sample
                         String[] tokens = sample.getSentence();
+                        System.out.println();
                         //predicts the spans (start index to end index) of
                         // character names in the token array
                         Span[] predictedSpans = nameFinder.find(tokens);
                         //compares the true spans to the predicted spans
                         //updates precision, recall, and f1 scores
                         fMeasure.updateScores(sample.getNames(), predictedSpans);
+
+                        if (!Arrays.equals(predictedSpans, sample.getNames())) {
+                            System.out.println("TEXT: " + String.join(" ", tokens));
+                            System.out.println("PREDICTED: " + Arrays.toString(predictedSpans));
+                            System.out.println("EXPECTED: " + Arrays.toString(sample.getNames()));
+                            System.out.println("---------------------------");
+                        }
                     }
+
                     //precision is the fraction of actually correct names compared to all predicted
                     System.out.println("Precision: " + fMeasure.getPrecisionScore());
                     //recall is the fraction of correctly predicted names compared to all that should have been correct

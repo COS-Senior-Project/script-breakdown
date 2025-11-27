@@ -84,7 +84,7 @@ public class Main {
             List<String> trainingData = trainEntries.subList(0, trainSize);
             List<String> testingData = trainEntries.subList(trainSize, total);
 
-
+            /*
             //writes the lists into the files
             try (BufferedWriter trainWriter = new BufferedWriter(new FileWriter(trainPath.toFile(), true))) {
                 for (String entry : trainingData) {
@@ -101,7 +101,7 @@ public class Main {
             }
 
 
-
+             */
             System.out.println("Training entries: " + trainingData.size());
             System.out.println("Testing entries: " + testingData.size());
 
