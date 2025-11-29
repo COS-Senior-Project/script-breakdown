@@ -89,7 +89,6 @@ public class TrainingRunner {
                     while (( sample = testSampleStream.read()) != null) {
                         //extracts the tokens in the sample
                         String[] tokens = sample.getSentence();
-                        System.out.println();
                         //predicts the spans (start index to end index) of
                         // character names in the token array
                         Span[] predictedSpans = nameFinder.find(tokens);

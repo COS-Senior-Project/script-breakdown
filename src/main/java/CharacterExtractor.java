@@ -340,7 +340,7 @@ public class CharacterExtractor {
         //converts to readable apostrophes and multiple spaces to just one space
         String s = raw.replaceAll("’", "'").replaceAll("\\s+", " ").trim();
         //removes (V.O.), (O.S.), and (CONT'D)
-        s = s.replaceAll("\\s*\\((V\\.O\\.|O\\.S\\.|CONT'D)\\)\\s*$", "").trim();
+        s = s.replaceAll("\\s*\\((V\\.O\\.|V/O|O\\.S\\.|O/S|O\\.C\\.|O/C|CONT'D)\\)\\s*$", "").trim();
         //removes stray trailing punctuation in the beginning and at the end of the string
         s = s.replaceAll("^[^A-Z0-9]+", "").replaceAll("[^A-Z0-9]+$", "");
         //removes any trailing scene-number formatting that might accidentally go into the name

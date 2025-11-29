@@ -23,18 +23,5 @@ public class Character extends ExtractableItem {
                 nameDb;
     }
 
-    /*
-    //Writes a CSV row
-    private static void writeCSV(BufferedWriter writer, Scene scene, NameDatabase nameDb) throws IOException {
-        List <Character> speakerCues = CharacterExtractor.extractSpeakerCues(scene.getContent(), scene, nameDb;)
-        //name and rules are assumed safe (uppercase tokens); snippets need quoting
-        StringBuilder sb = new StringBuilder();
-        sb.append(sceneNumber).append(",")
-                .append(nameItem).append(",")
-                .append(rule).append(",")
-                .append("\"").append(contextSnippet).append("\"");
-        writer.write(sb.toString());
-        writer.newLine();
-    }
-     */
+
 }
