@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Scene {
     private final int sceneIntNumber;
     private final String sceneNumber;
@@ -5,6 +8,8 @@ public class Scene {
     private final String content;
     private final String locationKeyword;
     private final String time;
+
+    private final List<CharacterMention> mentions = new ArrayList<>();
 
     public Scene(int sceneIntNumber, String sceneNumber, String heading, String content, String locationKeyword, String time){
         this.sceneIntNumber = sceneIntNumber;
@@ -35,6 +40,15 @@ public class Scene {
     }
     public String getTime(){
         return  time;
+    }
+
+    //adds post-training character mentions to a list
+    public void addMentions(List<CharacterMention> newMentions) {
+        mentions.addAll(newMentions);
+    }
+
+    public List<CharacterMention> getMentions() {
+        return mentions;
     }
 
     @Override
