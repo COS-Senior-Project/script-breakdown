@@ -927,7 +927,7 @@ that ranch ? Dr . <START:person> Lecter <END> , when there ' s
  You ' ll back me up with some paperwork ?
 1980 , by my patient <START:person> Benjamin Raspail <END> . They were lovers ,
 punches OFF the music . <START:person> Jacobs <END> kneels with his fingers on
-<START:person> PETERSON <END> ' S VOICE
+<START:person> PETERSON ' S VOICE <END> 
  Got it .
 you help us find Buffalo <START:person> Bill <END> in time to save Catherine
 <START:person> CLARICE <END> 
@@ -1248,7 +1248,7 @@ struggle to regain composure . <START:person> Crawford <END> , who was at the
  Some fishermen in West Virginia found
 <START:person> CRAWFORD <END> 
  Get photos of her teeth . Then we ' ll
-FLUSHES , and <START:person> Dr . Lecter <END> reappears , looking jaunty .
+FLUSHES , and Dr . <START:person> Lecter <END> reappears , looking jaunty .
 <START:person> MR . GUMB <END> 
  Looking down at her , smiles ...
 <START:person> DR . LECTER <END> 
@@ -1690,7 +1690,8 @@ s great , <START:person> Mr . Weaver <END> . It ' s a
 <START:person> DAVID JACOBOWITZ <END> 
  Wow . You know , that ' s exactly
 Cal drives now . <START:person> Jessica <END> in the front . Awkward
-<START:person> CAL <END>
+<START:person> VOICE <END> ( O . S . )
+<START:person> CAL <END> 
  Hello ?
 <START:person> JACOB <END> 
  It is . So now I ' m going to ask if
@@ -1711,7 +1712,7 @@ Cal drives now . <START:person> Jessica <END> in the front . Awkward
  Cal ?
 ) 44 Tracy waves to <START:person> David <END> as she and Robbie EXIT
 reality of it all . <START:person> Tracy <END> looks at the U -
-writing in a pad . <START:person> POLICE OFFICER <END> 1 Well ,
+writing in a pad . <START:person> POLICE OFFICER # 1 <END> Well ,
 have I been talking ? <START:person> Jacob <END> takes her hand . (
 remembers his company and turns toward <START:person> Jessica <END> .
 <START:person> JESSICA <END>
@@ -1875,9 +1876,9 @@ off . Cal turns to <START:person> Molly <END> , REMOTE in hand .
  Eww .
 <START:person> HANNAH <END> 
  My life is not PG - 13 !
-<START:person> Jacob <END> , <START:person> Bernie <END> , and <START:person> David Jacobowitz <END> sit side - by -
+Jacob , Bernie , and <START:person> David Jacobowitz <END> sit side - by -
 <START:person> CAL <END> 
- Okay , well ... <START:person> Molly <END> , last chance ! ?
+ Okay , well ... Molly , last chance ! ?
 <START:person> CAL <END> 
  Yeah .
 <START:person> ROBBIE <END> 
@@ -1935,14 +1936,15 @@ Cal bids farewell to a <START:person> NEW GIRL <END> on a new morning .
  I asked you second .
 <START:person> CAL <END> 
  I dunno . Five hundred ?
-<START:person> CAL <END>
+<START:person> VOICE <END> ( O . S . )
+<START:person> CAL <END> 
  In fairness , I don ' t know where he
 been in love before . <START:person> Honestly <END> , I ' ve never
 horribly painful . INSIDE ... <START:person> Tracy <END> looks at her kids ,
 in . Tries to pull <START:person> Bernie <END> off . <START:person> Bernie <END> NAILS Jacob
 <START:person> JACOB <END> ( O . S . ) 
  Ah , it ' s okay , I deserved it .
-intimate middle school graduation . <START:person> Tracy <END> , <START:person> Molly <END> , and <START:person> Hannah <END>
+intimate middle school graduation . <START:person> Tracy <END> , Molly , and Hannah
 <START:person> CAL <END> 
  I ' m getting divorced . Or , in the
 s ) stands there : <START:person> DAVID <END> JACOBOWITZ . You have a
@@ -2376,6 +2378,8 @@ this word , Mrs . <START:person> Weaver <END> ? She ' s heard
  Guess I should take it down , huh ?
 <START:person> ROBBIE <END> 
  Listen , Dad . I love you . I have
+<START:person> VOICE <END> ( O . S . ) 
+ Mr . and Mrs . Weaver ?
 you for inviting me to <START:person> Hannah <END> ' s ` goodbye '
 <START:person> HANNAH <END> 
  Did you hear that ? ` It ' s going to
@@ -2403,6 +2407,8 @@ won ' t stop sending <START:person> Jessica <END> texts that make her uncomforta
  I ' ll kill him if he hurts you .
 <START:person> TRACY <END> 
  I ' ll be right back , okay , honey ?
+<START:person> VOICE <END> ( O . S . ) 
+ Hello ?
 What ' s happening ? <START:person> Bernie <END> is pummeling Cal . I
 <START:person> JACOB <END> 
  Cal , the only thing I care less
@@ -2507,7 +2513,7 @@ SMALL GIFTS in front of <START:person> Hannah <END> . Holding her hand is
 flowers that David Jacobowitz gave <START:person> Tracy <END> sit out front . She
 <START:person> JACOB <END> 
  Okay , so like children then . Move
-<START:person> Cal <END> , <START:person> Jacob <END> , <START:person> Bernie <END> , and <START:person> David Jacobowitz <END> sit
+Cal , Jacob , <START:person> Bernie <END> , and David Jacobowitz sit
 <START:person> JESSICA <END> 
  Hi , Mr . and Mrs . Weaver . How was
 <START:person> JESSICA <END> 
@@ -2526,7 +2532,8 @@ flowers that David Jacobowitz gave <START:person> Tracy <END> sit out front . Sh
  Weren ' t we talking about you ?
 <START:person> ROBBIE <END> 
  Now I know what you ' re thinking :
-<START:person> JACOB <END>
+Tracy , Molly , and <START:person> Hannah <END> sit in the front row
+<START:person> JACOB <END> 
  WHAT THE HELL IS A NANNA ! ?
 <START:person> CAL <END> 
  You know , maybe we should focus on
@@ -2835,7 +2842,8 @@ an accountant named <START:person> David <END> . <START:person> David <END> , th
 get you a drink , <START:person> Amy <END> ? CUT TO : 35
 <START:person> CAL <END> 
  I ' m buying you a drink anyway ,
-<START:person> HANNAH <END>
+<START:person> VOICE <END> ( O . S . )
+<START:person> HANNAH <END> 
  I ' m not sure .
 <START:person> CAL <END> 
  She ' s all yours , David .
@@ -2900,6 +2908,7 @@ in there . Sorry . <START:person> Bernie <END> stands , awkwardly . He
  Listen , I ' m going to be honest :
 <START:person> CAL <END> 
  Know what ?
+school graduation . Tracy , <START:person> Molly <END> , and Hannah sit in
 you find me attractive ? <START:person> Hannah <END> doesn ' t flinch .
 <START:person> SALESMAN <END> 
  Get the matching chaise , killer
@@ -3131,7 +3140,8 @@ A <START:person> WOMAN <END> ( 60 s ) gives Cal the tour .
  No , your other daughter .
 <START:person> MOLLY <END> 
  No !
-<START:person> LIZ <END>
+<START:person> VOICE <END> ( V . O . )
+<START:person> LIZ <END> 
  Richard , you just give me a heads -
 <START:person> TRACY <END> 
  We got married so young , Cal . And
@@ -3268,7 +3278,7 @@ she still loves him . <START:person> Robbie <END> props the PHOTO of Tracy
  Sorry , that ' s unfair . Ignore me ,
 <START:person> JESSICA <END> 
  Strained . I took a summer
-<START:person> WOMAN <END> 1
+<START:person> WOMAN <END> # 1
 <START:person> CAL <END> 
  Okay .
 <START:person> CAL <END> 
@@ -3311,6 +3321,8 @@ Thank you , Mrs . <START:person> Thompson <END> . Welcome , Class of
  I ' ll be honest : he scares the
 <START:person> TRACY <END> 
  Me , too . She sound okay to you ?
+<START:person> VOICE <END> ( O . S . ) 
+ Who ?
 <START:person> DAVID JACOBOWITZ <END> 
  You ' ve been avoiding me .
 <START:person> JACOB <END> 
@@ -3374,6 +3386,7 @@ is this ? Mrs . <START:person> Thompson <END> . This is the one
 <START:person> JESSICA <END> 
  Huh ?
 are having a catch . <START:person> Robbie <END> is listless . So you
+<START:person> VOICE <END> ( O . S . )
 ) and his wife , <START:person> TRACY <END> ( 41 ) . A
 <START:person> JACOB <END> 
  Hi . Who looks like a carrot ?
@@ -3809,7 +3822,7 @@ parse how it works . <START:person> Cooper <END> looks on . ( AMAZED
  My dad can fix anything .
 Ahead , <START:person> Cooper <END> can see the gleaming water
 help with the disorientation . <START:person> Cooper <END> opens his mouth to talk
-to get his bearings : <START:person> Roth <END> , <START:person> Doyle <END> , and everything
+to get his bearings : <START:person> Roth <END> , Doyle , and everything
 way along the hull . <START:person> Cooper <END> gets quicker with each bundle
 <START:person> BRAND <END> 
  These creatures are billions of years
@@ -3979,7 +3992,7 @@ make a shortwave broadcast . <START:person> Brand <END> opens her mouth to point
 to handle . Case grabs <START:person> Cooper <END> and Brand and pushes them
 <START:person> DONALD <END> 
  You get older , sometimes you just
-<START:person> Brand <END> , <START:person> Cooper <END> , and <START:person> Doyle <END> pull themselves out of the
+Brand , Cooper , and <START:person> Doyle <END> pull themselves out of the
 He puts a hand on <START:person> Brand <END> ' s shoulder . He
 <START:person> Cooper <END> is standing on a rooftop
 <START:person> COOPER <END> 
@@ -3998,7 +4011,8 @@ a problem . Case and <START:person> Roth <END> look up to see the
 <START:person> ROTH <END> ( CONT ' D ) 
  It appears to be pulling us on exactly
 Cooper smiles at Ms . <START:person> KELLY <END> , 30 s , attractive .
-<START:person> BRAND <END>
+<START:person> VOICE <END> ( O . S . )
+<START:person> BRAND <END> 
  Our last trip past the black hole
 <START:person> COOPER <END> 
  This is what the Chinese were
@@ -4313,7 +4327,7 @@ What ' s that ? <START:person> Tom <END> snorts with laughter . Turns
  Humans are good at surviving because
 <START:person> ROTH <END> 
  Look at that .
-This is the Space Station Joseph A . Cooper . <START:person> Cooper <END> takes in the
+This is the Space Station <START:person> Joseph A . Cooper <END> . Cooper takes in the
 <START:person> DOYLE <END> ( CONT ' D ) 
  If the modelling was wrong , then we
 <START:person> BRAND <END> 
@@ -4442,7 +4456,7 @@ As the light fades , <START:person> Cooper <END> and the others come to
 <START:person> DOYLE <END> 
  The Chinese must have captured them .
 this smaller black hole . <START:person> Roth <END> calls it Pantagruel . We
-' s two boys , <START:person> TOM <END> , 15 , and <START:person> MURPH <END>
+' s two boys , <START:person> TOM <END> , 15 , and MURPH
 . The image freezes , <START:person> Tom <END> ' s hand on the
 they ' re distracted , <START:person> Doyle <END> maneuvers himself over to the
 <START:person> COOPER <END> 
@@ -4474,6 +4488,7 @@ re safe up there . <START:person> Tom <END> gets up to leave .
 <START:person> COOPER <END> 
  What about <START:person> Tars <END> ?
 out . Cooper watches as <START:person> Doyle <END> is swallowed into the compressing
+Joseph A . <START:person> Cooper <END> . <START:person> Cooper <END> takes in the incredible surroundings
 <START:person> Cooper <END> , in a space suit
 up from the screen as <START:person> Cooper <END> walks up . Tars here
 <START:person> Cooper <END> is seated , alone .
@@ -4821,7 +4836,7 @@ The next message begins . <START:person> Tom <END> is in his 30 s
  I ' m not going to endanger it any
 <START:person> BRAND <END> ( CONT ' D ) 
  Case ... what are you doing ?
-<START:person> Brand <END> , <START:person> Cooper <END> , and <START:person> Doyle <END>
+<START:person> Brand <END> , Cooper , and Doyle
 <START:person> COOPER <END> 
  I guess I just think we ' re on our
 , lost in thought . <START:person> Cooper <END> has told him everything .
@@ -5140,7 +5155,7 @@ his bearings : Roth , <START:person> Doyle <END> , and everything that hasn
  ( AMAZED )
 <START:person> BRAND <END> 
  This isn ' t turbulence . Look at the
-The ballplayer notices Cooper ' s two boys , <START:person> TOM <END> , 15 , and <START:person> MURPH <END> ,
+The ballplayer notices Cooper ' s two boys , TOM , 15 , and <START:person> MURPH <END> ,
 Brand ushers <START:person> Doyle <END> into the landing module .
 <START:person> ROTH <END> 
  ( SMILES )
@@ -5308,17 +5323,18 @@ wait . Too late . <START:person> Cooper <END> forces his way between two
  I ' m nervous . You don ' t need to be
 The scene is decaying . <START:person> Joel <END> chases after her . Clem
 , waits . Hello , <START:person> Howard <END> ?
+s by Pope Alexander . <START:person> Alexander Pope <END> ? Yes , shit .
 and starts to read . <START:person> Joel <END> glances up , tries to
 <START:person> STAN <END> 
  She was unconscious , Patrick .
-<START:person> NAOMI <END> ' S VOICE
+<START:person> NAOMI ' S VOICE <END> 
  Good . I called you at work today . They
+to be from then . <START:person> Everyone <END> wore hats . Anyway ,
 the van . He and <START:person> Howard <END> look at each other .
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
  ( poking her head downstairs )
-<START:person> Clementine <END> reenters with her drink .
- The <START:person> old woman <END> carries her manuscript haltingly down a subway hall .
-do me a favor - - <START:person> Joel <END> is watching Stan . Stan
+a pastrami for after ? <START:person> Cole <END> slaw , ice tea ?
+do me a favor -- <START:person> Joel <END> is watching Stan . Stan
 <START:person> JOEL <END> 
  I knew .
 <START:person> CLEMENTINE <END> 
@@ -5347,7 +5363,6 @@ fuck around , <START:person> Stan <END> . <START:person> Stan <END> tries to thi
  Nope . No jokes . My favorite thing when
 <START:person> JOEL <END> ( CONT ' D ) 
  I remember --
-The <START:person> woman <END> is still in the chair
 <START:person> JOEL <END> 
  Thanks .
 <START:person> MIERZWIAK <END> 
@@ -5366,13 +5381,11 @@ Patrick and <START:person> Mary <END> are heading home from Boston
 ! Remember the Alamo ! <START:person> Mary <END> ... please . This is
 <START:person> JOEL <END> 
  I don ' t know .
- ( reprimanding whisper )
- <START:person> Stan <END> . . . c'mon . . .
 <START:person> JOEL <END> 
  Thanks , guys .
 <START:person> PATRICK <END> 
  ( guilty beat )
-<START:person> Joel <END> and <START:person> Clementine <END> are in the
+<START:person> Joel <END> and Clementine are in the
 <START:person> CLEMENTINE <END> 
  Why ?
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
@@ -5383,7 +5396,6 @@ off the elevator , approaches <START:person> Carmen <END> , who is in conversati
 a right to know . <START:person> Howard <END> is a thief . He
 <START:person> CLEMENTINE <END> 
  Yo ho ho !
- The <START:person> woman <END> glances at the manuscript in her lap .
 <START:person> CLEMENTINE <END> 
  ( formulating )
 <START:person> JOE EARLY <END> 
@@ -5396,13 +5408,13 @@ a right to know . <START:person> Howard <END> is a thief . He
  I think so .
 me another , Joely ? <START:person> Joel <END> sighs , stands , and
 we ' re hidden . <START:person> Joel <END> sucks in some snot .
-<START:person> JOEL <END> ' S VOICE
+<START:person> JOEL ' S VOICE <END> 
  Hi , it ' s Joel . Please leave a message
 <START:person> CLEMENTINE <END> 
  You ' re really nice . I ' m sorry I yelled
 <START:person> MARY <END> 
  ( a little giggly )
-<START:person> Clementine <END> in your brain . Tonight while you sleep we '
+Clementine in your brain . <START:person> Tonight <END> while you sleep we '
 <START:person> JOEL <END> 
  Well , I wouldn ' t want to be --
 <START:person> STAN <END> 
@@ -5410,7 +5422,8 @@ we ' re hidden . <START:person> Joel <END> sucks in some snot .
 <START:person> SAD WOMAN <END> ' S VOICE ( CONT ' D )
 <START:person> CLEMENTINE <END> ( O . S . ) 
  Hi .
-<START:person> MARY <END> ' S VOICE
+not , like , a <START:person> Robert Frost <END> lover by any stretch .
+<START:person> MARY ' S VOICE <END> 
  ( shaky )
 <START:person> NAOMI <END> 
  What ?
@@ -5424,7 +5437,6 @@ walks with his bags behind <START:person> Mary <END> . ( not looking back
 It ' s cold . <START:person> Joel <END> and Clementine walk , all
 <START:person> MARY <END> 
  May I help you ?
- the <START:person> old woman <END> studies commuters in passing tubes .
 on the lab , where <START:person> Patrick <END> has clearly taken over Stan
 <START:person> JOEL <END> 
  Oh shit . I remember this .
@@ -5436,7 +5448,8 @@ home in my bed . <START:person> Stan <END> pulls a snow globe from
 <START:person> Patrick <END> is on the phone next
 <START:person> MIERZWIAK <END> ( CONT ' D ) 
  ( looking up )
-<START:person> Mary <END> . . .
+<START:person> VAGUE RECORDED VOICE <END> 
+ -- If you think you have reached this
 about you . Yay . <START:person> Meet <END> me after work by the
 <START:person> MARY <END> 
  You made me have an abortion .
@@ -5444,7 +5457,6 @@ about you . Yay . <START:person> Meet <END> me after work by the
  Like I wanted to talk to you . I didn ' t
 <START:person> JOEL <END> 
  Yeah .
-<START:person> Mary <END> looks up .
 <START:person> RECEPTIONIST <END> ( CONT ' D ) 
  ( quietly into headset )
 <START:person> MIERZWIAK <END> 
@@ -5460,7 +5472,7 @@ gulp of her drink . <START:person> Joel <END> sips . She plops down
  Yeah .
 . Let him go , <START:person> Stan <END> . I can help .
 crosses to his car . <START:person> Mary <END> is sitting on the hood
-<START:person> CLEMENTINE <END> ' S VOICE
+<START:person> CLEMENTINE ' S VOICE <END> 
  I know . I spoke to my friend Magda .
 <START:person> STAN <END> 
  It ' s a quote book .
@@ -5468,7 +5480,8 @@ crosses to his car . <START:person> Mary <END> is sitting on the hood
  Ucch , really ? You ' re kidding . God .
 <START:person> JOEL <END> 
  It ' s not somebody else .
-<START:person> CLEMENTINE <END>
+by ( thought ) The <START:person> Tom Waits <END> album is Rain Dogs .
+<START:person> CLEMENTINE <END> 
  Purple Haze , Pink Eraser .
 <START:person> CLEMENTINE <END> 
  ( pissy )
@@ -5491,16 +5504,15 @@ their blunders . Mary and <START:person> Stan <END> click glasses . Nietzsche .
 <START:person> CLEMENTINE <END> ( O . S . ) 
  You pick it .
 <START:person> Joel <END> sits forlornly in the back
-<START:person> STAN <END> ' S VOICE
+<START:person> STAN ' S VOICE <END> 
  I was away from the monitor for a second .
 <START:person> MARY <END> 
  I won ' t allow it . Those who cannot
 <START:person> JOEL <END> 
  I mean , it ' s okay if you want to sit down
-( MARY ) <START:person> Dr . Mierzwiak <END> , this is <START:person> Clementine Kruczynski <END>
+( MARY ) Dr . <START:person> Mierzwiak <END> , this is Clementine Kruczynski
 <START:person> MARY <END> 
  Blessed are the forgetful , for they get
- <START:person> Clementine <END> sits .  She looks tired
 <START:person> STAN <END> 
  Shit !
 , Patrick . Hi , <START:person> Mary <END> . How ' s it
@@ -5519,19 +5531,19 @@ interesting about my life . <START:person> Joel <END> , you ' re a
 you should go there , <START:person> Joel <END> . Yeah , I don
 <START:person> RECEPTIONIST <END> 
  Of course . Please have a seat .
-<START:person> CLEMENTINE <END> ' S VOICE
+<START:person> CLEMENTINE ' S VOICE <END> 
  ... and we made love right on the ice .
-<START:person> Mierzwiak <END> looks from <START:person> Mary <END> to <START:person> Stan <END> , nods , and enters
-<START:person> Clementine <END> makes her way down the aisle towards <START:person> Joel <END> .
+Mierzwiak looks from Mary to <START:person> Stan <END> , nods , and enters
+way down the aisle towards <START:person> Joel <END> . It ' s okay
 <START:person> JOEL <END> 
  There you are .
-<START:person> Mary <END> pads down the hallway .
 <START:person> Joel <END> awakens . The apartment is
-we are . <START:person> Joel <END> glimpses <START:person> Mary <END> smiling coquettishly at <START:person> Mierzwiak <END> .
+we are . Joel glimpses <START:person> Mary <END> smiling coquettishly at Mierzwiak .
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
  You know my body like the back of your
-vague street <START:person> Joel <END> listens to <START:person> Patrick <END> and <START:person> Stan <END> . I know
-<START:person> PATRICK <END>
+vague street Joel listens to <START:person> Patrick <END> and Stan . I know
+Nothing changes . I saw <START:person> Naomi <END> last night . We had
+<START:person> PATRICK <END> 
  Sure . We ' ll go next weekend and --
 <START:person> MAN <END> 
  I ... I ... I ... find you physically
@@ -5540,7 +5552,7 @@ vague street <START:person> Joel <END> listens to <START:person> Patrick <END> a
 <START:person> CLEMENTINE <END> 
  How ' s the fish ?
 <START:person> JOEL <END> 
- I ' m done , <START:person> Clem <END> . I ' m just going to ride
+ I ' m done , Clem . I ' m just going to ride
 <START:person> Joel <END> is unconscious on the bed
 <START:person> MARY <END> 
  ( heroically )
@@ -5548,12 +5560,11 @@ vague street <START:person> Joel <END> listens to <START:person> Patrick <END> a
  Look , I ' m very sorry I came off sort of
 <START:person> Patrick <END> is checking out the apartment
 <START:person> Mary <END> looks confusedly at Howard .
-nods , and enters . <START:person> Mary <END> closes the door .
+nods , and enters . <START:person> Mary <END> closes the door . Mierzwiak
 <START:person> STAN <END> 
  ( uninterested )
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
  Ready for another ?
- It ' s <START:person> Clementine <END> .  He watches her for a bit ,
 <START:person> PATRICK <END> 
  The voltage looks fine .
 was beautiful to watch , <START:person> Howard <END> . Like a surgeon or
@@ -5570,17 +5581,16 @@ Clementine lies in bed with <START:person> Patrick <END> .
 . He hangs up . <START:person> Mary <END> enters with the papers .
 <START:person> MIERZWIAK <END> 
  Okay , we ' re back in .
-<START:person> STAN <END> ' S VOICE
+<START:person> STAN ' S VOICE <END> 
  1062 Sherman Drive . Apartment 1 E ,
 <START:person> MARY <END> 
  Let him go , Stan . I can help .
 <START:person> MIERZWIAK <END> 
  We can help you through this . Why don ' t
 ( beat ) Besides , <START:person> Howard <END> ' s married , Stan
-<START:person> JOEL <END>
- Is there a <START:person> Clementine <END> who works here ?
- <START:person> WAITRESS <END>
- Coffee ?
+his desk . Ms . <START:person> Kruczynski <END> , please come in .
+<START:person> JOEL <END> 
+ Is there a Clementine who works here ?
 <START:person> MARY <END> 
  I ' ve loved you for a very long time . I ' m
 She ' s upset . <START:person> Mary <END> is in the kitchen .
@@ -5598,7 +5608,6 @@ t like me much , <START:person> Stan <END> , but please talk to
  This ... someone gave that to me , just
 <START:person> MARY <END> 
  May I help you ?
- <START:person> Clementine <END> enters the office .
 it and -- Hey , <START:person> Joel <END> -- -- and I '
 <START:person> JOEL <END> 
  No , not at all .
@@ -5606,13 +5615,12 @@ it and -- Hey , <START:person> Joel <END> -- -- and I '
 talk about this here . <START:person> Joel <END> , We ' re fucking
 van now , listening . <START:person> Mary <END> shivers in the cold ,
 knew by your nervousness that <START:person> Naomi <END> wasn ' t the kind
-The <START:person> waitress <END> pours the coffee .
-<START:person> JOEL <END>
+<START:person> JOEL <END> 
  Well , I probably wouldn ' t say if I were ,
 the tracks is empty . <START:person> Joel <END> ' s train arrives .
 appears in the doorway . <START:person> Mary <END> leads her down the hall
 <START:person> JOEL <END> 
-<START:person> Clem <END> , I ' m sorry . I shouldn ' t have --
+ Clem , I ' m sorry . I shouldn ' t have --
 <START:person> JOEL <END> 
  Why would she do that ?
 <START:person> NAOMI <END> 
@@ -5624,8 +5632,6 @@ you know . I like <START:person> Mary <END> . I like when she
  Anyway , I ' ve got to do my tap
 <START:person> CLEMENTINE <END> 
  What do we do ?
-<START:person> WAITRESS <END>
- You know what you want yet ?
 ? Just a second . <START:person> Joel <END> nods , confused , as
 he doesn ' t know <START:person> Joel <END> ' s number . After
 <START:person> JOEL <END> 
@@ -5634,32 +5640,31 @@ he doesn ' t know <START:person> Joel <END> ' s number . After
  Oh , I doubt that ' s the case .
 cable , packs bags . <START:person> Howard <END> dials the bedside phone .
 <START:person> JOEL <END> 
- Hi , <START:person> Cindy <END> . <START:person> Joel <END> . Listen , I ' m not
+ Hi , Cindy . <START:person> Joel <END> . Listen , I ' m not
 <START:person> STAN <END> 
  I don ' t know what you ' re talking about ,
 <START:person> JOEL <END> 
  Frost ?
 <START:person> MIERZWIAK <END> 
  It ' s a good quote , Mary . I ' m glad we
-<START:person> CLEMENTINE <END> ' S VOICE
+<START:person> CLEMENTINE ' S VOICE <END> 
  Hey , lover . Whatcha doing ?
 <START:person> CLEMENTINE <END> 
  I can ' t tell you how happy I am to hear
-<START:person> Mierzwiak <END> directs <START:person> Clementine <END> to a chair next to a coffee table
 <START:person> JOEL <END> 
  It would be different , if we could just
 <START:person> JOEL <END> ( CONT ' D ) 
- Any messages for me , <START:person> Carmen <END> .
- The <START:person> waitress <END> is not amused .
+ Any messages for me , Carmen .
 <START:person> JOEL <END> 
  They found us before . The plan didn ' t
 <START:person> JOEL <END> 
  So , um --
- <START:person> Clementine <END> pulls a book from her purse and starts to read .
 <START:person> CLEMENTINE <END> 
  Yes ! I love that poem . It breaks my
 SECOND <START:person> OLD WOMAN <END> ( CLEMENTINE ) ( V . O . )
-<START:person> MARY <END>
+a kid was my Huckleberry <START:person> Hound <END> doll . I think your
+. Stan nods again and <START:person> Mary <END> opens the door to the
+<START:person> MARY <END> 
  Yes , please have a seat . He ' ll be right
 girlfriend ' s name ? <START:person> Naomi <END> . She ' s searching
 That ' s fine , <START:person> Stan <END> . Mary doesn ' t
@@ -5667,9 +5672,8 @@ is delivered without passion . <START:person> Joel <END> , I ' m not
 <START:person> CLEMENTINE <END> 
  I don ' t know . I ' m lost . I ' m scared . I
 <START:person> JOEL <END> 
- Sorry , <START:person> Carmen <END> . Any messages ?
- He passes an <START:person> old man <END> with a metal detector .
-<START:person> Stan <END> enters . <START:person> Mierzwiak <END> is pale
+ Sorry , Carmen . Any messages ?
+<START:person> Stan <END> enters . Mierzwiak is pale
 <START:person> OLD WOMAN <END> ( MARY ) ( CONT ' D )
 <START:person> CLEMENTINE <END> 
  What if ?
@@ -5677,7 +5681,7 @@ is delivered without passion . <START:person> Joel <END> , I ' m not
 <START:person> SAD WOMAN <END> ' S VOICE ( CONT ' D )
 <START:person> JOEL <END> 
  ( looking at her )
-<START:person> Joel <END> says goodbye to <START:person> Clementine <END> .
+<START:person> Joel <END> says goodbye to Clementine .
 <START:person> MARY <END> 
  Yeah , I can ' t wait to tell Howard ! It
 called me a girl . <START:person> Joel <END> miserably smashes the bird repeatedly
@@ -5690,11 +5694,10 @@ called me a girl . <START:person> Joel <END> miserably smashes the bird repeated
 <START:person> CLEMENTINE <END> 
  You ' re not a stalker or anything , right ?
 <START:person> MIERZWIAK <END> 
- We got him back . <START:person> Stan <END> , I think I ' m just
+ We got him back . Stan , I think I ' m just
 <START:person> JOEL <END> 
  Listen , did you want to make love ?
- Later : <START:person> Joel <END> looks out at the ocean .
-<START:person> Joel <END> finds himself eating Chinese food and sitting across from
+Joel finds himself eating <START:person> Chinese <END> food and sitting across from
 Yeah . Say hi to <START:person> Naomi <END> . The car door closes
 . You know that . <START:person> Mary <END> slumps to the floor .
 <START:person> JOEL <END> 
@@ -5702,7 +5705,8 @@ Yeah . Say hi to <START:person> Naomi <END> . The car door closes
 bag , looks surprised . <START:person> Mary <END> . What are you doing
 <START:person> STAN <END> 
  Once , maybe .
- Far down the beach <START:person> Clementine <END> stares at it , too .
+<START:person> RECORDED VOICE <END> 
+ We ' re sorry , the number you have dialed
 <START:person> CLEMENTINE <END> 
  How can you watch this crap ?
 being honest with her . <START:person> Joel <END> is at his office desk
@@ -5718,7 +5722,6 @@ being honest with her . <START:person> Joel <END> is at his office desk
  I don ' t care .
 <START:person> JOEL <END> 
  I ' m not a stalker .
-<START:person> Joel <END> sits on the bench waiting for a train .
 <START:person> MIERZWIAK <END> 
  ( nodding sympathetically )
 <START:person> JOEL <END> 
@@ -5741,18 +5744,17 @@ presence in your home . <START:person> Stan <END> pulls out a coffee mug
  What ?
 <START:person> MIERZWIAK <END> 
  Thanks , Stan . Thanks .
-<START:person> Joel <END> sits at the far end of the empty car
 <START:person> JOEL <END> 
  I ' m fine .
 <START:person> MARY <END> 
  Okay , um , there ' s one that goes "" Blessed
-<START:person> NAOMI <END> ' S VOICE
+<START:person> NAOMI ' S VOICE <END> 
  Hi .
 <START:person> CLEMENTINE <END> 
  Yeah , maybe .
 <START:person> STAN <END> 
  Maybe if you stopped stealing their
-shot of <START:person> Mierzwiak <END> mouthing to <START:person> Mary <END> ' s voice . ""
+shot of Mierzwiak mouthing to <START:person> Mary <END> ' s voice . ""
 <START:person> STAN <END> 
  Can I ... I brought some --
 <START:person> JOEL <END> 
@@ -5798,7 +5800,7 @@ crowded with business commuters . <START:person> Joel <END> is among them . He
  I ' m just kidding . C ' mon .
 <START:person> MARY <END> 
  ( suddenly weepy )
-<START:person> STAN <END> ' S VOICE
+<START:person> STAN ' S VOICE <END> 
  The guy we ' re doing ? He ' s disappeared
 <START:person> NAOMI <END> 
  ( sighing )
@@ -5818,7 +5820,7 @@ scene starts to fade . <START:person> Joel <END> remembers their previous plan .
 hair was lime <START:person> green <END> . <START:person> Green <END> revolution . A shot of
 <START:person> CLEMENTINE <END> 
  Me neither . But sometimes I have
-window , watches <START:person> Mierzwiak <END> and <START:person> Mary <END> inside .
+window , watches Mierzwiak and <START:person> Mary <END> inside . Mierzwiak ' s
 erase points of light . <START:person> Mary <END> gets up her courage to
 <START:person> JOEL <END> 
  I don ' t know any jokes about your name .
@@ -5839,7 +5841,7 @@ t know . Stuffy . <START:person> Patrick <END> , let ' s just
 <START:person> MARY <END> 
  Don ' t you think Howard ' s like that ?
 . C ' mon , <START:person> Joel <END> , you have to .
-into phone ) <START:person> Mr . Mierzwiak <END> , <START:person> Stan <END> is here to
+into phone ) Mr . <START:person> Mierzwiak <END> , Stan is here to
 <START:person> CLEMENTINE <END> 
  I just wanted to say that . Come by my
 <START:person> JOEL <END> 
@@ -5863,7 +5865,7 @@ door reads Lacuna Ltd . <START:person> Joel <END> enters .
 <START:person> JOEL <END> 
  I can ' t . I have to go home . I ' ll do it
 <START:person> OLD WOMAN <END> ( MARY )
-a seat . <START:person> Dr . Mierzwiak <END> will be right with you
+a seat . Dr . <START:person> Mierzwiak <END> will be right with you
 <START:person> JOEL <END> 
  No , I mean , I don ' t know . I can ' t really
 <START:person> MIERZWIAK <END> ( CONT ' D ) 
@@ -5876,8 +5878,8 @@ a seat . <START:person> Dr . Mierzwiak <END> will be right with you
 the whiskey . Oh , <START:person> Patrick <END> , you didn ' t
 <START:person> CLEMENTINE <END> 
  I love it !
-<START:person> OLD MAN <END> ' S VOICE
- Hi , it ' s Joel . What ' s going on , <START:person> Clem <END> ?
+<START:person> OLD MAN ' S VOICE <END> 
+ Hi , it ' s Joel . What ' s going on , Clem ?
 <START:person> PATRICK <END> 
  The thing is ... my situation is a little
 <START:person> STAN <END> 
@@ -5905,6 +5907,7 @@ jerks the joystick spastically . <START:person> Mary <END> , also naked , gets
  So , I ' ve got to drop the van off .
 <START:person> CLEMENTINE <END> 
  Exactly ! Tom Waits . Which song ?
+you dinner to celebrate ? <START:person> Tonight <END> ? I ' m free
 Stan . Please just tell <START:person> Howard I <END> ' m here to clean
 <START:person> Joel <END> is on the phone pacing
 <START:person> JOEL <END> 
@@ -5924,7 +5927,8 @@ Candles are lit . <START:person> Joel <END> and Clementine are under a
 of your procedure tonight . <START:person> Stan <END> nods professionally . Mr .
 <START:person> JOEL <END> 
  Did you send this ? Is it a joke ?
-<START:person> MIERZWIAK <END>
+' s The Play by <START:person> Stephen Dixon <END> . Damn it . DAMN
+<START:person> MIERZWIAK <END> 
  Oh . Well , I ' d love to hear some .
 <START:person> RECEPTIONIST <END> 
  ( into phone )
@@ -5954,7 +5958,7 @@ Do you like quotes , <START:person> Howard <END> ? How do you mean
  I love you and if you knew that ... if I
 <START:person> CLEMENTINE <END> 
  Don ' t worry . It ' s really solid this time
-<START:person> MIERZWIAK <END>  VOICE
+<START:person> MIERZWIAK VOICE <END> 
  It ' s what ' s best , Mary . You know that .
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
  Do you know her poem that starts "" Seaside
@@ -5962,16 +5966,15 @@ Do you like quotes , <START:person> Howard <END> ? How do you mean
  God , yes . You ' ve saved my life !
 <START:person> CLEMENTINE <END> 
  I just don ' t think "" nice "" is a
-: Tell me what ? <START:person> Hollis <END> and <START:person> Mierzwiak <END> have locked eyes
-<START:person> STAN <END> ' S VOICE
+: Tell me what ? <START:person> Hollis <END> and Mierzwiak have locked eyes
+<START:person> STAN ' S VOICE <END> 
  We have work to do .
-<START:person> Stan <END> enters . <START:person> Mierzwiak <END> is pale and pacing .
+Stan enters . <START:person> Mierzwiak <END> is pale and pacing .
 <START:person> Carmen <END> . Any messages ? <START:person> Carmen <END> shakes her head "" no
 s nervous . Hi ... <START:person> Naomi <END> ? Yeah , hi !
 I have to think . <START:person> Joel <END> , we ' ve fucked
 <START:person> JOEL <END> 
  Seems too coincidental that way .
-  The <START:person> conductor <END> turns to <START:person> Clementine <END> .  She fishes in her bag .
 <START:person> CLEMENTINE <END> 
  Yeah ? Well , have a seat , anyway .
 <START:person> PATRICK <END> 
@@ -5981,32 +5984,35 @@ I have to think . <START:person> Joel <END> , we ' ve fucked
 <START:person> JOEL <END> 
  He calls me Jill . Everyone calls me Jill
 . Hey , you . <START:person> Stan <END> and Mary kiss . She
-outs . The room , <START:person> Stan <END> , and <START:person> Mierzwiak <END> are now
+outs . The room , <START:person> Stan <END> , and Mierzwiak are now
 the car . Tickets . <START:person> Joel <END> hands the conductor his ticket
-<START:person> MARY <END>
+. Barish . This is <START:person> Stan <END> . He ' ll be
+<START:person> MARY <END> 
  To let people begin again . It ' s
 <START:person> CLEMENTINE <END> 
  ( giggling )
+love quotes . So did <START:person> Winston Churchill <END> . He actually has a
 strewn about the apartment . <START:person> Joel <END> is immediately sorry he said
-scene is being erased . <START:person> Joel <END> is panicked .
+scene is being erased . <START:person> Joel <END> is panicked . Clem ,
 scrambles in the window . <START:person> Joel <END> looks around , panicked .
-<START:person> PATRICK <END> ' S VOICE ( CONT ' D )
+<START:person> PATRICK ' S VOICE <END> ( CONT ' D )
 <START:person> MARY <END> 
  ( somewhat guiltilly )
 last memory of her . <START:person> Joel <END> looks out the window .
 <START:person> JOEL <END> 
  I was so nervous . I remember I couldn ' t
-one - time mistake . <START:person> Mary <END> is right behind <START:person> Mierzwiak <END> now
+one - time mistake . <START:person> Mary <END> is right behind Mierzwiak now
 <START:person> Joel <END> hangs up . He dials
 <START:person> Joel <END> enters , checks his phone
 <START:person> CLEMENTINE <END> 
  I said : Are you sure ? You seem unsure .
-<START:person> STAN <END> ' S VOICE
+<START:person> STAN ' S VOICE <END> 
  He went home sick .
 wanted to come in , <START:person> Joel <END> . He walks cautiously toward
 <START:person> CLEMENTINE <END> 
  God , that feels so fucking good . Take
-<START:person> NAOMI <END>
+' t reveal anything . <START:person> Nice <END> is pandering . Cowardly .
+<START:person> NAOMI <END> 
  Okay , Joel . I suppose you ' re right .
 <START:person> JOEL <END> 
  This was our first time .
@@ -6015,7 +6021,7 @@ wanted to come in , <START:person> Joel <END> . He walks cautiously toward
 aiming for the lines . <START:person> Patrick <END> ( who we saw earlier
 I was imagining things . <START:person> Mary <END> says nothing . I really
 out . This one has <START:person> Joel <END> ' s name on it
-The train pulls out . <START:person> Joel <END> ? It ' s Joel
+The train pulls out . <START:person> Joel <END> ? It ' s <START:person> Joel <END>
 <START:person> PATRICK <END> 
  You want to stop for coffee or something ?
 <START:person> PATRICK <END> ( CONT ' D ) 
@@ -6038,8 +6044,8 @@ empty booth and sits . <START:person> Joel <END> studies her discreetly . The
 <START:person> CLEMENTINE <END> 
  Yes , but I can ' t love a man named Wally .
 SECOND <START:person> OLD WOMAN <END> ( CLEMENTINE ) ( V . O . )
-a wild punch that hits <START:person> Joel <END> in the side .
-frightened , confused <START:person> Joel <END> . Joel , you ' re not
+a wild punch that hits <START:person> Joel <END> in the side . <START:person> joel <END>
+frightened , confused <START:person> Joel <END> . <START:person> Joel <END> , you ' re not
 <START:person> JOEL <END> 
  You think that could possibly be a full
 <START:person> JOEL <END> 
@@ -6056,16 +6062,15 @@ putting on a sweater . <START:person> Naomi <END> is at the dining room
 Clementine and <START:person> Joel <END> laugh as they try to
 . We did talk about <START:person> Naomi <END> . I said : Are
 <START:person> MARY <END> 
- Welcome , <START:person> Howard <END> .
+ Welcome , Howard .
 ) I like you , <START:person> Howard <END> ... an awful lot .
 <START:person> CLEMENTINE <END> 
  ( impressed )
-<START:person> NAOMI <END> ' S VOICE
+<START:person> NAOMI ' S VOICE <END> 
  Long day thinking .
 the levator ) Thanks , <START:person> Stan <END> . She stops but doesn
 <START:person> PATRICK <END> 
- Thanks , <START:person> Stan <END> . I owe you .
-  The <START:person> conductor <END> punches it and hands it back .
+ Thanks , Stan . I owe you .
 <START:person> CLEMENTINE <END> 
  ( singing )
 books on her shelves . <START:person> Clementine <END> is in the kitchen .
@@ -6078,7 +6083,7 @@ books on her shelves . <START:person> Clementine <END> is in the kitchen .
 <START:person> MARY <END> 
  ( professionally courteous )
 <START:person> MARY <END> 
- I better do this , <START:person> Stan <END> .
+ I better do this , Stan .
 ) Hello , Ms . <START:person> Kruczynski <END> . Nice to meet you
 <START:person> CARRIE <END> 
  ( agitated , interrupting )
@@ -6099,7 +6104,8 @@ My girlfriend is very -- <START:person> Patrick <END> , we ' re in
 <START:person> JOEL <END> 
  You were down by the surf . I could just
 roadside . It ' s <START:person> Joel <END> and Carrie in :
-<START:person> JOEL <END>
+s stopped . What ? <START:person> Listen <END> , it ' s not
+<START:person> JOEL <END> 
  Okay .
 <START:person> MARY <END> 
  Well , what should we do ?
@@ -6118,7 +6124,7 @@ pulls into that platform . <START:person> Joel <END> gets on the train and
 What ' s this ? <START:person> Joel <END> looks around at the kitchen
 <START:person> OLD WOMAN <END> ( MARY )
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
- Mmmmmmm . Way to go , <START:person> Joel <END> . You pick
+ Mmmmmmm . Way to go , Joel . You pick
 . Naomi turns over . <START:person> Joel <END> goes back to his writing
 packing things in boxes . <START:person> Joel <END> paces , steals glances at
 , closes her eyes . <START:person> Joel <END> watches her , looks at
@@ -6126,7 +6132,6 @@ packing things in boxes . <START:person> Joel <END> paces , steals glances at
  Sorry to track you down like this . I ' m
 <START:person> NAOMI <END> 
  Oh , sweetie . It really does cut both
-<START:person> Joel <END> sits down in his chair and drinks .
 <START:person> CLEMENTINE <END> 
  Yeah ?
 <START:person> JOEL <END> 
@@ -6140,28 +6145,28 @@ couples talking , kissing , <START:person> Rob <END> sharing a joint with a
  He won ' t bite . You can pet him if you
 and haunting and slow . <START:person> Clementine <END> falls back onto the couch
 Patrick has clearly taken over <START:person> Stan <END> ' s position . He
-<START:person> CLEMENTINE <END>
+s reading The Play by <START:person> Stephen Dixon <END> . I love this book
+<START:person> CLEMENTINE <END> 
  ( stares out window )
 used to work here . <START:person> Stan <END> . Please just tell Howard
-deathly silent as <START:person> Mierzwiak <END> and <START:person> Stan <END> work on completing the job
+deathly silent as Mierzwiak and <START:person> Stan <END> work on completing the job
 <START:person> JOEL <END> 
  Female .
 <START:person> MARY <END> ( CONT ' D ) 
  You ' re nice .
-<START:person> MARY <END> ' S VOICE ( CONT ' D )
+<START:person> MARY ' S VOICE <END> ( CONT ' D )
 <START:person> CLEMENTINE <END> 
  Says you were constantly calling me a
 <START:person> JOEL <END> ( CONT ' D ) 
-<START:person> Clem <END> , no ! This can ' t keep happening .
+ Clem , no ! This can ' t keep happening .
 <START:person> CLEMENTINE <END> 
  Hi there .
- which seems fine to <START:person> Clementine <END> but makes <START:person> Joel <END> anxious .
 <START:person> CLEMENTINE <END> 
  Yay ! It ' ll be great ! I ' ll get my shit .
-some electronic machinery monitored by <START:person> Stan <END> . <START:person> Mierzwiak <END> watches from the
+some electronic machinery monitored by <START:person> Stan <END> . Mierzwiak watches from the
 Well , thank you , <START:person> Mary <END> . ( sighing ) You
 <START:person> MARY <END> 
- I need this signed , <START:person> Howard  <END>  .
+ I need this signed , Howard .
 Joel ' s brain . <START:person> Stan <END> presses buttons and operates a
 <START:person> PATRICK <END> 
  Oh , Tangerine .
@@ -6171,11 +6176,10 @@ Joel ' s brain . <START:person> Stan <END> presses buttons and operates a
 <START:person> MARY <END> 
  Well , allow me to do the honors . It ' s
 <START:person> MARY <END> ( CONT ' D ) 
-<START:person> Ms . Kruczynski <END> ?
+ Ms . Kruczynski ?
 is obscured in darkness . <START:person> Joel <END> wanders it . In the
 <START:person> JOEL <END> 
  I ' m nut nuts .
- She hands the <START:person> conductor <END> the tickets , smiles sweetly .
 drives off . Mary watches <START:person> Howard <END> with increased foreboding . What
 <START:person> CLEMENTINE <END> 
  At least I haven ' t been barking up the
@@ -6183,7 +6187,7 @@ drives off . Mary watches <START:person> Howard <END> with increased foreboding 
  It ' s okay , really .
 <START:person> JOEL <END> 
  You ' re so beautiful .
-<START:person> CLEMENTINE <END> ' S VOICE ( CONT ' D )
+<START:person> CLEMENTINE ' S VOICE <END> ( CONT ' D )
 <START:person> Stan <END> watches the screen . Patrick
 <START:person> STAN <END> 
  I ' ll go out for a smoke . If no one
@@ -6197,18 +6201,17 @@ drives off . Mary watches <START:person> Howard <END> with increased foreboding 
 <START:person> JOEL <END> 
  I don ' t know . I ' m so ... I can ' t believe
 <START:person> MIERZWIAK <END> 
- <START:person> Ms . Kruczynski <END> , please come in .
-( heroically ) <START:person> Mrs . Mierzwiak <END> , it ' s true
+ Ms . Kruczynski , please come in .
+( heroically ) Mrs . <START:person> Mierzwiak <END> , it ' s true
 <START:person> CLEMENTINE <END> 
  I could see you wanted to come in , Joel .
-<START:person> CONDUCTOR <END>
- Next stop Southampton .
 <START:person> CLEMENTINE <END> 
  ( eyes welling )
 <START:person> STAN <END> ( CONT ' D ) 
  I really like you , Mary . You know that .
 <START:person> CLEMENTINE <END> 
  ( Mae West )
+. When ? Tomorrow ? <START:person> Tonight <END> . Just to test out
 I live . Lived . <START:person> Joel <END> looks down at her hand
 driver ' s POV . <START:person> Mary <END> having an abortion .
 <START:person> JOEL <END> 
@@ -6240,8 +6243,10 @@ has an unobstructed view into <START:person> Joel <END> ' s bedroom window .
  I really want to , but tonight ' s
 <START:person> JOEL <END> 
  Thanks .
-<START:person> CLEMENTINE <END>
+Hello again , Mr . <START:person> Barish <END> . Good , you '
+<START:person> CLEMENTINE <END> 
  I miss grade school . I don ' t know why
+Jesus , Mary , and <START:person> Joseph <END> , maybe I don '
 re adults but small . <START:person> Joel <END> wears footsie pajamas with some
 Go . ( quietly ) <START:person> Mary <END> hates me . ( into
 <START:person> MIERZWIAK <END> 
@@ -6263,13 +6268,13 @@ phone to call you , <START:person> Naomi <END> . I didn ' t
  ( turning back )
 <START:person> MIERZWIAK <END> 
  Alexander Pope ?
-<START:person> HOLLIS <END> ' S VOICE
+<START:person> HOLLIS ' S VOICE <END> 
  Hi , you ' ve reached the Mierzwiaks . We
 <START:person> Joel <END> enters with his mail .
 There ' s more , <START:person> Stan <END> -- <START:person> Stan <END> looks over at
-<START:person> NAOMI <END> ' S VOICE
+<START:person> NAOMI ' S VOICE <END> 
  Yeah , I tried you at home . Did you get
-<START:person> SAD WOMAN <END> ' S VOICE
+<START:person> SAD WOMAN ' S VOICE <END> 
  He took me to his car and ...
 desk studying some papers . <START:person> Howard <END> , your one o '
 <START:person> CLEMENTINE <END> 
@@ -6279,7 +6284,7 @@ desk studying some papers . <START:person> Howard <END> , your one o '
 <START:person> JOEL <END> 
  Naomi .
 Joel walks with <START:person> Naomi <END> . So what ' s
-<START:person> Joel <END> ? It ' s Joel , right ? Yes ?
+<START:person> Joel <END> ? It ' s <START:person> Joel <END> , right ? Yes ?
 <START:person> MARY <END> 
  He ' s coming ?
 <START:person> JOEL <END> 
@@ -6291,7 +6296,8 @@ Joel walks with <START:person> Naomi <END> . So what ' s
  What ? !
 <START:person> CLEMENTINE <END> 
  ( approaching reception area )
-<START:person> MARY <END>
+Menace , Yellow Fever , <START:person> Green Revolution <END> . That ' d be
+<START:person> MARY <END> 
  ( small )
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
  You like that ?
@@ -6311,7 +6317,7 @@ s fine , Stan . <START:person> Mary <END> doesn ' t say anything
  I don ' t know , I ' ve just been thinking ,
 presses an intercom button . <START:person> Howard <END> , your 10 : 30
 a refill . She grabs <START:person> Joel <END> ' s drink from his
-' s not <START:person> Mr . Mierzwiak <END> ' s fault . I
+' s not Mr . <START:person> Mierzwiak <END> ' s fault . I
 <START:person> JOEL <END> 
  I ' m sorry . I just wanted to say that .
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
@@ -6323,7 +6329,8 @@ door . Joel cringes . <START:person> Clementine <END> laughs , still in the
  Have you ever read any Anna Akhmatova ?
 <START:person> CLEMENTINE <END> 
  You should try Xanax . I mean , it ' s a
-<START:person> JOEL <END>
+. Oh , Jesus , <START:person> Mary <END> , and Joseph , maybe
+<START:person> JOEL <END> 
  Sorry . My life isn ' t that interesting .
 <START:person> JOEL <END> 
  Tomorrow ?
@@ -6368,7 +6375,6 @@ we had ... Okay , <START:person> Joel <END> . I suppose you '
  What ' s wrong with me ?
 <START:person> JOEL <END> 
  I hesitated for what seemed like forever .
- Clementine returns with <START:person> Joel <END> ' s drink
 <START:person> CLEMENTINE <END> 
  Oh ?
 <START:person> MIERZWIAK <END> 
@@ -6390,7 +6396,8 @@ I should go back . <START:person> Joel <END> , come here . Please
 room is not decaying . <START:person> Joel <END> smiles .
 <START:person> JOEL <END> 
  Says you were a slob , leaving trails of
-<START:person> JOEL <END> ( CONT ' D )
+snuggles closer to him . <START:person> Listen <END> , did you want to
+<START:person> JOEL <END> ( CONT ' D ) 
  Pink .
 <START:person> MARY <END> 
  There he is . Oh my God . Oh my God . Do
@@ -6420,7 +6427,8 @@ too much peripheral eradication . <START:person> Mary <END> sits on the bed .
  ( shyly formal )
 <START:person> JOEL <END> 
  No . I --
-<START:person> JOEL <END>
+<START:person> Joel <END> enters , dumps his overcoat
+<START:person> JOEL <END> 
  I don ' t know .
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
  Thanks very much . That was very nice of
@@ -6431,7 +6439,6 @@ a long while , then <START:person> Howard <END> goes back to locating and
  ( quietly )
 <START:person> CLEMENTINE <END> 
  Oh .
-<START:person> Joel <END> tries to hold her gaze , but can ' t .
 something alive about her . <START:person> Naomi <END> turns over in bed ,
 <START:person> OLD WOMAN <END> 
  This book -- It ' s essential that people
@@ -6440,7 +6447,8 @@ something alive about her . <START:person> Naomi <END> turns over in bed ,
 <START:person> MARY <END> 
  And after that ?
 . She hangs up and <START:person> Joel <END> stands there for a minute
-<START:person> JOEL <END>
+t want to assume . <START:person> Aw <END> , c ' mon ,
+<START:person> JOEL <END> 
  Even then I didn ' t believe you entirely .
 <START:person> STAN <END> 
  ( sighing )
@@ -6462,20 +6470,17 @@ down at his drink . <START:person> Clementine <END> starts to cry again .
  You sure ? That doesn ' t sound --
 <START:person> JOEL <END> 
  Look at it out here . It ' s falling apart .
-<START:person> CLEMENTINE <END> ' S VOICE
+<START:person> CLEMENTINE ' S VOICE <END> 
  Hmmm . Do you miss me ?
 <START:person> CLEMENTINE <END> 
  I want to know you .
-<START:person> Joel <END> turns . They drive in silence .
 <START:person> Patrick <END> opens the door . Mary
 , but please talk to <START:person> Mary <END> . She of all people
 <START:person> NAOMI <END> 
  Hi , Rob and Carrie .
 SECOND <START:person> OLD WOMAN <END> ( CLEMENTINE )
-<START:person> Joel <END> sits in the bookstore coffee shop .
-<START:person> JOEL <END>
- No , see , <START:person> Clem <END> , I assume you fucked
-<START:person> Joel <END> stands in the living room , somewhat nervously .
+<START:person> JOEL <END> 
+ No , see , Clem , I assume you fucked
 little token "" Back to <START:person> Mary <END> sitting on the floor ,
 <START:person> CLEMENTINE <END> 
  Oh .
@@ -6493,19 +6498,17 @@ little token "" Back to <START:person> Mary <END> sitting on the floor ,
  I ' m too scared to even throw a punch .
 <START:person> MIERZWIAK <END> 
  Yes , I suppose you are .
- . ( turns , sese <START:person> Joel <END> , embarrassed ) Oh ,
- , and downs it . <START:person> Joel <END> is watching all of this
+. ( turns , sese <START:person> Joel <END> , embarrassed ) Oh ,
+, and downs it . <START:person> Joel <END> is watching all of this
 was lovely . Hi , <START:person> Joel <END> . So no jokes about
 <START:person> CLEMENTINE <END> 
  You rat .
-<START:person> Clementine <END> is in the living room now
 <START:person> OLD MAN <END> ( HOWARD )
 <START:person> CARRIE <END> 
  I did . You said , things were fine .
 if things were okay between <START:person> Naomi <END> and me . I did
 <START:person> MIERZWIAK <END> 
  We can ' t do this .
- as he watches <START:person> Clementine <END> stack books on shelves .
 for coffee or something ? <START:person> Mary <END> shakes her head "" no
 <START:person> Joel <END> wanders the windy , empty
 <START:person> MARY <END> 
@@ -6513,15 +6516,14 @@ for coffee or something ? <START:person> Mary <END> shakes her head "" no
 <START:person> JOEL <END> 
  yeah ?
 heads down the hall . <START:person> Stan <END> , 30 ' s ,
-<START:person> CLEMENTINE <END> ' S VOICE
+<START:person> CLEMENTINE ' S VOICE <END> 
  I probably got the same thing as you .
 Stan , it ' s <START:person> Patrick <END> . Pick up . Hey
 <START:person> NAOMI <END> 
  I ' ve got to finish this chapter anyway .
 slides on the ice . <START:person> Joel <END> is by himself now .
-<START:person> STAN <END> ' S VOICE
+<START:person> STAN ' S VOICE <END> 
  Patrick ... do you know how unethical ...
- She caws and hands <START:person> Joel <END> a drink .
 . She was unconscious , <START:person> Patrick <END> . She was beautiful .
 <START:person> JOEL <END> 
  I ' d like to ... take you out or something .
@@ -6535,7 +6537,7 @@ s a good quote , <START:person> Mary <END> . I ' m glad
  Where do you live ?
 <START:person> CLEMENTINE <END> 
  I don ' t believe in that soulmate crap
-<START:person> Clementine Kruczynski <END> has had <START:person> Joel Barish <END> erased from her memory .
+: Clementine Kruczynski has had <START:person> Joel Barish <END> erased from her memory .
 a little ... thing . <START:person> Patrick <END> pulls the bracelet from his
 <START:person> JOEL <END> 
  It ' s happening now ! I ' m already in my
@@ -6549,8 +6551,8 @@ a little ... thing . <START:person> Patrick <END> pulls the bracelet from his
  ( calling over the rumble )
 to Naomi . Later : <START:person> Joel <END> walks up near the beach
 , yeah it is , <START:person> Howard <END> . And here I was
-door , peeks in . <START:person> Howard Mierzwiak <END> , 40 ' s , professional , dry , sits behind his desk
-stares out the window . <START:person> Clementine <END> sits closer still to <START:person> Joel <END> , eyes him .
+door , peeks in . <START:person> Howard Mierzwiak <END> , 40 ' s ,
+stares out the window . <START:person> Clementine <END> sits closer still to Joel
 <START:person> STAN <END> 
  Hey .
 <START:person> CLEMENTINE <END> 
@@ -6585,13 +6587,11 @@ re a wonderful girl , <START:person> Mary <END> . She leans over and
 glow of a cigarette . <START:person> Joel <END> squints to see inside the
 <START:person> CLEMENTINE <END> 
  Why are you sorry ? I just said hi .
-<START:person> MIERZWIAK <END>
- ( not looking up )
- Thanks , <START:person> Mary <END> .
 <START:person> STAN <END> 
  I know what it is .
 pulls the electrodes off of <START:person> Joel <END> ' s scalp , coils
 head in the door . <START:person> Joel <END> , I was just --
+frozen Charles ! Now ! <START:person> Tonight <END> ! Um , okay .
 <START:person> Mary <END> opens the door . Stan
 <START:person> Joel <END> stares out at the ocean
 <START:person> CLEMENTINE <END> 
@@ -6606,31 +6606,30 @@ looks from her conversation . <START:person> Joel <END> , this is Mark .
 <START:person> MIERZWIAK <END> 
  Jesus . All right , what ' s the address .
 <START:person> STAN <END> 
-<START:person> Mr . Barish <END> .
+ Mr . Barish .
 two of them walk down <START:person> Joel <END> ' s suburban street .
 <START:person> MIERZWIAK <END> 
  I know you don ' t like me much , Stan , but
 <START:person> STAN <END> ( CONT ' D ) 
  I don ' t know what to do ! I don ' t know
-<START:person> Mary <END> turns to leave .
 -- She steps aside for <START:person> Stan <END> to enter . He does
 <START:person> STAN <END> 
  I don ' t know . He ' s not on the map .
-<START:person> Joel <END> enters . <START:person> Mierzwiak <END> stands there
-<START:person> DISTRAUGHT WOMAN <END> ' S VOICE
+<START:person> Joel <END> enters . Mierzwiak stands there
+<START:person> DISTRAUGHT WOMAN ' S VOICE <END> 
  Excuse me ? Hello ?
-<START:person> CLEMENTINE <END>
+initials stamped on it . <START:person> Pink <END> . ( beat ) There
+<START:person> CLEMENTINE <END> 
  But can ' t you see ... I love you , Antoine .
 <START:person> JOEL <END> 
  Clementine , do you really think you could
- ( looking up )
-<START:person> Mary <END> . . .
 <START:person> CLEMENTINE <END> 
  ( without turning )
 <START:person> JOEL <END> 
  ( mumbly )
 <START:person> JOEL <END> 
  No .
+a day I rued . <START:person> Frost <END> ? ( impressed ) Yeah
 some work to do . <START:person> Joel <END> is sitting in a chair
 <START:person> CLEMENTINE <END> 
  Oh , um ...
@@ -6663,19 +6662,22 @@ we called the company . <START:person> Joel <END> just stands there . Close
 <START:person> STAN <END> ( CONT ' D ) 
  It ' s not erasing . He ' s off the screen .
 home from the beach with <START:person> Rob <END> and Carrie . It ,
-<START:person> CARRIE <END> ' S VOICE
+<START:person> CARRIE ' S VOICE <END> 
  Think about it : to be told you lived an
 <START:person> STAN <END> 
  ( re : memory on monitor )
-<START:person> CLEMENTINE <END> ( CONT ' D )
+<START:person> CLEMENTINE <END> ( CONT ' D ) 
  ( flat )
 <START:person> STAN <END> 
  ( reading )
-nods professionally . <START:person> Mr . Barish <END> . How exactly is this
+nods professionally . Mr . <START:person> Barish <END> . How exactly is this
 <START:person> CLEMENTINE <END> 
  Just , you know , to chat a little , maybe .
+<START:person> MIERZWIAK <END> 
+ ( not looking up )
 . I stayed home . <START:person> Naomi <END> worked on her dissertation .
-<START:person> MARY <END>
+) Thanks . Welcome , <START:person> Howard <END> . She smiles and heads
+<START:person> MARY <END> 
  That was beautiful to watch , Howard .
 <START:person> MARY <END> 
  May I help you ?
@@ -6708,7 +6710,8 @@ fight , fight ... "" <START:person> Joe Early <END> throws a wild punch that
 heads into the kitchen . <START:person> Stan <END> turns back to monitor the
 <START:person> CLEMENTINE <END> 
  I didn ' t think you ' d show your face
-<START:person> CLEMENTINE <END>
+It ' s by Pope <START:person> Alexander <END> . <START:person> Alexander <END> Pope ? Yes
+<START:person> CLEMENTINE <END> 
  What is nice , anyway ? I mean , besides an
 <START:person> JOEL <END> 
  It ' s going , Clementine . All the crap and
@@ -6738,10 +6741,10 @@ love to , even though <START:person> Joel <END> is completely beside himself .
 <START:person> JOEL <END> 
  ( whisper )
 He stands there dumbly . <START:person> Mary <END> slumps into a ball on
-<START:person> MALE EMPLOYEE <END> 1
+<START:person> MALE EMPLOYEE <END> # 1
 <START:person> JOEL <END> ( CONT ' D ) 
  Aaargh ! It ' s horrible ! I ' m trapped !
-<START:person> STAN <END> ' S VOICE
+<START:person> STAN ' S VOICE <END> 
  So , Mary ' s coming over tonight .
 <START:person> NAOMI <END> 
  Don ' t say "" we "" when you mean "" you . ""
@@ -6749,7 +6752,7 @@ Stan and <START:person> Howard <END> load the last of the
 opens and Clementine enters . <START:person> Joel <END> looks up . Clementine is
 <START:person> MARY <END> 
  ( beat )
-<START:person> MARY <END> ' S VOICE ( CONT ' D )
+<START:person> MARY ' S VOICE <END> ( CONT ' D )
 <START:person> JOEL <END> 
  Yeah , you told me that later .
 walls . The receptionist , <START:person> Mary <END> , 25 , can be
@@ -6762,7 +6765,7 @@ walls . The receptionist , <START:person> Mary <END> , 25 , can be
 <START:person> MIERZWIAK <END> 
  I ' m getting the hang of it . I still
 decaying environment . Bye , <START:person> Joel <END> . I love you .
-<START:person> STAN <END> ' S VOICE
+<START:person> STAN ' S VOICE <END> 
  Patrick , do me a favor --
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
  Come up to Boston with me ?
@@ -6771,7 +6774,7 @@ decaying environment . Bye , <START:person> Joel <END> . I love you .
 <START:person> MARY <END> ( CONT ' D ) 
  Anyway , the quote goes "" How happy is the
 <START:person> JOEL <END> 
- ... die right now , <START:person> Clem <END> . I ' m just ...
+ ... die right now , Clem . I ' m just ...
 <START:person> JOEL <END> 
  I ' m nervous because I have and enormous
 <START:person> JOEL <END> 
@@ -6798,14 +6801,16 @@ at his desk . Old <START:person> Mary <END> enters with the second old
 What do you want , <START:person> Stan <END> ? Can I ... I
 <START:person> CLEMENTINE <END> 
  But , I don ' t know , maybe we ' re the normal
-<START:person> SAD WOMAN <END> ' S VOICE
+<START:person> SAD WOMAN ' S VOICE <END> 
  I was by myself in the park because my
-<START:person> Joel <END> puts on his overcoat . <START:person> Clementine <END> heads to the phone table
+same writers . This writer <START:person> Stephen Dixon <END> he turned me on to
+puts on his overcoat . <START:person> Clementine <END> heads to the phone table
 <START:person> CLEMENTINE <END> 
  ( to Patrick )
 <START:person> MIERZWIAK <END> 
- Ah , <START:person> Mr . Barish <END> . This is <START:person> Stan <END> . He ' ll be
+ Ah , Mr . Barish . This is Stan . He ' ll be
 waiting for a train . <START:person> Clementine <END> enters the platform , sees
+. When ? Tomorrow ? <START:person> Tonight <END> . Just to test out
 , visually and emotionally . <START:person> Joel <END> is in the midst of
 <START:person> CLEMENTINE <END> 
  Doesn ' t sound like me .
@@ -6823,8 +6828,8 @@ waiting for a train . <START:person> Clementine <END> enters the platform , sees
 . The door opens and <START:person> Clementine <END> enters . She ' s
 <START:person> JOEL <END> 
  Yeah ? I can ' t remember that album very
-<START:person> CLEMENTINE <END> ' S VOICE
-<START:person> Joel <END> , we ' ve fucked . We ' ve made love .
+<START:person> CLEMENTINE ' S VOICE <END> 
+ Joel , we ' ve fucked . We ' ve made love .
 <START:person> CARRIE <END> 
  I ' m sorry Naomi couldn ' t make it . You
 far down the platform . <START:person> Joel <END> stares at his hands ,
@@ -6843,7 +6848,8 @@ the procedure as possible , <START:person> Howard <END> . I think it '
 <START:person> MARY <END> 
  What , Howard ?
 I need this signed , <START:person> Howard <END> . He takes it ,
-<START:person> MARY <END>
+waiting room . Ms . <START:person> Kruczynski <END> ? Hi . After a
+<START:person> MARY <END> 
  ( without turning )
 <START:person> STAN <END> 
  Just wanted to let you know .
@@ -6876,12 +6882,11 @@ Mary looks confusedly at <START:person> Howard <END> . What ? She follows
 <START:person> JOEL <END> ( CONT ' D ) 
  I don ' t think your personality comes out
 <START:person> Joel <END> enters , drops his overcoat
-<START:person> Clementine <END> enters the office . <START:person> Mary <END> smiles at <START:person> Mierzwiak <END> and closes
-<START:person> MIERZWIAK <END>
+Clementine enters the office . <START:person> Mary <END> smiles at Mierzwiak and closes
+<START:person> MIERZWIAK <END> 
  I didn ' t make you . You thought it best .
 <START:person> CLEMENTINE <END> 
  Okay , I guess .
- We stay with <START:person> Clementine <END> as she watches <START:person> Joel <END> tromping through the snow
 <START:person> JOEL <END> 
  I think she ' s great .
 <START:person> JOEL <END> 
@@ -6892,7 +6897,7 @@ Mary looks confusedly at <START:person> Howard <END> . What ? She follows
  What ' s happening here ?
 <START:person> MARY <END> 
  Do you love me ? Did you love me ?
-<START:person> Mary <END> looks back and forth between
+Mierzwiak have locked eyes . <START:person> Mary <END> looks back and forth between
 <START:person> Patrick <END> reads the journal . ...
 <START:person> JOEL <END> 
  You ' re driving drunk . It ' s pathetic .
@@ -6901,19 +6906,19 @@ Mary looks confusedly at <START:person> Howard <END> . What ? She follows
 <START:person> JOEL <END> 
  Well ... I did .
 <START:person> CLEMENTINE <END> 
- I love this book , <START:person> Joel <END> . Thank you so
+ I love this book , Joel . Thank you so
 <START:person> BOYS <END> 
- C ' mon , <START:person> Joel <END> , you have to . Do it already .
+ C ' mon , Joel , you have to . Do it already .
 <START:person> CLEMENTINE <END> 
  In the room ?
-<START:person> CLEMENTINE <END> ' S VOICE
+<START:person> CLEMENTINE ' S VOICE <END> 
  What took you so long ?
 <START:person> STAN <END> 
  ( sighing , to Patrick )
 ' m so sorry , <START:person> Howard <END> , you must be tired
 door between cars opens and <START:person> Clementine <END> enters . Joel looks up
 before her , writing . <START:person> Joel <END> turns and watches her for
-maybe talk to her . <START:person> Joel <END> rises and heads toward <START:person> Clementine <END> .
+maybe talk to her . <START:person> Joel <END> rises and heads toward Clementine
 . I was not . <START:person> Joel <END> is mesmerized by their familiarity
 <START:person> CLEMENTINE <END> 
  I know .
@@ -6921,7 +6926,8 @@ maybe talk to her . <START:person> Joel <END> rises and heads toward <START:pers
  ( without making eye contact )
 <START:person> JOEL <END> 
  Not yet . Not married .
-<START:person> Joel <END> speeds through the suburban Rockville Center
+<START:person> PHONE MACHINE VOICE <END> 
+ You have no messages .
 we need to focus . <START:person> Stan <END> aims the joystick .
 off - season empty . <START:person> Joel <END> sits in a booth and
 <START:person> OLD WOMAN <END> ( MARY )
@@ -6931,7 +6937,7 @@ off - season empty . <START:person> Joel <END> sits in a booth and
  ( at Mierzwiak ' s office )
 <START:person> MIERZWIAK <END> 
  That ' s lovely .
-<START:person> JOEL <END> ' S VOICE
+<START:person> JOEL ' S VOICE <END> 
  How can I ? How can I move on when I know
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
  Y ' know , I ' m sort of psychic .
@@ -6942,14 +6948,14 @@ off - season empty . <START:person> Joel <END> sits in a booth and
 <START:person> Joel <END> enters , looks around .
 <START:person> JOEL <END> 
  I loved you on this day . I love this
-<START:person> JOEL <END>
+in his lab coat . <START:person> Ah <END> , Mr . Barish .
+<START:person> JOEL <END> 
  It ' s dark .
 <START:person> STAN <END> ( CONT ' D ) 
  What ' s this ?
 <START:person> Stan <END> and Howard load the last
 <START:person> JOEL <END> 
  You had the whole human race pegged .
-<START:person> Joel <END> enters , dumps his overcoat on a chair ,
 <START:person> OLD MAN <END> ( HOWARD )
 <START:person> JOEL <END> 
  Thanks . That was good , that crow sound .
@@ -6972,13 +6978,17 @@ toward the bike rack . <START:person> Joel <END> ' s is the only
 SECOND <START:person> OLD WOMAN <END> ( CLEMENTINE ) ( V . O . )
 <START:person> CLEMENTINE <END> 
  But you weren ' t . I could tell .
-<START:person> Joel <END> and <START:person> Mierzwiak <END> are in the
-<START:person> CLEMENTINE <END>
+<START:person> Joel <END> and Mierzwiak are in the
+were wondering . Yeah . <START:person> Tom Waits <END> says it in -- Exactly
+<START:person> CLEMENTINE <END> 
  I knew by your nervousness that Naomi
+<START:person> RECORDED VOICE <END> 
+ The number you have dialed has been
 <START:person> CLEMENTINE <END> 
  And , anyway , you sell yourself short . I
 heading home from Boston . <START:person> Mary <END> is silent and depressed .
- dry out . <START:person> Clementine <END> and <START:person> Patrick <END> continue their flirtation but it
+? Yeah . ( ala <START:person> Paul Simon <END> ) What ' s the
+dry out . Clementine and <START:person> Patrick <END> continue their flirtation but it
 <START:person> CLEMENTINE <END> 
  Jesus . What ' s this ?
 <START:person> CLEMENTINE <END> 
@@ -7004,13 +7014,14 @@ doing ? This kid , <START:person> Joe Early <END> , is going to beat
 <START:person> CLEMENTINE <END> 
  No , that ' s okay . Thanks , though .
 Joel ' s bed . <START:person> Stan <END> watches the lights on the
-<START:person> MARY <END> ' S VOICE ( CONT ' D )
-<START:person> JOEL <END>
+s mother , his Huckleberry <START:person> Hound <END> doll , the details of
+<START:person> JOEL <END> 
  Um --
 <START:person> JOEL <END> 
  ( considering )
 <START:person> MARY <END> 
  Cole slaw , ice tea ?
+<START:person> MARY ' S VOICE <END> ( CONT ' D )
 <START:person> MARY <END> 
  Really ? I thought it was appropriate
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
@@ -7019,21 +7030,21 @@ Joel ' s bed . <START:person> Stan <END> watches the lights on the
  Definitely .
 <START:person> JOEL <END> ( CONT ' D ) 
  Fuck .
-<START:person> CARRIE <END> ' S VOICE
+<START:person> CARRIE ' S VOICE <END> 
  Move on , sweetie .
 <START:person> MARY <END> ( CONT ' D ) 
  Nietzsche . Beyond Good and Evil . Found
-<START:person> STAN <END> ' S VOICE
+<START:person> STAN ' S VOICE <END> 
  I think we got this one . Let ' s push on .
 <START:person> PATRICK <END> 
  She ' s right in the neighborhood . She ' s
 <START:person> NAOMI <END> 
  ' Night .
 <START:person> STAN <END> 
-<START:person> Mary <END> ... please . This is hurting people .
+ Mary ... please . This is hurting people .
 <START:person> CLEMENTINE <END> 
  Is that what you want ?
-right behind <START:person> Mierzwiak <END> now . <START:person> Hollis <END> is in her car .
+right behind Mierzwiak now . <START:person> Hollis <END> is in her car .
 <START:person> CLEMENTINE <END> 
  My writing career ! Your hair written by
 <START:person> CARRIE <END> 
@@ -7043,7 +7054,6 @@ right behind <START:person> Mierzwiak <END> now . <START:person> Hollis <END> is
 dialed has been disconnected . <START:person> Joel <END> ' s eyes bug .
 <START:person> MIERZWIAK <END> 
  It ' s no big deal .
-<START:person> Joel <END> drives fast, recklessly .  The intensity is back .
 The machines are operated by <START:person> Stan <END> , now in grubby street
 <START:person> CLEMENTINE <END> 
  -- another rainy day . Whatever shall we
@@ -7066,17 +7076,16 @@ s noisy and crowded . <START:person> Joel <END> and Clementine sit at a
 as a Vegas showgirl . <START:person> Joel <END> studies it . The machines
 <START:person> CLEMENTINE ' S VOICE <END> 
  Yeah ?
-<START:person> STAN <END>  ' S VOICE
+<START:person> STAN ' S VOICE <END> 
  Look , just don ' t tell me this stuff . I
 <START:person> CLEMENTINE <END> 
  ( pissy )
- of the car . <START:person> Joel <END> spots the parked van .
 <START:person> CLEMENTINE <END> 
  Naomi , I guess .
 <START:person> HOLLIS <END> 
  Poor kid . You can have him . You did .
 <START:person> JOEL <END> 
- Any messages , <START:person> Carmen <END> ?
+ Any messages , Carmen ?
 <START:person> NAOMI <END> 
  A religion instructor at Columbia . A
 <START:person> CLEMENTINE <END> 
@@ -7084,7 +7093,7 @@ as a Vegas showgirl . <START:person> Joel <END> studies it . The machines
 <START:person> CLEMENTINE <END> 
  Huckleberry Hound ?
 Stan works the joystick . <START:person> Patrick <END> sits on the bed with
-<START:person> CLEMENTINE <END> ' S VOICE
+<START:person> CLEMENTINE ' S VOICE <END> 
  God , I can ' t believe I ever hated you .
 <START:person> JOEL <END> 
  I don ' t really know how --
@@ -7113,16 +7122,15 @@ me take you home . <START:person> Mary <END> shakes her head "" no
 enters the platform , sees <START:person> Joel <END> , the only other person
 ) -- we ' re <START:person> David <END> and Ruth Laskin . Which
 They ' re talking as <START:person> Howard <END> works . It appears to
-<START:person> PATRICK <END> ' S VOICE
+<START:person> PATRICK ' S VOICE <END> 
  Hi , Clementine ! -- Why , what ' s wrong ? --
 <START:person> CLEMENTINE <END> 
  Well , you ' re married .
-again and ... Right before <START:person> Joel <END> gets there , <START:person> Patrick <END> , a skinny young man approaches <START:person> Clementine <END> .
+again and ... Right before <START:person> Joel <END> gets there , Patrick ,
 <START:person> ROB <END> 
  I don ' t think you should go there , Joel .
 <START:person> JOEL <END> 
  I don ' t know .
-<START:person> Joel <END> stops , watches .
 <START:person> PATRICK <END> 
  Did I tell you I have a new girlfriend ?
 <START:person> RECEPTIONIST <END> 
@@ -7134,17 +7142,19 @@ train is pretty crowded . <START:person> Joel <END> stares out the window .
  ( thinks , then : )
 Happy with a secret . <START:person> Mary <END> starts to cry . And
 out at the ocean . <START:person> Joel <END> writes . <START:person> JOEL <END> ( V
-<START:person> MARY <END> ' S VOICE
+<START:person> MARY ' S VOICE <END> 
  Yeah , I know . Oh , God . Okay , well , I
 nods , confused , as <START:person> Rob <END> and Carrie leave the room
 unbecoming on you . Old <START:person> Howard <END> mutters something and disappears into
 <START:person> JOEL <END> 
  I hope you get your work done .
-<START:person> JOEL <END> ( CONT ' D )
+t going to say Pope <START:person> Alexander <END> and sound like a dope
+<START:person> JOEL <END> ( CONT ' D ) 
  Bye .
 <START:person> MARY <END> 
  ( coolly )
-<START:person> JOEL <END>
+again , so I got <START:person> Patrick <END> and we drove all night
+<START:person> JOEL <END> 
  I don ' t think we ' re ready .
 <START:person> JOEL <END> 
  I have to get up early in the morning
@@ -7154,12 +7164,11 @@ unbecoming on you . Old <START:person> Howard <END> mutters something and disapp
  ( trying to engage )
 <START:person> PATRICK <END> 
  Not a dump , then , but kind of plain .
-. He watches <START:person> Mierzwiak <END> and <START:person> Mary <END> . They ' re talking
+. He watches Mierzwiak and <START:person> Mary <END> . They ' re talking
 is dated and vague . <START:person> Joel <END> and Clementine are in an
 to the reception area . <START:person> Stan <END> nods . See you later
 <START:person> MIERZWIAK <END> 
  Well , where was Patrick ?
-<START:person> Clementine <END> giggles , stands and pokes <START:person> Patrick <END> playfully in the ribs .
 <START:person> CLEMENTINE <END> ( CONT ' D ) 
  Thanky ! Thanky !
 crowded with business commuters . <START:person> Joel <END> is among them . The
@@ -7214,9 +7223,9 @@ increased foreboding . What , <START:person> Howard <END> ? We ... have a
 <START:person> RECEPTIONIST <END> 
  May I help you ?
 dressed for the cold . <START:person> Patrick <END> puts the notebook away .
- <START:person> Patrick <END> opens the door . <START:person> Mary <END> stands there in a winter
-know .  <START:person> Mierzwiak <END> looks from <START:person> Mary <END> to Stan , nods ,
-<START:person> Stan <END> nods again and <START:person> Mary <END> opens the door
+Patrick opens the door . <START:person> Mary <END> stands there in a winter
+know . Mierzwiak looks from <START:person> Mary <END> to Stan , nods ,
+do this , <START:person> Stan <END> . <START:person> Stan <END> nods again and Mary opens
 <START:person> JOEL <END> 
  Naomi .
 <START:person> MARY <END> 
@@ -7225,7 +7234,7 @@ soup together in bed , <START:person> Joel <END> watching her sleep , them
 <START:person> JOEL <END> 
  I walked out the door . There ' s no more
 <START:person> MARY <END> ( CONT ' D ) 
- Oh , <START:person> Patrick <END> , you didn ' t want any , did
+ Oh , Patrick , you didn ' t want any , did
 <START:person> JOEL <END> 
  It ' s good .
 <START:person> JOEL <END> 
@@ -7235,17 +7244,17 @@ soup together in bed , <START:person> Joel <END> watching her sleep , them
 <START:person> STAN <END> 
  I don ' t know . I just -- there are a lot
 in vain to remember . <START:person> Stan <END> watches . Let me take
-<START:person> CLEMENTINE <END> ' S VOICE
+<START:person> CLEMENTINE ' S VOICE <END> 
  Guess what I ' m wearing .
 be so goddamn immature ! <START:person> Joel <END> , look , the thing
 of us . Yeah . <START:person> Patrick <END> returns to the bedside ,
 <START:person> JOEL <END> 
-<START:person> Clem <END> , c ' mon , we ' ve got to hide you .
+ Clem , c ' mon , we ' ve got to hide you .
 <START:person> MARY <END> 
- Please have a seat . <START:person> Dr . Mierzwiak <END> will
+ Please have a seat . Dr . Mierzwiak will
 it ? Such a gift <START:person> Howard <END> gave the world . (
 <START:person> JOEL <END> 
- My name is <START:person> Joel Barish <END> . I have an
+ My name is <START:person> Joel <END> Barish . I have an
 <START:person> JOEL <END> 
  Yeah . I think so . It ' s hard to --
 <START:person> MARY <END> 
@@ -7262,7 +7271,7 @@ his stereo , listens . <START:person> Joel <END> dials the phone . Yeah
 Beep . ( whisper ) <START:person> Stan <END> , it ' s Patrick
 <START:person> JOEL <END> ( CONT ' D ) 
  So you ' re still on the Zoloft ?
-<START:person> CLEMENTINE <END> ' S VOICE
+<START:person> CLEMENTINE ' S VOICE <END> 
  Ha Ha ! You said , I do . I guess that
 to my friend Magda . <START:person> Joel <END> is immersed in the several
 <START:person> CLEMENTINE <END> 
@@ -7311,7 +7320,7 @@ Thanks , <START:person> Stan <END> . I owe you .
 <START:person> STAN <END> 
  We use the articles you brought to create
 Faded . Carrie and <START:person> Joel <END> sit at the table with
-) <START:person> Mr . Mierzwiak <END> , <START:person> Stan <END> is here to -- Yes
+) Mr . Mierzwiak , <START:person> Stan <END> is here to -- Yes
 <START:person> JOEL <END> 
  I came over to the bed and you smelled so
 <START:person> NAOMI <END> ( CONT ' D ) 
@@ -7348,7 +7357,7 @@ the slivers of light . <START:person> Mary <END> hates me . I '
 apparently weakened and he and <START:person> Mary <END> kiss again . This time
 <START:person> STAN <END> 
  You better go .
-<START:person> CLEMENTINE <END> ' S VOICE
+<START:person> CLEMENTINE ' S VOICE <END> 
  Your dried cum .
 <START:person> CLEMENTINE <END> 
  Me too . It is Rain Dogs , by the way .
@@ -7359,7 +7368,7 @@ We should call Howard . <START:person> Stan <END> turns and looks at her
  I ' m sorry you saw one of our notification
 <START:person> CLEMENTINE <END> 
  You don ' t tell me things , Joel . I ' m an
-surroundings become slightly vague . Even <START:person> Joel <END> ' s persona and voice
+surroundings become slightly vague . <START:person> Even Joel <END> ' s persona and voice
 <START:person> CLEMENTINE <END> 
  That ' s okay . I --
 <START:person> JOEL <END> 
@@ -7381,7 +7390,7 @@ end of the car . <START:person> Joel <END> looks out the window .
 <START:person> CLEMENTINE <END> 
  I ' ll buy that . Black ' s always good .
 . Joel looks up . <START:person> Clementine <END> is not looking at him
-<START:person> MIERZWIAK <END> VOICE
+<START:person> MIERZWIAK VOICE <END> 
  Okay , so just tell me what you remember .
 <START:person> Mary <END> , with a headset on
 <START:person> CLEMENTINE <END> 
@@ -7408,7 +7417,8 @@ laughs ) My goal , <START:person> Joel <END> , is to just let
 obscured by a fence . <START:person> Joel <END> and Clementine drink wine .
 <START:person> Patrick <END> and Mary are heading home
 bye . She nods . <START:person> Joel <END> and Clementine are walking near
-<START:person> PATRICK <END> ' S VOICE
+Joel ' s face . <START:person> Ah <END> - ha ! Now I
+<START:person> PATRICK ' S VOICE <END> 
  I know . It ' s not like ... I mean , they
 <START:person> JOEL <END> 
  Oh , thank God . It ' s going .

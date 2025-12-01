@@ -97,10 +97,13 @@ public class TrainingRunner {
                         fMeasure.updateScores(sample.getNames(), predictedSpans);
 
                         if (!Arrays.equals(predictedSpans, sample.getNames())) {
+
                             System.out.println("TEXT: " + String.join(" ", tokens));
                             System.out.println("PREDICTED: " + Arrays.toString(predictedSpans));
                             System.out.println("EXPECTED: " + Arrays.toString(sample.getNames()));
                             System.out.println("---------------------------");
+
+
                         }
                     }
 

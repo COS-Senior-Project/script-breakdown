@@ -11,7 +11,7 @@ import java.util.Collection;
 public class Main {
     public static void main(String[] args) throws IOException {
         //loads the film script
-        String script = ScriptParser.loadScript("/scripts/interstellar.txt");
+        String script = ScriptParser.loadScript("/scripts/eternal-sunshine.txt");
         //creates an object of ScriptParser
         ScriptParser parser = new ScriptParser();
         //the parser splits the script into scenes and puts them in a list
@@ -28,8 +28,8 @@ public class Main {
 
             //creates Path objects and converts the string path into a Path object
             Path csvPath = Paths.get("output/character_candidates.csv");
-            Path trainPath = Paths.get("output/characters_train3.train");
-            Path testPath = Paths.get("output/characters_test3.train");
+            Path trainPath = Paths.get("output/characters_train4.train");
+            Path testPath = Paths.get("output/characters_test4.train");
 
             //ensures the parent directories of the paths exist
             //it creates all missing directories
@@ -46,7 +46,7 @@ public class Main {
                 //loops through each scene
                 for (Scene scene : scenes) {
                     //prints out each scene
-                    System.out.println(scene);
+                    //System.out.println(scene);
                     //creates a list that takes characters from all extractors
                     List<Character> allCharacters = new ArrayList<>();
                     allCharacters.addAll(CharacterExtractor.extractSpeakerCues(scene.getContent(), scene, nameDb));
@@ -101,7 +101,9 @@ public class Main {
             }
 
 
-             */
+
+
+
             System.out.println("Training entries: " + trainingData.size());
             System.out.println("Testing entries: " + testingData.size());
 
@@ -115,6 +117,15 @@ public class Main {
             runner.trainAndEvaluate(trainFilePost, testFilePost, outputModel);
 
             System.out.println("Done!");
+
+             */
+
+            try (OutputStream modelOut = new BufferedOutputStream(
+                    new FileOutputStream("src/main/resources/models/en-ner-person-customer.bin"))) {
+                model.serialize(modelOut);
+            }
+
+
 
         } catch (NullPointerException npe) { //if the model input stream is null
             System.out.println("Model input stream was null.");

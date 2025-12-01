@@ -28,7 +28,7 @@ public class CharacterExtractor {
     //pattern looks for a person's name when introducing characters
     private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|Enter|Entering|Introducing|It's|It is)\\s+([A-Z0-9'’\\.\\-]+(?:\\s+[A-Z0-9'’\\.\\-]+){0,2})(?=\\s|$|,|\\.)");
     //pattern looks for a character name before age when first introduced
-    private static final Pattern NAME_WITH_AGE = Pattern.compile("\\b([A-Z][A-Z0-9'’.\\-]*(?:\\s+[A-Z][A-Z0-9'’.\\-]*)*)\\b(?:\\s*(?:\\(|,)\\s*(\\d{1,3}s?)\\)?)");
+    private static final Pattern NAME_WITH_AGE = Pattern.compile("\\b([A-Z][A-Z0-9'’.\\-]*(?:\\s+[A-Z][A-Z0-9'’.\\-]*)*)\\b(?:\\s*(?:\\(|,)\\s*(\\d{1,3}(?:'s)?)\\)?)");
     //set of black list words that are definitely not names
     private static final Set<String> BLACK_LIST = new HashSet<>(Arrays.asList(
             "A", "AND", "OR", "BUT", "FOR", "TO", "IN", "ON", "AT", "IS", "ARE", "WAS", "WERE",
@@ -42,7 +42,7 @@ public class CharacterExtractor {
             "SCREEN", "WITH", "SHE", "HE", "THEY", "EACH", "ITS", "HERS", "HIS", "FOOTAGE", "MUSIC", "EXPLODES",
             "EXPLODING", "EXPLODE", "PAUSE", "THEN", "MORE", "SORRY", "WHATEVER", "YEAH", "CUE", "WAIT", "SIGNS",
             "LAUGHS", "NODS", "HONESTLY", "NOW", "LOOK", "LOOKS", "LOOKING", "CHIRP", "VIDEO", "THERE", "OVER", "OVER THERE",
-            "WEAVES", "WALKS", "WALK", "WHY", "INSTANTLY", "WE", "YOU", "CAMERA", "GASPS", "IT", "THE"));
+            "WEAVES", "WALKS", "WALK", "WHY", "INSTANTLY", "WE", "YOU", "CAMERA", "GASPS", "IT", "THE", "ANYWAY", "EVERYONE"));
 
     //set of stage verbs that are definitely not names
     private static final Set <String> STAGE_VERBS = new HashSet<>(Arrays.asList(
@@ -53,7 +53,10 @@ public class CharacterExtractor {
             "MAN", "MEN", "WOMAN", "WOMEN", "BOY", "BOYS", "GIRL", "GIRLS", "MALE",
             "MALES", "FEMALE", "FEMALES", "CHILD", "CHILDREN", "TODDLER", "TODDLERS",
             "TEENAGER", "TEENAGERS", "ADULT", "ADULTS", "ELDER", "ELDERS", "HUMAN",
-            "HUMANS", "VOICE", "ASSISTANT", "OFFICER"
+            "HUMANS", "VOICE", "ASSISTANT", "OFFICER", "DOCTOR", "LAWYER", "TEACHER",
+            "DETECTIVE", "NURSE", "SOLDIER", "SCIENTIST", "SINGER", "CHEF", "PILOT",
+            "PHOTOGRAPHER", "FIREFIGHTER", "THIEF", "ARTIST", "VILLAIN", "PRIEST",
+            "POLITICIAN","VICTIM", "RECEPTIONIST", "WAITER", "WAITRESS"
     ));
     //extracts names above dialogue
     public static List <Character> extractSpeakerCues(String content, Scene scene, NameDatabase nameDb) {
@@ -84,7 +87,7 @@ public class CharacterExtractor {
                 if (isStopPhrase(normalized)) continue;
                 //sets base confidence level
                 //higher because almost all names before V.O.\O.S. are character names
-                double confidence = 0.4;
+                double confidence = 0.65;
                 //the confidence increases if the name is found in the name files
                 confidence += nameDb.confidenceBoostMatchFile(normalized);
                 String[] nameTokenized = TextUnits.tokenize(normalized);
