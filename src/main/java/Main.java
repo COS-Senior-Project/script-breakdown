@@ -1,5 +1,6 @@
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.TokenNameFinderModel;
+import opennlp.tools.util.Span;
 
 import java.io.*;
 import java.nio.file.Path;
@@ -26,52 +27,90 @@ public class Main {
             //creates an instance of NameFinderME
             NameFinderME nameFinderME = new NameFinderME(model);
 
+
+            //Populating the .csv and .train files + training code is here for reference/demo.
             //creates Path objects and converts the string path into a Path object
-            Path csvPath = Paths.get("output/character_candidates.csv");
-            Path trainPath = Paths.get("output/characters_train4.train");
-            Path testPath = Paths.get("output/characters_test4.train");
+            //Path csvPath = Paths.get("output/character_candidates7.csv");
+            //Path trainPath = Paths.get("output/characters_train4.train");
+            //Path testPath = Paths.get("output/characters_test4.train");
 
             //ensures the parent directories of the paths exist
             //it creates all missing directories
             //if they already exist, it does nothing
-            Files.createDirectories(csvPath.getParent());
-            Files.createDirectories(trainPath.getParent());
-            Files.createDirectories(testPath.getParent());
+            //Files.createDirectories(csvPath.getParent());
+            //Files.createDirectories(trainPath.getParent());
+            //Files.createDirectories(testPath.getParent());
 
             //list to contain all the train entries
-            List<String> trainEntries = new ArrayList<>();
+            //List<String> trainEntries = new ArrayList<>();
+
+            for (Scene scene : scenes) {
+                List<Character> extracted = CharacterPipeline.extractAll(scene, nameDb, nameFinderME);
+                //prints out each scene
+                //System.out.println(scene);
+
+                for (Character c : extracted) {
+                    scene.addCharacter(c);
+                }
+            }
+
+            LinkedHashSet<String> allNames = new LinkedHashSet<>();
+
+            for (Scene scene : scenes) {
+                for (Character c : scene.getCharacters()) {
+                    allNames.add(c.getNameItem());
+                }
+            }
+
+            CharacterClusterer clusterer = new CharacterClusterer();
+            Map<String, String> canonicalMap = clusterer.buildCanonicalMap(allNames);
+
+            for (Scene scene : scenes) {
+                for (Character c : scene.getCharacters()) {
+                    String raw = c.getNameItem();
+                    String canonical = canonicalMap.get(raw);
+                    c.setCanonicalName(canonical);
+                }
+            }
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates.csv", true))) {
-                //loops through each scene
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates9.csv", true))) {
+
+                csvWriter.write("SceneOrderNumber,SceneNumber,RawName,CanonicalName,Confidence\n");
                 for (Scene scene : scenes) {
-                    //prints out each scene
-                    //System.out.println(scene);
-                    //creates a list that takes characters from all extractors
-                    List<Character> allCharacters = new ArrayList<>();
-                    allCharacters.addAll(CharacterExtractor.extractSpeakerCues(scene.getContent(), scene, nameDb));
-                    allCharacters.addAll(CharacterExtractor.extractInlineName(scene.getContent(), scene, nameFinderME, nameDb));
-                    allCharacters.addAll(CharacterExtractor.extractPersonWord(scene.getContent(), scene));
-                    allCharacters.addAll(CharacterExtractor.extractIntroCharacter(scene.getContent(), scene));
+                    for (Character c : scene.getCharacters()) {
+                        if (c.getConfidenceScore() < 0.65) continue;
+                        csvWriter.write(scene.getSceneNumber() + ","
+                                        + c.getNameItem() + ","
+                                        + c.getCanonicalName() + ","
+                                        + c.getConfidenceScore());
+                        csvWriter.newLine();
+                    }
+                }
 
-
+                /*
                     //loops through each film character in the list
                     for (Character c : allCharacters) {
                         if (c.confidenceScore >= 0.65) {
+                            finalCharacters.add(c.nameItem);
                             //CSV OUTPUT
                             csvWriter.write(c.toCSVRow());
                             csvWriter.newLine();
 
                             //collect .train entry in memory
-                            trainEntries.add(c.bootstrappingObjects("person"));
+                            //trainEntries.add(c.bootstrappingObjects("person"));
                         }
                     }
 
-                }
+
+                 */
+
+
             } catch (IOException io) { //if the CSV file is not found, it handles the error
                 System.out.println("CSV file not found.");
             }
 
+            /*
             //shuffles the entries of the list using a random generator with the current time
             Collections.shuffle(trainEntries, new Random(System.currentTimeMillis()));
 
@@ -84,7 +123,7 @@ public class Main {
             List<String> trainingData = trainEntries.subList(0, trainSize);
             List<String> testingData = trainEntries.subList(trainSize, total);
 
-            /*
+
             //writes the lists into the files
             try (BufferedWriter trainWriter = new BufferedWriter(new FileWriter(trainPath.toFile(), true))) {
                 for (String entry : trainingData) {
@@ -100,10 +139,7 @@ public class Main {
                 }
             }
 
-
-
-
-
+            /*
             System.out.println("Training entries: " + trainingData.size());
             System.out.println("Testing entries: " + testingData.size());
 
@@ -118,13 +154,14 @@ public class Main {
 
             System.out.println("Done!");
 
-             */
+
 
             try (OutputStream modelOut = new BufferedOutputStream(
                     new FileOutputStream("src/main/resources/models/en-ner-person-customer.bin"))) {
                 model.serialize(modelOut);
             }
 
+             */
 
 
         } catch (NullPointerException npe) { //if the model input stream is null

@@ -1,88 +1,89 @@
 import java.util.*;
 
 public class CharacterClusterer {
-    private static final double JW_THRESHOLD = 0.90;
-    private static final int LEV_THRESHOLD = 2;
+    private static final double JW_THRESHOLD = 0.95;
+    private static final int LEV_THRESHOLD = 3;
+
+    private static class UnionFind {
+        private final int[] parent;
+
+        public UnionFind(int size) {
+            parent = new int[size];
+            for (int i = 0; i < size; i++) parent[i] = i;
+        }
+
+        public int find (int x) {
+            if (parent[x] != x) {
+                parent[x] = find(parent[x]);
+            }
+            return parent[x];
+        }
+
+        public void union(int a, int b) {
+            int rootA = find(a);
+            int rootB = find(b);
+            if (rootA != rootB) {
+                parent[rootB] = rootA;
+            }
+        }
+    }
 
     public Map<String, String> buildCanonicalMap(Set<String> rawNames) {
-        Map<String, String> normalizedMap = new HashMap<>();
-        //loops through all raw names found
-        //normalizes the names
-        for (String name : rawNames) {
-            //the key is the original name and the value is the normalized form
-            normalizedMap.put(name, CharacterExtractor.normalizeName(name).toLowerCase());
+        if (rawNames == null || rawNames.isEmpty()) return new HashMap<>();
+
+        Set<String> orderedNames = new LinkedHashSet<>(rawNames);
+        List<String> rawNamesList = new ArrayList<>(orderedNames);
+        int n = rawNames.size();
+
+        List<String> normalized = new ArrayList<>();
+        for (String name : rawNamesList) {
+            normalized.add(CharacterExtractor.normalizeName(name).toLowerCase());
         }
 
-        //stores all final cluster of clusters
-        //each cluster is a set of normalized names referring to the same character
-        List<Set<String>> clusters = new ArrayList<>();
-        //keeps track of normalized names already in th cluster and prevents duplicates
-        Set<String> visited = new HashSet<>();
-        //loops through the normalized names
-        for (String n1 : normalizedMap.values()) {
-            //if already in the cluster, skip it
-            if (visited.contains(n1)) continue;
-            //creates a new empty cluster for each character
-            Set<String> cluster = new HashSet<>();
-            //adds to the cluster and mark as visited
-            cluster.add(n1);
-            visited.add(n1);
-            //loops through the normalized names to compare n1 to all n2 values
-            for (String n2 : normalizedMap.values()) {
-                if (visited.contains(n2)) continue;
-                //computes Jaro-Winkler similarity score (0-1)
-                double similarity = JaroWinkler.similarity(n1, n2);
-                //computes Levenshtein distance
-                int lev = Levenshtein.distance(n1, n2);
-                //if the names are similar enough, they are considered as the same character
-                if (similarity >= JW_THRESHOLD || lev <= LEV_THRESHOLD) {
-                    //adds to the character cluster
-                    cluster.add(n2);
-                    //adds to visited so it's not clustered again
-                    visited.add(n2);
+        UnionFind uf = new UnionFind(n);
+
+        for (int i = 0; i < n; i ++) {
+            for (int j = i + 1; j < n; j++) {
+                String a = normalized.get(i);
+                String b = normalized.get(j);
+
+                double similarity = JaroWinkler.similarity(a, b);
+                int lev = Levenshtein.distance(a, b);
+
+                boolean similar = (similarity >= JW_THRESHOLD) && (lev <= LEV_THRESHOLD);
+
+                if (similar) {
+                    uf.union(i, j);
                 }
             }
-            //add the character cluster to the master cluster
-            clusters.add(cluster);
         }
-        //creates a map that will hold the normalized name as a key
-        // and the chosen canonical normalized name for the cluster
-        Map<String, String> canonicalNormalized = new HashMap<>();
+
+        Map<Integer, List<Integer>> clusters = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            int root = uf.find(i);
+            clusters.computeIfAbsent(root, k -> new ArrayList<>()).add(i);
+        }
+
+        //creates a map that will hold the raw name as a key
+        // and the chosen canonical name for the cluster
+        Map<String, String> output = new HashMap<>();
         //loops through each cluster of normalized names
-        for (Set<String> cluster : clusters) {
+        for (List<Integer> cluster : clusters.values()) {
             //converts the cluster set into a stream
-            String canonical = cluster.stream()
-                    //chooses the shortest name
-                    .min(Comparator.comparingInt(String::length))
+            String canonicalRaw = cluster.stream()
+                    .map(rawNamesList::get)
+                    //chooses the longest name
+                    .max(Comparator.comparingInt(s -> CharacterExtractor.normalizeName(s).toLowerCase().length()))
                     //if the cluster is empty, throws an exception
                     .orElseThrow();
             //loops through each element of the character cluster
-            for (String member : cluster) {
-                //maps every character cluster member to canonical normalized name
-                canonicalNormalized.put(member, canonical);
+            for (int index : cluster) {
+                String raw = rawNamesList.get(index);
+                output.put(raw, canonicalRaw);
             }
         }
-        //final output map with raw name as key and the raw canonical name as the value
-        Map <String, String> finalMap = new HashMap<>();
-        //loops through the original raw names
-        for (String raw : rawNames) {
-            //gets the normalized name value from the normalizedMap
-            String norm = normalizedMap.get(raw);
-            //gets the canonical normalized name for the normalized value
-            String canonicalNorm = canonicalNormalized.get(norm);
-            //choose the best raw name to represent the cluster
-            String bestRaw = rawNames.stream()
-                    //keeps all raw names whose normalized form equals the canonical normalized name
-                    .filter(r -> CharacterExtractor.normalizeName(r).toLowerCase().equals(canonicalNorm))
-                    //picks the shortest raw name among the kept ones
-                    .min(Comparator.comparingInt(String::length))
-                    //if none match, use the raw name as the canonical
-                    .orElse(raw);
 
-            //maps the raw name values to the canonical name
-            finalMap.put(raw, bestRaw);
-        }
-        //returns the final map
-        return finalMap;
+        return output;
+
     }
 }

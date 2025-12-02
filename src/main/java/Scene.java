@@ -11,6 +11,8 @@ public class Scene {
 
     private final List<CharacterMention> mentions = new ArrayList<>();
 
+    private List<Character> characters = new ArrayList<>();
+
     public Scene(int sceneIntNumber, String sceneNumber, String heading, String content, String locationKeyword, String time){
         this.sceneIntNumber = sceneIntNumber;
         this.sceneNumber = sceneNumber;
@@ -43,13 +45,12 @@ public class Scene {
     }
 
     //adds post-training character mentions to a list
-    public void addMentions(List<CharacterMention> newMentions) {
-        mentions.addAll(newMentions);
+    public void addCharacter(Character c) {
+        characters.add(c);
     }
 
-    public List<CharacterMention> getMentions() {
-        return mentions;
-    }
+
+    public List<Character> getCharacters() { return characters; }
 
     @Override
     public String toString(){

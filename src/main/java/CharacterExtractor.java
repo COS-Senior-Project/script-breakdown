@@ -42,7 +42,7 @@ public class CharacterExtractor {
             "SCREEN", "WITH", "SHE", "HE", "THEY", "EACH", "ITS", "HERS", "HIS", "FOOTAGE", "MUSIC", "EXPLODES",
             "EXPLODING", "EXPLODE", "PAUSE", "THEN", "MORE", "SORRY", "WHATEVER", "YEAH", "CUE", "WAIT", "SIGNS",
             "LAUGHS", "NODS", "HONESTLY", "NOW", "LOOK", "LOOKS", "LOOKING", "CHIRP", "VIDEO", "THERE", "OVER", "OVER THERE",
-            "WEAVES", "WALKS", "WALK", "WHY", "INSTANTLY", "WE", "YOU", "CAMERA", "GASPS", "IT", "THE", "ANYWAY", "EVERYONE"));
+            "WEAVES", "WALKS", "WALK", "WHY", "INSTANTLY", "WE", "YOU", "CAMERA", "GASPS", "IT", "THE", "ANYWAY", "EVERYONE", "TONIGHT"));
 
     //set of stage verbs that are definitely not names
     private static final Set <String> STAGE_VERBS = new HashSet<>(Arrays.asList(
