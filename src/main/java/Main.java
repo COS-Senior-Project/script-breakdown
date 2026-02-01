@@ -73,13 +73,13 @@ public class Main {
             for (Scene scene : scenes) {
                 for (Character c : scene.getCharacters()) {
                     String raw = c.getNameItem();
-                    String canonical = canonicalMap.get(raw);
+                    String canonical = canonicalMap.get(raw.toUpperCase(Locale.ROOT));
                     c.setCanonicalName(canonical);
                 }
             }
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates11.csv", true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates14.csv", true))) {
 
                 csvWriter.write("SceneOrderNumber,SceneNumber,RawName,CanonicalName,Confidence\n");
                 for (Scene scene : scenes) {

@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class CharacterClusterer {
-    private static final double JW_THRESHOLD = 0.95;
-    private static final int LEV_THRESHOLD = 3;
+    //private static final double JW_THRESHOLD = 0.95;
+    //private static final int LEV_THRESHOLD = 3;
 
     private static class UnionFind {
         private final int[] parent;
@@ -46,18 +46,27 @@ public class CharacterClusterer {
         for (int i = 0; i < n; i ++) {
             for (int j = i + 1; j < n; j++) {
                 String candidate = normalized.get(j);
-                int rootIndex = uf.find(i);
 
                 boolean similarToWholeCluster = true;
 
                 for (int k = 0; k < n; k++) {
-                    if (uf.find(k) == rootIndex) {
+                    if (uf.find(k) == uf.find(i)) {
                         String member = normalized.get(k);
 
                         double sim = JaroWinkler.similarity(member, candidate);
                         int lev = Levenshtein.distance(member, candidate);
 
-                        boolean similar = (sim >= JW_THRESHOLD) && (lev <= LEV_THRESHOLD);
+                        int minLen = Math.min(member.length(), candidate.length());
+
+                        boolean similar;
+                        if (minLen <= 4) {
+                            //short names must be almost identical
+                            similar = (sim >= 0.98) && (lev <= 1);
+                        } else if (minLen <= 7) {
+                            similar = (sim >= 0.95) && (lev <= 2);
+                        } else {
+                            similar = (sim >= 0.92) && (lev <= 3);
+                        }
 
                         if (!similar) {
                             similarToWholeCluster = false;
