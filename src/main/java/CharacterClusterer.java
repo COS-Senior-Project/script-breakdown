@@ -29,6 +29,7 @@ public class CharacterClusterer {
     }
 
     public Map<String, String> buildCanonicalMap(Set<String> rawNames) {
+        //if the set is empty
         if (rawNames == null || rawNames.isEmpty()) return new HashMap<>();
 
         Set<String> orderedNames = new LinkedHashSet<>(rawNames);
@@ -44,15 +45,28 @@ public class CharacterClusterer {
 
         for (int i = 0; i < n; i ++) {
             for (int j = i + 1; j < n; j++) {
-                String a = normalized.get(i);
-                String b = normalized.get(j);
+                String candidate = normalized.get(j);
+                int rootIndex = uf.find(i);
 
-                double similarity = JaroWinkler.similarity(a, b);
-                int lev = Levenshtein.distance(a, b);
+                boolean similarToWholeCluster = true;
 
-                boolean similar = (similarity >= JW_THRESHOLD) && (lev <= LEV_THRESHOLD);
+                for (int k = 0; k < n; k++) {
+                    if (uf.find(k) == rootIndex) {
+                        String member = normalized.get(k);
 
-                if (similar) {
+                        double sim = JaroWinkler.similarity(member, candidate);
+                        int lev = Levenshtein.distance(member, candidate);
+
+                        boolean similar = (sim >= JW_THRESHOLD) && (lev <= LEV_THRESHOLD);
+
+                        if (!similar) {
+                            similarToWholeCluster = false;
+                            break;
+                        }
+                    }
+                }
+
+                if (similarToWholeCluster) {
                     uf.union(i, j);
                 }
             }

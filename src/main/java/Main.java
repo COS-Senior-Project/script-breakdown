@@ -44,11 +44,13 @@ public class Main {
             //list to contain all the train entries
             //List<String> trainEntries = new ArrayList<>();
 
+            //for each scene, extract all characters
             for (Scene scene : scenes) {
                 List<Character> extracted = CharacterPipeline.extractAll(scene, nameDb, nameFinderME);
                 //prints out each scene
                 //System.out.println(scene);
 
+                //each extracted character is associated with a scene object
                 for (Character c : extracted) {
                     scene.addCharacter(c);
                 }
@@ -56,13 +58,16 @@ public class Main {
 
             LinkedHashSet<String> allNames = new LinkedHashSet<>();
 
+            //all names associated to scenes are added to a linked hash set
             for (Scene scene : scenes) {
                 for (Character c : scene.getCharacters()) {
                     allNames.add(c.getNameItem());
                 }
             }
 
+            //creates a clusterer object
             CharacterClusterer clusterer = new CharacterClusterer();
+            //builds a canonical map of all names
             Map<String, String> canonicalMap = clusterer.buildCanonicalMap(allNames);
 
             for (Scene scene : scenes) {
@@ -74,7 +79,7 @@ public class Main {
             }
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates9.csv", true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates11.csv", true))) {
 
                 csvWriter.write("SceneOrderNumber,SceneNumber,RawName,CanonicalName,Confidence\n");
                 for (Scene scene : scenes) {
