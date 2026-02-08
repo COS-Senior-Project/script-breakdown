@@ -14,6 +14,7 @@ public class CharacterExtractor {
             "\\b(?:(?:Mr|Mrs|Ms|Dr)\\.?)?\\s*" +
                     "\\b((?:[A-Z][A-Z0-9'’\\.\\-]*)" +
             "(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*)*)\\b" +
+                    "(?:\\s+VOICE\\b)?" +
                     "(?:\\s*\\(([^)]*)\\))?");
     //the pattern looks for an uppercase name followed by (V.O./V/O), (O.S./O/S), (O.C./O/C), or (CONT'D)
     private static final Pattern NAME_WITH_PAREN = Pattern.compile("^\\s*([A-Z][A-Z0-9'’\\.\\-]*)\\s*\\((V\\.O\\.|V/O|O\\.S\\.|O/S|O\\.C\\.|O/C|CONT'D)\\)\\s*$");
@@ -24,7 +25,9 @@ public class CharacterExtractor {
     private static final Pattern PERSON_ADJECTIVE = Pattern.compile("\\b(MALE|FEMALE|YOUNG|OLD|MIDDLE-AGED|MIDDLE AGED|ASIAN|CAUCASIAN|LATIN)(?:\\s+[A-Z][A-Z]+){1,2}\\b");
     //pattern looks for a person noun proceeded by an uppercase word
     private static final Pattern PERSON_NOUN = Pattern.compile("\\b(?:[A-Z][A-Z0-9'’\\.\\-]*\\s+)?(MAN|MEN|WOMAN|WOMEN|BOY|BOYS|GIRL|GIRLS|MALE|MALES|FEMALE|FEMALES|CHILD|" +
-            "CHILDREN|TODDLER|TODDLERS|TEENAGER|TEENAGERS|ADULT|ADULTS|ELDER|ELDERS|HUMAN|HUMANS|VOICE|OFFICER)\\b");
+            "CHILDREN|TODDLER|TODDLERS|TEENAGER|TEENAGERS|ADULT|ADULTS|ELDER|ELDERS|HUMAN|HUMANS|OFFICER)\\b");
+
+    private static final Pattern NAME_VOICE = Pattern.compile("\\b([A-Z][A-Z0-9'’\\.\\-]*(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*)*?)(?<!'S)\\s+VOICE\\b");
     //pattern looks for a person's name when introducing characters
     private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|Enter|Entering|Introducing|It's|It is)\\s+([A-Z0-9'’\\.\\-]+(?:\\s+[A-Z0-9'’\\.\\-]+){0,2})(?=\\s|$|,|\\.)");
     //pattern looks for a character name before age when first introduced
@@ -53,7 +56,7 @@ public class CharacterExtractor {
             "MAN", "MEN", "WOMAN", "WOMEN", "BOY", "BOYS", "GIRL", "GIRLS", "MALE",
             "MALES", "FEMALE", "FEMALES", "CHILD", "CHILDREN", "TODDLER", "TODDLERS",
             "TEENAGER", "TEENAGERS", "ADULT", "ADULTS", "ELDER", "ELDERS", "HUMAN",
-            "HUMANS", "VOICE", "ASSISTANT", "OFFICER", "DOCTOR", "LAWYER", "TEACHER",
+            "HUMANS", "ASSISTANT", "OFFICER", "DOCTOR", "LAWYER", "TEACHER",
             "DETECTIVE", "NURSE", "SOLDIER", "SCIENTIST", "SINGER", "CHEF", "PILOT",
             "PHOTOGRAPHER", "FIREFIGHTER", "THIEF", "ARTIST", "VILLAIN", "PRIEST",
             "POLITICIAN","VICTIM", "RECEPTIONIST", "WAITER", "WAITRESS"
@@ -248,6 +251,7 @@ public class CharacterExtractor {
             //creates a matcher object for an uppercase noun word combination
             // that is related to a person's identity
             Matcher matchNoun = PERSON_NOUN.matcher(trimmed);
+            Matcher matchVoice = NAME_VOICE.matcher(trimmed);
 
             //if it finds the adjective word sequence, it creates a new character entry
             if (matchAdj.find()) {
@@ -273,6 +277,18 @@ public class CharacterExtractor {
                         scene.getSceneNumber(),
                         matchNoun.group(),
                         "PERSON_NOUN",
+                        safeSnippet(trimmed),
+                        confidence,
+                        null
+                ));
+            }
+            else if (matchVoice.find()) {
+                if (isStopPhrase(matchNoun.group())) continue;
+                result.add(new Character(
+                        scene.getSceneIntNumber(),
+                        scene.getSceneNumber(),
+                        matchNoun.group(),
+                        "NAME_VOICE",
                         safeSnippet(trimmed),
                         confidence,
                         null
