@@ -364,6 +364,7 @@ public class CharacterExtractor {
         s = s.replaceAll("^[^A-Z0-9]+", "").replaceAll("[^A-Z0-9]+$", "");
         //removes any trailing scene-number formatting that might accidentally go into the name
         s = s.replaceAll("\\s+\\d+[A-Z]?\\.?\\s*$", "").trim();
+        s = s.replaceAll("'?S?\\s+VOICE\\b", "").trim();
         return s;
     }
 
