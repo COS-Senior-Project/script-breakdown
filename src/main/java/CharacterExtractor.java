@@ -216,7 +216,7 @@ public class CharacterExtractor {
             result.add(new Character(
                     scene.getSceneIntNumber(),
                     scene.getSceneNumber(),
-                    candidate,
+                    normalizeNameInline(candidate),
                     "NAMEFINDER_ME",
                     snippet,
                     confidence,
@@ -260,7 +260,7 @@ public class CharacterExtractor {
                 result.add(new Character(
                         scene.getSceneIntNumber(),
                         scene.getSceneNumber(),
-                        matchAdj.group(),
+                        normalizeName(matchAdj.group()),
                         "PERSON_ADJ",
                         safeSnippet(trimmed),
                         confidence,
@@ -275,7 +275,7 @@ public class CharacterExtractor {
                 result.add(new Character(
                         scene.getSceneIntNumber(),
                         scene.getSceneNumber(),
-                        matchNoun.group(),
+                        normalizeName(matchNoun.group()),
                         "PERSON_NOUN",
                         safeSnippet(trimmed),
                         confidence,
@@ -287,7 +287,7 @@ public class CharacterExtractor {
                 result.add(new Character(
                         scene.getSceneIntNumber(),
                         scene.getSceneNumber(),
-                        matchNoun.group(),
+                        normalizeName(matchNoun.group()),
                         "NAME_VOICE",
                         safeSnippet(trimmed),
                         confidence,
@@ -326,7 +326,7 @@ public class CharacterExtractor {
                     result.add(new Character(
                             scene.getSceneIntNumber(),
                             scene.getSceneNumber(),
-                            matchIntro.group(1),
+                            normalizeNameInline(matchIntro.group(1)),
                             "PERSON_INTRO",
                             safeSnippet(trimmed),
                             confidence,
@@ -340,7 +340,7 @@ public class CharacterExtractor {
                     result.add(new Character(
                             scene.getSceneIntNumber(),
                             scene.getSceneNumber(),
-                            matchAge.group(1),
+                            normalizeNameInline(matchAge.group(1)),
                             "PERSON_WITH_AGE",
                             safeSnippet(trimmed),
                             confidence,
@@ -364,6 +364,19 @@ public class CharacterExtractor {
         s = s.replaceAll("^[^A-Z0-9]+", "").replaceAll("[^A-Z0-9]+$", "");
         //removes any trailing scene-number formatting that might accidentally go into the name
         s = s.replaceAll("\\s+\\d+[A-Z]?\\.?\\s*$", "").trim();
+        return s;
+    }
+
+    //normalizes in-line names
+    public static String normalizeNameInline(String raw){
+        if (raw == null) return "";
+        //converts to readable apostrophes and multiple spaces to just one space
+        String s = raw.replaceAll("’", "'").replaceAll("\\s+", " ").trim();
+        //removes stray trailing punctuation in the beginning and at the end of the string
+        s = s.replaceAll("^[^A-Za-z0-9]+", "").replaceAll("[^A-Za-z0-9]+$", "");
+        //removes any trailing scene-number formatting that might accidentally go into the name
+        s = s.replaceAll("\\s+\\d+[A-Z]?\\.?\\s*$", "").trim();
+        s = s.toUpperCase(Locale.ROOT);
         return s;
     }
 

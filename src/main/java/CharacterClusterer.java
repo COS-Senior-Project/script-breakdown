@@ -27,6 +27,7 @@ public class CharacterClusterer {
             }
         }
     }
+
     //graph clustering with each name in the cluster matched with all those in the cluster beforehand
     public Map<String, String> buildCanonicalMap(LinkedHashSet<String> rawNames) {
         //if the set is empty, nothing to cluster
@@ -37,22 +38,24 @@ public class CharacterClusterer {
         List<String> rawNamesList = new ArrayList<>(rawNames);
         //int n = rawNamesList.size();
 
+        /*
         //list to store normalized names for comparison
         List<String> normalized = new ArrayList<>();
 
         for (String name : rawNamesList) {
-            normalized.add(CharacterExtractor.normalizeName(name).toUpperCase(Locale.ROOT));
+            normalized.add(name);
             //normalized.add(CharacterExtractor.normalizeName(name).toLowerCase());
         }
+        */
 
-        int n = normalized.size();
+        int n = rawNamesList.size();
         //creates a union-find object which makes each name a separate cluster
         UnionFind uf = new UnionFind(n);
 
         //compares every pair of names
         for (int i = 0; i < n; i ++) {
             for (int j = i + 1; j < n; j++) {
-                String candidate = normalized.get(j);
+                String candidate = rawNamesList.get(j);
 
                 boolean similarToWholeCluster = true;
 
@@ -60,7 +63,7 @@ public class CharacterClusterer {
                 for (int k = 0; k < n; k++) {
                     if (uf.find(k) == uf.find(i)) {
                         //sets a member of the cluster
-                        String member = normalized.get(k);
+                        String member = rawNamesList.get(k);
 
                         //calculates similarity and distance of the candidate and each cluster member
                         double sim = JaroWinkler.similarity(member, candidate);
@@ -115,7 +118,7 @@ public class CharacterClusterer {
             String canonicalRaw = cluster.stream()
                     .map(rawNamesList::get)
                     //chooses the longest name
-                    .max(Comparator.comparingInt(s -> CharacterExtractor.normalizeName(s).toUpperCase(Locale.ROOT).length()))
+                    .max(Comparator.comparingInt(s -> s.length()))
                     //if the cluster is empty, throws an exception
                     .orElseThrow();
             System.out.println("-------------------------------------------");
@@ -126,9 +129,8 @@ public class CharacterClusterer {
             for (int index : cluster) {
                 //sets the raw name, corresponding to the index
                 String raw = rawNamesList.get(index);
-                String norm = normalized.get(index);
 
-                System.out.println("raw: [" + raw + "]  normalized: [" + norm + "]");
+                System.out.println("raw: [" + raw + "]");
                 //creates an output map with the raw and canonical name
                 output.put(raw, canonicalRaw);
             }

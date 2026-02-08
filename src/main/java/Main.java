@@ -73,13 +73,21 @@ public class Main {
             for (Scene scene : scenes) {
                 for (Character c : scene.getCharacters()) {
                     String raw = c.getNameItem();
+                    /*
+                    System.out.println("RAW FROM CHARACTER: [" + raw + "]");
+                    System.out.println("RAW LENGTH: " + raw.length());
+
+                    for (String key : canonicalMap.keySet()) {
+                        System.out.println("MAP KEY: [" + key + "] len=" + key.length());
+                    }
+                     */
                     String canonical = canonicalMap.get(raw.toUpperCase(Locale.ROOT));
                     c.setCanonicalName(canonical);
                 }
             }
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates19.csv", true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates23.csv", true))) {
 
                 csvWriter.write("SceneOrderNumber,SceneNumber,RawName,CanonicalName,Confidence\n");
                 for (Scene scene : scenes) {
