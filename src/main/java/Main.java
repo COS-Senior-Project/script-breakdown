@@ -87,7 +87,7 @@ public class Main {
             }
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates24.csv", true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates31.csv", true))) {
 
                 csvWriter.write("SceneOrderNumber,SceneNumber,RawName,CanonicalName,Confidence\n");
                 for (Scene scene : scenes) {

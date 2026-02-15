@@ -36,17 +36,6 @@ public class CharacterClusterer {
         //Set<String> orderedNames = new LinkedHashSet<>(rawNames);
         //turns the linked hash set into a list with indices
         List<String> rawNamesList = new ArrayList<>(rawNames);
-        //int n = rawNamesList.size();
-
-        /*
-        //list to store normalized names for comparison
-        List<String> normalized = new ArrayList<>();
-
-        for (String name : rawNamesList) {
-            normalized.add(name);
-            //normalized.add(CharacterExtractor.normalizeName(name).toLowerCase());
-        }
-        */
 
         int n = rawNamesList.size();
         //creates a union-find object which makes each name a separate cluster
@@ -55,45 +44,32 @@ public class CharacterClusterer {
         //compares every pair of names
         for (int i = 0; i < n; i ++) {
             for (int j = i + 1; j < n; j++) {
-                String candidate = rawNamesList.get(j);
+                String a = rawNamesList.get(i);
+                String b = rawNamesList.get(j);
 
-                boolean similarToWholeCluster = true;
+                if (a.length() <= 2 || b.length() <= 2) continue;
 
-                //loops through every name and checks if it is already part of the same cluster as i
-                for (int k = 0; k < n; k++) {
-                    if (uf.find(k) == uf.find(i)) {
-                        //sets a member of the cluster
-                        String member = rawNamesList.get(k);
+                Set<String> ta = new HashSet<>(Arrays.asList(TextUnits.tokenize(a)));
+                Set<String> tb = new HashSet<>(Arrays.asList(TextUnits.tokenize(b)));
 
-                        //calculates similarity and distance of the candidate and each cluster member
-                        double sim = JaroWinkler.similarity(member, candidate);
-                        int lev = Levenshtein.distance(member, candidate);
-
-                        //gets the size of the shorter word of the compared
-                        int minLen = Math.min(member.length(), candidate.length());
-
-                        //sets different thresholds depending on how large the smallest compared word is
-                        boolean similar;
-                        if (minLen <= 4) {
-                            //short names must be almost identical
-                            similar = (sim >= 0.98) && (lev <= 1);
-                        } else if (minLen <= 7) {
-                            similar = (sim >= 0.95) && (lev <= 2);
-                        } else {
-                            similar = (sim >= 0.92) && (lev <= 3);
-                        }
-                        //if not similar, the inner loop breaks
-                        if (!similar) {
-                            similarToWholeCluster = false;
-                            break;
-                        }
-                    }
-                }
-
-                //if candidate is similar to all the members, it joins the cluster
-                if (similarToWholeCluster) {
-                    System.out.println("UNION: " + rawNamesList.get(i) + " <-> " + rawNamesList.get(j));
+                if (ta.containsAll(tb) || tb.containsAll(ta)) {
                     uf.union(i, j);
+                    System.out.println("UNION CONTAINS: " + a + "    <-->    " + b);
+                }
+                else {
+                    //calculates similarity and distance of the candidate and each cluster member
+                    double sim = JaroWinkler.similarity(a, b);
+                    int lev = Levenshtein.distance(a, b);
+
+                    //sets different thresholds depending on how large the smallest compared word is
+                    boolean similar;
+                    similar = (sim >= 0.96) && (lev <= 1);
+
+                    //if not similar, the inner loop breaks
+                    if (similar) {
+                        uf.union(i, j);
+                        System.out.println("UNION ALGORITHMS: " + a + "    <-->    " + b);
+                    }
                 }
             }
         }
