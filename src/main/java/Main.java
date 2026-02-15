@@ -87,16 +87,24 @@ public class Main {
             }
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates31.csv", true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates36.csv", true))) {
 
-                csvWriter.write("SceneOrderNumber,SceneNumber,RawName,CanonicalName,Confidence\n");
+                csvWriter.write("SceneNumber,RawName,CanonicalName,Confidence\n");
                 for (Scene scene : scenes) {
+                    Set<String> namesPerScene = new HashSet<>();
                     for (Character c : scene.getCharacters()) {
                         if (c.getConfidenceScore() < 0.65) continue;
+                        namesPerScene.add(c.getCanonicalName());
+                        /*
                         csvWriter.write(scene.getSceneNumber() + ","
                                         + c.getNameItem() + ","
                                         + c.getCanonicalName() + ","
                                         + c.getConfidenceScore());
+                        csvWriter.newLine();
+                         */
+                    }
+                    for (String name : namesPerScene) {
+                        csvWriter.write(scene.getSceneNumber() + "," + name);
                         csvWriter.newLine();
                     }
                 }
