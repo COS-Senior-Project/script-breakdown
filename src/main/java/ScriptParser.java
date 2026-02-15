@@ -123,6 +123,7 @@ public class ScriptParser {
         String currentLocation = null;
         String currentTime = null;
         StringBuilder currentContent = new StringBuilder();
+        int sceneLength = 0;
 
         boolean debug = false;
 
@@ -135,6 +136,7 @@ public class ScriptParser {
                 //but if no current scene, skip extra blanks
                 if (currentHeading != null && currentContent.length() > 0) {
                     currentContent.append("\n");
+                    sceneLength++;
                 }
                 continue;
             }
@@ -168,12 +170,13 @@ public class ScriptParser {
                 //If we were building a previous scene, finalize it now
                 if (currentHeading != null) {
                     sceneRawCounter++;
-                    scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocation, currentTime));
+                    scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocation, currentTime, sceneLength));
                     currentContent.setLength(0);
                     currentHeading = null;
                     currentLocation = null;
                     currentTime = null;
                     currentSceneNumber = null;
+                    sceneLength = 0;
                 }
 
                 //Determine scene number: pending (number-on-previous-line) has priority
@@ -218,7 +221,10 @@ public class ScriptParser {
             //Not a heading, not a page number: treat as content for current scene (if any)
             if (currentHeading != null) {
                 //append the raw line (preserve formatting within content)
-                if (currentContent.length() > 0) currentContent.append("\n");
+                if (currentContent.length() > 0) {
+                    currentContent.append("\n");
+                    sceneLength++;
+                }
                 currentContent.append(raw);
             }
 
@@ -226,7 +232,7 @@ public class ScriptParser {
         //finalize last scene
         if (currentHeading != null) {
             sceneRawCounter++;
-            scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocation, currentTime));
+            scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocation, currentTime, sceneLength));
         }
         return scenes;
     }

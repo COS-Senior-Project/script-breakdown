@@ -10,16 +10,18 @@ public class Scene {
     private final String time;
 
     private final List<CharacterMention> mentions = new ArrayList<>();
+    private final int sceneLength;
 
     private List<Character> characters = new ArrayList<>();
 
-    public Scene(int sceneIntNumber, String sceneNumber, String heading, String content, String locationKeyword, String time){
+    public Scene(int sceneIntNumber, String sceneNumber, String heading, String content, String locationKeyword, String time, int sceneLength){
         this.sceneIntNumber = sceneIntNumber;
         this.sceneNumber = sceneNumber;
         this.heading = heading;
         this.content = content;
         this.locationKeyword = locationKeyword;
         this.time = time;
+        this.sceneLength = sceneLength;
     }
 
     public int getSceneIntNumber(){
@@ -43,6 +45,8 @@ public class Scene {
     public String getTime(){
         return  time;
     }
+
+    public int getSceneLength() { return sceneLength; }
 
     //adds post-training character mentions to a list
     public void addCharacter(Character c) {
