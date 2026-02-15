@@ -89,7 +89,7 @@ public class Main {
             //tries to open the file for writing using a memory buffer and closes the writer at the end
             try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates37.csv", true))) {
 
-                csvWriter.write("SceneNumber,RawName,CanonicalName,Confidence\n");
+                csvWriter.write("SceneNumber,CanonicalNames,SceneLengths\n");
                 for (Scene scene : scenes) {
                     Set<String> namesPerScene = new HashSet<>();
                     for (Character c : scene.getCharacters()) {
