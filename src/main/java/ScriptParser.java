@@ -123,7 +123,8 @@ public class ScriptParser {
         String currentLocation = null;
         String currentTime = null;
         StringBuilder currentContent = new StringBuilder();
-        int sceneLength = 0;
+        int sceneLines = 0;
+        int sceneLengthEights = 0;
 
         boolean debug = false;
 
@@ -136,7 +137,7 @@ public class ScriptParser {
                 //but if no current scene, skip extra blanks
                 if (currentHeading != null && currentContent.length() > 0) {
                     currentContent.append("\n");
-                    sceneLength++;
+                    sceneLines++;
                 }
                 continue;
             }
@@ -170,13 +171,17 @@ public class ScriptParser {
                 //If we were building a previous scene, finalize it now
                 if (currentHeading != null) {
                     sceneRawCounter++;
-                    scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocation, currentTime, sceneLength));
+                    //around 55 lines per page
+                    sceneLengthEights = (int)Math.round((sceneLines/55.0) * 8);
+                    if (sceneLengthEights == 0) sceneLengthEights = 1;
+                    scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocation, currentTime, sceneLengthEights));
                     currentContent.setLength(0);
                     currentHeading = null;
                     currentLocation = null;
                     currentTime = null;
                     currentSceneNumber = null;
-                    sceneLength = 0;
+                    sceneLines = 0;
+                    sceneLengthEights = 0;
                 }
 
                 //Determine scene number: pending (number-on-previous-line) has priority
@@ -223,7 +228,7 @@ public class ScriptParser {
                 //append the raw line (preserve formatting within content)
                 if (currentContent.length() > 0) {
                     currentContent.append("\n");
-                    sceneLength++;
+                    sceneLines++;
                 }
                 currentContent.append(raw);
             }
@@ -232,7 +237,10 @@ public class ScriptParser {
         //finalize last scene
         if (currentHeading != null) {
             sceneRawCounter++;
-            scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocation, currentTime, sceneLength));
+            //around 55 lines per page
+            sceneLengthEights = (int)Math.round((sceneLines/55.0) * 8);
+            if (sceneLengthEights == 0) sceneLengthEights = 1;
+            scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocation, currentTime, sceneLengthEights));
         }
         return scenes;
     }
