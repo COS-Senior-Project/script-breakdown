@@ -87,7 +87,7 @@ public class Main {
             }
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates39.csv", true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates46.csv", true))) {
 
                 csvWriter.write("SceneNumber,CanonicalNames,SceneLengthsEights\n");
                 for (Scene scene : scenes) {
@@ -104,7 +104,7 @@ public class Main {
                          */
                     }
                     for (String name : namesPerScene) {
-                        csvWriter.write(scene.getSceneNumber() + "," + name + "," + scene.getSceneLength());
+                        csvWriter.write(scene.getSceneNumber() + "," + name + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() +  "," + scene.getLocation() + "," + scene.getTime());
                         csvWriter.newLine();
                     }
                 }

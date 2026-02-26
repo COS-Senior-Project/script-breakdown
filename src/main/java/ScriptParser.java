@@ -120,6 +120,7 @@ public class ScriptParser {
 
         String currentSceneNumber = null;
         String currentHeading = null;
+        String currentLocationKeyword = null;
         String currentLocation = null;
         String currentTime = null;
         StringBuilder currentContent = new StringBuilder();
@@ -174,9 +175,10 @@ public class ScriptParser {
                     //around 55 lines per page
                     sceneLengthEights = (int)Math.round((sceneLines/55.0) * 8);
                     if (sceneLengthEights == 0) sceneLengthEights = 1;
-                    scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocation, currentTime, sceneLengthEights));
+                    scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocationKeyword, currentLocation, currentTime, sceneLengthEights));
                     currentContent.setLength(0);
                     currentHeading = null;
+                    currentLocationKeyword = null;
                     currentLocation = null;
                     currentTime = null;
                     currentSceneNumber = null;
@@ -203,7 +205,8 @@ public class ScriptParser {
                 String locationDesc = h.group(4) != null ? h.group(4).trim() : "";
                 String time = h.group(5) != null ? h.group(5).trim() : "";
 
-                locationDesc = locationDesc.replaceAll("\\s+\\d+[A-Z]?(\\s*\\*?)?$", "").trim();
+                locationDesc = locationDesc.replaceAll("\\s+\\d+[A-Z]?(\\s*\\*?)?$", "").replaceAll("^\\.+\\s*", "").trim();
+                System.out.println(locationDesc);
 
                 //Build the displayed heading (keep keyword)
                 String displayedHeading = locationKeyword + (locationDesc.isEmpty() ? "" : " " + locationDesc) + (time.isEmpty() ? "" : " - " + time);
@@ -211,7 +214,8 @@ public class ScriptParser {
                 //Set current scene variables
                 currentSceneNumber = sceneNumber;
                 currentHeading = displayedHeading;
-                currentLocation = locationKeyword;
+                currentLocationKeyword = locationKeyword;
+                currentLocation = locationDesc;
                 currentTime = time;
 
                 //increment fallback for next scene (only if numeric)
@@ -240,7 +244,7 @@ public class ScriptParser {
             //around 55 lines per page
             sceneLengthEights = (int)Math.round((sceneLines/55.0) * 8);
             if (sceneLengthEights == 0) sceneLengthEights = 1;
-            scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocation, currentTime, sceneLengthEights));
+            scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocationKeyword, currentLocation, currentTime, sceneLengthEights));
         }
         return scenes;
     }
