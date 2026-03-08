@@ -44,67 +44,19 @@ public class Main {
             //list to contain all the train entries
             //List<String> trainEntries = new ArrayList<>();
 
-            //for each scene, extract all characters
-            for (Scene scene : scenes) {
-                List<Character> extracted = CharacterPipeline.extractAll(scene, nameDb, nameFinderME);
-                //prints out each scene
-                //System.out.println(scene);
-
-                //each extracted character is associated with a scene object
-                for (Character c : extracted) {
-                    scene.addCharacter(c);
-                }
-            }
-
-            LinkedHashSet<String> allNames = new LinkedHashSet<>();
-
-            //all names associated to scenes are added to a linked hash set
-            for (Scene scene : scenes) {
-                for (Character c : scene.getCharacters()) {
-                    allNames.add(c.getNameItem());
-                }
-            }
-
-            //creates a clusterer object
             CharacterClusterer clusterer = new CharacterClusterer();
-            //builds a canonical map of all names
-            Map<String, String> canonicalMap = clusterer.buildCanonicalMap(allNames);
+            CharacterOperations characterOperations = new CharacterOperations(nameDb, nameFinderME, clusterer);
+            characterOperations.processScenes(scenes);
 
-            for (Scene scene : scenes) {
-                for (Character c : scene.getCharacters()) {
-                    String raw = c.getNameItem();
-                    /*
-                    System.out.println("RAW FROM CHARACTER: [" + raw + "]");
-                    System.out.println("RAW LENGTH: " + raw.length());
-
-                    for (String key : canonicalMap.keySet()) {
-                        System.out.println("MAP KEY: [" + key + "] len=" + key.length());
-                    }
-                     */
-                    String canonical = canonicalMap.get(raw.toUpperCase(Locale.ROOT));
-                    c.setCanonicalName(canonical);
-                }
-            }
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates46.csv", true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates47.csv", true))) {
 
                 csvWriter.write("SceneNumber,CanonicalNames,SceneLengthsEights\n");
                 for (Scene scene : scenes) {
-                    Set<String> namesPerScene = new HashSet<>();
                     for (Character c : scene.getCharacters()) {
                         if (c.getConfidenceScore() < 0.65) continue;
-                        namesPerScene.add(c.getCanonicalName());
-                        /*
-                        csvWriter.write(scene.getSceneNumber() + ","
-                                        + c.getNameItem() + ","
-                                        + c.getCanonicalName() + ","
-                                        + c.getConfidenceScore());
-                        csvWriter.newLine();
-                         */
-                    }
-                    for (String name : namesPerScene) {
-                        csvWriter.write(scene.getSceneNumber() + "," + name + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() +  "," + scene.getLocation() + "," + scene.getTime());
+                        csvWriter.write(scene.getSceneNumber() + "," + c.getCanonicalName() + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() + "," + scene.getLocation() + "," + scene.getTime());
                         csvWriter.newLine();
                     }
                 }

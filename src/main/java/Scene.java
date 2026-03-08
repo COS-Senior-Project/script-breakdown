@@ -49,6 +49,7 @@ public class Scene {
         characters.add(c);
     }
     public List<Character> getCharacters() { return characters; }
+    public void setCharacters(List<Character> characters){ this.characters = characters; }
 
 
     @Override
