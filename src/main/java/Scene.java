@@ -60,6 +60,16 @@ public class Scene {
 
     public void setShootPhase(ShootPhase shootPhase) { this.shootPhase = shootPhase; }
 
+    public Set<String> getCanonicalCharacterNames() {
+        Set<String> names = new HashSet<>();
+        for (Character c : characters) {
+            if (c.getCanonicalName() != null) {
+                names.add(c.getCanonicalName());
+            }
+        }
+        return names;
+    }
+
     @Override
     public String toString(){
         return "Scene: " + sceneNumber +

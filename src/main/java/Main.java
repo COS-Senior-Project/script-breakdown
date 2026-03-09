@@ -50,15 +50,21 @@ public class Main {
 
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates47.csv", true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates49.csv", true))) {
 
-                csvWriter.write("SceneNumber,CanonicalNames,SceneLengthsEights\n");
+                csvWriter.write("SceneNumber,SceneLengthsEights,SceneLocationKeyword,SceneLocation,SceneShootPhase\n");
+                TimeClassifier.resolveTimes(scenes);
+
                 for (Scene scene : scenes) {
+                    /*
                     for (Character c : scene.getCharacters()) {
                         if (c.getConfidenceScore() < 0.65) continue;
-                        csvWriter.write(scene.getSceneNumber() + "," + c.getCanonicalName() + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() + "," + scene.getLocation() + "," + scene.getTime());
+                        csvWriter.write(scene.getSceneNumber() + "," + c.getCanonicalName() + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() + "," + scene.getLocation() + "," + scene.getShootPhase());
                         csvWriter.newLine();
                     }
+                     */
+                    csvWriter.write(scene.getSceneNumber() + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() + "," + scene.getLocation() + "," + scene.getShootPhase());
+                    csvWriter.newLine();
                 }
 
                 /*
