@@ -4,6 +4,10 @@ import java.util.List;
 import java.util.Set;
 
 public class Scene {
+    public enum ShootPhase {
+        DAY,
+        NIGHT
+    }
     private final int sceneIntNumber;
     private final String sceneNumber;
     private final String heading;
@@ -13,6 +17,7 @@ public class Scene {
     private final String time;
     private final int sceneLength;
     private List<Character> characters = new ArrayList<>();
+    private ShootPhase shootPhase;
 
     public Scene(int sceneIntNumber, String sceneNumber, String heading, String content, String locationKeyword, String location, String time, int sceneLength){
         this.sceneIntNumber = sceneIntNumber;
@@ -51,6 +56,9 @@ public class Scene {
     public List<Character> getCharacters() { return characters; }
     public void setCharacters(List<Character> characters){ this.characters = characters; }
 
+    public ShootPhase getShootPhase() { return shootPhase; }
+
+    public void setShootPhase(ShootPhase shootPhase) { this.shootPhase = shootPhase; }
 
     @Override
     public String toString(){
