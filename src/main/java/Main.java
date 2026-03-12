@@ -8,6 +8,8 @@ import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.util.*;
 import java.util.Collection;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -48,14 +50,16 @@ public class Main {
             CharacterOperations characterOperations = new CharacterOperations(nameDb, nameFinderME, clusterer);
             characterOperations.processScenes(scenes);
 
-
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates49.csv", true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates54.csv", true))) {
 
-                csvWriter.write("SceneNumber,SceneLengthsEights,SceneLocationKeyword,SceneLocation,SceneShootPhase\n");
+                //csvWriter.write("SceneNumber,SceneLengthsEights,SceneLocationKeyword,SceneLocation,SceneShootPhase\n");
                 TimeClassifier.resolveTimes(scenes);
+                ShootingScheduler scheduler = new ShootingScheduler(32);
+                List<ShootingDay> schedule = scheduler.schedule(scenes);
+                csvWriter.write("DayNumber,SceneNumbers,EightsUsed,Time,Location\n");
 
-                for (Scene scene : scenes) {
+                for (ShootingDay day : schedule) {
                     /*
                     for (Character c : scene.getCharacters()) {
                         if (c.getConfidenceScore() < 0.65) continue;
@@ -63,7 +67,10 @@ public class Main {
                         csvWriter.newLine();
                     }
                      */
-                    csvWriter.write(scene.getSceneNumber() + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() + "," + scene.getLocation() + "," + scene.getShootPhase());
+                    //csvWriter.write(scene.getSceneNumber() + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() + "," + scene.getLocation() + "," + scene.getShootPhase());
+                    //csvWriter.newLine();
+                    String numbers = day.getScenes().stream().map(Scene::getSceneNumber).collect(Collectors.joining(":"));
+                    csvWriter.write(day.getDayNumber() + "," + numbers + "," + day.getUsedEights() + "," + day.getTime() + "," + day.getLocation());
                     csvWriter.newLine();
                 }
 

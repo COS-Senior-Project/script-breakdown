@@ -22,14 +22,14 @@ public class ShootingScheduler {
         );
         //list of days in the schedule so far
         List<ShootingDay> schedule = new ArrayList<>();
-        //checks if the scenes in the scheduled day are night
+        //checks if any night scene has selected any night scene
         boolean nightPhaseStarted = false;
 
         for (Scene scene : scenes) {
             //checks if current scene is night
             boolean isNight = scene.getShootPhase().equals(Scene.ShootPhase.NIGHT);
             if (isNight) {
-                //if scenes in day are all night
+                //if current scene is night, the night phase for this location has started
                 nightPhaseStarted = true;
             }
             //variable to check which day this scene fits the best
@@ -60,8 +60,8 @@ public class ShootingScheduler {
                 ShootingDay newDay = new ShootingDay(schedule.size() + 1, scene.getLocation(), scene.getShootPhase());
                 newDay.addScene(scene);
                 schedule.add(newDay);
-                //checks if the new shooting day is a night shoot
-                if (isNight) nightPhaseStarted = true;
+                //checks if the new shooting day is not a night shoot
+                if (!isNight) nightPhaseStarted = false;
             }
         }
         return schedule;
@@ -101,7 +101,7 @@ public class ShootingScheduler {
     private double loadPenalty(ShootingDay day, Scene scene) {
         //computes the load
         double load = day.getUsedEights() + scene.getSceneLength();
-        //computes the penalty relative to the max eights per day
+        //computes the penalty relative to the max eights per day6
         return load / MAX_EIGHTS_PER_DAY;
     }
 }
