@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ShootingScheduler {
     //capacity limit of the shooting day
@@ -13,57 +10,66 @@ public class ShootingScheduler {
 
     //SSGS algorithm to construct the shooting days
     public List<ShootingDay> schedule(List<Scene> scenes) {
-        //priority rule
-        scenes.sort(Comparator
-                .comparing(Scene::getLocation) //first location
-                //night - true, day - false; false < true which makes all day scenes before the night ones at the same location
-                .thenComparing(scene -> scene.getShootPhase().equals(Scene.ShootPhase.NIGHT))
-                .thenComparing(Scene::getSceneIntNumber) //script order of scenes
-        );
         //list of days in the schedule so far
         List<ShootingDay> schedule = new ArrayList<>();
         //checks if any night scene has selected any night scene
-        boolean nightPhaseStarted = false;
 
-        for (Scene scene : scenes) {
-            //checks if current scene is night
-            boolean isNight = scene.getShootPhase().equals(Scene.ShootPhase.NIGHT);
-            if (isNight) {
-                //if current scene is night, the night phase for this location has started
-                nightPhaseStarted = true;
-            }
-            //variable to check which day this scene fits the best
-            ShootingDay bestDay = null;
-            //checks which is the best day by this score
-            double bestScore = Double.NEGATIVE_INFINITY;
+        //maps locations to scenes to create location groups
+        Map<String, List<Scene>> locationGroups = new LinkedHashMap<>();
+        for (Scene s : scenes) {
+            //creates a new location group if new location appears and adds the scene to the group
+            //if location has appeared before, it adds the scene to the already created location group
+            locationGroups.computeIfAbsent(s.getLocation(), k -> new ArrayList<>()).add(s);
+        }
 
-            //loops through every day of the day that is scheduled
-            for (ShootingDay day : schedule) {
-                //checks if day fits the basic requirements of location, time, and length
-                if (!feasible(day, scene)) continue;
-                //check to make sure day and night are not together in the same day
-                if (nightPhaseStarted && !isNight) continue;
-                //weighted score based on the priorities of the matching - cast similarity, scene order, and not too packed days
-                double score = castOverlapScore(day, scene) * 3.0 + orderScore(day, scene) * 2.0 + loadPenalty(day, scene);
-                //if the score of this scene is larger than the previous best one
-                if (score > bestScore) {
-                    //best score and best day are set to the current score and day
-                    bestScore = score;
-                    bestDay = day;
+        //loops through all scenes in each location group
+        for (List<Scene> locationScenes : locationGroups.values()) {
+            //sorts the scenes based on DAY/NIGHT
+            locationScenes.sort(Comparator.comparing(Scene::getShootPhase));
+
+            //loops through each scene of this location
+            for (Scene scene : locationScenes) {
+                //checks if current scene is night
+                //boolean isNight = scene.getShootPhase().equals(Scene.ShootPhase.NIGHT);
+                //boolean nightPhaseStarted = false;
+
+//                if (isNight) {
+//                    //if current scene is night, the night phase for this location has started
+//                    nightPhaseStarted = true;
+//                }
+
+                //variable to check which day this scene fits the best
+                ShootingDay bestDay = null;
+                //checks which is the best day by this score
+                double bestScore = Double.NEGATIVE_INFINITY;
+
+                //loops through every day of the day that is scheduled
+                for (ShootingDay day : schedule) {
+                    //checks if day fits the basic requirements of location, time, and length
+                    if (!feasible(day, scene)) continue;
+                    //check to make sure day and night are not together in the same day
+                    //if (nightPhaseStarted && !isNight) continue;
+                    //weighted score based on the priorities of the matching - cast similarity, scene order, and not too packed days
+                    double score = castOverlapScore(day, scene) * 3.0 + orderScore(day, scene) * 2.0 + loadPenalty(day, scene);
+                    //if the score of this scene is larger than the previous best one
+                    if (score > bestScore) {
+                        //best score and best day are set to the current score and day
+                        bestScore = score;
+                        bestDay = day;
+                    }
+                }
+                //after checking all scheduled days and the best day for the scene is found, the scene is added to it
+                if (bestDay != null) {
+                    bestDay.addScene(scene);
+                } else { //if no best day - first scene or requirements not fulfilled
+                    //new day is created and the scene is added to it
+                    ShootingDay newDay = new ShootingDay(schedule.size() + 1, scene.getLocation(), scene.getShootPhase());
+                    newDay.addScene(scene);
+                    schedule.add(newDay);
                 }
             }
-            //after checking all scheduled days and the best day for the scene is found, the scene is added to it
-            if (bestDay != null) {
-                bestDay.addScene(scene);
-            } else { //if no best day - first scene or requirements not fulfilled
-                //new day is created and the scene is added to it
-                ShootingDay newDay = new ShootingDay(schedule.size() + 1, scene.getLocation(), scene.getShootPhase());
-                newDay.addScene(scene);
-                schedule.add(newDay);
-                //checks if the new shooting day is not a night shoot
-                if (!isNight) nightPhaseStarted = false;
-            }
         }
+
         return schedule;
     }
 
@@ -77,6 +83,7 @@ public class ShootingScheduler {
             return false;
         return true;
     }
+
     //checks how many cast members from the current scene overlap with the ones in the day already
     private double castOverlapScore(ShootingDay day, Scene scene) {
         Set<String> dayCast = day.getCastSet();
