@@ -4,6 +4,10 @@ import java.util.List;
 import java.util.Set;
 
 public class ShootingDay {
+    public enum Move {
+        MOVE,
+        NO_MOVE
+    }
     private int dayNumber;
     private String location;
     private Scene.ShootPhase time;
@@ -11,25 +15,38 @@ public class ShootingDay {
 
     private List<Scene> scenes = new ArrayList<>();
     private Set<String> castSet = new HashSet<>();
+    private Move move;
 
-    public ShootingDay(int dayNumber, String location, Scene.ShootPhase time) {
+    public ShootingDay(int dayNumber, String location, Scene.ShootPhase time, Move move) {
         this.dayNumber = dayNumber;
         this.location = location;
         this.time = time;
+        this.move = move;
     }
 
     //adds scenes to the list
     //sums the eights of the scenes for the day
     //adds the cast needed in the set
-    public void addScene(Scene scene) {
+    public void addScene(Scene scene, Move move) {
         scenes.add(scene);
-        usedEights += scene.getSceneLength();
+        if (move == Move.MOVE) {
+            usedEights += scene.getSceneLength() + 8;
+        } else {
+            usedEights += scene.getSceneLength();
+        }
         castSet.addAll(scene.getCanonicalCharacterNames());
+
     }
 
     public int getDayNumber() { return dayNumber; }
     public String getLocation() { return location; }
     public Scene.ShootPhase getTime() { return time; }
+    public Move getMove() { return move; }
+
+    public void setUsedEights(int usedEights) {
+        this.usedEights = usedEights;
+    }
+
     public int getUsedEights() { return usedEights; }
     public Set<String> getCastSet() { return castSet; }
     public List<Scene> getScenes() { return scenes; }

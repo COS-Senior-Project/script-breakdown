@@ -51,7 +51,7 @@ public class Main {
             characterOperations.processScenes(scenes);
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates61.csv", true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates63.csv", true))) {
 
                 //csvWriter.write("SceneNumber,SceneLengthsEights,SceneLocationKeyword,SceneLocation,SceneShootPhase\n");
                 TimeClassifier.resolveTimes(scenes);
