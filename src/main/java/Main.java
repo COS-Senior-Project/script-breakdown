@@ -51,7 +51,7 @@ public class Main {
             characterOperations.processScenes(scenes);
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates63.csv", true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates71.csv", true))) {
 
                 //csvWriter.write("SceneNumber,SceneLengthsEights,SceneLocationKeyword,SceneLocation,SceneShootPhase\n");
                 TimeClassifier.resolveTimes(scenes);
@@ -70,7 +70,11 @@ public class Main {
                     //csvWriter.write(scene.getSceneNumber() + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() + "," + scene.getLocation() + "," + scene.getShootPhase());
                     //csvWriter.newLine();
                     String numbers = day.getScenes().stream().map(Scene::getSceneNumber).collect(Collectors.joining(":"));
-                    csvWriter.write(day.getDayNumber() + "," + numbers + "," + day.getUsedEights() + "," + day.getTime() + "," + day.getLocation());
+                    StringBuilder locations = new StringBuilder();
+                    for (Scene s : day.getScenes()) {
+                        locations.append(s.getLocation()).append("/");
+                    }
+                    csvWriter.write(day.getDayNumber() + "," + numbers + "," + day.getUsedEights() + "," + day.getTime() + "," + locations);
                     csvWriter.newLine();
                 }
 

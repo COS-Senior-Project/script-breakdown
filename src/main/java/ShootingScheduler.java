@@ -13,7 +13,7 @@ public class ShootingScheduler {
         //list of days in the schedule so far
         List<ShootingDay> schedule = new ArrayList<>();
         ShootingDay.Move move = ShootingDay.Move.NO_MOVE;
-        //checks if any night scene has selected any night scene
+        HashMap<Scene, String> locations = new HashMap<>();
 
         //maps locations to scenes to create location groups
         Map<String, List<Scene>> locationGroups = new LinkedHashMap<>();
@@ -47,6 +47,7 @@ public class ShootingScheduler {
                         //best score and best day are set to the current score and day
                         bestScore = score;
                         bestDay = day;
+                        locations.put(scene, scene.getLocation());
                         //checks location
                         if (!day.getLocation().equals(scene.getLocation())) {
                             move = ShootingDay.Move.MOVE;
@@ -56,9 +57,10 @@ public class ShootingScheduler {
                 //after checking all scheduled days and the best day for the scene is found, the scene is added to it
                 if (bestDay != null) {
                     bestDay.addScene(scene, ShootingDay.Move.NO_MOVE);
+                    locations.put(scene, scene.getLocation());
                 } else { //if no best day - first scene or requirements not fulfilled
                     //new day is created and the scene is added to it
-                    ShootingDay newDay = new ShootingDay(schedule.size() + 1, scene.getLocation(), scene.getShootPhase(), move);
+                    ShootingDay newDay = new ShootingDay(schedule.size() + 1, locations, scene.getShootPhase(), move);
                     newDay.addScene(scene, move);
                     schedule.add(newDay);
                 }

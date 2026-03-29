@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ShootingDay {
     public enum Move {
@@ -9,7 +6,7 @@ public class ShootingDay {
         NO_MOVE
     }
     private int dayNumber;
-    private String location;
+    private HashMap<Scene, String> location;
     private Scene.ShootPhase time;
     private int usedEights = 0;
 
@@ -17,7 +14,7 @@ public class ShootingDay {
     private Set<String> castSet = new HashSet<>();
     private Move move;
 
-    public ShootingDay(int dayNumber, String location, Scene.ShootPhase time, Move move) {
+    public ShootingDay(int dayNumber, HashMap<Scene, String> location, Scene.ShootPhase time, Move move) {
         this.dayNumber = dayNumber;
         this.location = location;
         this.time = time;
@@ -39,7 +36,7 @@ public class ShootingDay {
     }
 
     public int getDayNumber() { return dayNumber; }
-    public String getLocation() { return location; }
+    public HashMap<Scene, String> getLocation() { return location; }
     public Scene.ShootPhase getTime() { return time; }
     public Move getMove() { return move; }
 
