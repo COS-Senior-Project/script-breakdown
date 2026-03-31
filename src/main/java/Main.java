@@ -51,7 +51,7 @@ public class Main {
             characterOperations.processScenes(scenes);
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates71.csv", true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates78.csv", true))) {
 
                 //csvWriter.write("SceneNumber,SceneLengthsEights,SceneLocationKeyword,SceneLocation,SceneShootPhase\n");
                 TimeClassifier.resolveTimes(scenes);
@@ -70,11 +70,15 @@ public class Main {
                     //csvWriter.write(scene.getSceneNumber() + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() + "," + scene.getLocation() + "," + scene.getShootPhase());
                     //csvWriter.newLine();
                     String numbers = day.getScenes().stream().map(Scene::getSceneNumber).collect(Collectors.joining(":"));
-                    StringBuilder locations = new StringBuilder();
+                    Set<String> locations = new HashSet<>();
                     for (Scene s : day.getScenes()) {
-                        locations.append(s.getLocation()).append("/");
+                        locations.add(s.getLocation());
                     }
-                    csvWriter.write(day.getDayNumber() + "," + numbers + "," + day.getUsedEights() + "," + day.getTime() + "," + locations);
+                    StringBuilder locationsPerDay = new StringBuilder();
+                    for (String loc : locations) {
+                        locationsPerDay.append(loc).append("/");
+                    }
+                    csvWriter.write(day.getDayNumber() + "," + numbers + "," + day.getUsedEights() + "," + day.getTime() + "," + locationsPerDay);
                     csvWriter.newLine();
                 }
 
@@ -98,6 +102,10 @@ public class Main {
 
             } catch (IOException io) { //if the CSV file is not found, it handles the error
                 System.out.println("CSV file not found.");
+            }
+
+            for (Scene scene : scenes) {
+                System.out.println("Scene Numbers: " + scene.getSceneNumber() + "   Scene Heading: " + scene.getHeading() + "   Scene Location: " + scene.getLocation());
             }
 
             /*

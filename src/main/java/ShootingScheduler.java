@@ -13,10 +13,10 @@ public class ShootingScheduler {
         //list of days in the schedule so far
         List<ShootingDay> schedule = new ArrayList<>();
         ShootingDay.Move move = ShootingDay.Move.NO_MOVE;
-        HashMap<Scene, String> locations = new HashMap<>();
 
         //maps locations to scenes to create location groups
         Map<String, List<Scene>> locationGroups = new LinkedHashMap<>();
+        HashMap<Scene, String> locations = new HashMap<>();
         for (Scene s : scenes) {
             //creates a new location group if new location appears and adds the scene to the group
             //if location has appeared before, it adds the scene to the already created location group
@@ -49,7 +49,7 @@ public class ShootingScheduler {
                         bestDay = day;
                         locations.put(scene, scene.getLocation());
                         //checks location
-                        if (!day.getLocation().equals(scene.getLocation())) {
+                        if (!day.getLocation().values().toString().equals(scene.getLocation())) {
                             move = ShootingDay.Move.MOVE;
                         }
                     }
