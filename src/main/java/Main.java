@@ -51,11 +51,11 @@ public class Main {
             characterOperations.processScenes(scenes);
 
             //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates101.csv",true))) {
+            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates109.csv",true))) {
 
                 //csvWriter.write("SceneNumber,SceneLengthsEights,SceneLocationKeyword,SceneLocation,SceneShootPhase\n");
                 TimeClassifier.resolveTimes(scenes);
-                ShootingScheduler scheduler = new ShootingScheduler(40);
+                ShootingScheduler scheduler = new ShootingScheduler(45);
                 List<ShootingDay> schedule = scheduler.schedule(scenes);
                 csvWriter.write("DayNumber,SceneNumbers,EightsUsed,Time,Location\n");
 

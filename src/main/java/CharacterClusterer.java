@@ -54,7 +54,6 @@ public class CharacterClusterer {
 
                 if (ta.containsAll(tb) || tb.containsAll(ta)) {
                     uf.union(i, j);
-                    System.out.println("UNION CONTAINS: " + a + "    <-->    " + b);
                 }
                 else {
                     //calculates similarity and distance of the candidate and each cluster member
@@ -68,7 +67,6 @@ public class CharacterClusterer {
                     //if not similar, the inner loop breaks
                     if (similar) {
                         uf.union(i, j);
-                        System.out.println("UNION ALGORITHMS: " + a + "    <-->    " + b);
                     }
                 }
             }
@@ -97,16 +95,12 @@ public class CharacterClusterer {
                     .max(Comparator.comparingInt(s -> s.length()))
                     //if the cluster is empty, throws an exception
                     .orElseThrow();
-            System.out.println("-------------------------------------------");
-            System.out.println("CLUSTER CANONICAL NAME: " + canonicalRaw);
-            System.out.println("Cluster members:");
 
             //loops through each element of the character cluster
             for (int index : cluster) {
                 //sets the raw name, corresponding to the index
                 String raw = rawNamesList.get(index);
 
-                System.out.println("raw: [" + raw + "]");
                 //creates an output map with the raw and canonical name
                 output.put(raw, canonicalRaw);
             }

@@ -206,7 +206,6 @@ public class ScriptParser {
                 String time = h.group(5) != null ? h.group(5).trim() : "";
 
                 locationDesc = locationDesc.replaceAll("\\s+\\d+[A-Z]?(\\s*\\*?)?$", "").replaceAll("^\\.+\\s*", "").trim();
-                System.out.println(locationDesc);
 
                 //Build the displayed heading (keep keyword)
                 String displayedHeading = locationKeyword + (locationDesc.isEmpty() ? "" : " " + locationDesc) + (time.isEmpty() ? "" : " - " + time);
