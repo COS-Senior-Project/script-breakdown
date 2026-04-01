@@ -5,16 +5,21 @@ public class ShootingDay {
         MOVE,
         NO_MOVE
     }
+    public enum Time {
+        DAY,
+        NIGHT,
+        DAY_NIGHT
+    }
     private int dayNumber;
-    private HashMap<Scene, String> location;
-    private Scene.ShootPhase time;
+    private LinkedHashMap<Scene, String> location;
+    private Time time;
     private int usedEights = 0;
 
     private List<Scene> scenes = new ArrayList<>();
     private Set<String> castSet = new HashSet<>();
     private Move move;
 
-    public ShootingDay(int dayNumber, HashMap<Scene, String> location, Scene.ShootPhase time, Move move) {
+    public ShootingDay(int dayNumber, LinkedHashMap<Scene, String> location, Time time, Move move) {
         this.dayNumber = dayNumber;
         this.location = location;
         this.time = time;
@@ -27,7 +32,7 @@ public class ShootingDay {
     public void addScene(Scene scene, Move move) {
         scenes.add(scene);
         if (move == Move.MOVE) {
-            usedEights += scene.getSceneLength() + 8;
+            usedEights += scene.getSceneLength() + 12;
         } else {
             usedEights += scene.getSceneLength();
         }
@@ -36,8 +41,13 @@ public class ShootingDay {
     }
 
     public int getDayNumber() { return dayNumber; }
-    public HashMap<Scene, String> getLocation() { return location; }
-    public Scene.ShootPhase getTime() { return time; }
+    public LinkedHashMap<Scene, String> getLocation() { return location; }
+    public Time getTime() { return time; }
+
+    public void setTime(Time time) {
+        this.time = time;
+    }
+
     public Move getMove() { return move; }
 
     public void setUsedEights(int usedEights) {

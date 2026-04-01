@@ -12,17 +12,18 @@ public class ShootingScheduler {
     public List<ShootingDay> schedule(List<Scene> scenes) {
         //list of days in the schedule so far
         List<ShootingDay> schedule = new ArrayList<>();
+        //moving locations variable
         ShootingDay.Move move = ShootingDay.Move.NO_MOVE;
 
         //maps locations to scenes to create location groups
-        Map<String, List<Scene>> locationGroups = new LinkedHashMap<>();
-        HashMap<Scene, String> locations = new HashMap<>();
+        LinkedHashMap<String, List<Scene>> locationGroups = new LinkedHashMap<>();
+        LinkedHashMap<Scene, String> locations = new LinkedHashMap<>();
         for (Scene s : scenes) {
             //creates a new location group if new location appears and adds the scene to the group
             //if location has appeared before, it adds the scene to the already created location group
             locationGroups.computeIfAbsent(s.getLocation(), k -> new ArrayList<>()).add(s);
         }
-
+        ShootingDay.Time time = null;
         //loops through all scenes in each location group
         for (List<Scene> locationScenes : locationGroups.values()) {
             //night - true, day - false; false < true which makes all day scenes before the night ones at the same location
@@ -38,20 +39,22 @@ public class ShootingScheduler {
                 //loops through every day of the day that is scheduled
                 for (ShootingDay day : schedule) {
                     //checks if day fits the basic requirements of location, time, and length
-                    if (!feasible(day, scene)) continue;
-
+                    if (!feasible(day, scene, schedule)) continue;
                     //weighted score based on the priorities of the matching - cast similarity, scene order, and not too packed days
                     double score = castOverlapScore(day, scene) * 3.0 + orderScore(day, scene) * 2.0 + loadPenalty(day, scene);
                     //if the score of this scene is larger than the previous best one
                     if (score > bestScore) {
+                        if (!day.getLocation().values().toString().equals(scene.getLocation())) {
+                            move = ShootingDay.Move.MOVE;
+                        }
+                        else if (scene.getShootPhase() == Scene.ShootPhase.NIGHT && day.getTime() == ShootingDay.Time.DAY) {
+                            day.setTime(ShootingDay.Time.DAY_NIGHT);
+                        }
+
                         //best score and best day are set to the current score and day
                         bestScore = score;
                         bestDay = day;
                         locations.put(scene, scene.getLocation());
-                        //checks location
-                        if (!day.getLocation().values().toString().equals(scene.getLocation())) {
-                            move = ShootingDay.Move.MOVE;
-                        }
                     }
                 }
                 //after checking all scheduled days and the best day for the scene is found, the scene is added to it
@@ -59,8 +62,11 @@ public class ShootingScheduler {
                     bestDay.addScene(scene, ShootingDay.Move.NO_MOVE);
                     locations.put(scene, scene.getLocation());
                 } else { //if no best day - first scene or requirements not fulfilled
+                    if (scene.getShootPhase() == Scene.ShootPhase.DAY) { time = ShootingDay.Time.DAY; }
+                    if (scene.getShootPhase() == Scene.ShootPhase.NIGHT) { time = ShootingDay.Time.NIGHT; }
+
                     //new day is created and the scene is added to it
-                    ShootingDay newDay = new ShootingDay(schedule.size() + 1, locations, scene.getShootPhase(), move);
+                    ShootingDay newDay = new ShootingDay(schedule.size() + 1, locations, time, move);
                     newDay.addScene(scene, move);
                     schedule.add(newDay);
                 }
@@ -71,8 +77,11 @@ public class ShootingScheduler {
     }
 
     //checks if the basic requirements are met for scene to match a day
-    private boolean feasible(ShootingDay day, Scene scene) {
+    private boolean feasible(ShootingDay day, Scene scene, List<ShootingDay> sch) {
         if (day.getUsedEights() + scene.getSceneLength() > MAX_EIGHTS_PER_DAY) //checks if it fits the limit
+            return false;
+        ShootingDay prevDay = sch.get(day.getDayNumber()-1);
+        if (prevDay.getTime() == ShootingDay.Time.NIGHT && scene.getShootPhase() == Scene.ShootPhase.DAY)
             return false;
         return true;
     }
