@@ -18,6 +18,7 @@ public class ShootingDay {
     private List<Scene> scenes = new ArrayList<>();
     private Set<String> castSet = new HashSet<>();
     private Move move;
+    private String primaryLocation;
 
     public ShootingDay(int dayNumber, LinkedHashMap<Scene, String> location, Time time, Move move) {
         this.dayNumber = dayNumber;
@@ -37,7 +38,6 @@ public class ShootingDay {
             usedEights += scene.getSceneLength();
         }
         castSet.addAll(scene.getCanonicalCharacterNames());
-
     }
 
     public int getDayNumber() { return dayNumber; }
@@ -57,6 +57,12 @@ public class ShootingDay {
     public int getUsedEights() { return usedEights; }
     public Set<String> getCastSet() { return castSet; }
     public List<Scene> getScenes() { return scenes; }
+
+    public String getPrimaryLocation() { return primaryLocation; }
+
+    public void setPrimaryLocation(String primaryLocation) {
+        this.primaryLocation = primaryLocation;
+    }
 
     //tracks how far apart the scenes are for continuity
     public double getAverageScriptOrder() {
