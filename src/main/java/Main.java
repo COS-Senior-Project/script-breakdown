@@ -11,6 +11,9 @@ import java.util.Collection;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
 public class Main {
     public static void main(String[] args) throws IOException {
         //loads the film script
@@ -49,64 +52,121 @@ public class Main {
             CharacterClusterer clusterer = new CharacterClusterer();
             CharacterOperations characterOperations = new CharacterOperations(nameDb, nameFinderME, clusterer);
             characterOperations.processScenes(scenes);
+            //assigns the shoot phase to the scene
+            TimeClassifier.resolveTimes(scenes);
+            //schedules the scenes
+            ShootingScheduler scheduler = new ShootingScheduler(45);
+            List<ShootingDay> schedule = scheduler.schedule(scenes);
 
-            //tries to open the file for writing using a memory buffer and closes the writer at the end
-            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates109.csv",true))) {
-
-                //csvWriter.write("SceneNumber,SceneLengthsEights,SceneLocationKeyword,SceneLocation,SceneShootPhase\n");
-                TimeClassifier.resolveTimes(scenes);
-                ShootingScheduler scheduler = new ShootingScheduler(45);
-                List<ShootingDay> schedule = scheduler.schedule(scenes);
-                csvWriter.write("DayNumber,SceneNumbers,EightsUsed,Time,Location\n");
+            try {
+                //converts Java to JSON syntax
+                ObjectMapper mapper = new ObjectMapper();
+                //makes the JSON in a more readable format
+                mapper.enable(SerializationFeature.INDENT_OUTPUT);
+                //top level container - list of shooting days in order
+                List<Map<String, Object>> daysOutput = new ArrayList<>();
 
                 for (ShootingDay day : schedule) {
-                    /*
-                    for (Character c : scene.getCharacters()) {
-                        if (c.getConfidenceScore() < 0.65) continue;
-                        csvWriter.write(scene.getSceneNumber() + "," + c.getCanonicalName() + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() + "," + scene.getLocation() + "," + scene.getShootPhase());
-                        csvWriter.newLine();
-                    }
-                     */
-                    //csvWriter.write(scene.getSceneNumber() + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() + "," + scene.getLocation() + "," + scene.getShootPhase());
-                    //csvWriter.newLine();
-                    String numbers = day.getScenes().stream().map(Scene::getSceneNumber).collect(Collectors.joining(":"));
+                    //day map to model a JSON object in order
+                    Map<String, Object> dayMap = new LinkedHashMap<>();
+                    dayMap.put("dayNumber", day.getDayNumber());
+                    dayMap.put("usedEights", day.getUsedEights());
+                    dayMap.put("time", day.getTime());
+
+                    //set for unique locations
                     Set<String> locations = new HashSet<>();
                     for (Scene s : day.getScenes()) {
                         locations.add(s.getLocation());
                     }
-                    StringBuilder locationsPerDay = new StringBuilder();
-                    for (String loc : locations) {
-                        locationsPerDay.append(loc).append("/");
+
+                    dayMap.put("locations", locations);
+
+                    //list to store days in order of scheduling
+                    List<Map<String, Object>> scenesList = new ArrayList<>();
+
+                    for (Scene scene : day.getScenes()) {
+                        //map to represent JSON structure in order
+                        Map<String, Object> sceneMap = new LinkedHashMap<>();
+                        sceneMap.put("sceneNumber", scene.getSceneNumber());
+                        sceneMap.put("heading", scene.getHeading());
+                        sceneMap.put("intExt", scene.getLocationKeyword());
+                        sceneMap.put("location", scene.getLocation());
+                        sceneMap.put("shootPhase", scene.getShootPhase());
+                        sceneMap.put("lengthEights", scene.getSceneLength());
+                        sceneMap.put("characters", scene.getCanonicalCharacterNames());
+                        //adds each scene map to the list
+                        scenesList.add(sceneMap);
                     }
-                    csvWriter.write(day.getDayNumber() + "," + numbers + "," + day.getUsedEights() + "," + day.getTime() + "," + locationsPerDay);
-                    csvWriter.newLine();
+                    //adds each scene list to the day
+                    dayMap.put("scenes", scenesList);
+                    //adds each day map to the day list
+                    daysOutput.add(dayMap);
                 }
-
-                /*
-                    //loops through each film character in the list
-                    for (Character c : allCharacters) {
-                        if (c.confidenceScore >= 0.65) {
-                            finalCharacters.add(c.nameItem);
-                            //CSV OUTPUT
-                            csvWriter.write(c.toCSVRow());
-                            csvWriter.newLine();
-
-                            //collect .train entry in memory
-                            //trainEntries.add(c.bootstrappingObjects("person"));
-                        }
-                    }
-
-
-                 */
-
-
-            } catch (IOException io) { //if the CSV file is not found, it handles the error
-                System.out.println("CSV file not found.");
+                //creates a file reference
+                File outFile = new File("output/schedule3.json");
+                //ensures parent folder exists
+                outFile.getParentFile().mkdirs();
+                System.out.println("Writing JSON...");
+                //writes in the JSON file with one key value pair - "days" (key) and the days list (value)
+                mapper.writeValue(outFile,
+                        Collections.singletonMap("days", daysOutput));
+            } catch (IOException io) {
+                System.out.println("JSON file not found.");
             }
-
-            for (Scene scene : scenes) {
-                System.out.println("Scene Numbers: " + scene.getSceneNumber() + "   Scene Heading: " + scene.getHeading() + "   Scene Location: " + scene.getLocation());
-            }
+            //tries to open the file for writing using a memory buffer and closes the writer at the end
+//            try (BufferedWriter csvWriter = new BufferedWriter(new FileWriter("output/character_candidates110.csv",true))) {
+//                //csvWriter.write("SceneNumber,SceneLengthsEights,SceneLocationKeyword,SceneLocation,SceneShootPhase\n");
+//
+//                csvWriter.write("DayNumber,SceneNumbers,EightsUsed,Time,Location\n");
+//
+//                for (ShootingDay day : schedule) {
+//                    /*
+//                    for (Character c : scene.getCharacters()) {
+//                        if (c.getConfidenceScore() < 0.65) continue;
+//                        csvWriter.write(scene.getSceneNumber() + "," + c.getCanonicalName() + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() + "," + scene.getLocation() + "," + scene.getShootPhase());
+//                        csvWriter.newLine();
+//                    }
+//                     */
+//                    //csvWriter.write(scene.getSceneNumber() + "," + scene.getSceneLength() + "," + scene.getLocationKeyword() + "," + scene.getLocation() + "," + scene.getShootPhase());
+//                    //csvWriter.newLine();
+//                    String numbers = day.getScenes().stream().map(Scene::getSceneNumber).collect(Collectors.joining(":"));
+//                    Set<String> locations = new HashSet<>();
+//                    for (Scene s : day.getScenes()) {
+//                        locations.add(s.getLocation());
+//                    }
+//                    StringBuilder locationsPerDay = new StringBuilder();
+//                    for (String loc : locations) {
+//                        locationsPerDay.append(loc).append("/");
+//                    }
+//                    csvWriter.write(day.getDayNumber() + "," + numbers + "," + day.getUsedEights() + "," + day.getTime() + "," + locationsPerDay);
+//                    csvWriter.newLine();
+//                }
+//
+//                /*
+//                    //loops through each film character in the list
+//                    for (Character c : allCharacters) {
+//                        if (c.confidenceScore >= 0.65) {
+//                            finalCharacters.add(c.nameItem);
+//                            //CSV OUTPUT
+//                            csvWriter.write(c.toCSVRow());
+//                            csvWriter.newLine();
+//
+//                            //collect .train entry in memory
+//                            //trainEntries.add(c.bootstrappingObjects("person"));
+//                        }
+//                    }
+//
+//
+//                 */
+//
+//
+//            } catch (IOException io) { //if the CSV file is not found, it handles the error
+//                System.out.println("CSV file not found.");
+//            }
+//
+//            for (Scene scene : scenes) {
+//                System.out.println("Scene Numbers: " + scene.getSceneNumber() + "   Scene Heading: " + scene.getHeading() + "   Scene Location: " + scene.getLocation());
+//            }
 
             /*
             //shuffles the entries of the list using a random generator with the current time
