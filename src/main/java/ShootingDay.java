@@ -12,6 +12,7 @@ public class ShootingDay {
     }
     private int dayNumber;
     private LinkedHashMap<Scene, String> location;
+    private Set<String> locationSet = new HashSet<>();
     private Time time;
     private int usedEights = 0;
 
@@ -20,9 +21,9 @@ public class ShootingDay {
     private Move move;
     private String primaryLocation;
 
-    public ShootingDay(int dayNumber, LinkedHashMap<Scene, String> location, Time time, Move move) {
+    public ShootingDay(int dayNumber, Time time, Move move) {
         this.dayNumber = dayNumber;
-        this.location = location;
+        //this.location = location;
         this.time = time;
         this.move = move;
     }
@@ -38,10 +39,12 @@ public class ShootingDay {
             usedEights += scene.getSceneLength();
         }
         castSet.addAll(scene.getCanonicalCharacterNames());
+        locationSet.add(scene.getLocation());
     }
 
     public int getDayNumber() { return dayNumber; }
     public LinkedHashMap<Scene, String> getLocation() { return location; }
+    public Set<String> getLocationSet() { return locationSet; }
     public Time getTime() { return time; }
 
     public void setTime(Time time) {

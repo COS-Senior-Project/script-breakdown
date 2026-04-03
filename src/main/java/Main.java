@@ -72,6 +72,7 @@ public class Main {
                     dayMap.put("dayNumber", day.getDayNumber());
                     dayMap.put("usedEights", day.getUsedEights());
                     dayMap.put("time", day.getTime());
+                    dayMap.put("move", day.getMove());
 
                     //set for unique locations
                     Set<String> locations = new HashSet<>();
@@ -103,7 +104,7 @@ public class Main {
                     daysOutput.add(dayMap);
                 }
                 //creates a file reference
-                File outFile = new File("output/schedule3.json");
+                File outFile = new File("output/schedule6.json");
                 //ensures parent folder exists
                 outFile.getParentFile().mkdirs();
                 System.out.println("Writing JSON...");

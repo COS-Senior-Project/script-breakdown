@@ -17,7 +17,7 @@ public class ShootingScheduler {
 
         //maps locations to scenes to create location groups
         LinkedHashMap<String, List<Scene>> locationGroups = new LinkedHashMap<>();
-        LinkedHashMap<Scene, String> locations = new LinkedHashMap<>();
+        //LinkedHashMap<Scene, String> locations = new LinkedHashMap<>();
         for (Scene s : scenes) {
             //creates a new location group if new location appears and adds the scene to the group
             //if location has appeared before, it adds the scene to the already created location group
@@ -41,12 +41,12 @@ public class ShootingScheduler {
                     //checks if day fits the basic requirements of length
                     if (!feasible(day, scene)) continue;
                     //weighted score based on the priorities of the matching - cast similarity, scene order, and not too packed days
-                    double score = locationScore(day, scene) + timeScore(day, scene, schedule) + castOverlapScore(day, scene) * 20.0 + orderScore(day, scene) * 2.0 + loadPenalty(day, scene);
-                    System.out.println("Location score: " + locationScore(day, scene) + "   Time score: " + timeScore(day, scene, schedule) + "     Cast overlap score: " +  castOverlapScore(day, scene) * 3.0
+                    double score =  locationScore(day, scene) + timeScore(day, scene, schedule) + castOverlapScore(day, scene) * 20.0 + orderScore(day, scene) * 2.0 + loadPenalty(day, scene);
+                    System.out.println("Location score" + locationScore(day, scene) + "   Time score: " + timeScore(day, scene, schedule) + "     Cast overlap score: " +  castOverlapScore(day, scene) * 3.0
                             + "     Order score: " + orderScore(day, scene) * 2.0 + "       Load Penalty:" + loadPenalty(day, scene) + "    Total score: " + score);
                     //if the score of this scene is larger than the previous best one
                     if (score > bestScore) {
-                        if (!day.getLocation().values().toString().equals(scene.getLocation())) {
+                        if (!day.getLocationSet().contains(scene.getLocation())) {
                             move = ShootingDay.Move.MOVE;
                         }
                         else if (scene.getShootPhase() == Scene.ShootPhase.NIGHT && day.getTime() == ShootingDay.Time.DAY) {
@@ -56,7 +56,7 @@ public class ShootingScheduler {
                         //best score and best day are set to the current score and day
                         bestScore = score;
                         bestDay = day;
-                        locations.put(scene, scene.getLocation());
+                        //locations.put(scene, scene.getLocation());
                     }
                 }
                 double newDayScore = -700;
@@ -68,13 +68,13 @@ public class ShootingScheduler {
                         time = ShootingDay.Time.NIGHT;
                     }
                     //new day is created and the scene is added to it
-                    ShootingDay newDay = new ShootingDay(schedule.size() + 1, locations, time, move);
+                    ShootingDay newDay = new ShootingDay(schedule.size() + 1, time, move);
                     newDay.addScene(scene, move);
                     schedule.add(newDay);
                 } else {
                     //after checking all scheduled days and the best day for the scene is found, the scene is added to it
                     bestDay.addScene(scene, ShootingDay.Move.NO_MOVE);
-                    locations.put(scene, scene.getLocation());
+                    //locations.put(scene, scene.getLocation());
                 }
             }
         }
@@ -93,8 +93,8 @@ public class ShootingScheduler {
     }
 
     private double locationScore(ShootingDay day, Scene scene) {
-        if (day.getLocation().values().isEmpty()) return 1;
-        for (String loc : day.getLocation().values()) {
+        if (day.getLocationSet().isEmpty()) return 1;
+        for (String loc : day.getLocationSet()) {
             Set<String> dayLocTokenized = new HashSet<>(Arrays.asList(TextUnits.tokenize(loc)));
             Set<String> sceneLocTokenized = new HashSet<>(Arrays.asList(TextUnits.tokenize(scene.getLocation())));
             if (dayLocTokenized.containsAll(sceneLocTokenized)) {
