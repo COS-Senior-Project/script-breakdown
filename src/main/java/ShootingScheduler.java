@@ -12,8 +12,6 @@ public class ShootingScheduler {
     public List<ShootingDay> schedule(List<Scene> scenes) {
         //list of days in the schedule so far
         List<ShootingDay> schedule = new ArrayList<>();
-        //moving locations variable
-        ShootingDay.Move move = ShootingDay.Move.NO_MOVE;
 
         //maps locations to scenes to create location groups
         LinkedHashMap<String, List<Scene>> locationGroups = new LinkedHashMap<>();
@@ -38,16 +36,19 @@ public class ShootingScheduler {
 
                 //loops through every day of the day that is scheduled
                 for (ShootingDay day : schedule) {
+                    //moving locations variable
+                    ShootingDay.Move move = ShootingDay.Move.NO_MOVE;
                     //checks if day fits the basic requirements of length
-                    if (!feasible(day, scene)) continue;
+                    if (!feasible(day, scene, schedule)) continue;
                     //weighted score based on the priorities of the matching - cast similarity, scene order, and not too packed days
-                    double score =  locationScore(day, scene) + timeScore(day, scene, schedule) + castOverlapScore(day, scene) * 20.0 + orderScore(day, scene) * 2.0 + loadPenalty(day, scene);
-                    System.out.println("Location score" + locationScore(day, scene) + "   Time score: " + timeScore(day, scene, schedule) + "     Cast overlap score: " +  castOverlapScore(day, scene) * 3.0
+                    double score = 0;
+                    score =  locationScore(day, scene) + timeScore(day, scene) + castOverlapScore(day, scene) * 20.0 + orderScore(day, scene) * 2.0 + loadPenalty(day, scene);
+                    System.out.println("Location score" + locationScore(day, scene) + "   Time score: " + timeScore(day, scene) + "     Cast overlap score: " +  castOverlapScore(day, scene) * 3.0
                             + "     Order score: " + orderScore(day, scene) * 2.0 + "       Load Penalty:" + loadPenalty(day, scene) + "    Total score: " + score);
                     //if the score of this scene is larger than the previous best one
                     if (score > bestScore) {
-                        if (!day.getLocationSet().contains(scene.getLocation())) {
-                            move = ShootingDay.Move.MOVE;
+                        if (!day.getLocationSet().isEmpty() && !day.getLocationSet().contains(scene.getLocation()) && day.getMove() == ShootingDay.Move.NO_MOVE) {
+                            day.setMove(ShootingDay.Move.MOVE);
                         }
                         else if (scene.getShootPhase() == Scene.ShootPhase.NIGHT && day.getTime() == ShootingDay.Time.DAY) {
                             day.setTime(ShootingDay.Time.DAY_NIGHT);
@@ -59,21 +60,20 @@ public class ShootingScheduler {
                         //locations.put(scene, scene.getLocation());
                     }
                 }
-                double newDayScore = -700;
-                if (bestDay == null || newDayScore > bestScore) { //if no best day - first scene or requirements not fulfilled
+                //double newDayScore = -700;
+                if (bestDay == null) { //if no best day - first scene or requirements not fulfilled
                     if (scene.getShootPhase() == Scene.ShootPhase.DAY) {
                         time = ShootingDay.Time.DAY;
-                    }
-                    if (scene.getShootPhase() == Scene.ShootPhase.NIGHT) {
+                    } else {
                         time = ShootingDay.Time.NIGHT;
                     }
                     //new day is created and the scene is added to it
-                    ShootingDay newDay = new ShootingDay(schedule.size() + 1, time, move);
-                    newDay.addScene(scene, move);
+                    ShootingDay newDay = new ShootingDay(schedule.size() + 1, time, ShootingDay.Move.NO_MOVE);
+                    newDay.addScene(scene, ShootingDay.Move.NO_MOVE);
                     schedule.add(newDay);
                 } else {
                     //after checking all scheduled days and the best day for the scene is found, the scene is added to it
-                    bestDay.addScene(scene, ShootingDay.Move.NO_MOVE);
+                    bestDay.addScene(scene, bestDay.getMove());
                     //locations.put(scene, scene.getLocation());
                 }
             }
@@ -83,17 +83,21 @@ public class ShootingScheduler {
     }
 
     //checks if the basic requirements are met for scene to match a day
-    private boolean feasible(ShootingDay day, Scene scene) {
+    private boolean feasible(ShootingDay day, Scene scene, List<ShootingDay> sch) {
         if (day.getUsedEights() + scene.getSceneLength() > MAX_EIGHTS_PER_DAY) //checks if it fits the limit
             return false;
-//        ShootingDay prevDay = sch.get(day.getDayNumber()-1);
-//        if (prevDay.getTime() == ShootingDay.Time.NIGHT && scene.getShootPhase() == Scene.ShootPhase.DAY)
-//            return false;
+        int dayIndex = sch.indexOf(day);
+        if (dayIndex > 0) {
+            ShootingDay previousDay = sch.get(dayIndex - 1);
+            if (previousDay.getTime() == ShootingDay.Time.NIGHT && scene.getShootPhase() == Scene.ShootPhase.DAY) {
+                return false;
+            }
+        }
         return true;
     }
 
     private double locationScore(ShootingDay day, Scene scene) {
-        if (day.getLocationSet().isEmpty()) return 1;
+        if (day.getLocationSet().isEmpty()) return 0;
         for (String loc : day.getLocationSet()) {
             Set<String> dayLocTokenized = new HashSet<>(Arrays.asList(TextUnits.tokenize(loc)));
             Set<String> sceneLocTokenized = new HashSet<>(Arrays.asList(TextUnits.tokenize(scene.getLocation())));
@@ -104,20 +108,15 @@ public class ShootingScheduler {
                 return 200;
             }
         }
-        return -700;
+        return -300;
     }
 
-    private double timeScore (ShootingDay day, Scene scene, List<ShootingDay> sch) {
-        if (!sch.isEmpty()) {
-            ShootingDay prevDay = sch.get(sch.size() - 1);
-            if (prevDay.getTime() == ShootingDay.Time.NIGHT && scene.getShootPhase() == Scene.ShootPhase.DAY) {
-                return -5000;
-            }
-            if (day.getTime() != null && scene.getShootPhase().name().equals(day.getTime().name())) {
-                return 50;
-            }
+    private double timeScore (ShootingDay day, Scene scene) {
+        if (day.getTime() == null) { return 0; }
+        if (scene.getShootPhase().name().equals(day.getTime().name())) {
+            return 200;
         }
-        return -20;
+        return -200;
     }
 
     //checks how many cast members from the current scene overlap with the ones in the day already

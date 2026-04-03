@@ -53,6 +53,10 @@ public class ShootingDay {
 
     public Move getMove() { return move; }
 
+    public void setMove(Move move) {
+        this.move = move;
+    }
+
     public void setUsedEights(int usedEights) {
         this.usedEights = usedEights;
     }
