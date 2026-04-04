@@ -1,0 +1,1566 @@
+{
+  "days" : [ {
+    "dayNumber" : 1,
+    "usedEights" : 32,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "TUBE", "TILED HALLWAY", "PUBLISHING HOUSE RECEPTION AREA" ],
+    "scenes" : [ {
+      "sceneNumber" : "1",
+      "heading" : "INT PUBLISHING HOUSE RECEPTION AREA - DAY",
+      "intExt" : "INT",
+      "location" : "PUBLISHING HOUSE RECEPTION AREA",
+      "shootPhase" : "DAY",
+      "lengthEights" : 6,
+      "characters" : [ "RECEPTIONIST", "SECOND OLD WOMAN" ]
+    }, {
+      "sceneNumber" : "2",
+      "heading" : "INT TILED HALLWAY - DAY",
+      "intExt" : "INT",
+      "location" : "TILED HALLWAY",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    }, {
+      "sceneNumber" : "3",
+      "heading" : "INT TUBE - DAY",
+      "intExt" : "INT",
+      "location" : "TUBE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    } ]
+  }, {
+    "dayNumber" : 2,
+    "usedEights" : 41,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "TUBE", "CAR" ],
+    "scenes" : [ {
+      "sceneNumber" : "162",
+      "heading" : "INT TUBE - CONTINUOUS",
+      "intExt" : "INT",
+      "location" : "TUBE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "SECOND OLD WOMAN" ]
+    }, {
+      "sceneNumber" : "160",
+      "heading" : "INT TUBE - NIGHT",
+      "intExt" : "INT",
+      "location" : "TUBE",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "SECOND OLD WOMAN" ]
+    }, {
+      "sceneNumber" : "17",
+      "heading" : "INT CAR - MOMENTS LATER",
+      "intExt" : "INT",
+      "location" : "CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 14,
+      "characters" : [ "JOEL BARISH", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "44",
+      "heading" : "INT CAR - NIGHT",
+      "intExt" : "INT",
+      "location" : "CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    } ]
+  }, {
+    "dayNumber" : 3,
+    "usedEights" : 54,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "INNER OFFICE AREA", "OFFICE", "WAITING ROOM" ],
+    "scenes" : [ {
+      "sceneNumber" : "4",
+      "heading" : "INT WAITING ROOM - DAY",
+      "intExt" : "INT",
+      "location" : "WAITING ROOM",
+      "shootPhase" : "DAY",
+      "lengthEights" : 3,
+      "characters" : [ "MARY", "HOWARD MIERZWIAK", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "25",
+      "heading" : "INT WAITING ROOM - DAY",
+      "intExt" : "INT",
+      "location" : "WAITING ROOM",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "MARY", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "32",
+      "heading" : "INT WAITING ROOM - DAY",
+      "intExt" : "INT",
+      "location" : "WAITING ROOM",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "MARY", "HOWARD MIERZWIAK", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "158",
+      "heading" : "INT WAITING ROOM - DAY",
+      "intExt" : "INT",
+      "location" : "WAITING ROOM",
+      "shootPhase" : "DAY",
+      "lengthEights" : 4,
+      "characters" : [ "MARY", "HOWARD MIERZWIAK", "OLD MAN", "SECOND OLD WOMAN" ]
+    }, {
+      "sceneNumber" : "5",
+      "heading" : "INT INNER OFFICE AREA - CONTINUOUS",
+      "intExt" : "INT",
+      "location" : "INNER OFFICE AREA",
+      "shootPhase" : "DAY",
+      "lengthEights" : 12,
+      "characters" : [ "KRUCZYNSKI", "HOWARD MIERZWIAK", "MARY", "STAN", "COLE", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "6",
+      "heading" : "INT OFFICE - CONTINUOUS",
+      "intExt" : "INT",
+      "location" : "OFFICE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 9,
+      "characters" : [ "HOWARD MIERZWIAK", "CLEMENTINE" ]
+    } ]
+  }, {
+    "dayNumber" : 4,
+    "usedEights" : 32,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "OFFICE", "COMMUTER TRAIN STATION" ],
+    "scenes" : [ {
+      "sceneNumber" : "133",
+      "heading" : "INT OFFICE - DAY",
+      "intExt" : "INT",
+      "location" : "OFFICE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "NAOMI", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "151",
+      "heading" : "INT OFFICE - DAY",
+      "intExt" : "INT",
+      "location" : "OFFICE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 5,
+      "characters" : [ "MEET", "JOEL BARISH", "CLEMENTINE", "WHATCHA" ]
+    }, {
+      "sceneNumber" : "7",
+      "heading" : "EXT COMMUTER TRAIN STATION",
+      "intExt" : "EXT",
+      "location" : "COMMUTER TRAIN STATION",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "132",
+      "heading" : "EXT COMMUTER TRAIN STATION - MORNING",
+      "intExt" : "EXT",
+      "location" : "COMMUTER TRAIN STATION",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    } ]
+  }, {
+    "dayNumber" : 5,
+    "usedEights" : 31,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "MONTAUK TRAIN STATION", "BEACH", "COMMUTER TRAIN STATION" ],
+    "scenes" : [ {
+      "sceneNumber" : "139",
+      "heading" : "EXT COMMUTER TRAIN STATION - MORNING",
+      "intExt" : "EXT",
+      "location" : "COMMUTER TRAIN STATION",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "8",
+      "heading" : "EXT MONTAUK TRAIN STATION - LATER",
+      "intExt" : "EXT",
+      "location" : "MONTAUK TRAIN STATION",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "LISTEN", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "9",
+      "heading" : "EXT BEACH - DAY",
+      "intExt" : "EXT",
+      "location" : "BEACH",
+      "shootPhase" : "DAY",
+      "lengthEights" : 5,
+      "characters" : [ "NAOMI", "JOEL BARISH" ]
+    } ]
+  }, {
+    "dayNumber" : 6,
+    "usedEights" : 52,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "BEACH", "CAR" ],
+    "scenes" : [ {
+      "sceneNumber" : "11",
+      "heading" : "EXT BEACH - DAY",
+      "intExt" : "EXT",
+      "location" : "BEACH",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "87",
+      "heading" : "EXT BEACH - DAY",
+      "intExt" : "EXT",
+      "location" : "BEACH",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "121",
+      "heading" : "EXT BEACH - NIGHT",
+      "intExt" : "EXT",
+      "location" : "BEACH",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "CARRIE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "122",
+      "heading" : "EXT BEACH - MOMENTS LATER",
+      "intExt" : "EXT",
+      "location" : "BEACH",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "ROB", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "123",
+      "heading" : "EXT BEACH - LATER",
+      "intExt" : "EXT",
+      "location" : "BEACH",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 34,
+      "characters" : [ "ROB", "GREEN REVOLUTION", "JOEL BARISH", "CLEMENTINE", "HOUND" ]
+    }, {
+      "sceneNumber" : "125",
+      "heading" : "EXT BEACH - NIGHT",
+      "intExt" : "EXT",
+      "location" : "BEACH",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "81",
+      "heading" : "INT CAR - NIGHT",
+      "intExt" : "INT",
+      "location" : "CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    } ]
+  }, {
+    "dayNumber" : 7,
+    "usedEights" : 31,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "DINER", "MONTAUK TRAIN STATION PLATFORM", "TRAIN" ],
+    "scenes" : [ {
+      "sceneNumber" : "10",
+      "heading" : "INT DINER - DAY",
+      "intExt" : "INT",
+      "location" : "DINER",
+      "shootPhase" : "DAY",
+      "lengthEights" : 5,
+      "characters" : [ "WAITRESS", "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "12",
+      "heading" : "EXT MONTAUK TRAIN STATION PLATFORM - LATE AFTERNOON",
+      "intExt" : "EXT",
+      "location" : "MONTAUK TRAIN STATION PLATFORM",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "14",
+      "heading" : "INT TRAIN - LATER",
+      "intExt" : "INT",
+      "location" : "TRAIN",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "CLEMENTINE" ]
+    } ]
+  }, {
+    "dayNumber" : 8,
+    "usedEights" : 56,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "TRAIN STATION", "TRAIN" ],
+    "scenes" : [ {
+      "sceneNumber" : "13",
+      "heading" : "INT TRAIN - A BIT LATER",
+      "intExt" : "INT",
+      "location" : "TRAIN",
+      "shootPhase" : "DAY",
+      "lengthEights" : 42,
+      "characters" : [ "CONDUCTOR", "TOM WAITS", "PINK ERASER", "AW", "AH", "STEPHEN DIXON", "NICE", "GREEN REVOLUTION", "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "15",
+      "heading" : "INT TRAIN - LATER",
+      "intExt" : "INT",
+      "location" : "TRAIN",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "16",
+      "heading" : "EXT TRAIN STATION - EVENING",
+      "intExt" : "EXT",
+      "location" : "TRAIN STATION",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    } ]
+  }, {
+    "dayNumber" : 9,
+    "usedEights" : 32,
+    "time" : "NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "CAR", "JOEL'S CAR" ],
+    "scenes" : [ {
+      "sceneNumber" : "83",
+      "heading" : "INT CAR - NIGHT",
+      "intExt" : "INT",
+      "location" : "CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 3,
+      "characters" : [ "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "103",
+      "heading" : "INT CAR - NIGHT",
+      "intExt" : "INT",
+      "location" : "CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "126",
+      "heading" : "INT CAR - NIGHT",
+      "intExt" : "INT",
+      "location" : "CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "ROB", "CARRIE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "19",
+      "heading" : "INT JOEL'S CAR - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    }, {
+      "sceneNumber" : "23",
+      "heading" : "INT JOEL'S CAR - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "JOEL BARISH" ]
+    } ]
+  }, {
+    "dayNumber" : 10,
+    "usedEights" : 44,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "CLEMENTINE'S APARTMENT", "JOEL'S CAR", "JOEL'S APARTMENT" ],
+    "scenes" : [ {
+      "sceneNumber" : "144",
+      "heading" : "EXT CLEMENTINE'S APARTMENT - DAY",
+      "intExt" : "EXT",
+      "location" : "CLEMENTINE'S APARTMENT",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "138",
+      "heading" : "INT CLEMENTINE'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "CLEMENTINE'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "PATRICK" ]
+    }, {
+      "sceneNumber" : "141",
+      "heading" : "INT CLEMENTINE'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "CLEMENTINE'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "50",
+      "heading" : "INT JOEL'S CAR - CONTINUOUS",
+      "intExt" : "INT",
+      "location" : "JOEL'S CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "JOEL BARISH", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "58",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 14,
+      "characters" : [ "PATRICK", "MARY", "STAN", "HOWARD MIERZWIAK", "WINSTON CHURCHILL" ]
+    } ]
+  }, {
+    "dayNumber" : 11,
+    "usedEights" : 55,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "CLEMENTINE'S APARTMENT", "JOEL'S CAR", "JOEL'S APARTMENT" ],
+    "scenes" : [ {
+      "sceneNumber" : "148",
+      "heading" : "INT CLEMENTINE'S APARTMENT - LATER",
+      "intExt" : "INT",
+      "location" : "CLEMENTINE'S APARTMENT",
+      "shootPhase" : "DAY",
+      "lengthEights" : 9,
+      "characters" : [ "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "62",
+      "heading" : "INT CLEMENTINE'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "CLEMENTINE'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 6,
+      "characters" : [ "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "65",
+      "heading" : "INT CLEMENTINE'S APARTMENT - CONTINUOUS",
+      "intExt" : "INT",
+      "location" : "CLEMENTINE'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 6,
+      "characters" : [ "PATRICK", "STAN", "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "67",
+      "heading" : "INT CLEMENTINE'S APARTMENT - CONTINUOUS",
+      "intExt" : "INT",
+      "location" : "CLEMENTINE'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "PATRICK", "STAN", "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "69",
+      "heading" : "INT CLEMENTINE'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "CLEMENTINE'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 3,
+      "characters" : [ "PATRICK", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "104",
+      "heading" : "INT CLEMENTINE'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "CLEMENTINE'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "43",
+      "heading" : "INT JOEL'S CAR - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "CARRIE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "76",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "MARY", "STAN" ]
+    } ]
+  }, {
+    "dayNumber" : 12,
+    "usedEights" : 52,
+    "time" : "NIGHT",
+    "move" : "NO_MOVE",
+    "locations" : [ "CLEMENTINE'S APARTMENT" ],
+    "scenes" : [ {
+      "sceneNumber" : "18",
+      "heading" : "INT CLEMENTINE'S APARTMENT - A FEW MINUTES LATER",
+      "intExt" : "INT",
+      "location" : "CLEMENTINE'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 52,
+      "characters" : [ "PATRICK", "ROBERT FROST", "MARY", "STEPHEN DIXON", "JOSEPH", "REFILL", "CLEMENTINE", "JOEL BARISH", "BRIAN ENO", "PAUL SIMON" ]
+    } ]
+  }, {
+    "dayNumber" : 13,
+    "usedEights" : 47,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "JOEL'S APARTMENT BUILDING", "JOEL'S APARTMENT" ],
+    "scenes" : [ {
+      "sceneNumber" : "95",
+      "heading" : "EXT JOEL'S APARTMENT BUILDING - CONTINUOUS",
+      "intExt" : "EXT",
+      "location" : "JOEL'S APARTMENT BUILDING",
+      "shootPhase" : "DAY",
+      "lengthEights" : 6,
+      "characters" : [ "HOWARD MIERZWIAK", "MARY", "HOLLIS", "STAN" ]
+    }, {
+      "sceneNumber" : "20",
+      "heading" : "EXT JOEL'S APARTMENT BUILDING - CONTINUOUS",
+      "intExt" : "EXT",
+      "location" : "JOEL'S APARTMENT BUILDING",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    }, {
+      "sceneNumber" : "92",
+      "heading" : "EXT JOEL'S APARTMENT BUILDING - NIGHT",
+      "intExt" : "EXT",
+      "location" : "JOEL'S APARTMENT BUILDING",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "STAN", "MARY", "HOWARD MIERZWIAK", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "21",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 12,
+      "characters" : [ "VAGUE RECORDED", "PINK ERASER", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "28",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "PATRICK", "STAN" ]
+    } ]
+  }, {
+    "dayNumber" : 14,
+    "usedEights" : 30,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "JOEL'S APARTMENT BUILDING", "JOEL'S APARTMENT" ],
+    "scenes" : [ {
+      "sceneNumber" : "128",
+      "heading" : "EXT JOEL'S APARTMENT BUILDING - EARLY MORNING",
+      "intExt" : "EXT",
+      "location" : "JOEL'S APARTMENT BUILDING",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "STAN", "HOWARD MIERZWIAK" ]
+    }, {
+      "sceneNumber" : "30",
+      "heading" : "INT JOEL'S APARTMENT - DAY",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "NAOMI" ]
+    }, {
+      "sceneNumber" : "72",
+      "heading" : "INT JOEL'S APARTMENT - DAY",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "DAY",
+      "lengthEights" : 4,
+      "characters" : [ "JOEL BARISH", "CLEMENTINE" ]
+    } ]
+  }, {
+    "dayNumber" : 15,
+    "usedEights" : 45,
+    "time" : "DAY_NIGHT",
+    "move" : "NO_MOVE",
+    "locations" : [ "JOEL'S APARTMENT" ],
+    "scenes" : [ {
+      "sceneNumber" : "109",
+      "heading" : "INT JOEL'S APARTMENT - DAY",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "DAY",
+      "lengthEights" : 2,
+      "characters" : [ "NAOMI", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "117",
+      "heading" : "INT JOEL'S APARTMENT - AFTERNOON",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "DAY",
+      "lengthEights" : 3,
+      "characters" : [ "NAOMI", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "145",
+      "heading" : "INT JOEL'S APARTMENT - A FEW MINUTES LATER",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "DAY",
+      "lengthEights" : 4,
+      "characters" : [ "MONTAGE", "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "147",
+      "heading" : "INT JOEL'S APARTMENT - CONTINUOUS",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "DAY",
+      "lengthEights" : 2,
+      "characters" : [ "JOEL BARISH", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "35",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 3,
+      "characters" : [ "PATRICK", "STAN" ]
+    }, {
+      "sceneNumber" : "38",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "40",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "VAGUE RECORDED", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "42",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "CARRIE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "47",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 4,
+      "characters" : [ "PATRICK", "STAN", "MARY" ]
+    }, {
+      "sceneNumber" : "48",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 8,
+      "characters" : [ "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "52",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "PATRICK", "STAN" ]
+    }, {
+      "sceneNumber" : "54",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 3,
+      "characters" : [ "PATRICK", "STAN", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "55",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "61",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 3,
+      "characters" : [ "PATRICK", "STAN", "MARY" ]
+    }, {
+      "sceneNumber" : "63",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 4,
+      "characters" : [ "MARY", "STAN", "HOWARD MIERZWIAK", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "66",
+      "heading" : "INT JOEL'S APARTMENT - CONTINUOUS",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "STAN", "MARY" ]
+    }, {
+      "sceneNumber" : "70",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "STAN", "MARY" ]
+    }, {
+      "sceneNumber" : "86",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "HOWARD MIERZWIAK", "STAN" ]
+    } ]
+  }, {
+    "dayNumber" : 16,
+    "usedEights" : 57,
+    "time" : "NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "BOOKSTORE", "ROB AND CARRIE'S LIVING ROOM", "JOEL'S APARTMENT" ],
+    "scenes" : [ {
+      "sceneNumber" : "106",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 4,
+      "characters" : [ "NAOMI", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "108",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "NAOMI" ]
+    }, {
+      "sceneNumber" : "142",
+      "heading" : "INT JOEL'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 9,
+      "characters" : [ "NAOMI", "ODDLY", "JOEL BARISH", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "22",
+      "heading" : "INT BOOKSTORE - NIGHT",
+      "intExt" : "INT",
+      "location" : "BOOKSTORE",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 11,
+      "characters" : [ "PATRICK", "JOEL BARISH", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "41",
+      "heading" : "INT ROB AND CARRIE'S LIVING ROOM - NIGHT",
+      "intExt" : "INT",
+      "location" : "ROB AND CARRIE'S LIVING ROOM",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 8,
+      "characters" : [ "VAGUE RECORDED", "ROB", "CARRIE", "JOEL BARISH" ]
+    } ]
+  }, {
+    "dayNumber" : 17,
+    "usedEights" : 27,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "NEW YORK STREET", "STREET" ],
+    "scenes" : [ {
+      "sceneNumber" : "24",
+      "heading" : "EXT NEW YORK STREET - DAY",
+      "intExt" : "EXT",
+      "location" : "NEW YORK STREET",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    }, {
+      "sceneNumber" : "49",
+      "heading" : "EXT STREET - NIGHT",
+      "intExt" : "EXT",
+      "location" : "STREET",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    }, {
+      "sceneNumber" : "51",
+      "heading" : "EXT STREET - CONTINUOUS",
+      "intExt" : "EXT",
+      "location" : "STREET",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "PATRICK", "STAN", "JOEL BARISH" ]
+    } ]
+  }, {
+    "dayNumber" : 18,
+    "usedEights" : 27,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "HALLWAY", "NEW YORK STREET" ],
+    "scenes" : [ {
+      "sceneNumber" : "45",
+      "heading" : "EXT NEW YORK STREET - DAY",
+      "intExt" : "EXT",
+      "location" : "NEW YORK STREET",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    }, {
+      "sceneNumber" : "26",
+      "heading" : "INT HALLWAY - DAY",
+      "intExt" : "INT",
+      "location" : "HALLWAY",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "MARY" ]
+    }, {
+      "sceneNumber" : "31",
+      "heading" : "INT HALLWAY - DAY",
+      "intExt" : "INT",
+      "location" : "HALLWAY",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    } ]
+  }, {
+    "dayNumber" : 19,
+    "usedEights" : 38,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "LABORATORY", "OFFICE HALL", "LAB ROOM" ],
+    "scenes" : [ {
+      "sceneNumber" : "27",
+      "heading" : "INT LABORATORY - DAY",
+      "intExt" : "INT",
+      "location" : "LABORATORY",
+      "shootPhase" : "DAY",
+      "lengthEights" : 11,
+      "characters" : [ "PATRICK", "AH", "HOWARD MIERZWIAK", "STAN", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "29",
+      "heading" : "INT LAB ROOM - DAY",
+      "intExt" : "INT",
+      "location" : "LAB ROOM",
+      "shootPhase" : "DAY",
+      "lengthEights" : 2,
+      "characters" : [ "AH", "HOWARD MIERZWIAK", "STAN" ]
+    }, {
+      "sceneNumber" : "33",
+      "heading" : "INT OFFICE HALL - DAY",
+      "intExt" : "INT",
+      "location" : "OFFICE HALL",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "MARY", "JOEL BARISH" ]
+    } ]
+  }, {
+    "dayNumber" : 20,
+    "usedEights" : 42,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "MIERZWIAK'S OFFICE", "JOEL'S OFFICE" ],
+    "scenes" : [ {
+      "sceneNumber" : "34",
+      "heading" : "INT MIERZWIAK'S OFFICE - DAY",
+      "intExt" : "INT",
+      "location" : "MIERZWIAK'S OFFICE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 3,
+      "characters" : [ "PATRICK", "HOWARD MIERZWIAK", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "36",
+      "heading" : "INT MIERZWIAK'S OFFICE - DAY",
+      "intExt" : "INT",
+      "location" : "MIERZWIAK'S OFFICE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "HOWARD MIERZWIAK" ]
+    }, {
+      "sceneNumber" : "135",
+      "heading" : "INT MIERZWIAK'S OFFICE - CONTINUOUS",
+      "intExt" : "INT",
+      "location" : "MIERZWIAK'S OFFICE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 5,
+      "characters" : [ "MARY", "HOWARD MIERZWIAK" ]
+    }, {
+      "sceneNumber" : "150",
+      "heading" : "INT MIERZWIAK'S OFFICE - MOMENTS LATER",
+      "intExt" : "INT",
+      "location" : "MIERZWIAK'S OFFICE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 5,
+      "characters" : [ "PATRICK", "HOWARD MIERZWIAK", "STAN", "MARY", "YOUNG WOMAN" ]
+    }, {
+      "sceneNumber" : "37",
+      "heading" : "INT JOEL'S OFFICE - DAY",
+      "intExt" : "INT",
+      "location" : "JOEL'S OFFICE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 3,
+      "characters" : [ "PHONE MACHINE", "JOEL BARISH", "CARMEN" ]
+    }, {
+      "sceneNumber" : "39",
+      "heading" : "INT JOEL'S OFFICE - DAY",
+      "intExt" : "INT",
+      "location" : "JOEL'S OFFICE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH", "CARMEN" ]
+    } ]
+  }, {
+    "dayNumber" : 21,
+    "usedEights" : 29,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "STREET", "ELEVATOR" ],
+    "scenes" : [ {
+      "sceneNumber" : "46",
+      "heading" : "INT ELEVATOR - DAY",
+      "intExt" : "INT",
+      "location" : "ELEVATOR",
+      "shootPhase" : "DAY",
+      "lengthEights" : 2,
+      "characters" : [ "MARY", "STAN" ]
+    }, {
+      "sceneNumber" : "53",
+      "heading" : "EXT STREET - NIGHT",
+      "intExt" : "EXT",
+      "location" : "STREET",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "PATRICK", "STAN" ]
+    }, {
+      "sceneNumber" : "64",
+      "heading" : "EXT STREET - NIGHT",
+      "intExt" : "EXT",
+      "location" : "STREET",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "PATRICK" ]
+    } ]
+  }, {
+    "dayNumber" : 22,
+    "usedEights" : 39,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "JOEL'S BEDROOM", "BAR", "ZOO" ],
+    "scenes" : [ {
+      "sceneNumber" : "56",
+      "heading" : "EXT ZOO - DAY",
+      "intExt" : "EXT",
+      "location" : "ZOO",
+      "shootPhase" : "DAY",
+      "lengthEights" : 9,
+      "characters" : [ "JOEL BARISH", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "57",
+      "heading" : "INT BAR - NIGHT",
+      "intExt" : "INT",
+      "location" : "BAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 5,
+      "characters" : [ "JOEL BARISH", "CLEMENTINE", "MARK" ]
+    }, {
+      "sceneNumber" : "94",
+      "heading" : "INT JOEL'S BEDROOM - CONTINUOUS",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "MARY", "HOWARD MIERZWIAK" ]
+    } ]
+  }, {
+    "dayNumber" : 23,
+    "usedEights" : 43,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "JOEL'S BEDROOM" ],
+    "scenes" : [ {
+      "sceneNumber" : "110",
+      "heading" : "INT JOEL'S BEDROOM - DAY",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "NAOMI" ]
+    }, {
+      "sceneNumber" : "127",
+      "heading" : "INT JOEL'S BEDROOM - EARLY MORNING",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "DAY",
+      "lengthEights" : 2,
+      "characters" : [ "HOWARD MIERZWIAK", "HOLLIS", "STAN", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "131",
+      "heading" : "INT JOEL'S BEDROOM - MORNING",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "59",
+      "heading" : "INT JOEL'S BEDROOM - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 3,
+      "characters" : [ "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "74",
+      "heading" : "INT JOEL'S BEDROOM - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 7,
+      "characters" : [ "STAN", "MARY", "HOWARD MIERZWIAK", "LISTEN" ]
+    }, {
+      "sceneNumber" : "79",
+      "heading" : "INT JOEL'S BEDROOM - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 8,
+      "characters" : [ "MARY", "HOWARD MIERZWIAK", "STAN" ]
+    }, {
+      "sceneNumber" : "82",
+      "heading" : "INT JOEL'S BEDROOM - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "HOWARD MIERZWIAK", "MARY", "STAN" ]
+    }, {
+      "sceneNumber" : "84",
+      "heading" : "INT JOEL'S BEDROOM - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "STAN", "HOWARD MIERZWIAK", "MARY" ]
+    }, {
+      "sceneNumber" : "91",
+      "heading" : "INT JOEL'S BEDROOM - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 17,
+      "characters" : [ "ALEXANDER POPE", "HOWARD MIERZWIAK", "MARY", "STAN" ]
+    }, {
+      "sceneNumber" : "98",
+      "heading" : "INT JOEL'S BEDROOM - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "STAN" ]
+    } ]
+  }, {
+    "dayNumber" : 24,
+    "usedEights" : 41,
+    "time" : "NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "JOEL'S BEDROOM", "CHINESE RESTAURANT" ],
+    "scenes" : [ {
+      "sceneNumber" : "116",
+      "heading" : "INT JOEL'S BEDROOM - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 6,
+      "characters" : [ "NAOMI", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "137",
+      "heading" : "INT JOEL'S BEDROOM - NIGHT",
+      "intExt" : "INT",
+      "location" : "JOEL'S BEDROOM",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "NAOMI", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "60",
+      "heading" : "INT CHINESE RESTAURANT - NIGHT",
+      "intExt" : "INT",
+      "location" : "CHINESE RESTAURANT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 4,
+      "characters" : [ "PATRICK", "JOEL BARISH", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "100",
+      "heading" : "INT CHINESE RESTAURANT - NIGHT",
+      "intExt" : "INT",
+      "location" : "CHINESE RESTAURANT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 5,
+      "characters" : [ "NAOMI", "CHINESE", "JOEL BARISH", "CLEMENTINE" ]
+    } ]
+  }, {
+    "dayNumber" : 25,
+    "usedEights" : 44,
+    "time" : "NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "CHARLES RIVER", "CLEMENTINE'S CAR", "MIERZWIAK'S BEDROOM" ],
+    "scenes" : [ {
+      "sceneNumber" : "68",
+      "heading" : "EXT CHARLES RIVER - NIGHT",
+      "intExt" : "EXT",
+      "location" : "CHARLES RIVER",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 5,
+      "characters" : [ "CRAZILY", "HOWARD MIERZWIAK", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "96",
+      "heading" : "EXT CHARLES RIVER - NIGHT",
+      "intExt" : "EXT",
+      "location" : "CHARLES RIVER",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "PATRICK", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "143",
+      "heading" : "EXT CHARLES RIVER - NIGHT",
+      "intExt" : "EXT",
+      "location" : "CHARLES RIVER",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 10,
+      "characters" : [ "MONTAGE", "LISTEN", "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "75",
+      "heading" : "INT MIERZWIAK'S BEDROOM - CONTINUOUS",
+      "intExt" : "INT",
+      "location" : "MIERZWIAK'S BEDROOM",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 3,
+      "characters" : [ "PATRICK", "HOWARD MIERZWIAK", "STAN" ]
+    }, {
+      "sceneNumber" : "78",
+      "heading" : "INT CLEMENTINE'S CAR - NIGHT",
+      "intExt" : "INT",
+      "location" : "CLEMENTINE'S CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "PATRICK", "CLEMENTINE" ]
+    } ]
+  }, {
+    "dayNumber" : 26,
+    "usedEights" : 33,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "RESTAURANT", "FOREST" ],
+    "scenes" : [ {
+      "sceneNumber" : "71",
+      "heading" : "EXT FOREST - DAY",
+      "intExt" : "EXT",
+      "location" : "FOREST",
+      "shootPhase" : "DAY",
+      "lengthEights" : 3,
+      "characters" : [ "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "89",
+      "heading" : "INT RESTAURANT - NIGHT",
+      "intExt" : "INT",
+      "location" : "RESTAURANT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 3,
+      "characters" : [ "PATRICK", "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "102",
+      "heading" : "INT RESTAURANT - NIGHT",
+      "intExt" : "INT",
+      "location" : "RESTAURANT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 3,
+      "characters" : [ "NAOMI", "JOEL BARISH", "CLEMENTINE" ]
+    } ]
+  }, {
+    "dayNumber" : 27,
+    "usedEights" : 48,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "KITCHEN", "BOY'S BEDROOM", "SCHOOLYARD" ],
+    "scenes" : [ {
+      "sceneNumber" : "73",
+      "heading" : "INT KITCHEN - DAY",
+      "intExt" : "INT",
+      "location" : "KITCHEN",
+      "shootPhase" : "DAY",
+      "lengthEights" : 5,
+      "characters" : [ "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "77",
+      "heading" : "INT KITCHEN - DAY",
+      "intExt" : "INT",
+      "location" : "KITCHEN",
+      "shootPhase" : "DAY",
+      "lengthEights" : 8,
+      "characters" : [ "MOTHER", "GROSS", "JOEL BARISH", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "80",
+      "heading" : "INT KITCHEN - DAY",
+      "intExt" : "INT",
+      "location" : "KITCHEN",
+      "shootPhase" : "DAY",
+      "lengthEights" : 2,
+      "characters" : [ "MOTHER", "JOEL BARISH", "CLEMENTINE", "HOUND" ]
+    }, {
+      "sceneNumber" : "85",
+      "heading" : "EXT SCHOOLYARD - AFTERNOON",
+      "intExt" : "EXT",
+      "location" : "SCHOOLYARD",
+      "shootPhase" : "DAY",
+      "lengthEights" : 6,
+      "characters" : [ "JOE EARLY", "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "88",
+      "heading" : "INT BOY'S BEDROOM - NIGHT",
+      "intExt" : "INT",
+      "location" : "BOY'S BEDROOM",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 3,
+      "characters" : [ "MOTHER", "CLEMENTINE", "JOEL BARISH" ]
+    } ]
+  }, {
+    "dayNumber" : 28,
+    "usedEights" : 31,
+    "time" : "NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "RESTAURANT", "COMMUTER TRAIN", "BORDER'S BOOKSTORE" ],
+    "scenes" : [ {
+      "sceneNumber" : "136",
+      "heading" : "INT RESTAURANT - NIGHT",
+      "intExt" : "INT",
+      "location" : "RESTAURANT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 5,
+      "characters" : [ "NAOMI", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "97",
+      "heading" : "INT COMMUTER TRAIN - NIGHT",
+      "intExt" : "INT",
+      "location" : "COMMUTER TRAIN",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "MARY" ]
+    }, {
+      "sceneNumber" : "111",
+      "heading" : "INT BORDER'S BOOKSTORE - NIGHT",
+      "intExt" : "INT",
+      "location" : "BORDER'S BOOKSTORE",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH", "CLEMENTINE" ]
+    } ]
+  }, {
+    "dayNumber" : 29,
+    "usedEights" : 42,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "SUBURBAN STREET", "ROB AND CARRIE'S CAR", "BORDER'S BOOKSTORE" ],
+    "scenes" : [ {
+      "sceneNumber" : "90",
+      "heading" : "EXT SUBURBAN STREET - DAY",
+      "intExt" : "EXT",
+      "location" : "SUBURBAN STREET",
+      "shootPhase" : "DAY",
+      "lengthEights" : 5,
+      "characters" : [ "BOYS", "JOEL BARISH", "CLEMENTINE" ]
+    }, {
+      "sceneNumber" : "113",
+      "heading" : "INT BORDER'S BOOKSTORE - NIGHT",
+      "intExt" : "INT",
+      "location" : "BORDER'S BOOKSTORE",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 11,
+      "characters" : [ "MALE EMPLOYEE", "JOEL BARISH", "CLEMENTINE", "MARK" ]
+    }, {
+      "sceneNumber" : "114",
+      "heading" : "INT ROB AND CARRIE'S CAR - NIGHT",
+      "intExt" : "INT",
+      "location" : "ROB AND CARRIE'S CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "NAOMI", "CARRIE", "JOEL BARISH" ]
+    } ]
+  }, {
+    "dayNumber" : 30,
+    "usedEights" : 30,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "DRESS SHOP", "COUNTRY ROAD", "ROWBOAT" ],
+    "scenes" : [ {
+      "sceneNumber" : "93",
+      "heading" : "EXT COUNTRY ROAD - DAY",
+      "intExt" : "EXT",
+      "location" : "COUNTRY ROAD",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    }, {
+      "sceneNumber" : "99",
+      "heading" : "EXT ROWBOAT - DAY",
+      "intExt" : "EXT",
+      "location" : "ROWBOAT",
+      "shootPhase" : "DAY",
+      "lengthEights" : 4,
+      "characters" : [ "FATHER", "STEPHEN DIXON", "CLEMENTINE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "101",
+      "heading" : "INT DRESS SHOP - SHOP",
+      "intExt" : "INT",
+      "location" : "DRESS SHOP",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    } ]
+  }, {
+    "dayNumber" : 31,
+    "usedEights" : 40,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "BUILDING STAIRWAY", "LACUNA RECEPTION AREA", "ROB AND CARRIE'S CAR" ],
+    "scenes" : [ {
+      "sceneNumber" : "134",
+      "heading" : "INT LACUNA RECEPTION AREA - DAY",
+      "intExt" : "INT",
+      "location" : "LACUNA RECEPTION AREA",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "MARY" ]
+    }, {
+      "sceneNumber" : "154",
+      "heading" : "INT LACUNA RECEPTION AREA - DAY",
+      "intExt" : "INT",
+      "location" : "LACUNA RECEPTION AREA",
+      "shootPhase" : "DAY",
+      "lengthEights" : 2,
+      "characters" : [ "DISTRAUGHT WOMAN", "SAD WOMAN", "MARY", "HOWARD MIERZWIAK" ]
+    }, {
+      "sceneNumber" : "105",
+      "heading" : "INT LACUNA RECEPTION AREA - NIGHT",
+      "intExt" : "INT",
+      "location" : "LACUNA RECEPTION AREA",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 7,
+      "characters" : [ "HOWARD MIERZWIAK", "MARY" ]
+    }, {
+      "sceneNumber" : "118",
+      "heading" : "INT ROB AND CARRIE'S CAR - NIGHT",
+      "intExt" : "INT",
+      "location" : "ROB AND CARRIE'S CAR",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 5,
+      "characters" : [ "NAOMI", "CARRIE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "115",
+      "heading" : "INT BUILDING STAIRWAY - NIGHT",
+      "intExt" : "INT",
+      "location" : "BUILDING STAIRWAY",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    } ]
+  }, {
+    "dayNumber" : 32,
+    "usedEights" : 33,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "ROOM", "PARK" ],
+    "scenes" : [ {
+      "sceneNumber" : "107",
+      "heading" : "INT ROOM - DAY",
+      "intExt" : "INT",
+      "location" : "ROOM",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    }, {
+      "sceneNumber" : "112",
+      "heading" : "EXT PARK - DAY",
+      "intExt" : "EXT",
+      "location" : "PARK",
+      "shootPhase" : "DAY",
+      "lengthEights" : 5,
+      "characters" : [ "NAOMI", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "153",
+      "heading" : "EXT PARK - AFTERNOON",
+      "intExt" : "EXT",
+      "location" : "PARK",
+      "shootPhase" : "DAY",
+      "lengthEights" : 3,
+      "characters" : [ "DISTRAUGHT WOMAN", "SAD WOMAN", "OLD MAN" ]
+    } ]
+  }, {
+    "dayNumber" : 33,
+    "usedEights" : 37,
+    "time" : "DAY_NIGHT",
+    "move" : "MOVE",
+    "locations" : [ "BEACH PARKING LOT", "HOUSE", "ROB AND CARRIE'S KITCHEN" ],
+    "scenes" : [ {
+      "sceneNumber" : "119",
+      "heading" : "INT ROB AND CARRIE'S KITCHEN - DAY",
+      "intExt" : "INT",
+      "location" : "ROB AND CARRIE'S KITCHEN",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "CARRIE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "146",
+      "heading" : "INT ROB AND CARRIE'S KITCHEN - DAY",
+      "intExt" : "INT",
+      "location" : "ROB AND CARRIE'S KITCHEN",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "CARRIE", "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "120",
+      "heading" : "EXT BEACH PARKING LOT - NIGHT",
+      "intExt" : "EXT",
+      "location" : "BEACH PARKING LOT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 1,
+      "characters" : [ "JOEL BARISH" ]
+    }, {
+      "sceneNumber" : "124",
+      "heading" : "INT HOUSE - CONTINUOUS",
+      "intExt" : "INT",
+      "location" : "HOUSE",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 10,
+      "characters" : [ "NAOMI", "AH", "DAVID", "JOEL BARISH", "CLEMENTINE" ]
+    } ]
+  }, {
+    "dayNumber" : 34,
+    "usedEights" : 35,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "PATRICK'S CAR", "PARKING STRUCTURE", "MARY'S APARTMENT" ],
+    "scenes" : [ {
+      "sceneNumber" : "129",
+      "heading" : "INT PATRICK'S CAR - EARLY MORNING",
+      "intExt" : "INT",
+      "location" : "PATRICK'S CAR",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "PATRICK", "MARY" ]
+    }, {
+      "sceneNumber" : "130",
+      "heading" : "EXT PARKING STRUCTURE - EARLY MORNING",
+      "intExt" : "EXT",
+      "location" : "PARKING STRUCTURE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 9,
+      "characters" : [ "STAN", "MARY" ]
+    }, {
+      "sceneNumber" : "140",
+      "heading" : "INT MARY'S APARTMENT - MORNING",
+      "intExt" : "INT",
+      "location" : "MARY'S APARTMENT",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "MARY", "JOEL BARISH" ]
+    } ]
+  }, {
+    "dayNumber" : 35,
+    "usedEights" : 36,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "LACUNA LTD. WAITING ROOM", "COMMUTER TUBE", "MARY'S APARTMENT" ],
+    "scenes" : [ {
+      "sceneNumber" : "152",
+      "heading" : "INT MARY'S APARTMENT - DAY",
+      "intExt" : "INT",
+      "location" : "MARY'S APARTMENT",
+      "shootPhase" : "DAY",
+      "lengthEights" : 9,
+      "characters" : [ "MARY", "STAN", "HOWARD MIERZWIAK" ]
+    }, {
+      "sceneNumber" : "149",
+      "heading" : "INT LACUNA LTD. WAITING ROOM - MORNING",
+      "intExt" : "INT",
+      "location" : "LACUNA LTD. WAITING ROOM",
+      "shootPhase" : "DAY",
+      "lengthEights" : 2,
+      "characters" : [ "RECEPTIONIST", "STAN", "HOWARD MIERZWIAK" ]
+    }, {
+      "sceneNumber" : "155",
+      "heading" : "INT COMMUTER TUBE - DAY",
+      "intExt" : "INT",
+      "location" : "COMMUTER TUBE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    } ]
+  }, {
+    "dayNumber" : 36,
+    "usedEights" : 28,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "COMMUTER TUBE", "VAGUE SPACE" ],
+    "scenes" : [ {
+      "sceneNumber" : "157",
+      "heading" : "INT COMMUTER TUBE - DAY",
+      "intExt" : "INT",
+      "location" : "COMMUTER TUBE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ ]
+    }, {
+      "sceneNumber" : "156",
+      "heading" : "INT VAGUE SPACE",
+      "intExt" : "INT",
+      "location" : "VAGUE SPACE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 2,
+      "characters" : [ "MARY", "OLD MAN" ]
+    }, {
+      "sceneNumber" : "161",
+      "heading" : "INT VAGUE SPACE",
+      "intExt" : "INT",
+      "location" : "VAGUE SPACE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 1,
+      "characters" : [ "SECOND OLD WOMAN" ]
+    } ]
+  }, {
+    "dayNumber" : 37,
+    "usedEights" : 17,
+    "time" : "DAY",
+    "move" : "MOVE",
+    "locations" : [ "OLD MAN'S OFFICE", "SECOND OLD WOMAN'S APARTMENT" ],
+    "scenes" : [ {
+      "sceneNumber" : "159",
+      "heading" : "INT OLD MAN'S OFFICE - A FEW MINUTES LATER",
+      "intExt" : "INT",
+      "location" : "OLD MAN'S OFFICE",
+      "shootPhase" : "DAY",
+      "lengthEights" : 3,
+      "characters" : [ "KRUCZYNSKI", "HOWARD MIERZWIAK", "MARY", "OLD MAN", "JOEL BARISH", "SECOND OLD WOMAN" ]
+    }, {
+      "sceneNumber" : "163",
+      "heading" : "INT SECOND OLD WOMAN'S APARTMENT - NIGHT",
+      "intExt" : "INT",
+      "location" : "SECOND OLD WOMAN'S APARTMENT",
+      "shootPhase" : "NIGHT",
+      "lengthEights" : 2,
+      "characters" : [ "OLD MAN" ]
+    } ]
+  } ]
+}

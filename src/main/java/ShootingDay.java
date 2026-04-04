@@ -19,6 +19,7 @@ public class ShootingDay {
     private List<Scene> scenes = new ArrayList<>();
     private Set<String> castSet = new HashSet<>();
     private Move move;
+    private int moveCount;
     private String primaryLocation;
 
     public ShootingDay(int dayNumber, Time time, Move move) {
@@ -35,6 +36,8 @@ public class ShootingDay {
         scenes.add(scene);
         if (move == Move.MOVE) {
             usedEights += scene.getSceneLength() + 12;
+            int moveCount = getMoveCount() + 1;
+            setMoveCount(moveCount);
         } else {
             usedEights += scene.getSceneLength();
         }
@@ -52,6 +55,8 @@ public class ShootingDay {
     }
 
     public Move getMove() { return move; }
+    public int getMoveCount() { return moveCount; }
+    public void setMoveCount(int moveCount) { this.moveCount = moveCount; }
 
     public void setMove(Move move) {
         this.move = move;

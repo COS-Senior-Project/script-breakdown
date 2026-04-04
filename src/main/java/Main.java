@@ -104,7 +104,7 @@ public class Main {
                     daysOutput.add(dayMap);
                 }
                 //creates a file reference
-                File outFile = new File("output/schedule18.json");
+                File outFile = new File("output/schedule20.json");
                 //ensures parent folder exists
                 outFile.getParentFile().mkdirs();
                 System.out.println("Writing JSON...");

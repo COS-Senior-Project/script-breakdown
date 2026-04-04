@@ -93,6 +93,10 @@ public class ShootingScheduler {
                 return false;
             }
         }
+        if ((day.getTime() == ShootingDay.Time.NIGHT || day.getTime() == ShootingDay.Time.DAY_NIGHT) && scene.getShootPhase() == Scene.ShootPhase.DAY) {
+            return false;
+        }
+        if (day.getMoveCount() >= 2) return false;
         return true;
     }
 
