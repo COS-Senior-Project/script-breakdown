@@ -70,7 +70,7 @@ public class Main {
                     //day map to model a JSON object in order
                     Map<String, Object> dayMap = new LinkedHashMap<>();
                     dayMap.put("dayNumber", day.getDayNumber());
-                    dayMap.put("usedEights", day.getUsedEights());
+                    dayMap.put("usedEights", day.getUsedEights() - 8 * day.getMoveCount());
                     dayMap.put("time", day.getTime());
                     dayMap.put("move", day.getMove());
 
@@ -104,7 +104,7 @@ public class Main {
                     daysOutput.add(dayMap);
                 }
                 //creates a file reference
-                File outFile = new File("output/schedule20.json");
+                File outFile = new File("output/schedule27.json");
                 //ensures parent folder exists
                 outFile.getParentFile().mkdirs();
                 System.out.println("Writing JSON...");

@@ -34,13 +34,7 @@ public class ShootingDay {
     //adds the cast needed in the set
     public void addScene(Scene scene, Move move) {
         scenes.add(scene);
-        if (move == Move.MOVE) {
-            usedEights += scene.getSceneLength() + 12;
-            int moveCount = getMoveCount() + 1;
-            setMoveCount(moveCount);
-        } else {
-            usedEights += scene.getSceneLength();
-        }
+        usedEights += scene.getSceneLength();
         castSet.addAll(scene.getCanonicalCharacterNames());
         locationSet.add(scene.getLocation());
     }

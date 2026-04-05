@@ -26,7 +26,6 @@ public class ShootingScheduler {
         for (List<Scene> locationScenes : locationGroups.values()) {
             //night - true, day - false; false < true which makes all day scenes before the night ones at the same location
             locationScenes.sort(Comparator.comparing(scene -> scene.getShootPhase().equals(Scene.ShootPhase.NIGHT)));
-
             //loops through each scene of this location
             for (Scene scene : locationScenes) {
                 //variable to check which day this scene fits the best
@@ -43,17 +42,11 @@ public class ShootingScheduler {
                     //weighted score based on the priorities of the matching - cast similarity, scene order, and not too packed days
                     double score = 0;
                     score =  locationScore(day, scene) + timeScore(day, scene) + castOverlapScore(day, scene) * 20.0 + orderScore(day, scene) * 2.0 + loadPenalty(day, scene);
-                    System.out.println("Location score" + locationScore(day, scene) + "   Time score: " + timeScore(day, scene) + "     Cast overlap score: " +  castOverlapScore(day, scene) * 3.0
-                            + "     Order score: " + orderScore(day, scene) * 2.0 + "       Load Penalty:" + loadPenalty(day, scene) + "    Total score: " + score);
+//                    System.out.println("Location score" + locationScore(day, scene) + "   Time score: " + timeScore(day, scene) + "     Cast overlap score: " +  castOverlapScore(day, scene) * 3.0
+//                            + "     Order score: " + orderScore(day, scene) * 2.0 + "       Load Penalty:" + loadPenalty(day, scene) + "    Total score: " + score);
                     //if the score of this scene is larger than the previous best one
                     if (score > bestScore) {
-                        if (!day.getLocationSet().isEmpty() && !day.getLocationSet().contains(scene.getLocation()) && day.getMove() == ShootingDay.Move.NO_MOVE) {
-                            day.setMove(ShootingDay.Move.MOVE);
-                        }
-                        else if (scene.getShootPhase() == Scene.ShootPhase.NIGHT && day.getTime() == ShootingDay.Time.DAY) {
-                            day.setTime(ShootingDay.Time.DAY_NIGHT);
-                        }
-                        System.out.println("Best score: " + bestScore);
+//                        System.out.println("Best score: " + bestScore);
                         //best score and best day are set to the current score and day
                         bestScore = score;
                         bestDay = day;
@@ -73,6 +66,16 @@ public class ShootingScheduler {
                     schedule.add(newDay);
                 } else {
                     //after checking all scheduled days and the best day for the scene is found, the scene is added to it
+                    if (!bestDay.getLocationSet().contains(scene.getLocation())) {
+                        bestDay.setMove(ShootingDay.Move.MOVE);
+                        int moveCount = bestDay.getMoveCount() + 1;
+                        bestDay.setMoveCount(moveCount);
+                        int moveWeight = bestDay.getUsedEights() + 8;
+                        bestDay.setUsedEights(moveWeight);
+                    }
+                    if (scene.getShootPhase() == Scene.ShootPhase.NIGHT && bestDay.getTime() == ShootingDay.Time.DAY) {
+                        bestDay.setTime(ShootingDay.Time.DAY_NIGHT);
+                    }
                     bestDay.addScene(scene, bestDay.getMove());
                     //locations.put(scene, scene.getLocation());
                 }
@@ -96,7 +99,7 @@ public class ShootingScheduler {
         if ((day.getTime() == ShootingDay.Time.NIGHT || day.getTime() == ShootingDay.Time.DAY_NIGHT) && scene.getShootPhase() == Scene.ShootPhase.DAY) {
             return false;
         }
-        if (day.getMoveCount() >= 2) return false;
+        if (day.getMoveCount() > 2) return false;
         return true;
     }
 
@@ -109,7 +112,7 @@ public class ShootingScheduler {
                 return 1000;
             }
             if (!Collections.disjoint(dayLocTokenized, sceneLocTokenized)) {
-                return 200;
+                return 300;
             }
         }
         return -300;
@@ -150,9 +153,10 @@ public class ShootingScheduler {
         //computes the penalty relative to the max eights per day
         double ratio = load / (MAX_EIGHTS_PER_DAY - 5);
 
-        if (ratio > 1.0) {
-            return -500;
-        }
-        return 1;
+        return ratio * 200;
+//        if (ratio > 1.0) {
+//            return -500;
+//        }
+//        return 1;
     }
 }
