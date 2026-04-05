@@ -119,7 +119,7 @@ public class ShootingScheduler {
     }
 
     private double timeScore (ShootingDay day, Scene scene) {
-        if (day.getTime() == null) { return 0; }
+        //if (day.getTime() == null) { return 0; }
         if (scene.getShootPhase().name().equals(day.getTime().name())) {
             return 200;
         }
