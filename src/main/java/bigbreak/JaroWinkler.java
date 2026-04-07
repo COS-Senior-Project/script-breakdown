@@ -1,3 +1,5 @@
+package bigbreak;
+
 public class JaroWinkler {
     public static double similarity (String s1, String s2) {
         //converts both strings to lower

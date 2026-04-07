@@ -1,3 +1,5 @@
+package bigbreak;
+
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.util.Span;
 

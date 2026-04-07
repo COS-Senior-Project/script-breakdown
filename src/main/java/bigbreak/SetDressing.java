@@ -1,3 +1,5 @@
+package bigbreak;
+
 public class SetDressing extends PhysicalObject {
     public SetDressing (int sceneNumberInt, String sceneNumber, String nameItem, String rule,
                       String contextSnippet, double confidenceScore) {

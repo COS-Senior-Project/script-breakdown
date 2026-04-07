@@ -1,3 +1,5 @@
+package bigbreak;
+
 import java.util.*;
 
 public class CharacterClusterer {

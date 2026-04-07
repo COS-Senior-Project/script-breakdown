@@ -1,3 +1,5 @@
+package bigbreak;
+
 public class CharacterMention {
     private final String rawName;
     private final int startToken;

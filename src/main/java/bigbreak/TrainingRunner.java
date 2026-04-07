@@ -1,3 +1,5 @@
+package bigbreak;
+
 import opennlp.tools.namefind.*;
 import opennlp.tools.util.*;
 import opennlp.tools.util.eval.FMeasure;

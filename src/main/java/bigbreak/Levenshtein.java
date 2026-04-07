@@ -1,3 +1,5 @@
+package bigbreak;
+
 public class Levenshtein {
     public static int distance (String a, String b) {
         //converts both inputs to lowercase

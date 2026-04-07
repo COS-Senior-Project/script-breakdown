@@ -1,3 +1,5 @@
+package bigbreak;
+
 public class Prop extends PhysicalObject {
     public Prop (int sceneNumberInt, String sceneNumber, String nameItem, String rule,
                       String contextSnippet, double confidenceScore) {

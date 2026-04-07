@@ -1,42 +1,26 @@
-package bigbreak;
+package bigbreak.scheduler;
 
 import bigbreak.*;
-import opennlp.tools.namefind.NameFinderME;
-import opennlp.tools.namefind.TokenNameFinderModel;
+import bigbreak.service.ScriptProcessingService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api")
 public class ScheduleController {
+
+    private final ScriptProcessingService service;
+
+    public ScheduleController(ScriptProcessingService service) {
+        this.service = service;
+    }
     @PostMapping("/schedule")
     public List<ShootingDay> createSchedule(@RequestParam("file") MultipartFile file)  throws Exception {
-        String script = new String(file.getBytes());
-        //creates an object of ScriptParser
-        ScriptParser parser = new ScriptParser();
-        //the parser splits the script into scenes and puts them in a list
-        List<Scene> scenes = parser.splitScenes(script);
-        //creates a name database object
-        NameDatabase nameDb = new NameDatabase();
+        String script = new String(file.getBytes(), StandardCharsets.UTF_8);
+        return service.processScript(script);
 
-        //tries to load the NameFinderME file as a resource from the classpath
-        try (InputStream modelIn = getClass().getResourceAsStream("/models/en-ner-person.bin")) {
-            //reads the model from the input stream and loads it as an OpenNLP model to recognize human names
-            TokenNameFinderModel model = new TokenNameFinderModel(modelIn);
-            //creates an instance of NameFinderME
-            NameFinderME nameFinderME = new NameFinderME(model);
-
-            CharacterClusterer clusterer = new CharacterClusterer();
-            CharacterOperations characterOperations = new CharacterOperations(nameDb, nameFinderME, clusterer);
-            characterOperations.processScenes(scenes);
-            //assigns the shoot phase to the scene
-            TimeClassifier.resolveTimes(scenes);
-            //schedules the scenes
-            ShootingScheduler scheduler = new ShootingScheduler(45);
-            return scheduler.schedule(scenes);
-        }
     }
 }

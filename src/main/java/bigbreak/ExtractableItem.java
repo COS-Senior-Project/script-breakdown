@@ -1,3 +1,5 @@
+package bigbreak;
+
 import java.util.Map;
 
 public abstract class ExtractableItem {
