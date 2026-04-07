@@ -52,6 +52,11 @@ public class Scene {
         return  time;
     }
     public int getSceneLength() { return sceneLength; }
+    public String getPageCount() {
+        int pages = getSceneLength() / 8;
+        int eightLeft = getSceneLength() % 8;
+        return pages + " " + eightLeft + "/8 pages";
+    }
     public void addCharacter(Character c) {
         characters.add(c);
     }

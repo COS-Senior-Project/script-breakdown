@@ -10,8 +10,8 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.List;
 
-//React usually runs on 3000 port
-@CrossOrigin(origins = "http://localhost:3000")
+//React (using Vite) usually runs on 5173 port
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api")
 public class FileUploadController {

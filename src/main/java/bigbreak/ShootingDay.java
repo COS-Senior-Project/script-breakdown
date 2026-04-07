@@ -63,6 +63,12 @@ public class ShootingDay {
     }
 
     public int getUsedEights() { return usedEights; }
+    public String getPageCount() {
+        int eightsWoMoves = getUsedEights() - 8 * getMoveCount();
+        int pages = eightsWoMoves / 8;
+        int eightLeft = eightsWoMoves % 8;
+        return pages + " " + eightLeft + "/8 pages";
+    }
     public Set<String> getCastSet() { return castSet; }
     public List<Scene> getScenes() { return scenes; }
 
