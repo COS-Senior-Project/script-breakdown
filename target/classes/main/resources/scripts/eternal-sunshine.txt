@@ -578,7 +578,7 @@ came from.
 	sure I recognized you.
 
 		CLEMENTINE
-	Ah, the hair.
+	Ah the hair.
 		(pulls a strand in front of her
 		 eyes, studies it)
 	Blue, right?  It's called Blue Ruin.  The
@@ -1759,13 +1759,13 @@ Joel enters.  Mierzwiak stands there with Stan in his lab
 coat.
 
 		MIERZWIAK
-	Ah, Mr. Barish.  This is Stan.  He'll be
+	Ah Mr. Barish.  This is Stan.  He'll be
 	in charge of your procedure tonight.
 
 Stan nods professionally.
 
 		STAN
-	Mr. Barish.
+	Mr. Barish
 
 		JOEL
 	How exactly is this going to work

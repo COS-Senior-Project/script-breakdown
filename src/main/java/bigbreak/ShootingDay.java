@@ -66,17 +66,17 @@ public class ShootingDay {
     public String getPageCount() {
         int eightsWoMoves = getUsedEights() - 8 * getMoveCount();
         int pages = eightsWoMoves / 8;
-        int eightLeft = eightsWoMoves % 8;
-        return pages + " " + eightLeft + "/8 pages";
+        int eightsLeft = eightsWoMoves % 8;
+        if (pages == 0) {
+            return eightsLeft + "/8 pages";
+        }
+        if (eightsLeft == 0) {
+            return pages + " pages";
+        }
+        return pages + " " + eightsLeft + "/8 pages";
     }
     public Set<String> getCastSet() { return castSet; }
     public List<Scene> getScenes() { return scenes; }
-
-    public String getPrimaryLocation() { return primaryLocation; }
-
-    public void setPrimaryLocation(String primaryLocation) {
-        this.primaryLocation = primaryLocation;
-    }
 
     //tracks how far apart the scenes are for continuity
     public double getAverageScriptOrder() {

@@ -54,8 +54,14 @@ public class Scene {
     public int getSceneLength() { return sceneLength; }
     public String getPageCount() {
         int pages = getSceneLength() / 8;
-        int eightLeft = getSceneLength() % 8;
-        return pages + " " + eightLeft + "/8 pages";
+        int eightsLeft = getSceneLength() % 8;
+        if (pages == 0) {
+            return eightsLeft + "/8 pages";
+        }
+        if (eightsLeft == 0) {
+            return pages + " pages";
+        }
+        return pages + " " + eightsLeft + "/8 pages";
     }
     public void addCharacter(Character c) {
         characters.add(c);
@@ -70,8 +76,28 @@ public class Scene {
     public Set<String> getCanonicalCharacterNames() {
         Set<String> names = new HashSet<>();
         for (Character c : characters) {
-            if (c.getCanonicalName() != null) {
+            if (c.getCanonicalName() != null && c.getConfidenceScore() >= 0.80) {
                 names.add(c.getCanonicalName());
+            }
+        }
+        return names;
+    }
+
+    public Set<String> getCharactersBelowConfidence() {
+        Set<String> names = new HashSet<>();
+        for (Character c : characters) {
+            if (c.getCanonicalName() != null && c.getConfidenceScore() < 0.80) {
+                names.add(c.getCanonicalName());
+            }
+        }
+        return names;
+    }
+
+    public Set<String> getCharactersWithScores() {
+        Set<String> names = new HashSet<>();
+        for (Character c : characters) {
+            if (c.getCanonicalName() != null) {
+                names.add(c.getCanonicalName() + " " + c.getConfidenceScore());
             }
         }
         return names;

@@ -65,7 +65,7 @@ public class NameDatabase {
         if (parts.length >= 1){
             for (int i = 0; i < parts.length; i++) {
                 if (LAST_NAME_TRIE.contain(parts[i])) {
-                    boost += 0.3;
+                    boost += 0.4;
                 }
             }
         }

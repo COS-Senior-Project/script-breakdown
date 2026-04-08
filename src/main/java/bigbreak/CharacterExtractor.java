@@ -237,7 +237,7 @@ public class CharacterExtractor {
         if (content == null || content.trim().isEmpty()) return result;
         //sets static confidence score
         // because the match cannot be contained in the name files
-        double confidence = 0.7;
+        double confidence = 0.8;
         //splits the lines into an array keeping the formatting
         String[] lines = content.split("\n", -1);
         //loops through the lines

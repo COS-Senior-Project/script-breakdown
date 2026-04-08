@@ -17,6 +17,7 @@ public class ShootingScheduler {
 
         //maps locations to scenes to create location groups
         LinkedHashMap<String, List<Scene>> locationGroups = new LinkedHashMap<>();
+        //scenes.sort(Comparator.comparing(Scene::getLocation));
         //LinkedHashMap<Scene, String> locations = new LinkedHashMap<>();
         for (Scene s : scenes) {
             //creates a new location group if new location appears and adds the scene to the group
@@ -114,7 +115,7 @@ public class ShootingScheduler {
                 return 1000;
             }
             if (!Collections.disjoint(dayLocTokenized, sceneLocTokenized)) {
-                return 300;
+                return 400;
             }
         }
         return -300;
@@ -155,10 +156,9 @@ public class ShootingScheduler {
         //computes the penalty relative to the max eights per day
         double ratio = load / (MAX_EIGHTS_PER_DAY - 5);
 
+        if (ratio > 1.0) {
+            return -200;
+        }
         return ratio * 200;
-//        if (ratio > 1.0) {
-//            return -500;
-//        }
-//        return 1;
     }
 }
