@@ -64,6 +64,14 @@ function App() {
                                 {scene.canonicalCharacterNames.map((character) => (
                                     <div key={character}>{character}</div>
                                 ))}
+                                Possible Characters:<br/>
+                                {scene.charactersBelowConfidence.map((character) => (
+                                    <div key={character}>{character}</div>
+                                ))}
+                                {/* Characters:<br/>
+                                {scene.charactersWithScores.map((character) => (
+                                    <div key={character}>{character}</div>
+                                ))} */}
                             </div>
                         ))}
                     </div>
