@@ -1,13 +1,14 @@
 package bigbreak.scheduler;
 
 import bigbreak.*;
+import bigbreak.dtos.ScheduleDTO;
 import bigbreak.service.ScriptProcessingService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.nio.charset.StandardCharsets;
-import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api")
 public class ScheduleController {
@@ -18,9 +19,15 @@ public class ScheduleController {
         this.service = service;
     }
     @PostMapping("/schedule")
-    public List<ShootingDay> createSchedule(@RequestParam("file") MultipartFile file)  throws Exception {
+    public ScheduleDTO createSchedule(@RequestParam("file") MultipartFile file)  throws Exception {
         String script = new String(file.getBytes(), StandardCharsets.UTF_8);
         return service.processScript(script);
-
     }
+
+    @PostMapping("/update-schedule")
+    public ScheduleDTO updateSchedule(@RequestBody ScheduleDTO schedule) {
+        return service.updateSchedule(schedule);
+    }
+
+
 }

@@ -65,21 +65,27 @@ public class ShootingScheduler {
                     }
                     //new day is created and the scene is added to it
                     ShootingDay newDay = new ShootingDay(schedule.size() + 1, time, ShootingDay.Move.NO_MOVE);
-                    newDay.addScene(scene, ShootingDay.Move.NO_MOVE);
+                    scene.setCharactersDisplayedHC(scene.getCanonicalCharacterNames());
+                    scene.setCharactersDisplayedLC(scene.getCharactersBelowConfidence());
+                    newDay.addScene(scene);
+                    newDay.setMove(ShootingDay.Move.NO_MOVE);
                     schedule.add(newDay);
                 } else {
                     //after checking all scheduled days and the best day for the scene is found, the scene is added to it
                     if (!bestDay.getLocationSet().contains(scene.getLocation())) {
                         bestDay.setMove(ShootingDay.Move.MOVE);
                         int moveCount = bestDay.getMoveCount() + 1;
-                        bestDay.setMoveCount(moveCount);
+                        //bestDay.setMoveCount(moveCount);
+
                         int moveWeight = bestDay.getUsedEights() + 8;
                         bestDay.setUsedEights(moveWeight);
                     }
                     if (scene.getShootPhase() == Scene.ShootPhase.NIGHT && bestDay.getTime() == ShootingDay.Time.DAY) {
                         bestDay.setTime(ShootingDay.Time.DAY_NIGHT);
                     }
-                    bestDay.addScene(scene, bestDay.getMove());
+                    scene.setCharactersDisplayedHC(scene.getCanonicalCharacterNames());
+                    scene.setCharactersDisplayedLC(scene.getCharactersBelowConfidence());
+                    bestDay.addScene(scene);
                     //locations.put(scene, scene.getLocation());
                 }
             }

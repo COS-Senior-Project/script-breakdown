@@ -14,7 +14,6 @@ public class Character extends ExtractableItem {
         super(sceneNumberInt, sceneNumber, nameItem, rule, contextSnippet, confidenceScore);
         this.nameDb = nameDb;
     }
-
     public void setCanonicalName(String canonicalName) { this.canonicalName = canonicalName; }
     public String getCanonicalName() { return canonicalName; }
 

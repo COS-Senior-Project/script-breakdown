@@ -17,6 +17,8 @@ public class ShootingDay {
     private Set<String> locationSet = new HashSet<>();
     private Time time;
     private int usedEights = 0;
+    private int eightsWoMoves = 0;
+    private String pageCount;
 
     private List<Scene> scenes = new ArrayList<>();
     private Set<String> castSet = new HashSet<>();
@@ -34,11 +36,12 @@ public class ShootingDay {
     //adds scenes to the list
     //sums the eights of the scenes for the day
     //adds the cast needed in the set
-    public void addScene(Scene scene, Move move) {
+    public void addScene(Scene scene) {
         scenes.add(scene);
         usedEights += scene.getSceneLength();
         castSet.addAll(scene.getCanonicalCharacterNames());
         locationSet.add(scene.getLocation());
+        setMoveCount(locationSet.size() - 1);
     }
 
     public int getDayNumber() { return dayNumber; }
@@ -63,18 +66,43 @@ public class ShootingDay {
     }
 
     public int getUsedEights() { return usedEights; }
-    public String getPageCount() {
-        int eightsWoMoves = getUsedEights() - 8 * getMoveCount();
-        int pages = eightsWoMoves / 8;
-        int eightsLeft = eightsWoMoves % 8;
-        if (pages == 0) {
-            return eightsLeft + "/8 pages";
+
+    public int getEightsWoMoves() {
+
+        for (Scene s : scenes) {
+            this.eightsWoMoves += s.getSceneLength();
         }
-        if (eightsLeft == 0) {
-            return pages + " pages";
-        }
-        return pages + " " + eightsLeft + "/8 pages";
+        return eightsWoMoves;
     }
+
+    public void setEightsWoMoves(int eightsWoMoves) {
+        this.eightsWoMoves = eightsWoMoves;
+    }
+
+    public void setDayNumber(int dayNumber) {
+        this.dayNumber = dayNumber;
+    }
+
+    public void setLocation(LinkedHashMap<Scene, String> location) {
+        this.location = location;
+    }
+
+    public void setLocationSet(Set<String> locationSet) {
+        this.locationSet = locationSet;
+    }
+
+    public void setPageCount(String pageCount) {
+        this.pageCount = pageCount;
+    }
+
+    public void setScenes(List<Scene> scenes) {
+        this.scenes = scenes;
+    }
+
+    public void setCastSet(Set<String> castSet) {
+        this.castSet = castSet;
+    }
+
     public Set<String> getCastSet() { return castSet; }
     public List<Scene> getScenes() { return scenes; }
 
@@ -90,5 +118,20 @@ public class ShootingDay {
         //divides the sum with the scene size for the day
         //to check if the average scene order is close to most scenes for the day
         return (double) sum / scenes.size();
+    }
+    public void recalculate() {
+        this.locationSet.clear();
+        this.moveCount = 0;
+
+        Set<String> seenLocations = new LinkedHashSet<>();
+
+        for (Scene s : scenes) {
+            if (s.getLocation() != null) {
+                seenLocations.add(s.getLocation());
+            }
+        }
+
+        this.locationSet = seenLocations;
+        this.moveCount = seenLocations.size() - 1;
     }
 }

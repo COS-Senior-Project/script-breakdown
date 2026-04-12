@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Pencil, X, Grip } from "lucide-react";
-import { DndContext, closestCenter, PointerSensor, useSensor, useSensors, rectIntersection } from "@dnd-kit/core";
-import { arrayMove, SortableContext, verticalListSortingStrategy, useSortable } from "@dnd-kit/sortable";
+import { DndContext, PointerSensor, useSensor, useSensors, rectIntersection } from "@dnd-kit/core";
+import { SortableContext, verticalListSortingStrategy, useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import './App.css'
 
@@ -25,13 +25,12 @@ function App() {
 
             const data = await response.json();
             
-            data.forEach(day => {
+            data.days.forEach(day => {
                 day.scenes.forEach(scene =>{
-                    scene.id = `${day.dayNumber}-${scene.sceneNumber}`
+                    scene.id = scene.sceneIntNumber
                 });
             });
-
-            setSchedule(data);
+            setSchedule(data.days);
         } catch (error) {
             console.error(error)
         }
@@ -40,26 +39,41 @@ function App() {
     const addCharacter = (name) => {
         setEditingScene(prev => ({
             ...prev,
-            canonicalCharacterNames: [...prev.canonicalCharacterNames.filter(n => n !== name), name],
-            charactersBelowConfidence: prev.charactersBelowConfidence.filter((n) => n !== name)
+            charactersDisplayedHC: [...prev.charactersDisplayedHC.filter(n => n !== name), name],
+            charactersDisplayedLC: prev.charactersDisplayedLC.filter(n => n !== name)
         }));
     };
 
     //saves changes in the modal
-    const saveScene = (updatedScene) => {
+    const saveScene = async (updatedScene) => {
+        const hc = new Set(updatedScene.charactersDisplayedHC ?? []);
+        const lc = (updatedScene.charactersDisplayedLC ?? []).filter(name => !hc.has(name));
+        const sanitizedScene = {
+            ...updatedScene,
+            charactersDisplayedHC: Array.from(hc),
+            charactersDisplayedLC: lc
+        };
+
         const updatedSchedule = schedule.map((day) => ({
             ...day,
             scenes: day.scenes.map((scene) =>
-                scene.sceneNumber === updatedScene.sceneNumber ? updatedScene : scene
+                scene.sceneIntNumber === sanitizedScene.sceneIntNumber ? sanitizedScene : scene
             ),
         }));
-        setSchedule(updatedSchedule);
+        console.log("SENDING SCENE:", editingScene);
+        const response = await fetch("http://localhost:8080/api/update-schedule", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ days: updatedSchedule })
+        })
+        const newSchedule = await response.json();
+        setSchedule(newSchedule.days);
         setEditingScene(null);
     }
 
     function SceneRow({scene, dayNumber, setEditingScene}) {
         const { attributes, listeners, setNodeRef, transform, transition } = useSortable({
-            id: scene.id
+            id: scene.sceneIntNumber
         });
 
         const style={
@@ -112,9 +126,9 @@ function App() {
                 <td>{scene.locationKeyword}</td>
                 <td>{scene.location}</td>
                 <td>{scene.shootPhase}</td>
-                <td>{scene.pageCount}</td>
-                <td>{scene.canonicalCharacterNames?.join(", ")}</td>
-                <td>{scene.charactersBelowConfidence?.join(", ")}</td>
+                <td>{formatPages(scene.pageCountEights)}</td>
+                <td>{(scene.charactersDisplayedHC ?? []).join(", ")}</td>
+                <td>{(scene.charactersDisplayedLC ?? []).join(", ")}</td>
                 {/* <td>{scene.charactersWithScores?.join(", ")}</td> */}
                 <td style={{ textAlign: "center" }}>
                     <button onClick={(e) => {
@@ -134,7 +148,7 @@ function App() {
         );
     }
 
-    const handleDragEnd = (event) => {
+    const handleDragEnd = async (event) => {
         const { active, over } = event;
         if (!over) return;
 
@@ -145,25 +159,22 @@ function App() {
 
         let activeScene, fromDay;
 
-        let overDayNum;
-        let overSceneNum;
-
         newSchedule.forEach(day => {
-            const idx = day.scenes.findIndex(s => s.id === active.id);
+            const idx = day.scenes.findIndex(s => s.sceneIntNumber === active.id);
             if (idx !== -1) {
                 activeScene = day.scenes[idx];
                 fromDay = day;
             }
         });
 
-        const oldIndex = fromDay.scenes.findIndex(s => s.id === active.id);
+        const oldIndex = fromDay.scenes.findIndex(s => s.sceneIntNumber === active.id);
         fromDay.scenes.splice(oldIndex, 1);
 
         let toDay;
         let newIndex = 0;
 
         newSchedule.forEach(day => {
-            const idx = day.scenes.findIndex(s => s.id === over.id);
+            const idx = day.scenes.findIndex(s => s.sceneIntNumber === over.id);
             if (idx !== -1) {
                 toDay = day;
                 newIndex = idx;
@@ -171,22 +182,40 @@ function App() {
         });
 
         toDay.scenes.splice(newIndex, 0, activeScene);
-        setSchedule(newSchedule);
+        const response = await fetch("http://localhost:8080/api/update-schedule", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ days: newSchedule })
+        });
+        const updated = await response.json();
+        console.log(updated);
+        setSchedule(updated.days);
     };
 
     const sensors = useSensors(
         useSensor(PointerSensor)
     );
 
+    const formatPages = (eightsWoMoves) => {
+        const fullPages = Math.floor(eightsWoMoves / 8);
+        const remainder = eightsWoMoves % 8;
+
+        if (remainder === 0) return `${fullPages} pages`;
+        if (fullPages === 0) return `${remainder}/8 pages`
+        return `${fullPages} ${remainder}/8 pages`
+    };
+
     return (
         <div>
+            <h1 style={{ margin: "50px", marginBottom: "60px", fontWeight: "bold" }}>Big Break! - Film Scheduling</h1>
             <h2>Upload Script</h2>
 
             <input
                 type="file"
                 onChange={(e) => handleUpload(e.target.files[0])}
             />
-
             <DndContext
                 sensors={sensors}
                 collisionDetection={rectIntersection}
@@ -198,10 +227,10 @@ function App() {
                             <h2>Day {day.dayNumber}</h2>
 
                             <div style={{ marginBottom: "20px", fontSize: "16px" }}>
-                                <strong>Page length: </strong>{day.pageCount}<br/>
+                                <strong>Page length: </strong>{formatPages(day.eightsWoMoves)}<br/>
                                 <strong>Time:</strong> {day.time}<br/>
                                 <strong>Move Count:</strong> {day.moveCount}<br/>
-                                <strong>Locations</strong>: {day.locationSet?.join(", ")}
+                                <strong>Locations</strong>: {day.locations?.join(", ")}
                             </div>
 
                             <table border="1" cellPadding="4" style={{ borderCollapse: "collapse", width: "100%", fontSize: "14px" }}>
@@ -221,7 +250,7 @@ function App() {
                                 </thead>
                                 <SortableContext
                                     id={`day-${day.dayNumber}`}
-                                    items={day.scenes.map(scene => `${day.dayNumber}-${scene.sceneNumber}`)}
+                                    items={day.scenes.map(scene => scene.sceneIntNumber)}
                                     strategy={verticalListSortingStrategy}
                                 >
                                     <tbody>
@@ -285,11 +314,11 @@ function App() {
                     <div>
                         <label>Characters:</label> <br/>
                         <input
-                            value={editingScene.canonicalCharacterNames.join(", ")}
+                            value={(editingScene.charactersDisplayedHC ?? []).join(", ")}
                             onChange={(e) =>
                                 setEditingScene({
                                     ...editingScene,
-                                    canonicalCharacterNames: e.target.value
+                                    charactersDisplayedHC: e.target.value
                                     .split(", ")
                                     .map((n) => n.trim()),
                                 })
@@ -306,10 +335,10 @@ function App() {
                         />
                     </div>
 
-                    {editingScene.charactersBelowConfidence.length === 0 ? (
+                    {editingScene.charactersDisplayedLC.length === 0 ? (
                         <div style={{ fontStyle: "italic", color: "#000000", marginBottom: "5px" }}>No character suggestions</div>
                     ) : (
-                        editingScene.charactersBelowConfidence.map(name => (
+                        editingScene.charactersDisplayedLC.map(name => (
                             <div
                                 key={name}
                                 onClick={() => addCharacter(name)}

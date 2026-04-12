@@ -20,7 +20,10 @@ public class Scene {
     private final int sceneLength;
     private List<Character> characters = new ArrayList<>();
     private ShootPhase shootPhase;
-
+    private Set<String> canonicalCharacterNames = new HashSet<>();
+    private Set<String> charactersBelowConfidence = new HashSet<>();
+    private Set<String> charactersDisplayedHC = new HashSet<>();
+    private Set<String> charactersDisplayedLC = new HashSet<>();
     public Scene(int sceneIntNumber, String sceneNumber, String heading, String content, String locationKeyword, String location, String time, int sceneLength){
         this.sceneIntNumber = sceneIntNumber;
         this.sceneNumber = sceneNumber;
@@ -52,17 +55,7 @@ public class Scene {
         return  time;
     }
     public int getSceneLength() { return sceneLength; }
-    public String getPageCount() {
-        int pages = getSceneLength() / 8;
-        int eightsLeft = getSceneLength() % 8;
-        if (pages == 0) {
-            return eightsLeft + "/8 pages";
-        }
-        if (eightsLeft == 0) {
-            return pages + " pages";
-        }
-        return pages + " " + eightsLeft + "/8 pages";
-    }
+
     public void addCharacter(Character c) {
         characters.add(c);
     }
@@ -81,6 +74,30 @@ public class Scene {
             }
         }
         return names;
+    }
+
+    public void setCanonicalCharacterNames(Set<String> canonicalCharacterNames) {
+        this.canonicalCharacterNames = canonicalCharacterNames;
+    }
+
+    public Set<String> getCharactersDisplayedHC() {
+        return charactersDisplayedHC;
+    }
+
+    public void setCharactersDisplayedHC(Set<String> charactersDisplayedHC) {
+        this.charactersDisplayedHC = charactersDisplayedHC;
+    }
+
+    public Set<String> getCharactersDisplayedLC() {
+        return charactersDisplayedLC;
+    }
+
+    public void setCharactersDisplayedLC(Set<String> charactersDisplayedLC) {
+        this.charactersDisplayedLC = charactersDisplayedLC;
+    }
+
+    public void setCharactersBelowConfidence(Set<String> charactersBelowConfidence) {
+        this.charactersBelowConfidence = charactersBelowConfidence;
     }
 
     public Set<String> getCharactersBelowConfidence() {
