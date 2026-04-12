@@ -74,7 +74,7 @@ public class ShootingScheduler {
                     //after checking all scheduled days and the best day for the scene is found, the scene is added to it
                     if (!bestDay.getLocationSet().contains(scene.getLocation())) {
                         bestDay.setMove(ShootingDay.Move.MOVE);
-                        int moveCount = bestDay.getMoveCount() + 1;
+                        //int moveCount = bestDay.getMoveCount() + 1;
                         //bestDay.setMoveCount(moveCount);
 
                         int moveWeight = bestDay.getUsedEights() + 8;
@@ -159,7 +159,7 @@ public class ShootingScheduler {
     private double loadPenalty(ShootingDay day, Scene scene) {
         //computes the load
         double load = day.getUsedEights() + scene.getSceneLength();
-        //computes the penalty relative to the max eights per day
+        //computes the score relative to the max eights per day
         double ratio = load / (MAX_EIGHTS_PER_DAY - 5);
 
         if (ratio > 1.0) {
