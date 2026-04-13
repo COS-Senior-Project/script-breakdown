@@ -49,7 +49,7 @@ public class ScriptParser {
             String line = lines[i];
             String trimmed = line.trim();
 
-            //case A: repeated number line (page header/footr like "98  98")
+            //case A: repeated number line (page header/footer like "98  98")
             if (repeatedNumberLine.matcher(trimmed).find()) {
                 //capture the number
                 Matcher rep = Pattern.compile("^\\s*(\\d+)\\s+\\1\\s*$").matcher(trimmed);
@@ -108,7 +108,8 @@ public class ScriptParser {
 
         //Patterns
         Pattern numberOnly = Pattern.compile("^\\s*(\\d+[A-Z]?)\\s*\\.?\\s*\\*?\\s*$"); // "98" or "98A"
-        Pattern headingPattern = Pattern.compile("^(?:((\\d+[A-Z]?)\\s+)?(INT\\.?|EXT\\.?|INT/EXT\\.?|EXT/INT\\.?|I/E\\.?|E/I\\.?|EST\\.?|OMITTED)\\b\\s*([^\\-\\n]*?)(?:-\\s*(.*))?)$",
+        Pattern repeatedNumber = Pattern.compile("^\\s*(\\d+[A-Z]?\\.*\\*?)\\s+\\1\\s*$"); // "98   98"
+        Pattern headingPattern = Pattern.compile("^\\s*(?:((\\d+[A-Z]?)\\s*\\.?\\s*\\*?\\s+)?(INT\\.?|EXT\\.?|INT/EXT\\.?|EXT/INT\\.?|I/E\\.?|E/I\\.?|EST\\.?|OMITTED)\\b\\s*([^\\-\\n]*?)(?:-\\s*(.*?))?(?:\\s+(\\d+[A-Z]?)\\s*\\.?\\s*\\*?)?\\s*)$",
                 Pattern.CASE_INSENSITIVE);
         Pattern headingKeyword = Pattern.compile("^(INT\\.?|EXT\\.?|INT/EXT\\.?|EXT/INT\\.?|I/E\\.?|E/I\\.?|EST\\.?|OMITTED)\\b",
                 Pattern.CASE_INSENSITIVE);
@@ -125,6 +126,7 @@ public class ScriptParser {
         String currentLocationKeyword = null;
         String currentLocation = null;
         String currentTime = null;
+        String secondCurrentSceneNumber = null;
         StringBuilder currentContent = new StringBuilder();
         int sceneLines = 0;
         int sceneLengthEights = 0;
@@ -165,9 +167,30 @@ public class ScriptParser {
                     if (debug) System.out.println("DEBUG: dropped page number line: " + line + " (line " + i + ")");
                     continue;
                 }
-
-
             }
+
+            //if repeated numbers on both sides of the line (above heading)
+            Matcher repeatedNumM = repeatedNumber.matcher(line);
+            if (repeatedNumM.find()) {
+                //Look ahead to next non-empty line
+                int j = i + 1;
+                while (j < lines.length && lines[j].trim().isEmpty()) j++;
+                boolean nextIsHeading = false;
+                if (j < lines.length) {
+                    nextIsHeading = headingKeyword.matcher(lines[j].trim()).find();
+                }
+                if (nextIsHeading) {
+                    //this is a scene-number line (store and skip it, the next line will be heading)
+                    pendingSceneNumber = repeatedNumM.group(1); //e.g., "98     98" or "98A     98A"
+                    if (debug) System.out.println("DEBUG: pending scene number = " + pendingSceneNumber + " (line " + i + ")");
+                    continue; //proceed to the line (which should be the heading)
+                } else {
+                    //it's a page number or stray number -> skip it
+                    if (debug) System.out.println("DEBUG: dropped page number line: " + line + " (line " + i + ")");
+                    continue;
+                }
+            }
+
             //Check if this is a heading line (inline number optional)
             Matcher h = headingPattern.matcher(line);
             if (h.find()) {
@@ -183,23 +206,29 @@ public class ScriptParser {
                     currentLocationKeyword = null;
                     currentLocation = null;
                     currentTime = null;
+                    secondCurrentSceneNumber = null;
                     currentSceneNumber = null;
                     sceneLines = 0;
                     sceneLengthEights = 0;
                 }
 
-                //Determine scene number: pending (number-on-previous-line) has priority
-                String sceneNumber = (pendingSceneNumber != null) ? pendingSceneNumber : (h.group(2) != null ? h.group(2).trim() : "");
+                //Determine scene number: in-line scene number has priority
+                String sceneNumber = (h.group(2) != null) ? h.group(2).trim() : (pendingSceneNumber != null ? pendingSceneNumber : "");
+
                 pendingSceneNumber = null;
+
+                String secondSceneNumber = h.group(6);
+                if (secondSceneNumber != null && !secondSceneNumber.trim().equals(sceneNumber.trim())) {
+                    if (sceneNumber.isEmpty()) {
+                        sceneNumber = secondSceneNumber;
+                    } else {
+                        System.out.println("Scene numbers on both sides of the heading line are different. Assigning the first one.");
+                    }
+                }
 
                 //If no number, use fallback
                 if (sceneNumber.isEmpty()) {
                     sceneNumber = String.valueOf(fallbackCounter);
-                }
-
-                //Normalize: if pure numeric, sync fallback
-                if (sceneNumber.matches("^\\d+$")) {
-                    //fallbackCounter = Integer.parseInt(sceneNumber);
                 }
 
                 //Extract location (the keyword), description and time
@@ -207,7 +236,7 @@ public class ScriptParser {
                 String locationDesc = h.group(4) != null ? h.group(4).trim() : "";
                 String time = h.group(5) != null ? h.group(5).trim() : "";
 
-                locationDesc = locationDesc.replaceAll("\\s+\\d+[A-Z]?(\\s*\\*?)?$", "").replaceAll("^\\.+\\s*", "").trim();
+                locationDesc = locationDesc.replaceAll("\\s+\\d+[A-Z]?\\s*\\.?\\s*\\*?\\s*$", "").replaceAll("^\\.+\\s*", "").trim();
 
                 //Build the displayed heading (keep keyword)
                 String displayedHeading = locationKeyword + (locationDesc.isEmpty() ? "" : " " + locationDesc) + (time.isEmpty() ? "" : " - " + time);
@@ -218,6 +247,7 @@ public class ScriptParser {
                 currentLocationKeyword = locationKeyword;
                 currentLocation = locationDesc;
                 currentTime = time;
+                secondCurrentSceneNumber = secondSceneNumber;
 
                 //increment fallback for next scene (only if numeric)
                 if (sceneNumber.matches("^\\d+$")) {

@@ -135,7 +135,7 @@ INTERSTELLAR
           the quad and dozens of ARMED FEDERAL AGENTS converge on his
           building.
                          
-          INT. MAIN CONFERENCE ROOM, LIGO, CALTECH -- DAY
+          INT. MAIN CONFERENCE ROOM, LIGO, CALTECH -- DAY 12B
                          
           Ansen sits, alone, on one side of a conference table.
                          
@@ -320,8 +320,9 @@ INTERSTELLAR
           tiny link between our galaxy and another.
                          
           FADE TO BLACK
-                         
-          EXT. CORNFIELD, CENTRAL CALIFORNIA -- DAY
+           
+	  17A.            				
+          14A. EXT. CORNFIELD, CENTRAL CALIFORNIA -- DAY 14A.
                          
           Corn. As far as the eye can see.
                          
