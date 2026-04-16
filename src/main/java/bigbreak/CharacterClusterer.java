@@ -81,7 +81,7 @@ public class CharacterClusterer {
             }
         }
 
-        //builds the actual clusters from the parent pointers tree
+        //builds the actual clusters from the parent pointer trees
         Map<Integer, List<Integer>> clusters = new HashMap<>();
         //goes through each name
         for (int i = 0; i < n; i++) {

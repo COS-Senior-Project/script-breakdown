@@ -98,6 +98,7 @@ public class ShootingScheduler {
     private boolean feasible(ShootingDay day, Scene scene, List<ShootingDay> sch) {
         if (day.getUsedEights() + scene.getSceneLength() > MAX_EIGHTS_PER_DAY) //checks if it fits the limit
             return false;
+        if (day.getMoveCount() > 2) return false;
         int dayIndex = sch.indexOf(day);
         if (dayIndex > 0) {
             ShootingDay previousDay = sch.get(dayIndex - 1);
@@ -108,7 +109,6 @@ public class ShootingScheduler {
         if ((day.getTime() == ShootingDay.Time.NIGHT || day.getTime() == ShootingDay.Time.DAY_NIGHT) && scene.getShootPhase() == Scene.ShootPhase.DAY) {
             return false;
         }
-        if (day.getMoveCount() > 2) return false;
         return true;
     }
 
