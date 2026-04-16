@@ -5,12 +5,12 @@ import opennlp.tools.namefind.NameFinderME;
 import java.util.*;
 
 public class CharacterOperations {
-    private final NameDatabase nameDb;
+    //private final NameDatabase nameDb;
     private final NameFinderME nameFinderME;
     private final CharacterClusterer clusterer;
 
-    public CharacterOperations(NameDatabase nameDb, NameFinderME nameFinderME, CharacterClusterer clusterer) {
-        this.nameDb = nameDb;
+    public CharacterOperations(NameFinderME nameFinderME, CharacterClusterer clusterer) {
+        //this.nameDb = nameDb;
         this.nameFinderME = nameFinderME;
         this.clusterer = clusterer;
     }
@@ -18,7 +18,7 @@ public class CharacterOperations {
     //for each scene, extract all characters
     public void processScenes(List<Scene> scenes) {
         for (Scene scene : scenes) {
-            List<Character> extracted = CharacterPipeline.extractAll(scene, nameDb, nameFinderME);
+            List<Character> extracted = CharacterPipeline.extractAll(scene, nameFinderME);
 
             //each extracted character is associated with a scene object
             for (Character c : extracted) {
@@ -56,7 +56,19 @@ public class CharacterOperations {
                 //if no canonical name, the entry is skipped
                 if (key == null) continue;
                 //checks if the canonical name appears in this scene and adds it to the map if absent
-                uniqueByCanonical.putIfAbsent(key, c);
+//                uniqueByCanonical.putIfAbsent(key, c);
+
+                Character existing = uniqueByCanonical.get(key);
+
+                if (existing == null) {
+                    uniqueByCanonical.put(key,c);
+                }
+                else {
+                    //keeps the character with the higher confidence
+                    if (c.getConfidenceScore() > existing.getConfidenceScore()) {
+                        uniqueByCanonical.put(key,c);
+                    }
+                }
             }
             //resets the characters per scene with the unique values
             scene.setCharacters(new ArrayList<>(uniqueByCanonical.values()));

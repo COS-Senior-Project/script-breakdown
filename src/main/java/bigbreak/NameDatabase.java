@@ -38,22 +38,22 @@ public class NameDatabase {
             System.out.println("General exception: " + e.getMessage());
         }
     }
-    public boolean containInFirstNames(String word) {
+    public static boolean containInFirstNames(String word) {
         return FIRST_NAME_TRIE.contain(word);
     }
 
-    public boolean containInLastNames(String word) {
+    public static boolean containInLastNames(String word) {
         return LAST_NAME_TRIE.contain(word);
     }
     //checks if a string is found in the first or last name Trie structures
     //and boost confidence depending on where it is found
-    public double confidenceBoostMatchFile (String raw) {
+    public static double confidenceBoostMatchFile (String raw) {
         //if the string is null or empty, it returns 0 boost
         if (raw == null || raw.isEmpty()) return 0.0;
 
         String name = raw.toLowerCase();
         //creates an array with each word of the name
-        String[] parts = name.split("\\s+");
+        String[] parts = TextUnits.tokenize(name);
         double boost = 0.0;
 
         //if the first name matches
@@ -62,11 +62,15 @@ public class NameDatabase {
         }
 
         //if any last or middle names match
-        if (parts.length >= 1){
-            for (int i = 0; i < parts.length; i++) {
+        if (parts.length > 1){
+            for (int i = 1; i < parts.length; i++) {
                 if (LAST_NAME_TRIE.contain(parts[i])) {
                     boost += 0.4;
                 }
+            }
+        } else if (parts.length == 1) {
+            if (LAST_NAME_TRIE.contain(parts[0])) {
+                boost += 0.4;
             }
         }
 

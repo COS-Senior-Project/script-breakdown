@@ -25,7 +25,7 @@ public class ScriptProcessingService {
             sceneStore.put(scene.getSceneIntNumber(), scene);
         }
         //creates a name database object
-        NameDatabase nameDb = new NameDatabase();
+        //NameDatabase nameDb = new NameDatabase();
 
         //tries to load the NameFinderME file as a resource from the classpath
         try (InputStream modelIn = getClass().getResourceAsStream("/models/en-ner-person.bin")) {
@@ -35,7 +35,7 @@ public class ScriptProcessingService {
             NameFinderME nameFinderME = new NameFinderME(model);
 
             CharacterClusterer clusterer = new CharacterClusterer();
-            CharacterOperations characterOperations = new CharacterOperations(nameDb, nameFinderME, clusterer);
+            CharacterOperations characterOperations = new CharacterOperations(nameFinderME, clusterer);
             characterOperations.processScenes(scenes);
             //assigns the shoot phase to the scene
             TimeClassifier.resolveTimes(scenes);

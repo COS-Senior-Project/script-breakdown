@@ -52,7 +52,7 @@ public class Main {
             //List<String> trainEntries = new ArrayList<>();
 
             CharacterClusterer clusterer = new CharacterClusterer();
-            CharacterOperations characterOperations = new CharacterOperations(nameDb, nameFinderME, clusterer);
+            CharacterOperations characterOperations = new CharacterOperations(nameFinderME, clusterer);
             characterOperations.processScenes(scenes);
             //assigns the shoot phase to the scene
             TimeClassifier.resolveTimes(scenes);

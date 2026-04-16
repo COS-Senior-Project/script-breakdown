@@ -196,11 +196,13 @@ public class ScriptParser {
             if (h.find()) {
                 //If we were building a previous scene, finalize it now
                 if (currentHeading != null) {
-                    sceneRawCounter++;
-                    //around 55 lines per page
-                    sceneLengthEights = (int)Math.round((sceneLines/55.0) * 8);
-                    if (sceneLengthEights == 0) sceneLengthEights = 1;
-                    scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocationKeyword, currentLocation, currentTime, sceneLengthEights));
+                    if (!currentLocationKeyword.equals("OMITTED")) {
+                        sceneRawCounter++;
+                        //around 55 lines per page
+                        sceneLengthEights = (int)Math.round((sceneLines/55.0) * 8);
+                        if (sceneLengthEights == 0) sceneLengthEights = 1;
+                        scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocationKeyword, currentLocation, currentTime, sceneLengthEights));
+                    }
                     currentContent.setLength(0);
                     currentHeading = null;
                     currentLocationKeyword = null;
