@@ -213,7 +213,7 @@ function App() {
             <h2>Upload Script</h2>
 
             <input
-                type="file"
+                type="file" accept='.txt'
                 onChange={(e) => handleUpload(e.target.files[0])}
             />
             <DndContext

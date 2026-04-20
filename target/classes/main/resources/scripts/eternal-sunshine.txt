@@ -139,7 +139,7 @@ leave.
 	Order me a pastrami for after?
 
 		MARY
-	Cole slaw, ice tea?
+	Ice tea?
 
 		MIERZWIAK
 		(nodding)
@@ -429,8 +429,8 @@ title.
 
 EXT. BEACH - DAY
 
-Joel stares out at the ocean.  Far down the beach Clementine
-stares at it, too.  Joel glances sideways at her then back at
+Joel stares out at the ocean.  Far down the beach Clementine stares at it,
+ too.  Joel glances sideways at her then back at
 the ocean.
 
 EXT. MONTAUK TRAIN STATION PLATFORM - LATE AFTERNOON
@@ -612,7 +612,7 @@ came from.
 	I don't really know how --
 
 		CLEMENTINE
-	Purple Haze, Pink Eraser.
+	Purple Haze Pink Eraser.
 
 		JOEL
 	You think that could possibly be a full
@@ -631,8 +631,7 @@ came from.
 	I'm sure you would.
 
 		CLEMENTINE
-	My writing career!  Your hair written by
-	Clementine Kruczynski.
+	My writing career!  Your hair written by Clementine Kruczynski.
 		(thought)
 	The Tom Waits album is Rain Dogs.
 
@@ -835,9 +834,8 @@ Clementine sits and stares out the window.
 
 INT. TRAIN - LATER
 
-There are a few more people in the car now.  Clementine has
-inched a few seats closer to Joel.  She watches him.  His
-head is immersed in his journal.
+There are a few more people in the car now.  Clementine has inched a few seats closer to Joel.
+She watches him.  His head is immersed in his journal.
 
 INT. TRAIN - LATER
 
@@ -1153,7 +1151,7 @@ kitchen.
 
 		CLEMENTINE (CONT'D) (O.S.) (CONT'D)
 	God bless alcohol, is what I say.  Where
-	would I be without it.  Oh, Jesus, Mary,
+	would I be without it.  Oh, Jesus Mary
 	and Joseph, maybe I don't want to think
 	about that.
 
@@ -1477,7 +1475,7 @@ street.  There are two dark figures inside.
 		VOICE-OVER
 	Them.
 
-He hurries inside the building.
+Joel hurries inside the building.
 
 INT. JOEL'S APARTMENT - NIGHT
 
@@ -1727,7 +1725,7 @@ van.  We've seen this before, but it's dried out now.
 EXT. NEW YORK STREET - DAY
 
 Joel trudges along carrying two big trash bags full of stuff.
-He's been crying.  He looks behind him and finds himself
+He's been crying. Joel looks behind him and finds himself
 looking out the window of his apartment at the dark van on
 the snowy street.  He turns back to the New York Street and
 spots the address he was looking for: 610 11th Avenue.
@@ -6338,8 +6336,8 @@ Old Howard works at his desk.  Old Mary enters with the
 second old woman.
 
 		OLD WOMAN (MARY)
-	Dr. Mierzwiak, this is Clementine
-	Kruczynski.  She'd like to talk to you.
+	Dr. Mierzwiak, this is Clementine Kruczynski.
+	She'd like to talk to you.
 
 Old Howard and the old Mary eye each other.
 

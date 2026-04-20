@@ -71,71 +71,71 @@ public abstract class ExtractableItem {
 
     //non-abstract methods
 
-    //returns a string in OpenNLP training format
-    public String bootstrappingObjects(String classLabel) {
-        //tokenizes the text around the nameItem
-        String[] tokens = TextUnits.tokenize(this.contextSnippet);
-        //string builder to store the training line at the end
-        StringBuilder sb = new StringBuilder();
-        //splits the name in separate words if more than one word
-        String[] nameWords = nameItem.toLowerCase()
-                .replaceAll("[^a-zA-Z\\.'’\\-]", " ")
-                .replaceAll("\\.", " .")
-                .replaceAll("\\s+", " ")
-                //splits on space, dash, or apostrophe
-                //keeps the dash/apostrophe as an array value
-                //it makes working with - or ' names possible
-                .trim().split("(?=['\\-])|(?<=['\\-])|\\s+");
-        //the number of words in the character's name
-        int nameWordCount = nameWords.length;
-        //index to walk through tokens
-        int i = 0;
-        //loops through all tokens of the snippet
-        while (i < tokens.length) {
-            //will check if the current position of i matches the full name
-            boolean match = true;
-            //checks if there are enough tokens left for the name
-            if (i + nameWordCount <= tokens.length) {
-                //loops through each token of the name
-                for (int j = 0; j < nameWordCount; j++) {
-                    //normalizes the token to lowercase and removes punctuation
-                    String cleaned = tokens[i + j].toLowerCase().replaceAll("[^a-zA-Z\\.'’\\-]", "");
-                    //if any of the character name words, doesn't match this position of the snippet
-                    //break out the name loop and move to the next snippet token
-                    if (!cleaned.equals(nameWords[j])) {
-                        match = false;
-                        break;
-                    }
-                }
-            } else { //if the tokens are not enough, no match
-                match = false;
-            }
-            //if the match is found
-            if (match) {
-                //inserts <START:LABEL>
-                sb.append("<START:").append(classLabel).append("> ");
-
-                //appends the actual name tokens
-                for (int j = 0; j < nameWordCount; j++) {
-                    if (j > 0) sb.append(" ");
-                    sb.append(tokens[i + j]);
-                }
-
-                //appends <END>
-                sb.append(" <END> ");
-                //skips past the name
-                i += nameWordCount;
-            }
-            else { //if there is no match
-                //appends the current token to the result snippet
-                sb.append(tokens[i]).append(" ");
-                //moves to the next snippet token
-                i++;
-            }
-        }
-        //returns the final training line
-        return sb.toString().replace("/", "\n").trim();
-    }
+//    //returns a string in OpenNLP training format
+//    public String bootstrappingObjects(String classLabel) {
+//        //tokenizes the text around the nameItem
+//        String[] tokens = TextUnits.tokenize(this.contextSnippet);
+//        //string builder to store the training line at the end
+//        StringBuilder sb = new StringBuilder();
+//        //splits the name in separate words if more than one word
+//        String[] nameWords = nameItem.toLowerCase()
+//                .replaceAll("[^a-zA-Z\\.'’\\-]", " ")
+//                .replaceAll("\\.", " .")
+//                .replaceAll("\\s+", " ")
+//                //splits on space, dash, or apostrophe
+//                //keeps the dash/apostrophe as an array value
+//                //it makes working with - or ' names possible
+//                .trim().split("(?=['\\-])|(?<=['\\-])|\\s+");
+//        //the number of words in the character's name
+//        int nameWordCount = nameWords.length;
+//        //index to walk through tokens
+//        int i = 0;
+//        //loops through all tokens of the snippet
+//        while (i < tokens.length) {
+//            //will check if the current position of i matches the full name
+//            boolean match = true;
+//            //checks if there are enough tokens left for the name
+//            if (i + nameWordCount <= tokens.length) {
+//                //loops through each token of the name
+//                for (int j = 0; j < nameWordCount; j++) {
+//                    //normalizes the token to lowercase and removes punctuation
+//                    String cleaned = tokens[i + j].toLowerCase().replaceAll("[^a-zA-Z\\.'’\\-]", "");
+//                    //if any of the character name words, doesn't match this position of the snippet
+//                    //break out the name loop and move to the next snippet token
+//                    if (!cleaned.equals(nameWords[j])) {
+//                        match = false;
+//                        break;
+//                    }
+//                }
+//            } else { //if the tokens are not enough, no match
+//                match = false;
+//            }
+//            //if the match is found
+//            if (match) {
+//                //inserts <START:LABEL>
+//                sb.append("<START:").append(classLabel).append("> ");
+//
+//                //appends the actual name tokens
+//                for (int j = 0; j < nameWordCount; j++) {
+//                    if (j > 0) sb.append(" ");
+//                    sb.append(tokens[i + j]);
+//                }
+//
+//                //appends <END>
+//                sb.append(" <END> ");
+//                //skips past the name
+//                i += nameWordCount;
+//            }
+//            else { //if there is no match
+//                //appends the current token to the result snippet
+//                sb.append(tokens[i]).append(" ");
+//                //moves to the next snippet token
+//                i++;
+//            }
+//        }
+//        //returns the final training line
+//        return sb.toString().replace("/", "\n").trim();
+//    }
 
     /*
     @Override

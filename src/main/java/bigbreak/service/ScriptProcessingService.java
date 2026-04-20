@@ -1,15 +1,18 @@
 package bigbreak.service;
 
 import bigbreak.*;
+import bigbreak.Character;
 import bigbreak.dtos.DayDTO;
 import bigbreak.dtos.SceneDTO;
 import bigbreak.dtos.ScheduleDTO;
+import bigbreak.test.CharacterExtractionEvaluationTest;
+import bigbreak.test.SceneTestData;
+import bigbreak.test.JsonLoader;
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.TokenNameFinderModel;
 import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
-import java.lang.Character;
 import java.util.*;
 
 @Service
@@ -21,6 +24,7 @@ public class ScriptProcessingService {
         ScriptParser parser = new ScriptParser();
         //the parser splits the script into scenes and puts them in a list
         List<Scene> scenes = parser.splitScenes(script);
+        //List<SceneTestData> groundTruth = JsonLoader.load("D:/AUBG/COS/senior-project/script-breakdown/src/main/resources/test/ground_truth_eternal_sunshine.json");
         for (Scene scene : scenes) {
             sceneStore.put(scene.getSceneIntNumber(), scene);
         }
@@ -42,6 +46,8 @@ public class ScriptProcessingService {
             //schedules the scenes
             ShootingScheduler scheduler = new ShootingScheduler(45);
             List<ShootingDay> shootingDays = scheduler.schedule(scenes);
+
+            //CharacterExtractionEvaluationTest.evaluate(groundTruth, scenes);
             return mapToDTO(shootingDays);
         }
     }
