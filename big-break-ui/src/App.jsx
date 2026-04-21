@@ -20,7 +20,9 @@ function App() {
             });
 
             if (!response.ok) {
-                throw new Error ("Upload failed");
+                const errorMessage = await response.text();
+                alert(`Error ${response.status}: ${errorMessage}`);
+                return;
             }
 
             const data = await response.json();
@@ -32,7 +34,7 @@ function App() {
             });
             setSchedule(data.days);
         } catch (error) {
-            console.error(error)
+            console.error("Upload failed:", error)
         }
     };
 

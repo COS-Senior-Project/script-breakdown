@@ -9,29 +9,29 @@ import java.util.*;
 
 public class ScriptParser {
     //load a script file using the ScriptParser class
-    public static String loadScript (String filePath) throws IOException {
-        return loadScript(ScriptParser.class, filePath);
-    }
+//    public static String loadScript (String filePath) throws IOException {
+//        return loadScript(ScriptParser.class, filePath);
+//    }
     //loads the script file using non-specific class and classpath
-    public static String loadScript(Class<?> className,String filePath) throws IOException {
-        //tries to load input stream from the classpath
-        try (InputStream in = className.getResourceAsStream(filePath)) {
-            //if the input stream is null, throw an exception
-            if (in == null) {
-                throw new IllegalArgumentException("Resource path not found: " + filePath);
-            }
-            //reads the bytes of the script into a string
-            String script = new String(in.readAllBytes());
-            //normalizes the script
-            script = script
-                    .replaceAll("\u00A0", " ") //replaces non-breaking spaces
-                    .replaceAll("\\r", "") //normalizes line breaks (carriage returns)
-                    .replaceAll("(?m)^\\s+", "") //removes leading spaces on each line
-                    .replaceAll("(?m)\\s+$", ""); //removes trailing spaces
-            //returns the normalized string
-            return script;
-        }
-    }
+//    public static String loadScript(Class<?> className,String filePath) throws IOException {
+//        //tries to load input stream from the classpath
+//        try (InputStream in = className.getResourceAsStream(filePath)) {
+//            //if the input stream is null, throw an exception
+//            if (in == null) {
+//                throw new IllegalArgumentException("Resource path not found: " + filePath);
+//            }
+//            //reads the bytes of the script into a string
+//            String script = new String(in.readAllBytes());
+//            //normalizes the script
+//            script = script
+//                    .replaceAll("\u00A0", " ") //replaces non-breaking spaces
+//                    .replaceAll("\\r", "") //normalizes line breaks (carriage returns)
+//                    .replaceAll("(?m)^\\s+", "") //removes leading spaces on each line
+//                    .replaceAll("(?m)\\s+$", ""); //removes trailing spaces
+//            //returns the normalized string
+//            return script;
+//        }
+//    }
 
     //Removes page headers/footers and obvious page number-only lines,
     //but only if they are not immediately followed by a heading keyword
@@ -41,7 +41,7 @@ public class ScriptParser {
 
         Pattern numberOnly = Pattern.compile("^\\s*(\\d+)\\s*\\.?\\s*\\*?\\s*$"); //"98", "98.", "98 *"
         Pattern repeatedNumberLine = Pattern.compile("^\\s*(\\d+)\\s+\\1\\s*$"); //"98  98"
-        Pattern headingKeyword = Pattern.compile("^(INT\\.?|EXT\\.?|INT/EXT\\.?|EXT/INT\\.?|I/E\\.?|EST\\.?|OMITTED)\\b",
+        Pattern headingKeyword = Pattern.compile("^(INT\\.?|EXT\\.?|INT\\.?/EXT\\.?|EXT/INT\\.?|I/E\\.?|EST\\.?|OMITTED)\\b",
                 Pattern.CASE_INSENSITIVE);
 
 
@@ -109,9 +109,9 @@ public class ScriptParser {
         //Patterns
         Pattern numberOnly = Pattern.compile("^\\s*(\\d+[A-Z]?)\\s*\\.?\\s*\\*?\\s*$"); // "98" or "98A"
         Pattern repeatedNumber = Pattern.compile("^\\s*(\\d+[A-Z]?\\.*\\*?)\\s+\\1\\s*$"); // "98   98"
-        Pattern headingPattern = Pattern.compile("^\\s*(?:((\\d+[A-Z]?)\\s*\\.?\\s*\\*?\\s+)?(INT\\.?|EXT\\.?|INT/EXT\\.?|EXT/INT\\.?|I/E\\.?|E/I\\.?|EST\\.?|OMITTED)\\b\\s*([^\\-\\n]*?)(?:-\\s*(.*?))?(?:\\s+(\\d+[A-Z]?)\\s*\\.?\\s*\\*?)?\\s*)$",
+        Pattern headingPattern = Pattern.compile("^\\s*(?:((\\d+[A-Z]?)\\s*\\.?\\s*\\*?\\s+)?(INT\\.?/EXT\\.?|EXT\\.?/INT\\.?|INT\\.?|EXT\\.?|I\\.?/E\\.?|E\\.?/I\\.?|EST\\.?|OMITTED)\\b\\s*([^\\-\\n]*?)(?:-\\s*(.*?))?(?:\\s+(\\d+[A-Z]?)\\s*\\.?\\s*\\*?)?\\s*)$",
                 Pattern.CASE_INSENSITIVE);
-        Pattern headingKeyword = Pattern.compile("^(INT\\.?|EXT\\.?|INT/EXT\\.?|EXT/INT\\.?|I/E\\.?|E/I\\.?|EST\\.?|OMITTED)\\b",
+        Pattern headingKeyword = Pattern.compile("^(INT\\.?/EXT\\.?|EXT\\.?/INT\\.?|INT\\.?|EXT\\.?|I/E\\.?|E/I\\.?|EST\\.?|OMITTED)\\b",
                 Pattern.CASE_INSENSITIVE);
 
         List<Scene> scenes = new ArrayList<>();
@@ -131,7 +131,7 @@ public class ScriptParser {
         int sceneLines = 0;
         int sceneLengthEights = 0;
 
-        boolean debug = false;
+        //boolean debug = false;
 
         for (int i = 0; i < lines.length; i++) {
             String raw = lines[i];
@@ -160,11 +160,11 @@ public class ScriptParser {
                 if (nextIsHeading) {
                     //this is a scene-number line (store and skip it, the next line will be heading)
                     pendingSceneNumber = numOnlyM.group(1); //e.g., "98" or "98A"
-                    if (debug) System.out.println("DEBUG: pending scene number = " + pendingSceneNumber + " (line " + i + ")");
+                    //if (debug) System.out.println("DEBUG: pending scene number = " + pendingSceneNumber + " (line " + i + ")");
                     continue; //proceed to the line (which should be the heading)
                 } else {
                     //it's a page number or stray number -> skip it
-                    if (debug) System.out.println("DEBUG: dropped page number line: " + line + " (line " + i + ")");
+                    //if (debug) System.out.println("DEBUG: dropped page number line: " + line + " (line " + i + ")");
                     continue;
                 }
             }
@@ -182,11 +182,11 @@ public class ScriptParser {
                 if (nextIsHeading) {
                     //this is a scene-number line (store and skip it, the next line will be heading)
                     pendingSceneNumber = repeatedNumM.group(1); //e.g., "98     98" or "98A     98A"
-                    if (debug) System.out.println("DEBUG: pending scene number = " + pendingSceneNumber + " (line " + i + ")");
+                    //if (debug) System.out.println("DEBUG: pending scene number = " + pendingSceneNumber + " (line " + i + ")");
                     continue; //proceed to the line (which should be the heading)
                 } else {
                     //it's a page number or stray number -> skip it
-                    if (debug) System.out.println("DEBUG: dropped page number line: " + line + " (line " + i + ")");
+                    //if (debug) System.out.println("DEBUG: dropped page number line: " + line + " (line " + i + ")");
                     continue;
                 }
             }
@@ -255,9 +255,9 @@ public class ScriptParser {
                 if (sceneNumber.matches("^\\d+$")) {
                     fallbackCounter = Integer.parseInt(sceneNumber) + 1;
                 }
-                if (debug) {
-                    System.out.println("DEBUG: new heading -> sceneNumber=" + currentSceneNumber + ", heading='" + currentHeading + "'");
-                }
+//                if (debug) {
+//                    System.out.println("DEBUG: new heading -> sceneNumber=" + currentSceneNumber + ", heading='" + currentHeading + "'");
+//                }
                 continue; //heading handled
             }
             //Not a heading, not a page number: treat as content for current scene (if any)
@@ -273,11 +273,13 @@ public class ScriptParser {
         }
         //finalize last scene
         if (currentHeading != null) {
-            sceneRawCounter++;
-            //around 55 lines per page
-            sceneLengthEights = (int)Math.round((sceneLines/55.0) * 8);
-            if (sceneLengthEights == 0) sceneLengthEights = 1;
-            scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocationKeyword, currentLocation, currentTime, sceneLengthEights));
+            if (!currentLocationKeyword.equals("OMITTED")) {
+                sceneRawCounter++;
+                //around 55 lines per page
+                sceneLengthEights = (int)Math.round((sceneLines/55.0) * 8);
+                if (sceneLengthEights == 0) sceneLengthEights = 1;
+                scenes.add(new Scene(sceneRawCounter, currentSceneNumber, currentHeading, currentContent.toString().trim(), currentLocationKeyword, currentLocation, currentTime, sceneLengthEights));
+            }
         }
         return scenes;
     }

@@ -1,13 +1,9 @@
 package bigbreak.service;
 
 import bigbreak.*;
-import bigbreak.Character;
 import bigbreak.dtos.DayDTO;
 import bigbreak.dtos.SceneDTO;
 import bigbreak.dtos.ScheduleDTO;
-import bigbreak.test.CharacterExtractionEvaluationTest;
-import bigbreak.test.SceneTestData;
-import bigbreak.test.JsonLoader;
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.TokenNameFinderModel;
 import org.springframework.stereotype.Service;
@@ -28,8 +24,6 @@ public class ScriptProcessingService {
         for (Scene scene : scenes) {
             sceneStore.put(scene.getSceneIntNumber(), scene);
         }
-        //creates a name database object
-        //NameDatabase nameDb = new NameDatabase();
 
         //tries to load the NameFinderME file as a resource from the classpath
         try (InputStream modelIn = getClass().getResourceAsStream("/models/en-ner-person.bin")) {

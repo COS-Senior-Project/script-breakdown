@@ -96,6 +96,10 @@ public class ShootingScheduler {
 
     //checks if the basic requirements are met for scene to match a day
     private boolean feasible(ShootingDay day, Scene scene, List<ShootingDay> sch) {
+//        int moveWeightCheck = 0;
+//        if (!day.getLocationSet().contains(scene.getLocation())) {
+//            moveWeightCheck = 8;
+//        }
         if (day.getUsedEights() + scene.getSceneLength() > MAX_EIGHTS_PER_DAY) //checks if it fits the limit
             return false;
         if (day.getMoveCount() > 2) return false;

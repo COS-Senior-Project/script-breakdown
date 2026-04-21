@@ -20,15 +20,12 @@ public class FileUploadController {
     ScriptProcessingService service;
     @PostMapping("/upload-script")
     public ResponseEntity<?> uploadScript(@RequestParam("file") MultipartFile file) throws IllegalAccessException {
-        if (!file.getOriginalFilename().endsWith(".txt")) {
-            throw new IllegalAccessException("Only .txt files allowed.");
+        if (file.getOriginalFilename() == null || !file.getOriginalFilename().toLowerCase().endsWith(".txt")) {
+            return ResponseEntity.badRequest().body("Only .txt files are allowed.");
         }
         try {
-            long start = System.nanoTime();
             String scriptText = new String(file.getBytes());
             var result = service.processScript(scriptText);
-            long duration = (System.nanoTime() - start) / 1_000_000;
-            System.out.println("Time: " + duration + " ms");
             return ResponseEntity.ok(result);
         } catch (Exception e) {
             e.printStackTrace();
