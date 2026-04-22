@@ -7,19 +7,11 @@
     <list default="true" id="3256b56e-017d-4cc6-9e8d-db3d5dea2c0b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Vili-An_Doneva_Diploma_Thesis.docx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Vili-An_Doneva_Diploma_Thesis.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterClusterer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterClusterer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/ShootingDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/ShootingDay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/ShootingScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/ShootingScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/scripts/eternal-sunshine.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scripts/eternal-sunshine.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/scripts/interstellar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scripts/interstellar.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/CharacterClusterer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/CharacterClusterer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scripts/example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scripts/example.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/CharacterExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/CharacterExtractor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/ShootingDay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/ShootingDay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/ShootingScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/ShootingScheduler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scripts/eternal-sunshine.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/eternal-sunshine.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scripts/interstellar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/interstellar.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/bigbreak/service/GroupSceneLocationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/bigbreak/service/GroupSceneLocationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/scripts/example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/example.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

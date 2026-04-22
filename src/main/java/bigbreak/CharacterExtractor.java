@@ -21,7 +21,7 @@ public class CharacterExtractor {
     // followed by more upper-cased letters, digits, apostrophes, periods, or dashes
     private static final Pattern NAME_TOKEN = Pattern.compile("^[A-Z][A-Z0-9]*$");
     //pattern looks for a person's name when introducing characters
-    private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|this is|Enter|enter|Entering|entering|Introducing|introducing|It's|it's|It is|it is)\\s+([A-Z0-9'’\\.\\-]+(?:\\s+[A-Z0-9'’\\.\\-]+){0,2})(?=\\s|$|,|\\.)");
+    private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|this is|Enter|Enters|enters|enter|Entering|entering|Introducing|introducing|It's|it's|It is|it is)\\s+([A-Z0-9'’\\.\\-]+(?:\\s+[A-Z0-9'’\\.\\-]+){0,2})(?=\\s|$|,|\\.)");
     //pattern looks for a character name before age when first introduced
     private static final Pattern NAME_WITH_AGE = Pattern.compile("\\b([A-Z][A-Z0-9'’.\\-]*(?:\\s+[A-Z][A-Z0-9'’.\\-]*){0,2})\\b(?:\\s*(?:\\(|,)\\s*(\\d{1,3}(?:['’]?s)?)\\)?)");
     //set of black list words that are definitely not names
@@ -257,7 +257,6 @@ public class CharacterExtractor {
                 String normalized = normalizeName(candidate);
                 if (isStopPhrase(normalized)) continue;
                 confidence += NameDatabase.confidenceBoostMatchFile(normalized);
-                //Matcher matchExtraNoun = PERSON_NOUN.matcher(trimmed);
 
                 if (!candidate.isEmpty()) {
                     result.add(new Character(
