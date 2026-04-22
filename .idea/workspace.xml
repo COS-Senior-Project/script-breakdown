@@ -15,7 +15,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/scripts/interstellar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scripts/interstellar.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/CharacterClusterer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/CharacterClusterer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/CharacterExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/CharacterExtractor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/ShootingDay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/ShootingDay.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/ShootingScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/ShootingScheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/scripts/eternal-sunshine.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/eternal-sunshine.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/scripts/interstellar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/interstellar.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/bigbreak/service/GroupSceneLocationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/bigbreak/service/GroupSceneLocationTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

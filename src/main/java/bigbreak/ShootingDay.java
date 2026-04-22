@@ -136,7 +136,6 @@ public class ShootingDay {
                 continue;
             }
         }
-
         this.locationSet = seenLocations;
         this.moveCount = seenLocations.size() - 1;
     }
