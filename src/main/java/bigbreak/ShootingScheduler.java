@@ -43,6 +43,7 @@ public class ShootingScheduler {
                     //weighted score based on the priorities of the matching - cast similarity, scene order, and not too packed days
                     double score = 0;
                     score =  locationScore(day, scene) + timeScore(day, scene) + castOverlapScore(day, scene) * 20.0 + orderScore(day, scene) * 2.0 + loadPenalty(day, scene);
+//                    System.out.println("Score: " + score);
                     //if the score of this scene is larger than the previous best one
                     if (score > bestScore) {
                         //best score and best day are set to the current score and day
@@ -64,6 +65,8 @@ public class ShootingScheduler {
                     newDay.setMove(ShootingDay.Move.NO_MOVE);
                     schedule.add(newDay);
                 } else {
+//                    System.out.println("Best day for scene " + scene.getSceneNumber() + ": day " + bestDay.getDayNumber());
+//                    System.out.println("Best score for scene " + scene.getSceneNumber() + ": " + bestScore + "\n ---------------------------------------");
                     //after checking all scheduled days and the best day for the scene is found, the scene is added to it
                     if (!bestDay.getLocationSet().contains(scene.getLocation())) {
                         bestDay.setMove(ShootingDay.Move.MOVE);
@@ -84,19 +87,29 @@ public class ShootingScheduler {
 
     //checks if the basic requirements are met for scene to match a day
     private boolean feasible(ShootingDay day, Scene scene, List<ShootingDay> sch) {
-        if (day.getUsedEights() + scene.getSceneLength() > MAX_EIGHTS_PER_DAY) //checks if it fits the limit
+//        System.out.println("Trying to add scene " + scene.getSceneNumber() + " to day " + day.getDayNumber());
+        int moveWeightCheck = 0;
+        if (!day.getLocationSet().contains(scene.getLocation())) {
+            moveWeightCheck = 8;
+        }
+        if (day.getUsedEights() + scene.getSceneLength() + moveWeightCheck > MAX_EIGHTS_PER_DAY) //checks if it fits the limit
             return false;
+//        System.out.println("Scene length check passed");
         if (day.getMoveCount() > 2) return false;
+//        System.out.println("Move check passed");
         int dayIndex = sch.indexOf(day);
         if (dayIndex > 0) {
             ShootingDay previousDay = sch.get(dayIndex - 1);
             if (previousDay.getTime() == ShootingDay.Time.NIGHT && scene.getShootPhase() == Scene.ShootPhase.DAY) {
+//                System.out.println("Previous Night Day Check DID NOT Pass");
                 return false;
             }
         }
+//        System.out.println("Previous Night Day Check Passed");
         if ((day.getTime() == ShootingDay.Time.NIGHT || day.getTime() == ShootingDay.Time.DAY_NIGHT) && scene.getShootPhase() == Scene.ShootPhase.DAY) {
             return false;
         }
+//        System.out.println("No day after night check");
         return true;
     }
 
@@ -116,7 +129,6 @@ public class ShootingScheduler {
     }
 
     private double timeScore (ShootingDay day, Scene scene) {
-        //if (day.getTime() == null) { return 0; }
         if (scene.getShootPhase().name().equals(day.getTime().name())) {
             return 200;
         }
@@ -153,6 +165,9 @@ public class ShootingScheduler {
         if (ratio > 1.0) {
             return -200;
         }
-        return ratio * 200;
+        if (ratio < 0.50) {
+            return 200;
+        }
+        return 0;
     }
 }

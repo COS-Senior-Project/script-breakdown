@@ -114,6 +114,7 @@ public class ShootingDay {
     }
     public void recalculate() {
         this.locationSet.clear();
+        this.time = null;
         this.moveCount = 0;
 
         Set<String> seenLocations = new LinkedHashSet<>();
@@ -121,6 +122,18 @@ public class ShootingDay {
         for (Scene s : scenes) {
             if (s.getLocation() != null) {
                 seenLocations.add(s.getLocation());
+            }
+            if (s.getShootPhase() == Scene.ShootPhase.DAY && (time == Time.DAY || time == null)) {
+                time = Time.DAY;
+            }
+            else if (s.getShootPhase() == Scene.ShootPhase.NIGHT && (time == Time.NIGHT) || time == null) {
+                time = Time.NIGHT;
+            }
+            else if ((s.getShootPhase() == Scene.ShootPhase.DAY && time == Time.NIGHT) || (s.getShootPhase() == Scene.ShootPhase.NIGHT && time == Time.DAY)) {
+                time = Time.DAY_NIGHT;
+            }
+            else {
+                continue;
             }
         }
 

@@ -49,8 +49,8 @@ public class CharacterClusterer {
                 Set<String> ta = new HashSet<>(Arrays.asList(TextUnits.tokenize(a)));
                 Set<String> tb = new HashSet<>(Arrays.asList(TextUnits.tokenize(b)));
 
-                boolean hasGenericA = ta.contains("MAN") || ta.contains("WOMAN");
-                boolean hasGenericB = tb.contains("MAN") || tb.contains("WOMAN");
+                boolean hasGenericA = ta.contains("MAN") || ta.contains("WOMAN") || ta.contains("#");
+                boolean hasGenericB = tb.contains("MAN") || tb.contains("WOMAN") || tb.contains("#");
 
                 if (hasGenericA || hasGenericB) {
                     continue;

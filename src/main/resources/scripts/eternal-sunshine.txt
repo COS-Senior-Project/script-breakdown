@@ -1892,7 +1892,7 @@ The memory is becoming vague, characters' affects flat.  Stan
 pulls out a pile of loose-leaf pages.  Mierzwiak smiles.
 
 		MIERZWIAK
-	Ah, your journal.  This will be
+	Ah your journal.  This will be
 	invaluable.
 
 		STAN
@@ -5200,7 +5200,7 @@ She's searching through drawers for something.  She pulls out
 a flashlight, shines it in Joel's face.
 
 		CLEMENTINE
-	Ah-ha!  Now I can look for candles,
+	Ha!  Now I can look for candles,
 	matches, and the liquor cabinet.
 
 		JOEL

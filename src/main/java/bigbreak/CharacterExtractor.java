@@ -11,11 +11,12 @@ public class CharacterExtractor {
     private static final Pattern MULTI_WORD_NAME = Pattern.compile(
             "^\\b(?:(?:MR|MRS|MS|DR)\\.?)?\\s*" +
                     "\\b((?:[A-Z][A-Z0-9'’\\.\\-]*)" +
-            "(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*)*)\\b" +
+            "(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*)*" +
+                    "(?:\\s+#\\d+)?)" +
                     "(?:\\s+VOICE\\b)?" +
                     "(?:\\s*\\(([^)]*)\\))?$");
     //the pattern looks for an uppercase name followed by (V.O./V/O), (O.S./O/S), (O.C./O/C), or (CONT'D)
-    private static final Pattern NAME_WITH_PAREN = Pattern.compile("^(?:(?:MR|MRS|MS|DR)\\.?)?\\s*([A-Z][A-Z0-9'’\\.\\-]*(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*)*)(?:\\s*\\(([^)]*)\\))?\\s*\\((V\\.O\\.|V/O|O\\.S\\.|O/S|O\\.C\\.|O/C|CONT'D)\\)\\s*$");
+    private static final Pattern NAME_WITH_PAREN = Pattern.compile("^(?:(?:MR|MRS|MS|DR)\\.?)?\\s*([A-Z][A-Z0-9'’\\.\\-]*(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*)*(?:\\s+#\\d+)?)(?:\\s*\\(([^)]*)\\))?\\s*\\((V\\.O\\.|V/O|O\\.S\\.|O/S|O\\.C\\.|O/C|CONT'D)\\)\\s*$");
     //pattern looks for a string starting with one upper-cased letter
     // followed by more upper-cased letters, digits, apostrophes, periods, or dashes
     private static final Pattern NAME_TOKEN = Pattern.compile("^[A-Z][A-Z0-9]*$");
@@ -51,7 +52,7 @@ public class CharacterExtractor {
             "DETECTIVE", "NURSE", "SOLDIER", "SCIENTIST", "SINGER", "CHEF", "PILOT",
             "PHOTOGRAPHER", "FIREFIGHTER", "THIEF", "ARTIST", "VILLAIN", "PRIEST",
             "POLITICIAN", "VICTIM", "RECEPTIONIST", "WAITER", "WAITRESS", "MOTHER", "FATHER",
-            "MALE", "FEMALE", "YOUNG", "OLD", "ASIAN", "CAUCASIAN", "LATIN"
+            "MALE", "FEMALE", "YOUNG", "OLD", "ASIAN", "CAUCASIAN", "LATIN", "EMPLOYEE"
     ));
     //extracts names above dialogue
     public static List <Character> extractSpeakerCues(String content, Scene scene) {
@@ -314,13 +315,13 @@ public class CharacterExtractor {
         int nameTokens = 0;
         //total token counter equals the total length of all tokens
         int tokenCount = toks.length;
-        int parenthesisCount = 0;
+        int allowedPunctCount = 0;
         double percentage = 0.65;
 
         //loops through each token of the line
         for (String t : toks){
-            if (t.matches("\\(") || t.matches("\\)")){
-                parenthesisCount++;
+            if (t.matches("\\(") || t.matches("\\)") || t.matches("#")){
+                allowedPunctCount++;
                 percentage = 0.5;
             }
             //normalizes token for matching (strip punctuation that tokenizer may still keep)
@@ -337,7 +338,7 @@ public class CharacterExtractor {
         if (nameTokens == 0) return false;
 
         //if the name token count is at least 65% of the total count and the total token count is at most 5
-        if (nameTokens >= Math.ceil((tokenCount - parenthesisCount) * percentage) && (tokenCount - parenthesisCount) <= 5){
+        if (nameTokens >= Math.ceil((tokenCount - allowedPunctCount) * percentage) && (tokenCount - allowedPunctCount) <= 5){
             //rejects if non-word specific punctuation appears
             if (line.matches(".*[!\\?,;:].*")) return false;
             return true;
