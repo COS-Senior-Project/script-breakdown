@@ -3,8 +3,7 @@ package bigbreak;
 import java.io.*;
 
 //class working with the name file databases
-//it loads the files and creates a function checking
-// if the word is in the Trie structure
+//it loads the files and creates a function checking if the word is in the Trie structure
 public class NameDatabase {
     //objects for the first name and the last name trie structures
     public static final NameTrie FIRST_NAME_TRIE = new NameTrie();
@@ -45,8 +44,7 @@ public class NameDatabase {
     public static boolean containInLastNames(String word) {
         return LAST_NAME_TRIE.contain(word);
     }
-    //checks if a string is found in the first or last name Trie structures
-    //and boost confidence depending on where it is found
+    //checks if a string is found in the first or last name Trie structures and boost confidence depending on where it is found
     public static double confidenceBoostMatchFile (String raw) {
         //if the string is null or empty, it returns 0 boost
         if (raw == null || raw.isEmpty()) return 0.0;
@@ -73,7 +71,6 @@ public class NameDatabase {
                 boost += 0.4;
             }
         }
-
         //returns the boost, and returns 1 if the boost is higher than that
         return Math.min(boost, 1.0);
     }

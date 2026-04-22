@@ -3,9 +3,6 @@ package bigbreak;
 import java.util.*;
 
 public class CharacterClusterer {
-    //private static final double JW_THRESHOLD = 0.95;
-    //private static final int LEV_THRESHOLD = 3;
-
     private static class UnionFind {
         private final int[] parent;
 
@@ -35,10 +32,8 @@ public class CharacterClusterer {
         //if the set is empty, nothing to cluster
         if (rawNames == null || rawNames.isEmpty()) return new HashMap<>();
 
-        //Set<String> orderedNames = new LinkedHashSet<>(rawNames);
         //turns the linked hash set into a list with indices
         List<String> rawNamesList = new ArrayList<>(rawNames);
-
         int n = rawNamesList.size();
         //creates a union-find object which makes each name a separate cluster
         UnionFind uf = new UnionFind(n);
@@ -92,8 +87,7 @@ public class CharacterClusterer {
             clusters.computeIfAbsent(root, k -> new ArrayList<>()).add(i);
         }
 
-        //creates a map that will hold the raw name as a key
-        // and the chosen canonical name for the cluster
+        //creates a map that will hold the raw name as a key and the chosen canonical name for the cluster
         Map<String, String> output = new HashMap<>();
         //loops through each cluster
         for (List<Integer> cluster : clusters.values()) {

@@ -8,7 +8,6 @@ public class DayDTO {
     private String time;
     private String move;
     private int moveCount;
-    private String pageCount;
     private int pageCountEights;
     private int eightsWoMoves;
     private Set<String> locations;
@@ -28,14 +27,6 @@ public class DayDTO {
 
     public void setTime(String time) {
         this.time = time;
-    }
-
-    public String getPageCount() {
-        return pageCount;
-    }
-
-    public void setPageCount(String pageCount) {
-        this.pageCount = pageCount;
     }
 
     public int getPageCountEights() {

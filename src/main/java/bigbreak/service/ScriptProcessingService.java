@@ -4,6 +4,9 @@ import bigbreak.*;
 import bigbreak.dtos.DayDTO;
 import bigbreak.dtos.SceneDTO;
 import bigbreak.dtos.ScheduleDTO;
+import bigbreak.testCharacters.CharacterExtractionTest;
+import bigbreak.testCharacters.JsonLoader;
+import bigbreak.testCharacters.SceneTestData;
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.TokenNameFinderModel;
 import org.springframework.stereotype.Service;
@@ -41,7 +44,7 @@ public class ScriptProcessingService {
             ShootingScheduler scheduler = new ShootingScheduler(45);
             List<ShootingDay> shootingDays = scheduler.schedule(scenes);
 
-            //CharacterExtractionEvaluationTest.evaluate(groundTruth, scenes);
+            //CharacterExtractionTest.evaluate(groundTruth, scenes);
             return mapToDTO(shootingDays);
         }
     }

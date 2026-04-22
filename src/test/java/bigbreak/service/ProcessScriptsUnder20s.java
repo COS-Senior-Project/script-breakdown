@@ -10,7 +10,6 @@ public class ProcessScriptsUnder20s {
     void shouldProcessScriptUnder20Seconds() throws Exception {
 
         ScriptProcessingService service = new ScriptProcessingService();
-
         String script = Files.readString(Path.of("src/main/resources/scripts/eternal-sunshine.txt"));
 
         long start = System.nanoTime();

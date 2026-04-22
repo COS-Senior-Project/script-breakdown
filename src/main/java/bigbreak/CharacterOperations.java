@@ -1,16 +1,13 @@
 package bigbreak;
 
 import opennlp.tools.namefind.NameFinderME;
-
 import java.util.*;
 
 public class CharacterOperations {
-    //private final NameDatabase nameDb;
     private final NameFinderME nameFinderME;
     private final CharacterClusterer clusterer;
 
     public CharacterOperations(NameFinderME nameFinderME, CharacterClusterer clusterer) {
-        //this.nameDb = nameDb;
         this.nameFinderME = nameFinderME;
         this.clusterer = clusterer;
     }
@@ -56,8 +53,6 @@ public class CharacterOperations {
                 //if no canonical name, the entry is skipped
                 if (key == null) continue;
                 //checks if the canonical name appears in this scene and adds it to the map if absent
-//                uniqueByCanonical.putIfAbsent(key, c);
-
                 Character existing = uniqueByCanonical.get(key);
 
                 if (existing == null) {

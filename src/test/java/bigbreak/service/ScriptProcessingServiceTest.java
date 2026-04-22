@@ -60,12 +60,12 @@ public class ScriptProcessingServiceTest {
         assertNotNull(schedule);
         assertFalse(schedule.getDays().isEmpty());
 
-        // Check at least one scene exists
+        //checks that at least one scene exists
         assertFalse(schedule.getDays().get(0).getScenes().isEmpty());
+        assertFalse(schedule.getDays().get(1).getScenes().isEmpty());
 
-        // Check characters were extracted
+        //check that characters were extracted
         var firstScene = schedule.getDays().get(0).getScenes().get(0);
-        //System.out.println(firstScene.getCanonicalCharacterNames());
         assertTrue(firstScene.getCanonicalCharacterNames().contains("VILI-AN"));
         var secondScene = schedule.getDays().get(0).getScenes().get(1);
         assertEquals("INT CORGI CAFE - DAY", secondScene.getHeading());
@@ -87,6 +87,5 @@ public class ScriptProcessingServiceTest {
         var ninthScene = schedule.getDays().get(1).getScenes().get(3);
         assertTrue(ninthScene.getCanonicalCharacterNames().contains("VILI-AN"));
         assertEquals(4, schedule.getDays().get(1).getScenes().size());
-
     }
 }

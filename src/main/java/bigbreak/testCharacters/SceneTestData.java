@@ -1,6 +1,6 @@
 package bigbreak.testCharacters;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Set;
 
 public class SceneTestData {

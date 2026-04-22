@@ -1,10 +1,9 @@
 package bigbreak.testCharacters;
 
 import bigbreak.Scene;
-
 import java.util.*;
 
-public class CharacterExtractionEvaluationTest {
+public class CharacterExtractionTest {
     public static void evaluate(List<SceneTestData> groundTruth, List<Scene> predicted) {
         Map<Integer, Scene> predictedMap = new HashMap<>();
         for (Scene s: predicted) {

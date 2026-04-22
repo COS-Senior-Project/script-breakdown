@@ -2,9 +2,7 @@ package bigbreak.service;
 
 import bigbreak.dtos.ScheduleDTO;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class GroupSceneLocationTest {
@@ -39,7 +37,6 @@ public class GroupSceneLocationTest {
                 transitions++;
             }
         }
-
         assertEquals(1, transitions);
     }
 }

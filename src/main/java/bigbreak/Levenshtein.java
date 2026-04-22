@@ -6,20 +6,15 @@ public class Levenshtein {
         a = a.toLowerCase();
         b = b.toLowerCase();
 
-        //creates a matrix for all prefixes of transforming a into b
-        // even when the prefix is empty string
+        //creates a matrix for all prefixes of transforming a into b even when the prefix is empty string
         int[][] dp = new int[a.length() + 1][b.length() + 1];
 
-        //initializes the first column of the matrix
-        //as if transforming the first a characters
-        // into the empty string of a
+        //initializes the first column of the matrix as if transforming the first a characters into the empty string of a
         for (int i = 0; i <= a.length(); i++) {
             dp[i][0] = i; //cost of deletions
         }
 
-        //initializes the first row of the matrix again
-        //as if transforming an empty string of a
-        // into the first j characters of b
+        //initializes the first row of the matrix again as if transforming an empty string of a into the first j characters of b
         for (int j = 0; j <= b.length(); j++) {
             dp[0][j] = j; //cost of insertions
         }
@@ -42,14 +37,11 @@ public class Levenshtein {
                 //computes matrix values
                 //chooses the least edit distance
                 dp[i][j] = Math.min(
-                        //deletion: checks how much needs to delete
-                        // for char of a to become char of b and adds the change cost
+                        //deletion: checks how much needs to delete for char of a to become char of b and adds the change cost
                         Math.min(dp[i-1][j] + 1,
-                                //insertion: checks how much needs to be inserted
-                                // to insert char of a into b and adds the change cost
+                                //insertion: checks how much needs to be inserted to insert char of a into b and adds the change cost
                                 dp[i][j-1] + 1),
-                        //substitution: computes the cost so far (without last char)
-                        // and adds substitution cost
+                        //substitution: computes the cost so far (without last char) and adds substitution cost
                         dp[i-1][j-1] + cost
                 );
             }

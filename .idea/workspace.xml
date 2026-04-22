@@ -5,66 +5,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3256b56e-017d-4cc6-9e8d-db3d5dea2c0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/example.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/bigbreak/CharacterExtractorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/bigbreak/ScriptParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/bigbreak/service/GroupSceneLocationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/bigbreak/service/NormalizeCanonicalNamesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/bigbreak/service/ProcessScriptsUnder20s.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/bigbreak/service/ScriptProcessingServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/apache_opennlp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/big-break-ui/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/big-break-ui/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Doneva-authorship report.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Vili-An_Doneva_Diploma_Thesis.docx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Vili-An_Doneva_Diploma_Thesis.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script-breakdown.iml" beforeDir="false" afterPath="$PROJECT_DIR$/script-breakdown.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterClusterer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterClusterer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterMention.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterPipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterPipeline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/ExtractableItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/ExtractableItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/ExtractorPostTraining.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/JaroWinkler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/JaroWinkler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/Levenshtein.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/Levenshtein.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/NameDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/NameDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/NameTrie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/NameTrie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/PhysicalObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/Prop.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/ScriptParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/ScriptParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/SetDressing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/ShootingDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/ShootingDay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/ShootingScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/ShootingScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/TimeClassifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/TimeClassifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/TrainingRunner.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/controller/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/controller/FileUploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/dtos/DayDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/dtos/DayDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/dtos/SceneDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/dtos/SceneDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/scheduler/ScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/scheduler/ScheduleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/service/ScriptProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/service/ScriptProcessingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/test/CharacterExtractionEvaluationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/testCharacters/CharacterExtractionEvaluationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/test/JsonLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/testCharacters/JsonLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/test/SceneTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/testCharacters/SceneTestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/names/first_names.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/names/first_names.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/testCharacters/CharacterExtractionEvaluationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/testCharacters/CharacterExtractionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/testCharacters/JsonLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/testCharacters/JsonLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/testCharacters/SceneTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/testCharacters/SceneTestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/models/opennlp-en-ud-ewt-pos-1.3-2.5.4.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bigbreak/CharacterExtractorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bigbreak/service/GroupSceneLocationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bigbreak/service/GroupSceneLocationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bigbreak/service/NormalizeCanonicalNamesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bigbreak/service/CanonicalNamesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bigbreak/service/ProcessScriptsUnder20s.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bigbreak/service/ProcessScriptsUnder20s.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bigbreak/service/ScriptProcessingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bigbreak/service/ScriptProcessingServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/Character.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/CharacterClusterer$UnionFind.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/CharacterClusterer$UnionFind.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/CharacterClusterer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/CharacterClusterer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/CharacterExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/CharacterExtractor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/CharacterMention.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/CharacterOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/CharacterOperations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/CharacterPipeline.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/CharacterPipeline.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/ExtractableItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/ExtractableItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/ExtractorPostTraining.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/JaroWinkler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/JaroWinkler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/Levenshtein.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/Levenshtein.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/NameDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/NameDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/NameTrie$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/NameTrie$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/NameTrie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/NameTrie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/PhysicalObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/Prop.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/ScriptParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/ScriptParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/SetDressing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/ShootingDay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/ShootingDay.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/ShootingScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/ShootingScheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/TimeClassifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/TimeClassifier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/TrainingRunner$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/TrainingRunner$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/TrainingRunner.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/controller/FileUploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/controller/FileUploadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/dtos/DayDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/dtos/DayDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/dtos/SceneDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/dtos/SceneDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/scheduler/ScheduleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/scheduler/ScheduleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/service/ScriptProcessingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/service/ScriptProcessingService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/test/CharacterExtractionEvaluationTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/test/JsonLoader$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/test/JsonLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/test/SceneTestData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/models/en-ner-person-customer.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/models/en-ner-person.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/models/opennlp-en-ud-ewt-pos-1.3-2.5.4.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/names/first_names.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/names/last_names.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/Anora.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/PINK.FULL.THE RED BOX by Jonny Grant - 13.8.25.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/The Break Room - 5.6.2025.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/The Break Room.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/The Red Box.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/Wicked.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/american-gangster.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/crazy-stupid-love.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/eternal-sunshine.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/interstellar.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/the-fault-in-our-stars.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/the-graduate.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/the-menu.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/scripts/the-silence-of-the-lambs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/test/ground_truth_eternal_sunshine.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/names/first_names.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/names/first_names.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-script-breakdown-0.1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/script-breakdown-0.1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/testCharacters/CharacterExtractionEvaluationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/testCharacters/JsonLoader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/testCharacters/JsonLoader$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/testCharacters/JsonLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/testCharacters/JsonLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/opennlp-en-ud-ewt-pos-1.3-2.5.4.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/bigbreak/CharacterExtractorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/bigbreak/service/NormalizeCanonicalNamesTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/bigbreak/service/ProcessScriptsUnder20s.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/bigbreak/service/ProcessScriptsUnder20s.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/bigbreak/service/ScriptProcessingServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/bigbreak/service/ScriptProcessingServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +115,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.SpringBootMain.executor": "Run",
+    "JUnit.CanonicalNamesTest.executor": "Run",
     "JUnit.CharacterExtractorTest.executor": "Coverage",
     "JUnit.CharacterExtractorTest.shouldExtractSpeakCuesCorrectly.executor": "Coverage",
     "JUnit.NormalizeCanonicalNamesTest.executor": "Run",
@@ -119,10 +135,26 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="bigbreak" />
       <recent name="bigbreak.service" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CanonicalNamesTest">
+    <configuration name="CanonicalNamesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="script-breakdown" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bigbreak.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bigbreak.service" />
+      <option name="MAIN_CLASS_NAME" value="bigbreak.service.CanonicalNamesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NormalizeCanonicalNamesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="script-breakdown" />
       <extension name="coverage">
@@ -185,28 +217,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScriptProcessingServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="script-breakdown" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bigbreak.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bigbreak.service" />
-      <option name="MAIN_CLASS_NAME" value="bigbreak.service.ScriptProcessingServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CanonicalNamesTest" />
         <item itemvalue="JUnit.NormalizeCanonicalNamesTest" />
         <item itemvalue="JUnit.NormalizeCanonicalNamesTest.shouldNormalizeAllCharacterVariantsToCanonicalName" />
         <item itemvalue="JUnit.ProcessScriptsUnder20s" />
         <item itemvalue="JUnit.ProcessScriptsUnder20s.shouldProcessScriptUnder20Seconds" />
-        <item itemvalue="JUnit.ScriptProcessingServiceTest" />
       </list>
     </recent_temporary>
   </component>

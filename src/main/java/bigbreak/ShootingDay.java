@@ -18,13 +18,10 @@ public class ShootingDay {
     private Time time;
     private int usedEights = 0;
     private int eightsWoMoves = 0;
-    private String pageCount;
-
     private List<Scene> scenes = new ArrayList<>();
     private Set<String> castSet = new HashSet<>();
     private Move move;
     private int moveCount;
-    private String primaryLocation;
 
     public ShootingDay(int dayNumber, Time time, Move move) {
         this.dayNumber = dayNumber;
@@ -89,10 +86,6 @@ public class ShootingDay {
 
     public void setLocationSet(Set<String> locationSet) {
         this.locationSet = locationSet;
-    }
-
-    public void setPageCount(String pageCount) {
-        this.pageCount = pageCount;
     }
 
     public void setScenes(List<Scene> scenes) {

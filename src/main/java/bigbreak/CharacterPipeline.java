@@ -1,7 +1,6 @@
 package bigbreak;
 
 import opennlp.tools.namefind.NameFinderME;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +10,6 @@ public class CharacterPipeline {
 
         allCharacters.addAll(CharacterExtractor.extractSpeakerCues(scene.getContent(), scene));
         allCharacters.addAll(CharacterExtractor.extractInlineName(scene.getContent(), scene, nameFinderME));
-        //allCharacters.addAll(CharacterExtractor.extractAdjWord(scene.getContent(), scene));
         allCharacters.addAll(CharacterExtractor.extractIntroCharacter(scene.getContent(), scene));
 
         return allCharacters;

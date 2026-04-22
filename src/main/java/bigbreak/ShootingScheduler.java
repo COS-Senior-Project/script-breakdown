@@ -14,11 +14,9 @@ public class ShootingScheduler {
     public List<ShootingDay> schedule(List<Scene> scenes) {
         //list of days in the schedule so far
         List<ShootingDay> schedule = new ArrayList<>();
-
         //maps locations to scenes to create location groups
         LinkedHashMap<String, List<Scene>> locationGroups = new LinkedHashMap<>();
-        //scenes.sort(Comparator.comparing(Scene::getLocation));
-        //LinkedHashMap<Scene, String> locations = new LinkedHashMap<>();
+
         for (Scene s : scenes) {
             //creates a new location group if new location appears and adds the scene to the group
             //if location has appeared before, it adds the scene to the already created location group
@@ -45,18 +43,13 @@ public class ShootingScheduler {
                     //weighted score based on the priorities of the matching - cast similarity, scene order, and not too packed days
                     double score = 0;
                     score =  locationScore(day, scene) + timeScore(day, scene) + castOverlapScore(day, scene) * 20.0 + orderScore(day, scene) * 2.0 + loadPenalty(day, scene);
-//                    System.out.println("Location score" + locationScore(day, scene) + "   Time score: " + timeScore(day, scene) + "     Cast overlap score: " +  castOverlapScore(day, scene) * 3.0
-//                            + "     Order score: " + orderScore(day, scene) * 2.0 + "       Load Penalty:" + loadPenalty(day, scene) + "    Total score: " + score);
                     //if the score of this scene is larger than the previous best one
                     if (score > bestScore) {
-//                        System.out.println("Best score: " + bestScore);
                         //best score and best day are set to the current score and day
                         bestScore = score;
                         bestDay = day;
-                        //locations.put(scene, scene.getLocation());
                     }
                 }
-                //double newDayScore = -700;
                 if (bestDay == null) { //if no best day - first scene or requirements not fulfilled
                     if (scene.getShootPhase() == Scene.ShootPhase.DAY) {
                         time = ShootingDay.Time.DAY;
@@ -74,9 +67,6 @@ public class ShootingScheduler {
                     //after checking all scheduled days and the best day for the scene is found, the scene is added to it
                     if (!bestDay.getLocationSet().contains(scene.getLocation())) {
                         bestDay.setMove(ShootingDay.Move.MOVE);
-                        //int moveCount = bestDay.getMoveCount() + 1;
-                        //bestDay.setMoveCount(moveCount);
-
                         int moveWeight = bestDay.getUsedEights() + 8;
                         bestDay.setUsedEights(moveWeight);
                     }
@@ -86,20 +76,14 @@ public class ShootingScheduler {
                     scene.setCharactersDisplayedHC(scene.getCanonicalCharacterNames());
                     scene.setCharactersDisplayedLC(scene.getCharactersBelowConfidence());
                     bestDay.addScene(scene);
-                    //locations.put(scene, scene.getLocation());
                 }
             }
         }
-
         return schedule;
     }
 
     //checks if the basic requirements are met for scene to match a day
     private boolean feasible(ShootingDay day, Scene scene, List<ShootingDay> sch) {
-//        int moveWeightCheck = 0;
-//        if (!day.getLocationSet().contains(scene.getLocation())) {
-//            moveWeightCheck = 8;
-//        }
         if (day.getUsedEights() + scene.getSceneLength() > MAX_EIGHTS_PER_DAY) //checks if it fits the limit
             return false;
         if (day.getMoveCount() > 2) return false;

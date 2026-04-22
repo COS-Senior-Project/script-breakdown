@@ -9,8 +9,7 @@ public class JaroWinkler {
         //if the strings are the same, returns similarity 1
         if (s1.equals(s2)) return 1.0;
 
-        //the maximum distance between characters for them to be considered a match
-        //only if within the larger string length / 2 - 1 positions
+        //the maximum distance between characters for them to be considered a match only if within the larger string length / 2 - 1 positions
         int matchDistance = Math.max(s1.length(), s2.length()) / 2 - 1;
 
         //track which characters have already matched so not to match them twice
@@ -70,8 +69,7 @@ public class JaroWinkler {
         int prefix = 0;
         //loops through each character of the prefix (at most 4 characters)
         for (int i = 0; i < Math.min(4, Math.min(s1.length(), s2.length())); i++) {
-            //if the characters at position i for both s1 and s2 are the same,
-            // increment the prefix counter
+            //if the characters at position i for both s1 and s2 are the same, increment the prefix counter
             if (s1.charAt(i) == s2.charAt(i)) prefix++;
             //if one character differs, break the loop
             else break;

@@ -2,11 +2,6 @@ package bigbreak;
 
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.util.Span;
-
-import javax.naming.Name;
-import java.io.IOException;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.util.*;
 import java.util.regex.*;
 
@@ -24,19 +19,6 @@ public class CharacterExtractor {
     //pattern looks for a string starting with one upper-cased letter
     // followed by more upper-cased letters, digits, apostrophes, periods, or dashes
     private static final Pattern NAME_TOKEN = Pattern.compile("^[A-Z][A-Z0-9]*$");
-    //patterns looks for a person indicating uppercase adjective followed by one or two uppercase words
-//    private static final Pattern PERSON_ADJECTIVE = Pattern.compile("\\b(MALE|FEMALE|YOUNG|OLD|MIDDLE-AGED|MIDDLE AGED|ASIAN|CAUCASIAN|LATIN)(?:\\s+[A-Z][A-Z]+){1,2}\\b");
-    //pattern looks for a person noun proceeded by an uppercase word
-//    private static final Pattern PERSON_NOUN = Pattern.compile("\\b(?:[A-Z][A-Z0-9'’\\.\\-]*\\s+)?(MAN|MEN|WOMAN|WOMEN|BOY|BOYS|GIRL|GIRLS|MALE|MALES|FEMALE|FEMALES|CHILD|" +
-//            "CHILDREN|TODDLER|TODDLERS|TEENAGER|TEENAGERS|ADULT|ADULTS|ELDER|ELDERS|HUMAN|HUMANS|OFFICER|" +
-//            "ASSISTANT|DOCTOR|LAWYER|TEACHER|" +
-//            "DETECTIVE|NURSE|SOLDIER|SCIENTIST|SINGER|CHEF|PILOT|" +
-//            "PHOTOGRAPHER|FIREFIGHTER|THIEF|ARTIST|VILLAIN|PRIEST|" +
-//            "POLITICIAN|VICTIM|RECEPTIONIST|WAITER|WAITRESS)\\b");
-//    private static final Pattern PERSON_NOUN = Pattern.compile("\\b(?:[A-Z][A-Z0-9'’\\.\\-]*\\s+)?(MAN|MEN|WOMAN|WOMEN|BOY|BOYS|GIRL|GIRLS|MALE|MALES|FEMALE|FEMALES|CHILD|" +
-//            "CHILDREN|TODDLER|TODDLERS|TEENAGER|TEENAGERS|ADULT|ADULTS|ELDER|ELDERS|HUMAN|HUMANS|OFFICER)\\b");
-
-    private static final Pattern NAME_VOICE = Pattern.compile("\\b([A-Z][A-Z0-9'’\\.\\-]*(?:\\s+[A-Z][A-Z0-9'’\\.\\-]*)*?)(?<!'S)\\s+VOICE\\b");
     //pattern looks for a person's name when introducing characters
     private static final Pattern INLINE_INTRO = Pattern.compile("\\b(?:This is|this is|Enter|enter|Entering|entering|Introducing|introducing|It's|it's|It is|it is)\\s+([A-Z0-9'’\\.\\-]+(?:\\s+[A-Z0-9'’\\.\\-]+){0,2})(?=\\s|$|,|\\.)");
     //pattern looks for a character name before age when first introduced
@@ -180,8 +162,7 @@ public class CharacterExtractor {
             //replaces V.O.\O.S. with "" so that it cn fit into the isCharacterCue
             String withoutPostfix = line.replaceAll("\\s*\\((V\\.O\\.|O\\.S\\.|CONT'D)\\)$", "").trim();
 
-            //if the lines without V.O.\O.S. do not fit into the isCharacterCue,
-            //they are appended to the new content
+            //if the lines without V.O.\O.S. do not fit into the isCharacterCue, they are appended to the new content
             //in this way, the new content omits all covered by the extractCharacterCues extractor
             if (!isCharacterCue(withoutPostfix)) {
                 contentInline.append(withoutPostfix).append("\n");
@@ -190,11 +171,8 @@ public class CharacterExtractor {
 
         //tokenizes the text
         String[] contentTokens = TextUnits.tokenize(contentInline.toString());
-
         //a sequence of tokens that NameFinderME considers a person's name
         Span[] spans = nameFinder.find(contentTokens);
-        //the confidence score returned by NameFinderME
-        //double[] probs = nameFinder.probs(spans);
 
         //loops through the span of candidate names
         for (int i = 0; i < spans.length; i++) {
@@ -218,8 +196,6 @@ public class CharacterExtractor {
             ////builds a context snippet using 5 tokens before the candidate's name and 5 tokens after
             String snippet = safeSnippet(String.join(" ", Arrays.copyOfRange(contentTokens, Math.max(0, s.getStart() - 5),
                     Math.min(contentTokens.length, s.getEnd() + 5))));
-            //evaluates confidence score according to NameFinderME
-            //double confidence = probs[i];
             double confidence = 0.4;
             //checks if the names are part of the name files and adds confidence if true
             confidence += NameDatabase.confidenceBoostMatchFile(candidate);
@@ -237,75 +213,6 @@ public class CharacterExtractor {
         //returns all results of the NameFinderME + file names check
         return result;
     }
-
-    //extractor to extract characters that include a person-related adjective or noun
-//    public static List <Character> extractAdjWord (String content, Scene scene) {
-//        //list to store all the Character objects fitting the criteria
-//        List <Character> result = new ArrayList<>();
-//        //if there is no content
-//        if (content == null || content.trim().isEmpty()) return result;
-//        //sets static confidence score
-//        // because the match cannot be contained in the name files
-//        double confidence = 0.8;
-//        //splits the lines into an array keeping the formatting
-//        String[] lines = content.split("\n", -1);
-//        //loops through the lines
-//        for (String line : lines) {
-//            //trims the line
-//            String trimmed = line.trim();
-//            //if nothing left, goes to the next iteration
-//            if (trimmed.isEmpty()) continue;
-//            if (isCharacterCue(trimmed)) continue;
-//            //creates a matcher object for an uppercase adjective word combination
-//            // that is related to a personal characteristic
-//            Matcher matchAdj = PERSON_ADJECTIVE.matcher(trimmed);
-//            //creates a matcher object for an uppercase noun word combination
-//            // that is related to a person's identity
-//            //Matcher matchNoun = PERSON_NOUN.matcher(trimmed);
-//            //Matcher matchVoice = NAME_VOICE.matcher(trimmed);
-//
-//            //if it finds the adjective word sequence, it creates a new character entry
-//            if (matchAdj.find()) {
-//                //if it contains a stop phrase, skip this iteration
-//                if (isStopPhrase(matchAdj.group())) continue;
-//                result.add(new Character(
-//                        scene.getSceneIntNumber(),
-//                        scene.getSceneNumber(),
-//                        normalizeName(matchAdj.group()),
-//                        "PERSON_ADJ",
-//                        safeSnippet(trimmed),
-//                        confidence
-//                ));
-//            }
-//            //if it finds a word noun sequence, it creates a new character
-//            //using else if in case of a "YOUNG WOMAN" match
-////            else if (matchNoun.find()) {
-////                //if it contains a stop phrase, skip this iteration
-////                if (isStopPhrase(matchNoun.group())) continue;
-////                result.add(new Character(
-////                        scene.getSceneIntNumber(),
-////                        scene.getSceneNumber(),
-////                        normalizeName(matchNoun.group()),
-////                        "PERSON_NOUN",
-////                        safeSnippet(trimmed),
-////                        confidence
-////                ));
-////            }
-////            else if (matchVoice.find()) {
-////                if (isStopPhrase(matchVoice.group())) continue;
-////                result.add(new Character(
-////                        scene.getSceneIntNumber(),
-////                        scene.getSceneNumber(),
-////                        normalizeName(matchVoice.group()),
-////                        "NAME_VOICE",
-////                        safeSnippet(trimmed),
-////                        confidence
-////                ));
-////            }
-//        }
-//        //returns the list of characters
-//        return result;
-//    }
 
     //extracts characters that are first introduced
     public static List <Character> extractIntroCharacter (String content, Scene scene) {
@@ -403,7 +310,6 @@ public class CharacterExtractor {
         //tokenizes the line
         String[] toks = TextUnits.tokenize(line);
 
-        //if (toks.length == 0) return false;
         //name token counter
         int nameTokens = 0;
         //total token counter equals the total length of all tokens
@@ -430,8 +336,7 @@ public class CharacterExtractor {
         //if there are no name tokens, returns false
         if (nameTokens == 0) return false;
 
-        //if the name token count is at least 65% of the total count and
-        //the total token count is at most 5
+        //if the name token count is at least 65% of the total count and the total token count is at most 5
         if (nameTokens >= Math.ceil((tokenCount - parenthesisCount) * percentage) && (tokenCount - parenthesisCount) <= 5){
             //rejects if non-word specific punctuation appears
             if (line.matches(".*[!\\?,;:].*")) return false;
@@ -470,6 +375,5 @@ public class CharacterExtractor {
         String esc = oneLine.replace("\"", "\"\"");
         return esc;
     }
-
 }
 

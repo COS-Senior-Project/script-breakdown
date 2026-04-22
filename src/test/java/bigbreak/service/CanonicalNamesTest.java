@@ -4,7 +4,7 @@ import bigbreak.dtos.ScheduleDTO;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class NormalizeCanonicalNamesTest {
+public class CanonicalNamesTest {
     @Test
     void shouldCharacterVariantsToCanonicalName() throws Exception {
 

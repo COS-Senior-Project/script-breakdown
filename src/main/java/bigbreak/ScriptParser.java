@@ -1,38 +1,9 @@
 package bigbreak;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.regex.*;
 import java.util.*;
 
 public class ScriptParser {
-    //load a script file using the ScriptParser class
-//    public static String loadScript (String filePath) throws IOException {
-//        return loadScript(ScriptParser.class, filePath);
-//    }
-    //loads the script file using non-specific class and classpath
-//    public static String loadScript(Class<?> className,String filePath) throws IOException {
-//        //tries to load input stream from the classpath
-//        try (InputStream in = className.getResourceAsStream(filePath)) {
-//            //if the input stream is null, throw an exception
-//            if (in == null) {
-//                throw new IllegalArgumentException("Resource path not found: " + filePath);
-//            }
-//            //reads the bytes of the script into a string
-//            String script = new String(in.readAllBytes());
-//            //normalizes the script
-//            script = script
-//                    .replaceAll("\u00A0", " ") //replaces non-breaking spaces
-//                    .replaceAll("\\r", "") //normalizes line breaks (carriage returns)
-//                    .replaceAll("(?m)^\\s+", "") //removes leading spaces on each line
-//                    .replaceAll("(?m)\\s+$", ""); //removes trailing spaces
-//            //returns the normalized string
-//            return script;
-//        }
-//    }
-
     //Removes page headers/footers and obvious page number-only lines,
     //but only if they are not immediately followed by a heading keyword
     private String removePageNumbers(String script){
@@ -43,7 +14,6 @@ public class ScriptParser {
         Pattern repeatedNumberLine = Pattern.compile("^\\s*(\\d+)\\s+\\1\\s*$"); //"98  98"
         Pattern headingKeyword = Pattern.compile("^(INT\\.?|EXT\\.?|INT\\.?/EXT\\.?|EXT/INT\\.?|I/E\\.?|EST\\.?|OMITTED)\\b",
                 Pattern.CASE_INSENSITIVE);
-
 
         for (int i = 0; i< lines.length; i++){
             String line = lines[i];
@@ -131,8 +101,6 @@ public class ScriptParser {
         int sceneLines = 0;
         int sceneLengthEights = 0;
 
-        //boolean debug = false;
-
         for (int i = 0; i < lines.length; i++) {
             String raw = lines[i];
             String line = raw.trim();
@@ -160,11 +128,9 @@ public class ScriptParser {
                 if (nextIsHeading) {
                     //this is a scene-number line (store and skip it, the next line will be heading)
                     pendingSceneNumber = numOnlyM.group(1); //e.g., "98" or "98A"
-                    //if (debug) System.out.println("DEBUG: pending scene number = " + pendingSceneNumber + " (line " + i + ")");
                     continue; //proceed to the line (which should be the heading)
                 } else {
                     //it's a page number or stray number -> skip it
-                    //if (debug) System.out.println("DEBUG: dropped page number line: " + line + " (line " + i + ")");
                     continue;
                 }
             }
@@ -182,11 +148,9 @@ public class ScriptParser {
                 if (nextIsHeading) {
                     //this is a scene-number line (store and skip it, the next line will be heading)
                     pendingSceneNumber = repeatedNumM.group(1); //e.g., "98     98" or "98A     98A"
-                    //if (debug) System.out.println("DEBUG: pending scene number = " + pendingSceneNumber + " (line " + i + ")");
                     continue; //proceed to the line (which should be the heading)
                 } else {
                     //it's a page number or stray number -> skip it
-                    //if (debug) System.out.println("DEBUG: dropped page number line: " + line + " (line " + i + ")");
                     continue;
                 }
             }
@@ -255,9 +219,6 @@ public class ScriptParser {
                 if (sceneNumber.matches("^\\d+$")) {
                     fallbackCounter = Integer.parseInt(sceneNumber) + 1;
                 }
-//                if (debug) {
-//                    System.out.println("DEBUG: new heading -> sceneNumber=" + currentSceneNumber + ", heading='" + currentHeading + "'");
-//                }
                 continue; //heading handled
             }
             //Not a heading, not a page number: treat as content for current scene (if any)

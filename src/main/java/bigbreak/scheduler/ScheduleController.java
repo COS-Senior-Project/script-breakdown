@@ -1,6 +1,5 @@
 package bigbreak.scheduler;
 
-import bigbreak.*;
 import bigbreak.dtos.ScheduleDTO;
 import bigbreak.service.ScriptProcessingService;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +11,6 @@ import java.nio.charset.StandardCharsets;
 @RestController
 @RequestMapping("/api")
 public class ScheduleController {
-
     private final ScriptProcessingService service;
 
     public ScheduleController(ScriptProcessingService service) {
@@ -28,6 +26,4 @@ public class ScheduleController {
     public ScheduleDTO updateSchedule(@RequestBody ScheduleDTO schedule) {
         return service.updateSchedule(schedule);
     }
-
-
 }
