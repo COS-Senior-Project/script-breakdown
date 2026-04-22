@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3256b56e-017d-4cc6-9e8d-db3d5dea2c0b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Doneva-authorship report.docx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Doneva-authorship report.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Vili-An_Doneva_Diploma_Thesis.docx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Vili-An_Doneva_Diploma_Thesis.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bigbreak/CharacterExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/scripts/example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scripts/example.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/CharacterExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/CharacterExtractor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bigbreak/ShootingDay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bigbreak/ShootingDay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scripts/example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/example.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/~$neva-authorship report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/~WRL1091.tmp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
